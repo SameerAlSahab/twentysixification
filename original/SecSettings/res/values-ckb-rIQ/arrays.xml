@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apn_auth_entries">
+        <item>هیچکام</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP or CHAP</item>
+    </string-array>
+    <string-array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="bluetooth_cast_timeout_entries">
+        <item>5 خولەک</item>
+        <item>١٠ خولەک</item>
+        <item>30 خولەک</item>
+        <item>"Don't disconnect"</item>
+    </string-array>
+    <string-array name="bluetooth_max_connected_audio_devices">
+        <item>System default: %d</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="bluetooth_sap_activation_entries">
+        <item>Default (no effect)</item>
+        <item>Turn on SAP by force</item>
+        <item>Turn off SAP by force</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>بنەڕەت</item>
+        <item>هیچکام</item>
+        <item>Outline</item>
+        <item>کەوتنە خوارەوەی سێبەرەکە</item>
+        <item>هاتە سەرەوە</item>
+        <item>خەمۆکی</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Very small</item>
+        <item>بچووک</item>
+        <item>ئاسایی</item>
+        <item>گەورە</item>
+        <item>Very large</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>پێشوەختە</item>
+        <item>White on black</item>
+        <item>Black on white</item>
+        <item>Yellow on black</item>
+        <item>Yellow on blue</item>
+        <item>تایبەتمەند</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>بنەڕەت</item>
+        <item>Sans serif</item>
+        <item>Sans serif condensed</item>
+        <item>Sans serif monospace</item>
+        <item>Serif</item>
+        <item>Serif monospace</item>
+        <item>Casual</item>
+        <item>Cursive</item>
+        <item>Small caps</item>
+    </string-array>
+    <string-array name="data_usage_billing_cycle_summary">
+        <item>1st day of each month</item>
+        <item>2nd day of each month</item>
+        <item>3rd day of each month</item>
+        <item>4th day of each month</item>
+        <item>5th day of each month</item>
+        <item>6th day of each month</item>
+        <item>7th day of each month</item>
+        <item>8th day of each month</item>
+        <item>9th day of each month</item>
+        <item>10th day of each month</item>
+        <item>11th day of each month</item>
+        <item>12th day of each month</item>
+        <item>13th day of each month</item>
+        <item>14th day of each month</item>
+        <item>15th day of each month</item>
+        <item>16th day of each month</item>
+        <item>17th day of each month</item>
+        <item>18th day of each month</item>
+        <item>19th day of each month</item>
+        <item>20th day of each month</item>
+        <item>21st day of each month</item>
+        <item>22nd day of each month</item>
+        <item>23rd day of each month</item>
+        <item>24th day of each month</item>
+        <item>25th day of each month</item>
+        <item>26th day of each month</item>
+        <item>27th day of each month</item>
+        <item>28th day of each month</item>
+        <item>29th day of each month</item>
+        <item>30th day of each month</item>
+        <item>31st day of each month</item>
+    </string-array>
+    <string-array name="dex_timeout_entries">
+        <item>15 چرکە</item>
+        <item>٣٠ چرکە</item>
+        <item>١ خولەک</item>
+        <item>2 خولەک</item>
+        <item>5 خولەک</item>
+        <item>١٠ خولەک</item>
+        <item>20 خولەک</item>
+        <item>30 خولەک</item>
+        <item>60 خولەک</item>
+    </string-array>
+    <string-array name="gpuwatch_rendering_api_entries">
+        <item>Vulkan</item>
+        <item>OpenGL</item>
+    </string-array>
+    <string-array name="gpuwatch_widget_positions">
+        <item>Top - Left</item>
+        <item>Top - Center horizontal</item>
+        <item>Top - Right</item>
+        <item>Center vertical - Left</item>
+        <item>Center vertical - Right</item>
+        <item>Bottom - Left</item>
+        <item>Bottom - Center horizontal</item>
+        <item>Bottom - Right</item>
+    </string-array>
+    <string-array name="key_backlight_entries">
+        <item>هەمیشە کوژاوەتەوە</item>
+        <item>١ چرکە</item>
+        <item>3 seconds</item>
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 چرکە</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Immediately</item>
+        <item>5 seconds</item>
+        <item>15 چرکە</item>
+        <item>٣٠ چرکە</item>
+        <item>١ خولەک</item>
+        <item>2 خولەک</item>
+        <item>5 خولەک</item>
+        <item>١٠ خولەک</item>
+        <item>30 خولەک</item>
+    </string-array>
+    <string-array name="mouse_pointer_color_type">
+        <item>سپی</item>
+        <item>ڕەش</item>
+        <item>پیرۆزەیی</item>
+        <item>زەرد</item>
+        <item>سووری کاڵ</item>
+        <item>وەنەوشەیی کاڵ</item>
+        <item>شینی کاڵ</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>هیچکام</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="num_allowed_devices">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>٥</item>
+        <item>٦</item>
+        <item>٧</item>
+        <item>٨</item>
+        <item>٩</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>Normal</item>
+        <item>Moderate</item>
+        <item>Low</item>
+        <item>Critical</item>
+        <item>\?</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 چرکە</item>
+        <item>٣٠ چرکە</item>
+        <item>١ خولەک</item>
+        <item>2 خولەک</item>
+        <item>5 خولەک</item>
+        <item>١٠ خولەک</item>
+        <item>30 خولەک</item>
+    </string-array>
+    <string-array name="sec_bt_stack_log_level_entries">
+        <item>چەنەباز</item>
+        <item>ڕاستکردنەوە</item>
+        <item>زانیاری</item>
+        <item>ئاگادارکردنەوە</item>
+        <item>هەڵە</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_phone">
+        <item>مۆبایلەکەت بدۆزەرەوە ئەگەر لەدەستت دا.</item>
+        <item>هاوکاتکردنی ئەپەکان و ڕێکخستنەکان لە سەرانسەری ئامێرەکانتدا.</item>
+        <item>فایلەکان لەگەڵ هاوڕێ و خێزان و ئامێرەکانی تر هاوبەش بکە.</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_tablet">
+        <item>تابلێتە ونبووەکەت بدۆزەرەوە.</item>
+        <item>فایلەکان لەگەڵ هاوڕێ و خێزان و ئامێرەکانی تر هاوبەش بکە.</item>
+        <item>لە نێوان مۆبایل و تابلێتەکەتدا کۆپی و لێدانی.</item>
+        <item>بە شێوەیەکی ئۆتۆماتیکی گوڵەبەڕۆژەکانت بگۆڕە لە نێوان ئامێرەکاندا.</item>
+        <item>لە تابلێتەکەت وەڵامی پەیوەندی و نامە بدەرەوە.</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>ھەمیشە بپرسە</item>
+        <item>Never allow</item>
+        <item>ھەمیشە ڕێپێدان</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_phone">
+        <item>تەلەفۆن</item>
+        <item>TV or monitor</item>
+    </string-array>
+    <string-array name="vpn_proxy_settings">
+        <item>هیچکام</item>
+        <item>دەستیی</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>پەیوەندی پچڕاوە</item>
+        <item>دەستپێدەکات…</item>
+        <item>پەیوەندی بەستان…</item>
+        <item>پەیوەندی بەستراوە</item>
+        <item>Timeout</item>
+        <item>سەرنەکەوتوو</item>
+    </string-array>
+    <string-array name="wifi_ap_broadcast_channel_entries">
+        <item>خۆکار</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>٥</item>
+        <item>٦</item>
+        <item>٧</item>
+        <item>٨</item>
+        <item>٩</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_phone_entries">
+        <item>‏MACـی هەڕەمەکی</item>
+        <item>Phone MAC</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_tablet_entries">
+        <item>‏MACـی هەڕەمەکی</item>
+        <item>Tablet MAC</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_security_type_entries1">
+        <item>Open</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_wpa3_security_type_entries">
+        <item>Open</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_security_type_entries1">
+        <item>Open</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_turn_off_hotspot_timer_entries">
+        <item>Never timeout</item>
+        <item>5 minutes</item>
+        <item>١٠ خولەک</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="wifi_ap_wifi_sharing">
+        <item>Turn on Wi-Fi sharing</item>
+        <item>Turn off Wi-Fi sharing</item>
+    </string-array>
+    <string-array name="wifi_ap_wpa3_security_type_entries">
+        <item>Open</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_connect_entries">
+        <item>خۆکار</item>
+        <item>دەستیی</item>
+        <item>هەمیشە بپرسە</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Static</item>
+    </string-array>
+    <string-array name="wifi_metered_entries">
+        <item>Detect automatically</item>
+        <item>Treat as metered</item>
+        <item>Treat as unmetered</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>پەیوەندی بەستراوە</item>
+        <item>بانگهێشت کراوە.</item>
+        <item>گرێدان شكستی هێنا</item>
+        <item>لێرە پەنجە داگرە بۆ پەیوەندی بەستن.</item>
+        <item>Out of range.</item>
+        <item>لەگەڵ ئامێرێکی تر پەیوەندی بەستووە</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>هیچکام</item>
+        <item>دەستیی</item>
+        <item>Auto-config</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>سکان دەکات…</item>
+        <item>پەیوەندی بەستان…</item>
+        <item>دەیسەلمێنێت…</item>
+        <item>بەدەستهێنانی ناونیشانی IP…</item>
+        <item>بەستراوەتەوە</item>
+        <item>ڕاگیراوە</item>
+        <item>پەیوەندی پچڕاوە…</item>
+        <item>پەیوەندی پچڕاوە</item>
+        <item>سەرنەکەوتوو</item>
+        <item>ڕێگری کراوە</item>
+        <item>پشکنینی جۆری پەیوەندی ئەنتەرنێت…</item>
+    </string-array>
+</resources>

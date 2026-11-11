@@ -1,0 +1,15 @@
+.class public final Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# instance fields
+.field public mBinderDeathReceiver:Lcom/android/server/blockchain/BlockchainTZService$FrameworkClient$ClientBinderDeathReceiver;
+
+.field public mCommnInfo:Landroid/blockchain/BlockchainTZServiceCommnInfo;
+
+.field public mPackageName:Ljava/lang/String;
+
+.field public mPid:I
+
+.field public synthetic this$0:Lcom/android/server/blockchain/BlockchainTZService;

@@ -1,0 +1,135 @@
+.class public Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;
+.super Landroid/media/tv/tuner/frontend/FrontendCapabilities;
+.source "IsdbtFrontendCapabilities.java"
+
+
+# annotations
+.annotation runtime Landroid/annotation/SystemApi;
+.end annotation
+
+
+# instance fields
+.field private final blacklist mBandwidthCap:I
+
+.field private final blacklist mCodeRateCap:I
+
+.field private final blacklist mGuardIntervalCap:I
+
+.field private final blacklist mIsFullSegmentSupported:Z
+
+.field private final blacklist mIsSegmentAutoSupported:Z
+
+.field private final blacklist mModeCap:I
+
+.field private final blacklist mModulationCap:I
+
+.field private final blacklist mTimeInterleaveCap:I
+
+
+# direct methods
+.method private constructor blacklist <init>(IIIIIIZZ)V
+    .locals 0
+
+    .line 40
+    invoke-direct {p0}, Landroid/media/tv/tuner/frontend/FrontendCapabilities;-><init>()V
+
+    .line 41
+    iput p1, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mModeCap:I
+
+    .line 42
+    iput p2, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mBandwidthCap:I
+
+    .line 43
+    iput p3, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mModulationCap:I
+
+    .line 44
+    iput p4, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mCodeRateCap:I
+
+    .line 45
+    iput p5, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mGuardIntervalCap:I
+
+    .line 46
+    iput p6, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mTimeInterleaveCap:I
+
+    .line 47
+    iput-boolean p7, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mIsSegmentAutoSupported:Z
+
+    .line 48
+    iput-boolean p8, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mIsFullSegmentSupported:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist getBandwidthCapability()I
+    .locals 0
+
+    .line 63
+    iget p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mBandwidthCap:I
+
+    return p0
+.end method
+
+.method public whitelist getCodeRateCapability()I
+    .locals 0
+
+    .line 77
+    iget p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mCodeRateCap:I
+
+    return p0
+.end method
+
+.method public whitelist getGuardIntervalCapability()I
+    .locals 0
+
+    .line 84
+    iget p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mGuardIntervalCap:I
+
+    return p0
+.end method
+
+.method public whitelist getModeCapability()I
+    .locals 0
+
+    .line 56
+    iget p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mModeCap:I
+
+    return p0
+.end method
+
+.method public whitelist getModulationCapability()I
+    .locals 0
+
+    .line 70
+    iget p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mModulationCap:I
+
+    return p0
+.end method
+
+.method public whitelist getTimeInterleaveModeCapability()I
+    .locals 0
+
+    .line 95
+    iget p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mTimeInterleaveCap:I
+
+    return p0
+.end method
+
+.method public whitelist isFullSegmentSupported()Z
+    .locals 0
+
+    .line 115
+    iget-boolean p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mIsFullSegmentSupported:Z
+
+    return p0
+.end method
+
+.method public whitelist isSegmentAutoSupported()Z
+    .locals 0
+
+    .line 105
+    iget-boolean p0, p0, Landroid/media/tv/tuner/frontend/IsdbtFrontendCapabilities;->mIsSegmentAutoSupported:Z
+
+    return p0
+.end method

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/home_time_zone_title" android:key="home_time_zone_settings_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.MainSwitchPreference android:title="@string/use_home_time_zone_title" android:key="use_home_time_zone" settings:controller="com.android.settings.datetime.timezone.ClearHomeTimeZonePreferenceController" />
+    <PreferenceCategory android:title="@string/home_time_zone_select_title" android:key="select_time_zone_category">
+        <Preference android:title="@string/date_time_select_region" android:key="home_time_zone_region" android:summary="@string/summary_placeholder" settings:controller="com.android.settings.datetime.timezone.HomeRegionPreferenceController" />
+        <Preference android:title="@string/date_time_set_timezone_title" android:key="home_time_zone_region_zone" android:summary="@string/summary_placeholder" settings:controller="com.android.settings.datetime.timezone.HomeRegionZonePreferenceController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/suggestions_category_title" android:key="home_time_zone_suggestions_category" settings:controller="com.android.settings.datetime.timezone.SuggestionsTimeZonePreferenceController" />
+</PreferenceScreen>

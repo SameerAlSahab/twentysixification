@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/one_battery" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:id="@id/sec_progress" android:layout_centerInParent="false" android:layout_centerHorizontal="true" app:glance_isTopLevelLayout="true" style="@style/SecBluetoothArcProgressBar" />
+            <com.google.android.material.imageview.ShapeableImageView android:id="@id/sec_icon" android:layout_width="@dimen/sec_bluetooth_profile_in_fast_pair_icon_size" android:layout_height="@dimen/sec_bluetooth_profile_in_fast_pair_icon_size" android:layout_marginTop="@dimen/sec_bluetooth_profile_in_fast_pair_margin_top" android:antialias="true" android:scaleType="fitCenter" android:layout_centerHorizontal="true" app:shapeAppearanceOverlay="@style/DeviceIconRoundedCornerStyle" />
+            <ImageView android:id="@id/sec_icon_default" android:visibility="gone" android:layout_width="@dimen/sec_bluetooth_profile_in_arcprogress_icon_size" android:layout_height="@dimen/sec_bluetooth_profile_in_arcprogress_icon_size" android:layout_marginTop="@dimen/sec_bluetooth_profile_in_fast_pair_margin_top" android:scaleType="fitXY" android:tint="@color/bt_device_icon_tint_color" android:layout_centerHorizontal="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="@dimen/sec_bt_ha_battery_summary_width" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_bluetooth_profile_in_fast_pair_battery_summary_layout_margin_top">
+                <TextView android:id="@id/battery_title" style="@style/HaBatteryTitle" />
+                <TextView android:id="@id/battery_summary" android:layout_marginStart="@dimen/sec_bluetooth_profile_in_fast_pair_battery_summary_text_margin_start" style="@style/HaBatterySummary" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

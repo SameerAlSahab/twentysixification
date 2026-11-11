@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/lockscreen" settings:hierarchicalParentFragment="com.android.settings.notification.ConfigureNotificationSettings" settings:keywords="@string/keywords_lock_screen_notif" settings:topLevelPreferenceKey="top_level_notifications"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_notification_lockscreen" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/sec_lockscreen_noti_description_locktype_none" android:key="description_pref" settings:positionMode="first_item" settings:searchable="false" />
+    <PreferenceCategory android:title="@string/lock_screen_notification_style_title" android:key="locksreen_notification_style_editor_category">
+        <com.samsung.android.settings.notification.SecNotificationHorizontalRadioPreference android:title="@string/lockscreen" android:key="lock_screen_notifications_style" settings:controller="com.samsung.android.settings.lockscreen.controller.LockScreenNotificationStyleController" settings:viewType="image" />
+    </PreferenceCategory>
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/notification_style_summary" android:key="lockscreen_notification_style_description" settings:controller="com.samsung.android.settings.lockscreen.controller.LockScreenNotificationStyleDotDescriptionController" style="@style/description_text" />
+    <SecSwitchPreference android:title="@string/sec_lockscreen_notifications_show_content_when_unlocked" android:key="show_content_when_unlocked" settings:controller="com.samsung.android.settings.lockscreen.controller.ShowContentWhenUnlockedController" />
+    <PreferenceCategory>
+        <SecSwitchPreference android:title="@string/sec_lock_screen_show_alterting_notifications_only" android:key="lockscreen_alert_notification" settings:controller="com.samsung.android.settings.lockscreen.controller.ShowAlertNotificationsController" />
+        <SeslPreferenceCaption android:title="@string/sec_lock_screen_show_alterting_notifications_summary" android:key="lockscreen_alert_notification_caption" settings:searchable="false" />
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/sec_sensitive_work_profile_title" android:key="sensitive_work_profile" settings:singleLineTitle="false" />
+    </PreferenceCategory>
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/sec_lockscreen_noti_description_wont_appear" android:key="description_pref_wont_appear" settings:positionMode="first_item" settings:searchable="false" />
+</PreferenceScreen>

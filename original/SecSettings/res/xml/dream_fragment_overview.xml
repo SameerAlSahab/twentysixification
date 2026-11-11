@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/screensaver_settings_title" android:key="screensaver" settings:keywords="@string/keywords_screensaver"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.MainSwitchPreference android:title="@string/screensaver_settings_toggle_title" android:key="dream_main_settings_switch" android:order="0" settings:controller="com.android.settings.dream.DreamMainSwitchPreferenceController" settings:searchable="false" />
+    <PreferenceCategory android:title="@string/dream_picker_category" android:order="100">
+        <com.android.settingslib.widget.LayoutPreference android:layout="@layout/dream_picker_layout" android:selectable="false" android:key="dream_picker" />
+    </PreferenceCategory>
+    <Preference android:title="@string/screensaver_settings_when_to_dream" android:key="when_to_start" android:order="200" android:fragment="com.android.settings.dream.WhenToDreamPicker" />
+    <SwitchPreferenceCompat android:title="@string/dream_complications_toggle_title" android:key="dream_complications_toggle" android:summary="@string/dream_complications_toggle_summary" android:order="300" settings:controller="com.android.settings.dream.DreamComplicationPreferenceController" />
+    <com.android.settings.dream.LowLightModePreference android:title="@string/screensaver_settings_low_light_mode" android:key="low_light_mode" android:order="350" android:fragment="com.android.settings.dream.LowLightModePicker" />
+    <SwitchPreferenceCompat android:title="@string/dream_home_controls_toggle_title" android:key="dream_home_controls_toggle" android:summary="@string/dream_home_controls_toggle_summary" android:order="400" />
+    <com.android.settings.applications.SpacePreference android:layout_height="16.0dip" android:key="dream_space_preference" />
+</PreferenceScreen>

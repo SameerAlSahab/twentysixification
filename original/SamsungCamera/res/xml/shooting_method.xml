@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_ShootingMethod"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.camera.setting.SpinnerPreference android:entries="@array/volume_key_to_list" android:title="@string/Title_Volume_Buttons_As" android:key="@string/key_volume_key_to" android:entryValues="@array/volume_key_to_value" />
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_Voice_Capture" android:key="@string/key_voice_control" />
+        <SeslPreferenceCaption android:key="@string/key_voice_control_caption" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_FloatingShutterButton" android:key="@string/key_floating_camera_button" />
+        <SeslPreferenceCaption android:key="@string/key_floating_camera_button_caption" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_ShowPalm" android:key="@string/key_palm_detection" />
+        <SeslPreferenceCaption android:key="@string/key_palm_detection_caption" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="" android:key="@string/dep_empty" />
+</PreferenceScreen>

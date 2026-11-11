@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/notification_bundle_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:title="@string/notification_bundle_description" android:key="feature_description" app:searchable="false" />
+    <com.android.settingslib.widget.IllustrationPreference android:selectable="false" android:key="notification_organizer_illustration" app:dynamicColor="true" app:lottie_cacheComposition="false" app:lottie_rawRes="@raw/lottie_notification_organizer" app:searchable="false" />
+    <PreferenceCategory android:key="enabled_settings">
+        <com.android.settingslib.widget.MainSwitchPreference android:title="@string/notification_bundle_main_control_title" android:key="global_pref" />
+        <com.android.settingslib.widget.UntitledPreferenceCategory android:key="enabled_classification_types" />
+        <com.android.settingslib.widget.UntitledPreferenceCategory>
+            <SwitchPreferenceCompat android:title="@string/notification_adjustment_work_switch_title" android:key="work_profile_pref" />
+        </com.android.settingslib.widget.UntitledPreferenceCategory>
+        <PreferenceCategory android:title="@string/notification_bundle_expansion_category_title">
+            <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/notification_bundle_expand_auto_title" android:key="auto_expand_pref" />
+            <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/notification_bundle_expand_always_title" android:key="always_expand_pref" />
+            <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/notification_bundle_expand_never_title" android:key="never_expand_pref" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/notification_excluded_apps" android:key="notification_bundle_excluded_apps_list" app:controller="com.android.settings.notification.AdjustmentExcludedAppsPreferenceController">
+            <Preference android:icon="@drawable/ic_chevron_right_24dp" android:title="@string/notification_summarization_manage_excluded_apps" android:key="notification_bundle_manage_apps" android:order="1000" android:fragment="com.android.settings.applications.manageapplications.ManageApplications" app:controller="com.android.settings.notification.BundleManageAppsPreferenceController">
+                <extra android:name="classname" android:value="com.android.settings.Settings$NotificationExcludeClassificationActivity" />
+            </Preference>
+        </PreferenceCategory>
+    </PreferenceCategory>
+</PreferenceScreen>

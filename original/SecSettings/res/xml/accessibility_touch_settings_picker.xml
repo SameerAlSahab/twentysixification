@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_preference" settings:isPreferenceVisible="false" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="padding_category" />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:key="touch_settings_picker_description" settings:searchable="false" />
+</PreferenceScreen>

@@ -1,0 +1,14 @@
+version: 2.12.1
+apkFileName: services.jar
+sdkInfo:
+  minSdkVersion: 35
+doNotCompress:
+- dex
+- com/android/server/backup/BackupAgentConnectionManager_compat_config.xml
+- com/android/server/backup/utils/BackupEligibilityRules_compat_config.xml
+- com/android/server/companion/virtual/GenericWindowPolicyController_compat_config.xml
+- com/android/server/companion/virtual/VirtualDeviceImpl_compat_config.xml
+- com/android/server/companion/virtual/VirtualDeviceManagerService_compat_config.xml
+- com/android/server/devicepolicy/DevicePolicyManagerService_compat_config.xml
+- com/android/server/voiceinteraction/HotwordDetectionConnection_compat_config.xml
+- com/android/server/voiceinteraction/VoiceInteractionManagerService_compat_config.xml

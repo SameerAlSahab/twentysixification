@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/video_resolution_chooser_item_height" android:width="@dimen/video_resolution_chooser_item_width" />
+    <corners android:radius="@dimen/video_resolution_chooser_item_background_radius" />
+    <solid android:color="@color/video_resolution_chooser_item_selected_background_color" />
+</shape>

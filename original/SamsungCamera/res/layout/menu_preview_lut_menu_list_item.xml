@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/lut_item" android:tag="layout/menu_preview_lut_menu_list_item_0" android:focusable="false" android:layout_width="wrap_content" android:layout_height="@dimen/preview_lut_item_height" android:importantForAccessibility="noHideDescendants" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/preview_lut_item_text_size" android:ellipsize="end" android:gravity="center" android:id="@id/lut_name" android:padding="@dimen/preview_lut_item_text_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxLines="2" android:textAlignment="center" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SecSemiBold" />
+</androidx.constraintlayout.widget.ConstraintLayout>

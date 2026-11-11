@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:theme="?android:actionBarTheme" android:id="@id/support_action_bar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:nextFocusForward="@id/content_frame" android:paddingStart="@dimen/settingslib_expressive_space_extrasmall4" android:layout_marginStart="@dimen/settingslib_expressive_space_extrasmall4" android:transitionName="shared_element_view" android:touchscreenBlocksFocus="false" app:layout_collapseMode="pin"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/settingslib_expressive_toolbar_buttons" />
+</androidx.appcompat.widget.Toolbar>

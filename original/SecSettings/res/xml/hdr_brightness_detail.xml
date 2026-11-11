@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/hdr_brightness_title" android:key="hdr_brightness_detail"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:title="@string/hdr_brigtness_text" android:key="hdr_brightness_top_intro" settings:searchable="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/hdr_brightness_preview" android:key="preview" />
+    <com.android.settingslib.widget.MainSwitchPreference android:title="@string/hdr_brightness_main_switch_title" android:key="hdr_brightness_enabled" settings:controller="com.android.settings.display.HdrBrightnessPreferenceController" />
+    <com.android.settingslib.widget.SliderPreference android:title="@string/hdr_brightness_level_title" android:key="hdr_brightness_boost_level" settings:controller="com.android.settings.display.HdrBrightnessLevelPreferenceController" settings:keywords="@string/keywords_display_hdr_brightness" settings:textEnd="@string/brightness_intensity_end_label" settings:textStart="@string/brightness_intensity_start_label" />
+    <com.android.settingslib.widget.FooterPreference android:title="@string/hdr_brightness_warning" android:selectable="false" settings:searchable="false" />
+</PreferenceScreen>

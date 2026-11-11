@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/action_corner_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:title="@string/action_corner_intro" android:key="action_corner_intro" settings:searchable="false" />
+    <com.android.settingslib.widget.IllustrationPreference android:selectable="false" android:key="action_corner_illustration" settings:dynamicColor="true" settings:lottie_rawRes="@drawable/corner_shortcuts" settings:searchable="false" />
+    <PreferenceCategory android:key="action_corner_customization_category">
+        <ListPreference android:entries="@array/action_corner_action_titles" android:title="@string/action_corner_bottom_left_title" android:key="action_corner_bottom_left" settings:controller="com.android.settings.inputmethod.ActionCornerCustomizationController" />
+        <ListPreference android:entries="@array/action_corner_action_titles" android:title="@string/action_corner_bottom_right_title" android:key="action_corner_bottom_right" settings:controller="com.android.settings.inputmethod.ActionCornerCustomizationController" />
+        <ListPreference android:entries="@array/action_corner_action_titles" android:title="@string/action_corner_top_left_title" android:key="action_corner_top_left" settings:controller="com.android.settings.inputmethod.ActionCornerCustomizationController" />
+        <ListPreference android:entries="@array/action_corner_action_titles" android:title="@string/action_corner_top_right_title" android:key="action_corner_top_right" settings:controller="com.android.settings.inputmethod.ActionCornerCustomizationController" />
+    </PreferenceCategory>
+</PreferenceScreen>

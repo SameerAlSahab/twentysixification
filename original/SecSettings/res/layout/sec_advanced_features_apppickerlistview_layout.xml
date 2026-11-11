@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center|top" android:orientation="vertical" android:id="@id/loading_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.appcompat.widget.SeslProgressBar android:layout_gravity="center" android:id="@id/loading" android:layout_width="@dimen/loading_progress_size_large" android:layout_height="@dimen/loading_progress_size_large" android:indeterminate="true" style="?android:progressBarStyleLarge" />
+    </LinearLayout>
+    <androidx.picker.widget.SeslAppPickerListView android:id="@id/sec_app_picker_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:nestedScrollingEnabled="true" />
+    <LinearLayout android:layout_gravity="center|top" android:orientation="vertical" android:id="@android:id/empty" android:background="@color/sec_widget_round_and_bgcolor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:gravity="center" android:id="@id/empty_view_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sec_app_search_no_result" style="@style/no_item_text_style" />
+    </LinearLayout>
+</LinearLayout>

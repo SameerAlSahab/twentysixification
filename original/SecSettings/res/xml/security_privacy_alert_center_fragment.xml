@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/alert_center_title" android:key="security_dashboard_status" settings:hierarchicalParentFragment="com.samsung.android.settings.privacy.SecurityAndPrivacySettings" settings:topLevelPreferenceKey="top_level_security_and_privacy"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/alert_center_description" android:selectable="false" android:key="alert_center_activity_description" android:order="-1300" settings:positionMode="first_item" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:selectable="false" android:key="alert_center_bottom_preference" android:order="9000" />
+</PreferenceScreen>

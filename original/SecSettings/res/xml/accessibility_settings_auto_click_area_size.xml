@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/autoclick_cursor_area_size_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="@string/autoclick_cursor_area_size_dialog_option_extra_small" android:key="autoclick_size_extra_small" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="@string/autoclick_cursor_area_size_dialog_option_small" android:key="autoclick_size_small" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="@string/autoclick_cursor_area_size_dialog_option_default" android:key="autoclick_size_default" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="@string/autoclick_cursor_area_size_dialog_option_large" android:key="autoclick_size_large" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="@string/autoclick_cursor_area_size_dialog_option_extra_large" android:key="autoclick_size_extra_large" />
+</PreferenceScreen>

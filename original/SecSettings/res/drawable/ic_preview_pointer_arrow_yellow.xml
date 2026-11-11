@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="160.0dip" android:width="160.0dip" android:viewportWidth="160.0" android:viewportHeight="160.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/mouse_pointer_color_yellow" android:pathData="M47.3,37.93C49.41,35.84 52.31,34.55 55.52,34.56C58.22,34.57 60.83,35.52 62.91,37.24L116.64,82C119.11,84.05 120.5,86.9 120.77,89.86C121.04,92.82 120.19,95.88 118.13,98.34C116.05,100.85 113.01,102.36 109.75,102.51L85.07,103.66C83.34,103.74 81.7,104.5 80.52,105.78L63.78,123.96C61.61,126.31 58.69,127.57 55.72,127.69C52.76,127.81 49.74,126.8 47.38,124.63C44.99,122.43 43.63,119.31 43.64,116.06L43.87,46.12C43.88,42.92 45.19,40.02 47.3,37.93Z" android:strokeColor="@color/mouse_pointer_border_color" android:strokeWidth="5.0" android:fillType="evenOdd" />
+</vector>

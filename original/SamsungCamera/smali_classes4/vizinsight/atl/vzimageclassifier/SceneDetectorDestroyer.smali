@@ -1,0 +1,300 @@
+.class public Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;
+    }
+.end annotation
+
+
+# static fields
+.field private static sceneDetectorDestroyer:Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+
+
+# instance fields
+.field public isRunning:Z
+
+.field private sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+.field private sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+.field private sceneDetectorVideo:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+.field private threadDestroy:Ljava/lang/Thread;
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 2
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 v0, 0x0
+
+    .line 5
+    iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 6
+    .line 7
+    iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 8
+    .line 9
+    iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorVideo:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 10
+    .line 11
+    const/4 v1, 0x0
+
+    .line 12
+    iput-boolean v1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->isRunning:Z
+
+    .line 13
+    .line 14
+    iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
+
+    .line 15
+    .line 16
+    return-void
+.end method
+
+.method public static synthetic access$000(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;)Lvizinsight/atl/vzimageclassifier/SceneDetector;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static synthetic access$002(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;Lvizinsight/atl/vzimageclassifier/SceneDetector;)Lvizinsight/atl/vzimageclassifier/SceneDetector;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 2
+    .line 3
+    return-object p1
+.end method
+
+.method public static synthetic access$100(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;)Lvizinsight/atl/vzimageclassifier/SceneDetector;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static synthetic access$102(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;Lvizinsight/atl/vzimageclassifier/SceneDetector;)Lvizinsight/atl/vzimageclassifier/SceneDetector;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 2
+    .line 3
+    return-object p1
+.end method
+
+.method public static synthetic access$200(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;)Lvizinsight/atl/vzimageclassifier/SceneDetector;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorVideo:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public static synthetic access$202(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;Lvizinsight/atl/vzimageclassifier/SceneDetector;)Lvizinsight/atl/vzimageclassifier/SceneDetector;
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorVideo:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 2
+    .line 3
+    return-object p1
+.end method
+
+.method public static instance()Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorDestroyer:Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    new-instance v0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+
+    .line 6
+    .line 7
+    invoke-direct {v0}, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;-><init>()V
+
+    .line 8
+    .line 9
+    .line 10
+    sput-object v0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorDestroyer:Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+
+    .line 11
+    .line 12
+    :cond_0
+    sget-object v0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorDestroyer:Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;
+
+    .line 13
+    .line 14
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public destroy(Lvizinsight/atl/vzimageclassifier/SceneDetector;Lvizinsight/atl/vzimageclassifier/SceneDetector;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    .line 1
+    iput-boolean v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->isRunning:Z
+
+    .line 2
+    const-string v0, "SceneDetectorDestroyer"
+
+    const-string v1, "JC Debug"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 3
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 4
+    iput-object p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 5
+    new-instance p1, Ljava/lang/Thread;
+
+    new-instance p2, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;
+
+    invoke-direct {p2, p0, p0}, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;-><init>(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;)V
+
+    invoke-direct {p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
+
+    .line 6
+    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+
+    .line 7
+    const-string p0, "SceneDetectorDestroyer - destroy "
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public destroy(Lvizinsight/atl/vzimageclassifier/SceneDetector;Lvizinsight/atl/vzimageclassifier/SceneDetector;Lvizinsight/atl/vzimageclassifier/SceneDetector;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    .line 8
+    iput-boolean v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->isRunning:Z
+
+    .line 9
+    const-string v0, "SceneDetectorDestroyer"
+
+    const-string v1, "JC Debug"
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 10
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetector:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 11
+    iput-object p2, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorLite:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 12
+    iput-object p3, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->sceneDetectorVideo:Lvizinsight/atl/vzimageclassifier/SceneDetector;
+
+    .line 13
+    new-instance p1, Ljava/lang/Thread;
+
+    new-instance p2, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;
+
+    invoke-direct {p2, p0, p0}, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer$DestroyRunnable;-><init>(Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;)V
+
+    invoke-direct {p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    iput-object p1, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
+
+    .line 14
+    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+
+    .line 15
+    const-string p0, "SceneDetectorDestroyer - destroy "
+
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public join()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    :try_start_0
+    invoke-virtual {v0}, Ljava/lang/Thread;->join()V
+
+    .line 6
+    .line 7
+    .line 8
+    const/4 v0, 0x0
+
+    .line 9
+    iput-object v0, p0, Lvizinsight/atl/vzimageclassifier/SceneDetectorDestroyer;->threadDestroy:Ljava/lang/Thread;
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 10
+    .line 11
+    return-void
+
+    .line 12
+    :catch_0
+    move-exception p0
+
+    .line 13
+    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    .line 14
+    .line 15
+    .line 16
+    :cond_0
+    return-void
+.end method

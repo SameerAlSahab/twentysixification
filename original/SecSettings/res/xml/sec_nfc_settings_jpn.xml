@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/nfc_osaifukeitai_title" settings:hierarchicalParentFragment="com.samsung.android.settings.connection.ConnectionsSettings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_nfc_settings_main_switch_bar_preference" android:key="nfc_main_switch_layout_preference" android:order="1" settings:selectable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_nfc_explain" android:selectable="false" android:key="nfc_explain" android:order="100" settings:controller="com.samsung.android.settings.nfc.NfcDescriptionController" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="empty_general" android:order="200" />
+    <SecSwitchPreference android:title="@string/osaifukeitai_secure_nfc_title" android:key="secure_nfc_settings_dcm" android:order="300" settings:controller="com.samsung.android.settings.nfc.osaifu.SecureNfcControllerJPN" />
+    <SecSwitchPreference android:title="@string/osaifukeitai_secure_nfc_title_kdi" android:key="secure_nfc_settings_kdi" android:order="400" settings:controller="com.samsung.android.settings.nfc.osaifu.SecureNfcControllerJPN" />
+    <SeslPreferenceCaption android:title="@string/osaifukeitai_secure_nfc_summary" android:key="secure_nfc_settings_caption" android:order="410" settings:controller="com.samsung.android.settings.nfc.osaifu.SecureNfcControllerJPN" />
+    <PreferenceCategory android:title="@string/nfc_payment_settings_title_jpn" android:key="nfc_header_contactless" android:order="500" />
+    <SecPreference android:title="@string/default_wallet_app" android:key="nfc_payment_settings" android:order="600" />
+    <SecPreference android:title="@string/default_wallet_app" android:key="nfc_payment_settings_dcm" android:order="700" />
+    <SecPreferenceScreen android:title="@string/nfc_other_services" android:key="nfc_other_services" android:order="800" android:fragment="com.samsung.android.settings.nfc.OtherSettings" />
+</PreferenceScreen>

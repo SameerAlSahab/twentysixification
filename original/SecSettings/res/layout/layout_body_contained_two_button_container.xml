@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/body_contained_two_button_container_root" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.samsung.android.settings.accessibility.base.widget.BodyContainedButton android:ellipsize="end" android:id="@id/contained_button_1" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/touch_settings_bottom_btn_sm_width" android:maxLines="2" />
+        <View android:layout_width="@dimen/touch_settings_padding_between_btn" android:layout_height="0.0dip" />
+        <com.samsung.android.settings.accessibility.base.widget.BodyContainedButton android:ellipsize="end" android:id="@id/contained_button_2" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/touch_settings_bottom_btn_sm_width" android:maxLines="2" />
+    </LinearLayout>
+</LinearLayout>

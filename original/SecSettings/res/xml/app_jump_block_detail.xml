@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference android:title="@string/always_chained_start_up" android:key="allow_launch_other_apps" />
+    <SecPreferenceCategory android:title="@string/always_allow_to_launch" android:key="always_allow_list" />
+</PreferenceScreen>

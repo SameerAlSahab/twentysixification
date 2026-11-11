@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bluetooth_battery_level_untethered_left_lea_support">Connexion établie (prise en charge du partage audio). Gauche : pile à %1$s.</string>
+    <string name="bluetooth_battery_level_untethered_right_lea_support">Connexion (prise en charge du partage audio). Droite : pile à %1$s.</string>
+    <string name="bluetooth_connected_no_headset_battery_level">Connexion (aucun téléphone), pile chargée à %1$s %2$s</string>
+    <string name="bluetooth_connected_no_headset_no_a2dp_battery_level">Connexion établie (aucun téléphone ni média), pile à %1$s %2$s</string>
+    <string name="connected_via_network_scorer_default">"Connexion automatique par l'utilitaire d'évaluation des réseaux"</string>
+</resources>

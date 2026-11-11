@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$indicator_motion_photo_off_auto__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="s6m1" android:animation="@drawable/$indicator_motion_photo_off_auto__1" />
+    <target android:name="s6m2" android:animation="@drawable/$indicator_motion_photo_off_auto__3" />
+    <target android:name="s6" android:animation="@drawable/$indicator_motion_photo_off_auto__5" />
+    <target android:name="s6s5" android:animation="@drawable/$indicator_motion_photo_off_auto__7" />
+    <target android:name="s6s4" android:animation="@drawable/$indicator_motion_photo_off_auto__9" />
+    <target android:name="s4m1" android:animation="@drawable/$indicator_motion_photo_off_auto__11" />
+    <target android:name="s4pg1p10" android:animation="@drawable/$indicator_motion_photo_off_auto__13" />
+    <target android:name="s6s3" android:animation="@drawable/$indicator_motion_photo_off_auto__14" />
+    <target android:name="s3pg2p10" android:animation="@drawable/$indicator_motion_photo_off_auto__16" />
+    <target android:name="s3pg1p10" android:animation="@drawable/$indicator_motion_photo_off_auto__18" />
+    <target android:name="s3pg1p10" android:animation="@drawable/$indicator_motion_photo_off_auto__19" />
+    <target android:name="s6s2" android:animation="@drawable/$indicator_motion_photo_off_auto__21" />
+    <target android:name="s2m1" android:animation="@drawable/$indicator_motion_photo_off_auto__23" />
+    <target android:name="s2pg3p10" android:animation="@drawable/$indicator_motion_photo_off_auto__25" />
+    <target android:name="s2pg2p10" android:animation="@drawable/$indicator_motion_photo_off_auto__26" />
+    <target android:name="s2pg1p300" android:animation="@drawable/$indicator_motion_photo_off_auto__27" />
+    <target android:name="s6s1" android:animation="@drawable/$indicator_motion_photo_off_auto__28" />
+    <target android:name="s1" android:animation="@drawable/$indicator_motion_photo_off_auto__30" />
+    <target android:name="s1pg2p10" android:animation="@drawable/$indicator_motion_photo_off_auto__33" />
+    <target android:name="s1pg1p300" android:animation="@drawable/$indicator_motion_photo_off_auto__34" />
+    <target android:name="time_group" android:animation="@drawable/$indicator_motion_photo_off_auto__35" />
+</animated-vector>

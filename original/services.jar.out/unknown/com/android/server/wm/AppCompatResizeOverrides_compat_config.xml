@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableAfterTargetSdk="36" id="447301631" name="DISABLE_OPT_OUT_UNIVERSAL_RESIZABLE_BY_DEFAULT"><meta-data definedIn="com.android.server.wm.AppCompatResizeOverrides"/></compat-change></config>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:id="@id/nested_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="always"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/root" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.SliceView.Panel"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/device_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/preset_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/device_list">
+            <LinearLayout android:gravity="start|top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/Hearing_option_category_title_style" android:gravity="center_vertical" android:id="@id/preset_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sec_bluetooth_hearing_aids_presets" android:textDirection="locale" android:accessibilityHeading="true" />
+                <View android:gravity="center_vertical" android:background="@drawable/sec_subheader_divider" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="5.0dip" />
+            </LinearLayout>
+            <Spinner android:id="@id/preset_spinner" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/default_mic" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/preset_layout">
+            <LinearLayout android:gravity="start|top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textAppearance="@style/Hearing_option_category_title_style" android:gravity="center_vertical" android:id="@id/default_mic_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sec_bluetooth_hearing_device_input_routing_title" android:textDirection="locale" android:accessibilityHeading="true" />
+                <View android:gravity="center_vertical" android:background="@drawable/sec_subheader_divider" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="5.0dip" />
+            </LinearLayout>
+            <Spinner android:id="@id/default_mic_spinner" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="vertical" android:id="@id/separate_preset_container" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textAppearance="@style/Hearing_option_category_title_style" android:gravity="center_vertical" android:id="@id/left_preset_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/sec_bluetooth_hearing_aid_left_program" android:textDirection="locale" />
+                <Spinner android:id="@id/left_preset_spinner" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textAppearance="@style/Hearing_option_category_title_style" android:gravity="center_vertical" android:id="@id/right_preset_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/sec_bluetooth_hearing_aid_right_program" android:textDirection="locale" />
+                <Spinner android:id="@id/right_preset_spinner" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@id/ambient_divider" android:background="@drawable/sec_subheader_divider" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_marginTop="0.0dip" app:layout_constraintTop_toBottomOf="@id/default_mic" />
+        <com.samsung.android.settings.accessibility.hearing.shortcutpopup.AmbientVolumeLayout android:id="@id/ambient_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ambient_divider" />
+        <com.google.android.material.switchmaterial.SwitchMaterial android:textSize="17.0sp" android:id="@id/ambient_switch" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_bluetooth_aics_adjust_volume" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ambient_layout" app:switchPadding="8.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/volume_slider" android:paddingTop="@dimen/sec_bt_ha_ambient_padding_vertical" android:paddingBottom="@dimen/sec_bt_ha_ambient_padding_vertical" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/ambient_switch">
+            <LinearLayout android:id="@id/both_title_layout" android:paddingTop="@dimen/sec_bt_ha_ambient_padding_vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="#ff848487" android:id="@id/both_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_bluetooth_asha_both_ears" style="@style/HaAmbientText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/both_seekbar_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <ImageView android:id="@id/mute_icon_both" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="2.0dip" android:layout_marginEnd="15.0dip" />
+                <androidx.appcompat.widget.SeslSeekBar android:layout_gravity="center_vertical" android:id="@id/custom_seekbar_both" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:contentDescription="@string/sec_bluetooth_asha_both_ears" android:paddingStart="@dimen/sec_bt_ha_ambient_slider_padding" android:paddingEnd="@dimen/sec_bt_ha_ambient_slider_padding" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/left_title_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="#ff848487" android:id="@id/left_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_bluetooth_asha_left_ear" style="@style/HaAmbientText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/left_seekbar_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <ImageView android:id="@id/mute_icon_left" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="2.0dip" android:layout_marginEnd="15.0dip" />
+                <androidx.appcompat.widget.SeslSeekBar android:layout_gravity="center_vertical" android:id="@id/custom_seekbar_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:contentDescription="@string/sec_bluetooth_asha_left_ear" android:paddingStart="@dimen/sec_bt_ha_ambient_slider_padding" android:paddingEnd="@dimen/sec_bt_ha_ambient_slider_padding" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/right_title_layout" android:paddingTop="@dimen/sec_bt_ha_ambient_padding_vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="#ff848487" android:id="@id/right_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_bluetooth_asha_right_ear" style="@style/HaAmbientText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/right_seekbar_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <ImageView android:id="@id/mute_icon_right" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginStart="2.0dip" android:layout_marginEnd="15.0dip" />
+                <androidx.appcompat.widget.SeslSeekBar android:layout_gravity="center_vertical" android:id="@id/custom_seekbar_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:contentDescription="@string/sec_bluetooth_asha_right_ear" android:paddingStart="@dimen/sec_bt_ha_ambient_slider_padding" android:paddingEnd="@dimen/sec_bt_ha_ambient_slider_padding" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

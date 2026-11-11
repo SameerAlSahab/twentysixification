@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$picker_app_checkbox_anim_check_to_uncheck__9"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="s4" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__0" />
+    <target android:name="s4pg1p11" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__1" />
+    <target android:name="s4s3" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__2" />
+    <target android:name="s3p300" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__3" />
+    <target android:name="s3p300" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__4" />
+    <target android:name="s4s2" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__5" />
+    <target android:name="s2p300" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__6" />
+    <target android:name="s2p300" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__7" />
+    <target android:name="time_group" android:animation="@drawable/$picker_app_checkbox_anim_check_to_uncheck__8" />
+</animated-vector>

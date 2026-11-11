@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Test backup and restore"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SecDropDownPreference android:title="Select backup and restore from" android:key="select_bnr_from" />
+    <Preference android:title="Start backup" android:key="start_backup" />
+    <SecSwitchPreference android:title="Need validation" android:key="need_validation" />
+    <Preference android:title="Start restore" android:key="start_restore" />
+    <Preference android:title="Start deferred restore" android:key="start_deferred_restore" />
+    <PreferenceCategory android:key="restore_result_list" />
+</PreferenceScreen>

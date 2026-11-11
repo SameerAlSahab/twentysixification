@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableAfterTargetSdk="34" id="411183432" name="CONNECTION_EVENT_DRB_SPLIT_REVISION"><meta-data definedIn="android.telephony.SecurityAlgorithmUpdate"/></compat-change></config>

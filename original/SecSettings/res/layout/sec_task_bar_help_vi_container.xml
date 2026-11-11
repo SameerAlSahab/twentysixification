@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/help_vi_container" android:paddingTop="@dimen/taskbar_animation_view_container_padding_bottom" android:paddingBottom="@dimen/taskbar_animation_view_container_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/taskbar_animation_view_container_padding_start" android:paddingEnd="@dimen/taskbar_animation_view_container_padding_end">
+        <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:id="@id/task_bar_help_vi" android:paddingTop="@dimen/taskbar_animation_view_padding_top" android:paddingBottom="@dimen/taskbar_animation_view_padding_bottom" android:layout_width="@dimen/taskbar_animation_view_width" android:layout_height="@dimen/taskbar_animation_view_height" android:paddingStart="@dimen/taskbar_animation_view_padding_start" android:paddingEnd="@dimen/taskbar_animation_view_padding_end" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/sec_taskbar_help_vi_multiwindow_fold_light" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/help_instruction_container" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/help_instruction_summary" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_margin_top" android:layout_marginBottom="6.0dip" android:text="@string/taskbar_summary" android:layout_marginStart="@dimen/sec_widget_body_text_padding_start_end" android:layout_marginEnd="@dimen/sec_widget_body_text_padding_start_end" style="@style/body_text_style" />
+    </LinearLayout>
+</LinearLayout>

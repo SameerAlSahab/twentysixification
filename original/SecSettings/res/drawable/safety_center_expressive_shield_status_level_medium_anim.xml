@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$safety_center_expressive_shield_status_level_medium_anim__3"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="_R_G_L_1_G_D_0_P_0" android:animation="@drawable/$safety_center_expressive_shield_status_level_medium_anim__0" />
+    <target android:name="_R_G_L_1_G" android:animation="@drawable/$safety_center_expressive_shield_status_level_medium_anim__1" />
+    <target android:name="time_group" android:animation="@drawable/$safety_center_expressive_shield_status_level_medium_anim__2" />
+</animated-vector>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/entity_header" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/SecWifiEntityHeader">
+        <FrameLayout android:id="@id/entity_header_icon_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="center" android:id="@id/entity_header_icon_background" android:layout_width="@dimen/sec_wifi_header_app_icon_background_size" android:layout_height="@dimen/sec_wifi_header_app_icon_background_size" android:src="@drawable/sec_ic_wifi_details_header_bg" android:antialias="true" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="center" android:id="@id/entity_header_icon" android:layout_width="@dimen/sec_wifi_header_app_icon_size" android:layout_height="@dimen/sec_wifi_header_app_icon_size" android:antialias="true" android:scaleType="fitXY" />
+        </FrameLayout>
+        <TextView android:id="@id/entity_header_summary" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_wifi_header_title_margin_top" android:layout_below="@id/entity_header_icon_container" android:layout_centerHorizontal="true" android:textAlignment="center" style="@style/WifiEntityHeaderTitle" />
+    </RelativeLayout>
+</LinearLayout>

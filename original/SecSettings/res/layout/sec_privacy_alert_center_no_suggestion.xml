@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/theft_protection_info_margin_start_end" android:layout_marginEnd="@dimen/theft_protection_info_margin_start_end">
+        <TextView android:id="@id/alert_center_about_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/alert_center_description" android:layout_marginStart="@dimen/alert_center_margin_start_end" android:layout_marginEnd="@dimen/alert_center_margin_start_end" style="@style/security_dashboard_about_description" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/layout_no_suggestion" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textColor="@color/sec_security_alert_center_sub_text_color" android:gravity="center_horizontal" android:id="@id/tv_no_suggestion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/alert_center_no_suggestions" android:layout_marginStart="@dimen/sec_no_item_side_padding" android:layout_marginEnd="@dimen/sec_no_item_side_padding" style="@style/alert_center_title" />
+    </LinearLayout>
+</FrameLayout>

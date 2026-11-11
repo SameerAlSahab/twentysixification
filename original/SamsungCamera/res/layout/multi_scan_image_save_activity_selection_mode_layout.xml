@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:tag="layout/multi_scan_image_save_activity_selection_mode_layout_0" android:layout_width="wrap_content" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/multi_scan_image_save_activity_selection_mode_layout_padding_start" android:paddingEnd="@dimen/multi_scan_image_save_activity_selection_mode_layout_padding_end" android:layout_marginStart="10.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <CheckBox android:theme="@style/MultiScanCheckBox" android:id="@id/check_box_select_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+            <TextView android:textSize="@dimen/multi_scan_image_save_activity_selection_mode_layout_select_all_text_size" android:layout_gravity="center_horizontal" android:id="@id/txt_select_all" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/multi_scan_all" android:contentDescription="@string/selectAll" />
+        </LinearLayout>
+        <View android:layout_width="@dimen/multi_scan_image_save_activity_selection_mode_layout_dummy_view_width" android:layout_height="@dimen/multi_scan_image_save_activity_selection_mode_layout_dummy_view_height" />
+        <TextView android:textSize="@dimen/multi_scan_image_save_activity_selection_mode_layout_selected_count_text_size" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/txt_selected_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="center" style="@style/SecSemiBold" />
+        <TextView android:textSize="@dimen/multi_scan_image_save_activity_selection_mode_layout_selected_count_text_size" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/txt_selected_count_floating" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="center" style="@style/SecSemiBold" />
+    </LinearLayout>
+</RelativeLayout>

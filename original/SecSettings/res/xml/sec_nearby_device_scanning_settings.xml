@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_nearby_device_scanning_title" settings:hierarchicalParentFragment="com.samsung.android.settings.connection.WirelessSettings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="nearby_devices_scanning_switch" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.widget.SecHelpAnimationLayoutPreference android:layout="@layout/sec_nearby_help_guide" android:key="near_by_scan_preview" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <SecPreference android:title="@string/sec_nearby_device_scanning_about" android:key="about_preference" />
+</PreferenceScreen>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="line"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/setting_sub_header_dash_dot_width" android:color="@color/setting_sub_header_dash_dot_color" android:dashWidth="@dimen/setting_sub_header_dash_dot_width" android:dashGap="@dimen/setting_sub_header_dash_dot_gap" />
+</shape>

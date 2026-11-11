@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/content_background_color" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout android:layout_gravity="center" android:id="@id/test_edit_text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:hint="@string/type_here_to_test" android:layout_marginStart="@dimen/list_settings_layout_test_text_start_margin" android:layout_marginEnd="@dimen/list_settings_layout_test_button_top_margin" app:errorEnabled="true" app:hintAnimationEnabled="true" app:startIconContentDescription="@string/type_here_to_test" app:startIconDrawable="@drawable/ic_keyboard" app:startIconMinSize="24.0dip">
+        <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/list_settings_layout_test_text_input_text_size" android:layout_gravity="bottom" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="23.0dip" android:paddingStart="36.0dip" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

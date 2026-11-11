@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/spellcheckers_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_spell_checker" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <Preference android:persistent="false" android:title="@string/phone_language" android:key="spellchecker_language" />
+</PreferenceScreen>

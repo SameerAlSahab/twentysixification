@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/samsung_dex_title" android:key="key_dex_mode_screen" settings:hierarchicalParentFragment="com.samsung.android.settings.multidevices.MultiDevicesFragment" settings:topLevelPreferenceKey="top_level_dex_mode"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/entry_screen_help_container" android:key="key_entry_screen_help_container" />
+    <PreferenceCategory android:key="blank1" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/entry_screen_help_text_container" android:key="key_entry_screen_help_text_container" />
+    <PreferenceCategory android:key="blank2" />
+    <SwitchPreferenceCompat android:title="@string/auto_start_hdmi" android:key="key_entry_screen_HDMI_connected" settings:isPreferenceVisible="false" />
+</PreferenceScreen>

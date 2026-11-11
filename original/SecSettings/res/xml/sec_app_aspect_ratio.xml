@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/app_aspect_ratio"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/full_screen_aspect_ratio_preview_fold" android:selectable="false" android:key="aspect_ratio_preview" />
+    <PreferenceCategory android:key="aspect_ratio_category">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_set_aspect_ratio_for_each_app_app_default" android:key="app_default_pref" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_set_aspect_ratio_for_each_app_full_screen" android:key="fullscreen_pref" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_set_aspect_ratio_for_each_app_app_4_to_3" android:key="4_3_pref" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_set_aspect_ratio_for_each_app_app_16_to_9" android:key="16_9_pref" />
+    </PreferenceCategory>
+</PreferenceScreen>

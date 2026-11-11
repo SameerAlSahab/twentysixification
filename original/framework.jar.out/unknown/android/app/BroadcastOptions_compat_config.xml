@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="1" id="209888056" name="CHANGE_ALWAYS_ENABLED"><meta-data definedIn="android.app.BroadcastOptions"/></compat-change><compat-change disabled="true" id="210856463" name="CHANGE_ALWAYS_DISABLED"><meta-data definedIn="android.app.BroadcastOptions"/></compat-change></config>

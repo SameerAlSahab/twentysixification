@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="game_controller_remapping"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:persistent="false" android:title="@string/game_controller_remapping_settings_intro" android:selectable="false" />
+    <PreferenceCategory android:title="@string/game_controller_key_remapping_category" android:key="game_controller_key_remapping">
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_a" android:title="@string/game_controller_button_a" android:key="controller_button_a" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_b" android:title="@string/game_controller_button_b" android:key="controller_button_b" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_x" android:title="@string/game_controller_button_x" android:key="controller_button_x" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_y" android:title="@string/game_controller_button_y" android:key="controller_button_y" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_l1" android:title="@string/game_controller_button_l1" android:key="controller_button_l1" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_r1" android:title="@string/game_controller_button_r1" android:key="controller_button_r1" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_l2" android:title="@string/game_controller_button_l2" android:key="controller_button_l2" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_r2" android:title="@string/game_controller_button_r2" android:key="controller_button_r2" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_thumbl" android:title="@string/game_controller_button_thumbl" android:key="controller_button_thumbl" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_button_thumbr" android:title="@string/game_controller_button_thumbr" android:key="controller_button_thumbr" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/game_controller_stick_remapping_category" android:key="game_controller_axis_remapping">
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_dpad" android:title="@string/game_controller_dpad" android:key="controller_dpad" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_left_stick" android:title="@string/game_controller_stick_left" android:key="controller_stick_left" />
+        <com.android.settings.input.gamecontroller.GameControllerRemappingPreference android:icon="@drawable/ic_controller_right_stick" android:title="@string/game_controller_stick_right" android:key="controller_stick_right" />
+    </PreferenceCategory>
+    <com.android.settingslib.widget.ButtonPreference android:title="@string/game_controller_remapping_reset_preference_title" android:key="reset_to_default" app:buttonPreferenceSize="large" app:buttonPreferenceType="tonal" />
+</PreferenceScreen>

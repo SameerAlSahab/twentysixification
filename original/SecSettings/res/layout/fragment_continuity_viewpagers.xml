@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/help_animation_container" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.samsung.android.settings.widget.SecWrapContentHeightViewPager android:id="@id/view_pager_title" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:importantForAccessibility="no" android:layoutDirection="ltr" />
+        <FrameLayout android:id="@id/frame_animation" android:background="@color/sec_continuity_animation_background_color" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.samsung.android.settings.widget.SecWrapContentHeightViewPager android:id="@id/view_pager_animation" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:adjustViewBounds="true" android:importantForAccessibility="no" android:layoutDirection="ltr" android:clipToOutline="true" />
+        </FrameLayout>
+        <androidx.appcompat.widget.SeslIndicator android:gravity="center" android:id="@id/sesl_indicator" android:focusable="false" android:clickable="true" android:layout_width="fill_parent" android:layout_height="28.0dip" android:importantForAccessibility="noHideDescendants" android:layoutDirection="ltr" />
+    </LinearLayout>
+</FrameLayout>

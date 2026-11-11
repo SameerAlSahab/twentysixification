@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.samsung.android.settings.core.SecColoredPaddingView android:id="@id/included_window_inset" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/coordinator_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.material.appbar.AppBarLayout android:id="@id/appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:expanded="false" app:seslHeightProportion="0.0" app:seslUseCustomHeight="true" app:seslUseCustomPadding="false">
+                <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:background="@color/sesl_round_and_bgcolor_light" android:layout_width="fill_parent" android:layout_height="fill_parent" app:expanded="false" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:supportActionModeOverLay="false">
+                    <View android:layout_gravity="bottom" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:background="@android:color/transparent" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <androidx.picker.widget.SeslAppPickerSelectLayout android:id="@id/apppickerview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </FrameLayout>
+            <com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout android:id="@id/sesl_floating_toolbar_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:layout_anchor="@id/appbar">
+                <androidx.appcompat.widget.Toolbar android:layout_gravity="bottom" android:id="@id/toolbar" android:background="@android:color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:background="@android:color/transparent" />
+            </com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout>
+            <com.google.android.material.oneui.floatingactioncontainer.FloatingBottomLayout android:layout_gravity="bottom" android:id="@id/floating_bottom_layout" android:paddingBottom="8.0dip" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:showFloatingItemBackground="false">
+                <androidx.appcompat.widget.SearchView android:id="@id/searchView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="72.0dip" android:imeOptions="flagNoExtractUi" app:iconifiedByDefault="false" style="@style/Base.Widget.AppCompat.SearchView.Bottom" />
+            </com.google.android.material.oneui.floatingactioncontainer.FloatingBottomLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </FrameLayout>
+</com.samsung.android.settings.core.SecColoredPaddingView>

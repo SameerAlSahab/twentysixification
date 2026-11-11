@@ -1,0 +1,33 @@
+.class public final Landroidx/transition/Transition$3;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# instance fields
+.field public final synthetic this$0:Landroidx/transition/Transition;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/transition/Transition;)V
+    .locals 0
+
+    iput-object p1, p0, Landroidx/transition/Transition$3;->this$0:Landroidx/transition/Transition;
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget-object v0, p0, Landroidx/transition/Transition$3;->this$0:Landroidx/transition/Transition;
+
+    invoke-virtual {v0}, Landroidx/transition/Transition;->end()V
+
+    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-void
+.end method

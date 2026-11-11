@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/popup_qr_code_list_view_item" android:background="@drawable/qrcode_popup_button_ripple" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/qrcode_popup_list_view_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/qrcode_item_icon" android:background="@drawable/qrcode_popup_list_item_background" android:layout_width="@dimen/qrcode_popup_list_view_item_icon_size" android:layout_height="@dimen/qrcode_popup_list_view_item_icon_size" android:layout_marginTop="@dimen/qrcode_popup_list_view_item_icon_vertical_margin" android:layout_marginBottom="@dimen/qrcode_popup_list_view_item_icon_vertical_margin" android:scaleType="center" android:contentDescription="@null" />
+    <TextView android:textSize="@dimen/qrcode_popup_list_view_item_text_size" android:textColor="@color/qrcode_popup_list_view_text_color" android:ellipsize="end" android:gravity="center|top" android:id="@id/qrcode_item_text" android:layout_width="fill_parent" android:layout_height="@dimen/qrcode_popup_list_view_item_text_height" android:maxLines="3" style="@style/SecRegular" />
+</LinearLayout>

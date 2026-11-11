@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:enterFadeDuration="@integer/animation_duration_color_tone_text_color_change" android:exitFadeDuration="@integer/animation_duration_color_tone_text_color_change"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/color_tone_button_selected_color" />
+            <corners android:radius="@dimen/color_tone_button_background_radius" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/color_tone_button_color" />
+            <corners android:radius="@dimen/color_tone_button_background_radius" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="16.0dip" android:paddingEnd="6.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:scrollbarStyle="outsideInset" android:orientation="vertical" android:id="@id/terms_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0sp" android:gravity="start" android:id="@id/china_wireless_regulations_text" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:includeFontPadding="false" android:shadowColor="#ffffffff" android:editable="false" android:lineSpacingExtra="4.0dip" android:fontFamily="sec-roboto-light" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

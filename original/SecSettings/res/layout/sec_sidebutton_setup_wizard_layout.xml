@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center_horizontal" android:id="@id/side_button_suw_gemini_image_view" android:visibility="gone" android:layout_width="@dimen/ssw_side_button_width" android:layout_height="@dimen/ssw_side_button_height" android:scaleType="fitXY" app:lottie_autoPlay="true" app:lottie_loop="true" app:lottie_rawRes="@raw/sec_lpp_thumbnail" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/side_button_suw_other_image_view" android:visibility="gone" android:layout_width="@dimen/ssw_side_button_width" android:layout_height="@dimen/ssw_side_button_height" android:src="@drawable/side_button_suw_01" android:adjustViewBounds="true" />
+        <TextView android:textSize="@dimen/lpp_description_text_size" android:textColor="@color/lpp_description_text_color" android:id="@id/side_button_suw_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/side_button_suw_description_margin_top" android:fontFamily="sec" android:textFontWeight="400" />
+        <TextView android:textSize="@dimen/lpp_description_text_size" android:textColor="@color/lpp_description_text_color" android:id="@id/go_to_settings_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/ssw_side_button_description_margin_top" android:fontFamily="sec" android:textFontWeight="400" style="@style/description_text" />
+    </LinearLayout>
+</RelativeLayout>

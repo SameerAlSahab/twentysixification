@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/location_services_screen_title" android:key="location_services_screen" settings:controller="com.android.settings.location.LocationInjectedServicesPreferenceController" settings:searchable="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecPreferenceCategory android:title="@string/sec_location_scanning_title" android:order="999">
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/location_scanning_wifi_always_scanning_title" android:key="wifi_always_scanning" android:order="1000" android:defaultValue="true" />
+        <SeslPreferenceCaption android:title="@string/location_scanning_wifi_always_scanning_description" android:key="wifi_always_scanning_caption" android:order="1001" settings:searchable="false" />
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/location_scanning_bluetooth_always_scanning_title" android:key="bluetooth_always_scanning" android:order="1002" android:defaultValue="true" settings:keywords="@string/keywords_bluetooth_scanning" />
+        <SeslPreferenceCaption android:title="@string/location_scanning_bluetooth_always_scanning_description" android:key="bluetooth_always_scanning_caption" android:order="1003" settings:searchable="false" />
+    </SecPreferenceCategory>
+    <SecPreferenceCategory android:title="@string/sec_location_service_show_status_bar_location_subheader" android:key="key_show_status_bar_location_icon_category" android:order="2000" settings:searchable="false">
+        <SecSwitchPreference android:title="@string/sec_location_service_show_status_bar_location_icon_title" android:key="key_show_status_bar_location_icon" android:order="2001" settings:controller="com.samsung.android.settings.location.ShowStatusBarLocationIconController" />
+        <SeslPreferenceCaption android:title="@string/sec_location_service_show_status_bar_location_icon_summary" android:key="key_show_status_bar_location_icon_caption" android:order="2002" settings:searchable="false" />
+    </SecPreferenceCategory>
+</PreferenceScreen>

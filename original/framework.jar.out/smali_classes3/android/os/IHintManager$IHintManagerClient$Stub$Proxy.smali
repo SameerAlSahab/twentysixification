@@ -1,0 +1,108 @@
+.class final Landroid/os/IHintManager$IHintManagerClient$Stub$Proxy;
+.super Ljava/lang/Object;
+.source "IHintManager.java"
+
+# interfaces
+.implements Landroid/os/IHintManager$IHintManagerClient;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/os/IHintManager$IHintManagerClient$Stub;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "Proxy"
+.end annotation
+
+
+# instance fields
+.field private blacklist mRemote:Landroid/os/IBinder;
+
+
+# direct methods
+.method constructor blacklist <init>(Landroid/os/IBinder;)V
+    .locals 0
+
+    .line 806
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 807
+    iput-object p1, p0, Landroid/os/IHintManager$IHintManagerClient$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    .line 811
+    iget-object p0, p0, Landroid/os/IHintManager$IHintManagerClient$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    return-object p0
+.end method
+
+.method public final blacklist getInterfaceDescriptor()Ljava/lang/String;
+    .locals 0
+
+    .line 815
+    const-string p0, "android.os.IHintManager.IHintManagerClient"
+
+    return-object p0
+.end method
+
+.method public blacklist receiveChannelConfig(Landroid/hardware/power/ChannelConfig;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 820
+    invoke-virtual {p0}, Landroid/os/IHintManager$IHintManagerClient$Stub$Proxy;->asBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/os/Parcel;->obtain(Landroid/os/IBinder;)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    .line 822
+    :try_start_0
+    const-string v1, "android.os.IHintManager.IHintManagerClient"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    .line 823
+    invoke-virtual {v0, p1, v1}, Landroid/os/Parcel;->writeTypedObject(Landroid/os/Parcelable;I)V
+
+    .line 824
+    iget-object p0, p0, Landroid/os/IHintManager$IHintManagerClient$Stub$Proxy;->mRemote:Landroid/os/IBinder;
+
+    const/4 p1, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-interface {p0, v1, v0, p1, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 827
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    .line 828
+    throw p0
+.end method

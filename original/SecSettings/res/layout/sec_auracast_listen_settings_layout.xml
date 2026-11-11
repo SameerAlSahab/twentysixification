@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/listen_root_layout" android:background="@color/sec_auracast_listen_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/listen_root_card_layout" android:background="@color/sec_auracast_root_layout_background_color" android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_view_fixed_height">
+        <androidx.cardview.widget.CardView android:id="@id/listen_card_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardCornerRadius="@dimen/sec_auracast_card_corner_radius" app:cardElevation="@dimen/sec_auracast_card_elevation">
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:orientation="vertical" android:id="@id/listen_qr_share_background_layout" android:background="@drawable/sec_auracast_qr_share_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/listen_qr_share_contents_layout" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/sec_auracast_listen_card_contents_horizontal_padding">
+                        <TextView android:textSize="@dimen/sec_auracast_listen_card_qr_share_title_text_size" android:textColor="@color/sec_auracast_listen_card_qr_share_title_text_color" android:ellipsize="end" android:gravity="center" android:id="@id/listen_qr_share_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:fontFamily="sec" android:textFontWeight="600" />
+                        <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_qr_share_center_space_height" />
+                        <LinearLayout android:gravity="center" android:layout_gravity="center" android:background="@drawable/sec_auracast_qr_share_image_background" android:layout_width="@dimen/sec_auracast_listen_card_qr_share_qr_icon_background_size" android:layout_height="@dimen/sec_auracast_listen_card_qr_share_qr_icon_background_size">
+                            <ImageView android:id="@id/listen_qr_share_image" android:layout_width="@dimen/sec_auracast_listen_card_qr_share_qr_icon_size" android:layout_height="@dimen/sec_auracast_listen_card_qr_share_qr_icon_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="start|top" android:id="@id/listen_qr_share_icon_back" android:background="?selectableItemBackgroundBorderless" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_auracast_listen_card_qr_share_back_icon_padding" android:src="@drawable/sec_auracast_qr_share_ic_back" android:layoutDirection="locale" android:layout_marginStart="@dimen/sec_auracast_listen_card_qr_share_back_icon_padding" />
+                </FrameLayout>
+                <FrameLayout android:orientation="vertical" android:id="@id/play_card_layout" android:background="@drawable/sec_auracast_listen_card_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.airbnb.lottie.LottieAnimationView android:layout_gravity="center|top" android:id="@id/wave_animation" android:layout_width="@dimen/sec_auracast_wave_effect_width" android:layout_height="@dimen/sec_auracast_wave_effect_height" android:rotation="180.0" app:lottie_loop="true" app:lottie_rawRes="@raw/sec_auracast_wave" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/play_card_contents_background_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/play_card_description_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingHorizontal="@dimen/sec_auracast_listen_card_contents_horizontal_padding">
+                            <ImageView android:layout_gravity="center_horizontal" android:id="@id/play_card_description_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_auracast_listen_card_description_icon_bottom_margin" android:src="@drawable/sec_auracast_listen_ic_bluetooth_headset" />
+                            <TextView android:textSize="@dimen/sec_auracast_listen_card_description_text_size" android:textColor="@color/sec_auracast_listen_card_description_text_color" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:id="@id/play_card_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxHeight="@dimen/sec_auracast_listen_card_description_max_height" android:fontFamily="sec" android:textDirection="locale" android:textFontWeight="400" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/play_card_contents_layout" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_top_bottom_space_height" />
+                            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_button_bottom_margin_space_height" />
+                            <LinearLayout android:orientation="vertical" android:id="@id/play_card_source_info_layout" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/sec_auracast_listen_card_contents_horizontal_padding">
+                                <LinearLayout android:orientation="vertical" android:id="@id/play_card_lock_icon_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                    <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sec_auracast_listen_ic_lock" android:contentDescription="@string/sec_auracast_listen_ic_lock_tts" />
+                                    <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_information_space_height" />
+                                </LinearLayout>
+                                <TextView android:textSize="@dimen/sec_auracast_listen_card_title_text_size" android:textColor="@color/sec_auracast_listen_card_title_text_color" android:ellipsize="marquee" android:gravity="center" android:id="@id/play_card_source_title" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="sec" android:textDirection="locale" android:textFontWeight="600" />
+                                <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_information_space_height" />
+                                <TextView android:textSize="@dimen/sec_auracast_listen_card_summary_text_size" android:textColor="@color/sec_auracast_listen_card_summary_text_color" android:ellipsize="marquee" android:gravity="center" android:layout_gravity="center" android:id="@id/play_card_source_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sec" android:textDirection="locale" android:textFontWeight="600" />
+                                <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_information_space_height" />
+                                <ImageView android:layout_gravity="center" android:id="@id/qr_code_sharing_icon" android:background="?selectableItemBackgroundBorderless" android:clickable="true" android:layout_width="@dimen/sec_auracast_listen_card_qr_share_icon_size" android:layout_height="@dimen/sec_auracast_listen_card_qr_share_icon_size" android:src="@drawable/sec_auracast_listen_qr_generator" android:tint="@color/sec_auracast_listen_card_qr_share_icon_color" android:contentDescription="@string/sec_auracast_qr_code_tts" />
+                            </LinearLayout>
+                            <Space android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+                            <LinearLayout android:id="@id/play_card_action_layout" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                                <include android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/sec_auracast_button_layout" />
+                            </LinearLayout>
+                            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_card_top_bottom_space_height" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end" android:paddingTop="@dimen/sec_auracast_device_space_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/auracast_dropdown_anchor" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/sec_auracast_current_device_layout" />
+                    </LinearLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:id="@id/no_nearby_streams_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/sec_auracast_listen_no_nearby_streams_text_size" android:textColor="@color/sec_auracast_listen_no_nearby_streams_text_color" android:gravity="center" android:id="@id/no_nearby_streams_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sec_auracast_listen_no_nearby_audio_streams" android:fontFamily="sec" android:textFontWeight="400" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/nearby_streams_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@id/nearby_streams_title_layout" android:paddingTop="@dimen/sec_auracast_listen_list_category_top_padding" android:paddingBottom="@dimen/sec_auracast_listen_list_category_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/sec_auracast_listen_list_category_horizontal_padding">
+                <TextView android:textSize="@dimen/sec_auracast_listen_list_category_title_text_size" android:textColor="@color/sec_auracast_listen_list_category_title_text_color" android:id="@id/nearby_streams_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sec_auracast_listen_nearby_audio_streams" android:fontFamily="sec" android:textFontWeight="600" />
+                <Space android:layout_width="@dimen/sec_auracast_listen_list_category_progress_left_space" android:layout_height="wrap_content" />
+                <ProgressBar android:layout_gravity="center_vertical" android:layout_width="@dimen/sec_auracast_listen_list_category_progress_icon_size" android:layout_height="@dimen/sec_auracast_listen_list_category_progress_icon_size" style="?android:progressBarStyleSmall" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/nearby_streams_list_view" android:background="@color/sec_auracast_listen_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Space android:id="@id/listen_view_top_margin_floating_bottom_space" android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_view_top_margin_above_floating_bottom_height" />
+        <Space android:id="@id/listen_view_bottom_floating_tab_with_space" android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_view_bottom_floating_tab_space_height" />
+        <Space android:id="@id/listen_view_bottom_navi_bar_space" android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_listen_view_bottom_navi_bar_space_height" />
+    </LinearLayout>
+</LinearLayout>

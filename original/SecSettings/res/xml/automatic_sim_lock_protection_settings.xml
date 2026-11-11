@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/automatic_sim_lock_protection"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/first_sim_card_slot_title" android:key="category_first_sim_card_slot">
+        <com.android.settingslib.widget.IntroPreference android:selectable="false" android:key="first_active_slot_intro" />
+        <SwitchPreferenceCompat android:title="@string/sim_auto_pin_management_toggle" android:key="sim_pin_manual_management_only_toggle_0" settings:controller="com.android.settings.security.SimPinProtectionToggleController" />
+        <com.android.settingslib.PrimarySwitchPreference android:title="@string/sim_auto_pin_management_toggle" android:key="sim_pin_auto_management_toggle_0" android:fragment="com.android.settings.security.ControlAutoSimPinManagementFragment" settings:controller="com.android.settings.security.SimPinProtectionToggleController" />
+        <Preference android:title="@string/sim_pin_change" android:key="change_manually_managed_sim_pin_primary_screen_0" settings:controller="com.android.settings.security.ChangeSimPinPreferenceController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/second_sim_card_slot_title" android:key="category_second_sim_card_slot">
+        <com.android.settingslib.widget.IntroPreference android:selectable="false" android:key="second_active_slot_intro" />
+        <SwitchPreferenceCompat android:title="@string/sim_auto_pin_management_toggle" android:key="sim_pin_manual_management_only_toggle_1" settings:controller="com.android.settings.security.SimPinProtectionToggleController" />
+        <Preference android:title="@string/sim_pin_change" android:key="change_manually_managed_sim_pin_primary_screen_1" settings:controller="com.android.settings.security.ChangeSimPinPreferenceController" />
+    </PreferenceCategory>
+    <Preference android:title="@string/convert_to_esim_title" android:key="esim_conversion_toggle" settings:controller="com.android.settings.network.telephony.ConvertToEsimPreferenceController" />
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="?expressiveFooterPreferenceTheme" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?expressiveFooterPreferenceRootLayoutStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/icon_frame" style="?expressiveFooterPreferenceIconFrameStyle">
+        <ImageView android:id="@android:id/icon" style="?expressiveFooterPreferenceIconStyle" />
+    </LinearLayout>
+    <LinearLayout style="?expressiveFooterPreferenceLinearLayoutStyle">
+        <TextView android:id="@android:id/title" style="?expressiveFooterPreferenceTitleStyle" />
+        <com.android.settingslib.widget.LinkTextView android:id="@id/settingslib_learn_more" style="?expressiveFooterPreferenceLearnMoreStyle" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_screen_resolution_routines_dialog_margin_top" android:paddingStart="@dimen/sec_screen_resolution_routines_dialog_padding" android:paddingEnd="@dimen/sec_screen_resolution_routines_dialog_padding">
+            <RadioGroup android:orientation="vertical" android:id="@id/motion_smoothness_radio_group" android:paddingTop="@dimen/sec_high_refresh_rate_vi_text_size" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/container_high" android:paddingBottom="@dimen/sec_preference_seekbar_side_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@id/motion_smooth_high_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/sec_high_refresh_rate_vi_text_margin_bottom" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/winset_dialog_body_text_size" android:textColor="@color/sec_dark_mode_time_text_color" android:id="@id/motion_smooth_high_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/sec_no_item_sub_text_size" android:textColor="@color/sec_widget_sub_body_text_color" android:id="@id/motion_smooth_high_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/container_standard" android:paddingBottom="@dimen/sec_high_refresh_rate_vi_text_margin_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RadioButton android:id="@id/motion_smooth_standard_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/sec_high_refresh_rate_vi_text_margin_bottom" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="@dimen/winset_dialog_body_text_size" android:textColor="@color/sec_dark_mode_time_text_color" android:id="@id/motion_smooth_standard_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textSize="@dimen/sec_no_item_sub_text_size" android:textColor="@color/sec_widget_sub_body_text_color" android:id="@id/motion_smooth_standard_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="15.641357dip" android:width="24.0dip" android:autoMirrored="true" android:viewportWidth="290.0" android:viewportHeight="189.0" xmlns:aapt="http://schemas.android.com/aapt"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/$security_dashboard_status_redbg__0" android:pathData="M145,145m-145,0a145,145 0,1 1,290 0a145,145 0,1 1,-290 0" />
+</vector>

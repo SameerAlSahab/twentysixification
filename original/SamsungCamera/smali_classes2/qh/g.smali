@@ -1,0 +1,17 @@
+.class public interface abstract Lqh/g;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+
+# virtual methods
+.method public abstract a()Ljava/util/List;
+.end method
+
+.method public abstract b()Ljava/lang/reflect/Member;
+.end method
+
+.method public abstract call([Ljava/lang/Object;)Ljava/lang/Object;
+.end method
+
+.method public abstract getReturnType()Ljava/lang/reflect/Type;
+.end method

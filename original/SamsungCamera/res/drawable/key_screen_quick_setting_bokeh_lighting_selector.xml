@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/camera_quick_ic_portrait_lighting_default" />
+    <item android:state_selected="true">
+        <level-list>
+            <item android:drawable="@drawable/camera_quick_ic_portrait_lighting_default" android:maxLevel="0" />
+            <item android:drawable="@drawable/camera_quick_ic_portrait_lighting_on" android:maxLevel="1" />
+        </level-list>
+    </item>
+    <item>
+        <level-list>
+            <item android:drawable="@drawable/camera_quick_ic_portrait_lighting_default" android:maxLevel="0" />
+            <item android:drawable="@drawable/camera_quick_ic_portrait_lighting_off" android:maxLevel="1" />
+        </level-list>
+    </item>
+</selector>

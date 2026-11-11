@@ -1,0 +1,798 @@
+.class public Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;
+.super Ljava/lang/Object;
+.source "PermissionDataController.java"
+
+
+# static fields
+.field private static final blacklist DDR_6GB:I = 0x6
+
+.field public static final blacklist PROVIDER_URI:Landroid/net/Uri;
+
+.field private static final blacklist TAG:Ljava/lang/String; = "AI::PermissionDataController"
+
+.field private static final blacklist TWO_HOURS_IN_MILLIS:J = 0x6ddd00L
+
+.field private static blacklist lastBulkInsertTime:J
+
+
+# instance fields
+.field private final blacklist mContext:Landroid/content/Context;
+
+.field private blacklist mDDRSize:I
+
+.field private final blacklist mFlushExecutor:Ljava/util/concurrent/Executor;
+
+.field private blacklist mKeyguardManager:Landroid/app/KeyguardManager;
+
+.field private blacklist mPermissionDatas:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final blacklist mPermissionGroupMap:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final blacklist mReadLock:Ljava/util/concurrent/locks/Lock;
+
+.field private blacklist mSystemAppMap:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final blacklist mWriterLock:Ljava/util/concurrent/locks/Lock;
+
+
+# direct methods
+.method static constructor blacklist <clinit>()V
+    .locals 2
+
+    .line 39
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    sput-wide v0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->lastBulkInsertTime:J
+
+    .line 45
+    const-string v0, "content://com.samsung.android.kmxservice.ai.privacy/permission"
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->PROVIDER_URI:Landroid/net/Uri;
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>(Landroid/content/Context;)V
+    .locals 2
+
+    .line 47
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 161
+    new-instance v0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController$2;
+
+    invoke-direct {v0, p0}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController$2;-><init>(Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;)V
+
+    iput-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionGroupMap:Ljava/util/HashMap;
+
+    .line 48
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
+
+    .line 49
+    invoke-interface {v0}, Ljava/util/concurrent/locks/ReadWriteLock;->readLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mReadLock:Ljava/util/concurrent/locks/Lock;
+
+    .line 50
+    invoke-interface {v0}, Ljava/util/concurrent/locks/ReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mWriterLock:Ljava/util/concurrent/locks/Lock;
+
+    .line 51
+    iput-object p1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mContext:Landroid/content/Context;
+
+    .line 52
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mFlushExecutor:Ljava/util/concurrent/Executor;
+
+    .line 53
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionDatas:Ljava/util/Set;
+
+    .line 54
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mSystemAppMap:Ljava/util/Map;
+
+    .line 55
+    const-string/jumbo v0, "keyguard"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/KeyguardManager;
+
+    iput-object p1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mKeyguardManager:Landroid/app/KeyguardManager;
+
+    return-void
+.end method
+
+.method private blacklist isLastBulkSpent2Hours(J)Z
+    .locals 2
+
+    .line 204
+    sget-wide v0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->lastBulkInsertTime:J
+
+    sub-long/2addr p1, v0
+
+    const-wide/32 v0, 0x6ddd00
+
+    cmp-long p0, p1, v0
+
+    if-lez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method private blacklist isOpCodeEnable(I)Z
+    .locals 0
+
+    .line 200
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionGroupMap:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method private blacklist pushPermissionDatas(Ljava/util/Iterator;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Iterator<",
+            "Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 94
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 96
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 97
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;
+
+    .line 98
+    invoke-virtual {v1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;->toContentValues()Landroid/content/ContentValues;
+
+    move-result-object v2
+
+    .line 99
+    invoke-virtual {v1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;->getUid()I
+
+    move-result v1
+
+    invoke-static {v1}, Landroid/os/UserHandle;->getUserHandleForUid(I)Landroid/os/UserHandle;
+
+    move-result-object v1
+
+    .line 100
+    invoke-virtual {v1}, Landroid/os/UserHandle;->semGetIdentifier()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 101
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 105
+    :cond_1
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-lez p1, :cond_2
+
+    .line 106
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    new-array p1, p1, [Landroid/content/ContentValues;
+
+    .line 107
+    invoke-interface {v0, p1}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    .line 108
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
+
+    move-result-wide v0
+
+    .line 110
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    sget-object v2, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->PROVIDER_URI:Landroid/net/Uri;
+
+    invoke-virtual {p0, v2, p1}, Landroid/content/ContentResolver;->bulkInsert(Landroid/net/Uri;[Landroid/content/ContentValues;)I
+
+    .line 111
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p0
+
+    sput-wide p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->lastBulkInsertTime:J
+
+    .line 112
+    const-string p0, "AI::PermissionDataController"
+
+    const-string p1, "bulkInsert success"
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 116
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    .line 114
+    :try_start_1
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 116
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    return-void
+
+    :goto_1
+    invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    .line 117
+    throw p0
+
+    :cond_2
+    return-void
+.end method
+
+.method private blacklist write(Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;)V
+    .locals 1
+
+    .line 60
+    :try_start_0
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mReadLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    .line 61
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionDatas:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 63
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mReadLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mReadLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 64
+    throw p1
+.end method
+
+
+# virtual methods
+.method public blacklist flush()V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 135
+    iget v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mDDRSize:I
+
+    if-lez v0, :cond_0
+
+    const/4 v1, 0x6
+
+    if-ge v0, v1, :cond_0
+
+    goto :goto_1
+
+    .line 141
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mWriterLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    .line 142
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionDatas:Ljava/util/Set;
+
+    .line 143
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionDatas:Ljava/util/Set;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 145
+    iget-object v1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mWriterLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    if-eqz v0, :cond_2
+
+    .line 150
+    :try_start_1
+    const-string v1, "AI::PermissionDataController"
+
+    const-string/jumbo v2, "flush start..."
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 151
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    invoke-direct {p0, v1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->pushPermissionDatas(Ljava/util/Iterator;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v0, :cond_1
+
+    .line 155
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
+
+    .line 158
+    :cond_1
+    throw p0
+
+    :cond_2
+    :goto_0
+    if-eqz v0, :cond_3
+
+    .line 155
+    invoke-interface {v0}, Ljava/util/Set;->clear()V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    .line 145
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mWriterLock:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 146
+    throw v0
+.end method
+
+.method public blacklist flushAsync()V
+    .locals 2
+
+    .line 122
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mFlushExecutor:Ljava/util/concurrent/Executor;
+
+    new-instance v1, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController$1;
+
+    invoke-direct {v1, p0}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController$1;-><init>(Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public blacklist getDDRSize()V
+    .locals 2
+
+    .line 219
+    :try_start_0
+    const-string/jumbo v0, "ro.boot.ddr_size"
+
+    const-string v1, "0"
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mDDRSize:I
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 221
+    const-string v0, "AI::PermissionDataController"
+
+    invoke-virtual {p0}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method public blacklist isDeviceLocked()Z
+    .locals 2
+
+    .line 211
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mKeyguardManager:Landroid/app/KeyguardManager;
+
+    if-nez v0, :cond_0
+
+    .line 212
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mContext:Landroid/content/Context;
+
+    const-string/jumbo v1, "keyguard"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/KeyguardManager;
+
+    iput-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mKeyguardManager:Landroid/app/KeyguardManager;
+
+    .line 214
+    :cond_0
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mKeyguardManager:Landroid/app/KeyguardManager;
+
+    invoke-virtual {p0}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public blacklist isSystemApp(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 5
+
+    .line 226
+    const-string v0, " due to : "
+
+    const-string v1, "AI::PermissionDataController"
+
+    .line 227
+    iget-object v2, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mSystemAppMap:Ljava/util/Map;
+
+    invoke-interface {v2, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 228
+    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mSystemAppMap:Ljava/util/Map;
+
+    invoke-interface {p0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+
+    .line 230
+    :cond_0
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object p1
+
+    const/16 v2, 0x80
+
+    const/4 v3, 0x0
+
+    .line 232
+    :try_start_0
+    invoke-virtual {p1, p2, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    .line 233
+    iget p1, p1, Landroid/content/pm/ApplicationInfo;->flags:I
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x1
+
+    and-int/2addr p1, v0
+
+    if-eqz p1, :cond_1
+
+    move v3, v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 237
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v4, "Exception: "
+
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p1
+
+    .line 235
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v4, "Package Name not found exception: "
+
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 240
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mSystemAppMap:Ljava/util/Map;
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-interface {p0, p2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return v3
+.end method
+
+.method public blacklist write(IILjava/lang/String;I)V
+    .locals 7
+
+    .line 68
+    iget v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mDDRSize:I
+
+    if-nez v0, :cond_0
+
+    .line 69
+    invoke-virtual {p0}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->getDDRSize()V
+
+    .line 72
+    :cond_0
+    iget v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mDDRSize:I
+
+    if-lez v0, :cond_1
+
+    const/4 v1, 0x6
+
+    if-ge v0, v1, :cond_1
+
+    goto :goto_0
+
+    .line 76
+    :cond_1
+    iget-object v0, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mContext:Landroid/content/Context;
+
+    invoke-virtual {p0, v0, p3}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->isSystemApp(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    .line 80
+    :cond_2
+    invoke-direct {p0, p1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->isOpCodeEnable(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 81
+    new-instance v1, Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;
+
+    invoke-virtual {p0}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->isDeviceLocked()Z
+
+    move-result v6
+
+    move v2, p1
+
+    move v3, p2
+
+    move-object v4, p3
+
+    move v5, p4
+
+    invoke-direct/range {v1 .. v6}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;-><init>(IILjava/lang/String;IZ)V
+
+    .line 82
+    invoke-direct {p0, v1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->write(Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;)V
+
+    .line 83
+    invoke-virtual {v1}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionData;->getAccessTime()J
+
+    move-result-wide p1
+
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->isLastBulkSpent2Hours(J)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionDatas:Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    if-lez p1, :cond_3
+
+    .line 84
+    const-string p1, "AI::PermissionDataController"
+
+    const-string p2, "2 hours flush"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 85
+    invoke-virtual {p0}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->flushAsync()V
+
+    return-void
+
+    .line 86
+    :cond_3
+    iget-object p1, p0, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->mPermissionDatas:Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    const/16 p2, 0x1f3
+
+    if-le p1, p2, :cond_4
+
+    .line 87
+    invoke-virtual {p0}, Lcom/samsung/android/kmxservice/ai/privacy/PermissionDataController;->flushAsync()V
+
+    :cond_4
+    :goto_0
+    return-void
+.end method

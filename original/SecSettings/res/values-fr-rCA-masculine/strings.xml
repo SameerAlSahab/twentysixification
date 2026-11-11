@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bluetooth_connected_no_headset_no_a2dp_battery_level">Connecté (aucun téléphone ni média), pile à %1$s %2$s</string>
+</resources>

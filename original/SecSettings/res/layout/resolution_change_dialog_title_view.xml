@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+    <ImageView android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginBottom="16.0dip" android:src="@drawable/resolution_change_dialog_icon" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="@color/materialColorOnSurface" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/external_display_resolution_change_dialog_title" />
+</LinearLayout>

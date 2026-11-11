@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/sec_auracast_share_information_dialog_space_top" android:paddingBottom="@dimen/sec_auracast_share_information_dialog_space_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/sec_auracast_share_information_dialog_space_left_and_right">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_information_dialog_description" style="@style/secAuracastShareInformationDialogDescriptionTextStyle" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_share_information_dialog_sub_title_space_top" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_information_dialog_how_to_share_title" style="@style/SecAuracastShareInformationDialogSubTitleTextStyle" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_share_information_dialog_sub_title_space_bottom" />
+            <TextView android:id="@id/description_for_voice_broadcast_model" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_information_dialog_how_to_share_description" style="@style/secAuracastShareInformationDialogDescriptionTextStyle" />
+            <TextView android:id="@id/description_for_non_voice_broadcast_model" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_information_dialog_how_to_share_description_for_non_voice_broadcast_model" style="@style/secAuracastShareInformationDialogDescriptionTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_share_information_dialog_sub_title_space_top" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_information_dialog_how_to_listen_title" style="@style/SecAuracastShareInformationDialogSubTitleTextStyle" />
+            <Space android:layout_width="fill_parent" android:layout_height="@dimen/sec_auracast_share_information_dialog_sub_title_space_bottom" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_information_dialog_how_to_listen_description" style="@style/secAuracastShareInformationDialogDescriptionTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

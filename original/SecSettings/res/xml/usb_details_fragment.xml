@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/usb_preference" android:key="usb_details_fragment"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/usb_connected_devices" android:key="usb_details_connected_devices" />
+    <PreferenceCategory android:title="@string/usb_control_title" android:key="usb_details_data_role" />
+    <PreferenceCategory android:title="@string/usb_use" android:key="usb_details_functions" />
+    <PreferenceCategory android:title="@string/usb_file_transfer_title" android:key="usb_transcode_mtp" />
+    <PreferenceCategory android:title="@string/usb_power_title" android:key="usb_details_power_role" />
+    <PreferenceCategory android:title="@string/usb_pci_tunnel_title" android:key="usb_details_pci_tunnel" />
+</PreferenceScreen>

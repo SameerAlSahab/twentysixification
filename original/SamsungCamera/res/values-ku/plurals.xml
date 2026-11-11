@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="face_detected">
+        <item quantity="other">%dدەم و چاو</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d دەم و چاو</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="max_scan_counter_reached">
+        <item quantity="other">ناتوانرێت لە یەک کاتدا زیاتر لە %d پەڕە سکان بکرێن. پەڕە سکانکراوەکان بسڕەوە یان ئەم سکانکردنە پاشەکەوت بکە و دانەیەکی نوێ دەست پێ بکە.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ناتوانرێت لە یەک کاتدا زیاتر لە %d پەڕە سکان بکرێت. پەڕە سکانکراوەکان بسڕەوە یان ئەم سکانکردنە پاشەکەوت بکە و دانەیەکی نوێ دەست پێ بکە.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="more_than_limit">
+        <item quantity="other">ناکرێ زیاتر لە %d نووسە بنووسرێت.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ناتوانرێت زیاتر لە %d نووسە زیاد بکات.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="multi_scan_item_selected">
+        <item quantity="other">%d دەسنیشانکرا</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d دەسنیشانکرا</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="my_filter_reached_max_count">
+        <item quantity="other">ناتوانێت زیاتر لە %d فلتەری تایبەتمەند دروست بکات.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ناتوانێت زیاتر لە %d فلتەری تایبەتمەند دروست بکات.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="scan_dialog_delete_scans">
+        <item quantity="other">%d سکان دەسڕیتەوە؟</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d سکان دەسڕیتەوە؟</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_hyperlaplse_duration_minutes">
+        <item quantity="other">%d خولەک</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d خولەک</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_super_resolution_torch_high_temperature_warning">
+        <item quantity="other">بۆ خۆدوورگرتن لە زێدەگەرم بوون، زیاتر لە %d خولەک لە ڤیدیۆی 8K تۆمار مەکە.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">بۆ خۆدوورگرتن لە زێدەگەرم بوون، زیاتر لە %d خولەک لە ڤیدیۆی 8K تۆمار مەکە.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_torch_high_temperature_warning">
+        <item quantity="other">بۆ خۆدوورگرتن لە زێدەگەرم بوون، زیاتر لە %1$d خولەک لە %2$s تۆمار مەکە.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">بۆ خۆدوورگرتن لە زێدەگەرم بوون، زیاتر لە %1$d خولەک لە %2$s تۆمار مەکە.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_hyperlaplse_duration_minutes">
+        <item quantity="other">%d خولەک</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d خولەک</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_photo_size">
+        <item quantity="other">%d مێگاپیکسڵ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d مێگاپیکسڵ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours">
+        <item quantity="other">%d کاتژمێر</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d کاتژمێر</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute">
+        <item quantity="other">%d کاتژمێر یەک خولەک</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d کاتژمێر یەک خولەک</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute_one_second">
+        <item quantity="other">%d کاتژمێر یەک خولەک یەک چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d کاتژمێر یەک خولەک یەک چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_second">
+        <item quantity="other">%d کاتژمێر یەک چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d کاتژمێر یەک چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_minutes_one_second">
+        <item quantity="other">%d خولەک یەک چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d خولەک یەک چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_seconds">
+        <item quantity="other">%d چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes">
+        <item quantity="other">یەک کاتژمێر %d خولەک</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">یەک کاتژمێر %d خولەک</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes_one_second">
+        <item quantity="other">یەک کاتژمێر %d خولەک یەک چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">یەک کاتژمێر %d خولەک یەک چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_seconds">
+        <item quantity="other">یەک کاتژمێر %d چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">یەک کاتژمێر %d چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_one_minute_n_seconds">
+        <item quantity="other">یەک کاتژمێر یەک خولەک %d چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">یەک کاتژمێر یەک خولەک %d چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_minute_n_seconds">
+        <item quantity="other">یەک خولەک %d چرکە</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">یەک خولەک %d چرکە</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_cropped">
+        <item quantity="other">%d دەموچاو وێنەی قرتێندرا</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d دەموچاو وێنەی قرتێندرا</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_detected">
+        <item quantity="other">%d دەموچاو دەستنیشان کرا</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d دەموچاو دەستنیشان کرا</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_more_than_faces">
+        <item quantity="other">زیاتر لە %1$d دەموچاو، %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">زیاتر لە %1$d دەموچاو، %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_one_face_cropped">
+        <item quantity="other">%1$d دەموچاو وێنەی قرتێندرا لە %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$d دەموچاو وێنەی قرتێندرا لە %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?listChoiceBackgroundIndicator" android:paddingTop="@dimen/sesl_preference_item_padding_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd">
+        <TextView android:textAppearance="@style/sec_regular" android:textSize="@dimen/sec_supervision_tips_title_text_size" android:textColor="?android:textColorPrimary" android:ellipsize="end" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="5" android:textAlignment="viewStart" />
+        <TextView android:textAppearance="@style/sec_regular" android:textSize="@dimen/sec_supervision_tips_description_text_size" android:textColor="?android:textColorSecondary" android:ellipsize="end" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_supervision_tips_description_margin_top" android:maxLines="10" android:textAlignment="viewStart" />
+    </LinearLayout>
+    <LinearLayout android:gravity="end" android:layout_gravity="end" android:id="@id/tips_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/sesl_list_item_padding_end">
+        <Button android:textColor="@color/sec_widget_relative_link_title_text_color" android:ellipsize="end" android:id="@id/notNowButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="?android:buttonBarButtonStyle" />
+        <Button android:textColor="@color/sec_widget_relative_link_title_text_color" android:ellipsize="end" android:id="@id/actionButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" style="?android:buttonBarButtonStyle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="end|center" android:orientation="vertical" android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/sesl_list_widget_start_padding" android:paddingEnd="@dimen/sesl_list_widget_end_padding" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="delete_blob_confirmation_text">¿Estás seguro de que quieres eliminar estos datos compartidos?</string>
+    <string name="supervision_approval_method_chooser_description">Debes verificar que eres el padre</string>
+</resources>

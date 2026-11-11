@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_screen_resolution_routines_dialog_margin_top" android:paddingStart="@dimen/sec_screen_resolution_routines_dialog_padding" android:paddingEnd="@dimen/sec_screen_resolution_routines_dialog_padding">
+            <TextView android:id="@id/guide_body_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_screen_resolution_routines_dialog_margin_bottom" android:text="@string/sec_screen_resolution_routines_setting_guide_text_action_wait_until_screen_is_off" style="@style/description_text" />
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/sec_screen_resolution_routines_description" style="@style/description_text" />
+            <LinearLayout android:orientation="horizontal" android:paddingTop="@dimen/sec_screen_resolution_routines_dialog_padding_hd_top" android:paddingBottom="@dimen/sec_screen_resolution_routines_dialog_margin_bottom_hd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_screen_resolution_routines_dialog_margin_bottom_hd">
+                <LinearLayout android:orientation="vertical" android:id="@id/resolution_hd_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/sec_widget_description_text_size" android:ellipsize="end" android:gravity="center" android:id="@id/resolution_hd_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_widget_multi_btn_preference_icon_margin_bottom" android:text="HD+" android:maxLines="1" />
+                    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/resolution_hd_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_profile_layout_start_margin" android:maxLines="1" style="@style/screen_resolution_preview_text_style" />
+                    <RadioButton android:layout_gravity="center_horizontal" android:id="@id/resolution_hd_button" android:clickable="false" android:layout_width="@dimen/sec_screen_mode_auto_adaptive_settings_icon_size" android:layout_height="@dimen/sec_screen_mode_auto_adaptive_settings_icon_size" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/resolution_fhd_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/sec_widget_description_text_size" android:ellipsize="end" android:gravity="center" android:id="@id/resolution_fhd_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_widget_multi_btn_preference_icon_margin_bottom" android:text="FHD+" android:maxLines="1" />
+                    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/resolution_fhd_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_profile_layout_start_margin" android:maxLines="1" style="@style/screen_resolution_preview_text_style" />
+                    <RadioButton android:layout_gravity="center_horizontal" android:id="@id/resolution_fhd_button" android:clickable="false" android:layout_width="@dimen/sec_screen_mode_auto_adaptive_settings_icon_size" android:layout_height="@dimen/sec_screen_mode_auto_adaptive_settings_icon_size" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/resolution_qhd_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="@dimen/sec_widget_description_text_size" android:ellipsize="end" android:gravity="center" android:id="@id/resolution_wqhd_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_widget_multi_btn_preference_icon_margin_bottom" android:text="QHD+" android:maxLines="1" />
+                    <TextView android:ellipsize="end" android:gravity="center" android:id="@id/resolution_qhd_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_profile_layout_start_margin" android:maxLines="1" style="@style/screen_resolution_preview_text_style" />
+                    <RadioButton android:layout_gravity="center_horizontal" android:id="@id/resolution_qhd_button" android:clickable="false" android:layout_width="@dimen/sec_screen_mode_auto_adaptive_settings_icon_size" android:layout_height="@dimen/sec_screen_mode_auto_adaptive_settings_icon_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

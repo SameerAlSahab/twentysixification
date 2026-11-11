@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifi_autowifi_title" settings:roundStroke="none"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_preference" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <Preference android:persistent="false" android:layout="@layout/sec_wifi_control_history_description" android:title="@string/wifi_autowifi_summary" android:selectable="false" android:key="header" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <SecSwitchPreference android:title="@string/wifi_autowifi_off_title" android:key="switch_to_turn_off_wifi_automatically" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference settings:height="0.0dip" />
+    <com.samsung.android.settings.wifi.advanced.WifiAdvancedWarningPreference android:title="@string/wifi_autowifi_off_summary" android:key="wifi_autowifi_off_summary" settings:searchable="false" />
+    <PreferenceCategory android:title="@string/wifi_autowifi_frequently_ap" android:key="favorite_ap_list" />
+    <PreferenceCategory android:key="divider" />
+    <com.samsung.android.settings.wifi.advanced.WifiAdvancedWarningPreference android:persistent="false" android:title="@string/wifi_autowifi_frequently_ap_candidates_description" android:selectable="false" android:key="candidates_description" settings:searchable="false" />
+    <PreferenceCategory android:key="favorite_ap_candidate_list" />
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_touchpad_title" settings:hierarchicalParentFragment="com.samsung.android.settings.general.GeneralDeviceSettings" settings:topLevelPreferenceKey="top_level_general"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.inputmethod.SecTouchpadPointerSpeedPreference android:title="@string/pointer_speed" android:key="touchpad_pointer_speed" android:dialogTitle="@string/pointer_speed" settings:controller="com.android.settings.inputmethod.TouchpadPointerSpeedPreferenceController" />
+    <SecPreference android:title="@string/mouse_pointer_size_and_color_title" android:key="mouse_pointer_settings" android:fragment="com.samsung.android.settings.inputmethod.MousePointerSettingsFragment" settings:controller="com.samsung.android.settings.inputmethod.MousePointerSettingsPreferenceController" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <SecDropDownPreference android:title="@string/touchpad_scrolling_direction" android:key="key_touchpad_scrolling_direction" settings:controller="com.samsung.android.settings.inputmethod.TouchpadScrollingDirectionPreferenceController" />
+    <SecSwitchPreference android:title="@string/tap_to_click" android:key="key_tap_to_click" settings:controller="com.samsung.android.settings.inputmethod.TapToClickPreferenceController" />
+    <SecPreference android:title="@string/touchpad_gestures_title" android:key="key_touchpad_gestures" android:fragment="com.samsung.android.settings.inputmethod.TouchPadGestureSettings" />
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/contents" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/item1" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/spacer_right" android:layout_toEndOf="@id/spacer_left" layout="@layout/sec_suw_radio_item" />
+    <include android:id="@id/item2" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/spacer_below" android:layout_toStartOf="@id/spacer_right" android:layout_toEndOf="@id/spacer_left" layout="@layout/sec_suw_radio_item" />
+    <View android:id="@id/spacer_left" android:focusable="false" android:layout_width="@dimen/sec_suw_margin_start" android:layout_height="1.0dip" android:importantForAccessibility="no" android:layout_alignParentStart="true" />
+    <View android:id="@id/spacer_right" android:focusable="false" android:layout_width="@dimen/sec_suw_margin_start" android:layout_height="1.0dip" android:importantForAccessibility="no" android:layout_alignParentEnd="true" />
+    <View android:id="@id/spacer_below" android:focusable="false" android:layout_width="1.0dip" android:layout_height="@dimen/sec_suw_radio_item_spacer" android:layout_below="@id/item1" android:importantForAccessibility="no" />
+    <View android:id="@id/spacer_bottom" android:focusable="false" android:layout_width="1.0dip" android:layout_height="@dimen/sec_suw_margin_start" android:layout_below="@id/item2" android:importantForAccessibility="no" />
+</RelativeLayout>

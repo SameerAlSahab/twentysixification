@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/guide_image_view_phone" android:background="@color/connected_devices_contents_area_background_color" android:padding="@dimen/settings_description_image_padding" android:layout_width="fill_parent" android:layout_height="188.0dip" android:layout_marginLeft="@dimen/settings_image_margin_left_right" android:layout_marginRight="@dimen/settings_image_margin_left_right" android:src="@drawable/ic_hdmi_phone" />
+</LinearLayout>

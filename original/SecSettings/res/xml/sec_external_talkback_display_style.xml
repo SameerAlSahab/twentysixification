@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/display_style_title" android:key="key_talkback_display_style"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory>
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/extended_title" android:key="key_extended_display" android:summary="@string/extended_summary" settings:allowDividerBelow="false" />
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/mirrored_title" android:key="key_mirror_display" android:summary="@string/mirrored_summary" settings:allowDividerBelow="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

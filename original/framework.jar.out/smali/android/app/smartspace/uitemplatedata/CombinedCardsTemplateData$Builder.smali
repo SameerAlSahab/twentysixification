@@ -1,0 +1,132 @@
+.class public final Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;
+.super Landroid/app/smartspace/uitemplatedata/BaseTemplateData$Builder;
+.source "CombinedCardsTemplateData.java"
+
+
+# annotations
+.annotation runtime Landroid/annotation/SystemApi;
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Builder"
+.end annotation
+
+
+# instance fields
+.field private final blacklist mCombinedCardDataList:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Landroid/app/smartspace/uitemplatedata/BaseTemplateData;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor whitelist <init>(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/app/smartspace/uitemplatedata/BaseTemplateData;",
+            ">;)V"
+        }
+    .end annotation
+
+    const/4 v0, 0x6
+
+    .line 136
+    invoke-direct {p0, v0}, Landroid/app/smartspace/uitemplatedata/BaseTemplateData$Builder;-><init>(I)V
+
+    .line 137
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/List;
+
+    iput-object p1, p0, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->mCombinedCardDataList:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic whitelist build()Landroid/app/smartspace/uitemplatedata/BaseTemplateData;
+    .locals 0
+
+    .line 127
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->build()Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist build()Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;
+    .locals 11
+
+    .line 147
+    iget-object v0, p0, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->mCombinedCardDataList:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    .line 150
+    new-instance v1, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;
+
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getTemplateType()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getPrimaryItem()Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;
+
+    move-result-object v3
+
+    .line 151
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getSubtitleItem()Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getSubtitleSupplemtnalItem()Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;
+
+    move-result-object v5
+
+    .line 152
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getSupplementalLineItem()Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getSupplementalAlarmItem()Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->getLayoutWeight()I
+
+    move-result v8
+
+    iget-object v9, p0, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData$Builder;->mCombinedCardDataList:Ljava/util/List;
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v1 .. v10}, Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData;-><init>(ILandroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;Landroid/app/smartspace/uitemplatedata/BaseTemplateData$SubItemInfo;ILjava/util/List;Landroid/app/smartspace/uitemplatedata/CombinedCardsTemplateData-IA;)V
+
+    return-object v1
+
+    .line 148
+    :cond_0
+    const-string p0, "Please assign a value to all @NonNull args."
+
+    invoke-static {p0}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$5(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method

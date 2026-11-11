@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.StatusBannerPreference android:key="safety_center_status_banner" settings:controller="com.android.settings.safetycenter.ui.StatusBannerPreferenceController" />
+    <com.android.settingslib.widget.BannerMessagePreferenceGroup android:key="issues_banner_group" />
+</PreferenceScreen>

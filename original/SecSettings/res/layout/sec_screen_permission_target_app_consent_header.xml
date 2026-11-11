@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/sec_widget_round_and_bgcolor" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/list_item_container_style"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/sec_app_list_item_icon_min_width" android:paddingEnd="@dimen/sec_widget_preference_with_app_icon_margin_end">
+        <ImageView android:id="@id/agent_app_icon" android:layout_width="@dimen/list_app_icon_size" android:layout_height="@dimen/list_app_icon_size" android:scaleType="fitXY" android:contentDescription="@null" />
+        <ImageView android:id="@id/target_app_icon" android:layout_width="@dimen/list_app_icon_size" android:layout_height="@dimen/list_app_icon_size" android:scaleType="fitXY" android:contentDescription="@null" android:layout_marginStart="1.0dip" />
+    </LinearLayout>
+    <TextView android:textColor="@color/sec_app_name_text_color" android:ellipsize="end" android:id="@id/app_pair_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxLines="5" android:layout_weight="1.0" android:textAlignment="viewStart" style="@style/list_title_text_style" />
+</LinearLayout>

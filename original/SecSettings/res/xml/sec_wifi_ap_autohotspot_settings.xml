@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_wifi_ap_settings_main_switch_bar_preference" android:key="auto_hotspot_main_switch_layout_preference" android:order="1" settings:selectable="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_wifi_ap_auto_hotspot_unclickable" android:selectable="false" android:key="auto_hotspot_description_layout_preference" android:order="2" />
+    <SecPreferenceCategory android:title="@string/wifi_ap_auto_hotspot_my_account_title" android:key="my_account_preference_category" android:order="10" />
+    <PreferenceCategory android:title="@string/wifi_ap_auto_hotspot_sharing_title" android:key="my_family_preference_category" android:order="20">
+        <SecSwitchPreferenceScreen android:title="@string/group_sharing_switch_title" android:key="family_sharing_switch_preference_screen" settings:controller="com.samsung.android.settings.wifi.mobileap.autohotspot.WifiApFamilySharingSwitchController" />
+        <SecPreferenceScreen android:key="mde_family_sharing_preference_screen" settings:controller="com.samsung.android.settings.wifi.mobileap.autohotspot.WifiApMdeFamilySharingController" />
+    </PreferenceCategory>
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_wifi_ap_auto_hotspot_unclickable" android:selectable="false" android:key="family_sharing_description_preference" android:order="99" />
+</PreferenceScreen>

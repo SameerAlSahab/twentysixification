@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apn_auth_entries">
+        <item>Kò sí</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP tabi CHAP</item>
+    </string-array>
+    <string-array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="bluetooth_cast_timeout_entries">
+        <item>ìṣẹ́jú 5</item>
+        <item>Ìṣẹ́jú 10</item>
+        <item>Ìṣẹ́jú 30</item>
+        <item>Má ṣe yọ́ kúrò</item>
+    </string-array>
+    <string-array name="bluetooth_max_connected_audio_devices">
+        <item>Alálòpẹ́ ẹ̀rọ: %d</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="bluetooth_sap_activation_entries">
+        <item>Àbáwá (kò sí ipa)</item>
+        <item>Tan SAP nípasẹ̀ agbára</item>
+        <item>Pa SAP nípasẹ̀ agbára</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Àbáwá</item>
+        <item>Kò sí ìkankan</item>
+        <item>Outline</item>
+        <item>Drop Shadow</item>
+        <item>Raised</item>
+        <item>Depressed</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Kéré púpo</item>
+        <item>Kékeré</item>
+        <item>Déédé</item>
+        <item>Ńlá</item>
+        <item>O tobi gan-an</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Àbáwá</item>
+        <item>White on black</item>
+        <item>Black on white</item>
+        <item>Yellow on black</item>
+        <item>Yellow on blue</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Àbáwá</item>
+        <item>Sans serif</item>
+        <item>Sans serif condensed</item>
+        <item>Sans serif monospace</item>
+        <item>Serif</item>
+        <item>Serif monospace</item>
+        <item>Gbẹ̀fẹ́</item>
+        <item>Cursive</item>
+        <item>Small caps</item>
+    </string-array>
+    <string-array name="data_usage_billing_cycle_summary">
+        <item>Ọjọ́ 1 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 2 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 3 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 4 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 5 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 6 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 7 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 8 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 9 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 10 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 11 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 12 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 13 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 14 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 15 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 16 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 17 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 18 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 19 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 20 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 21 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 22 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 23 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 24 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 25 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 26 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 27 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 28 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 29 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 30 oṣù kọ̀ọ̀kan</item>
+        <item>Ọjọ́ 31 oṣù kọ̀ọ̀kan</item>
+    </string-array>
+    <string-array name="dex_timeout_entries">
+        <item>Ìṣẹ́jú àáyá 15</item>
+        <item>ìṣẹ́jú àáyá 30</item>
+        <item>ìṣẹ́jú 1</item>
+        <item>Ìṣẹ́jú 2</item>
+        <item>ìṣẹ́jú 5</item>
+        <item>Ìṣẹ́jú 10</item>
+        <item>Ìṣẹ́jú 20</item>
+        <item>Ìṣẹ́jú 30</item>
+        <item>ìṣẹ́jù 60</item>
+    </string-array>
+    <string-array name="external_display_timeout_entries">
+        <item>Ìṣẹ́jú àáyá 15</item>
+        <item>ìṣẹ́jú àáyá 30</item>
+        <item>ìṣẹ́jú 1</item>
+        <item>Ìṣẹ́jú 2</item>
+        <item>ìṣẹ́jú 5</item>
+        <item>Ìṣẹ́jú 10</item>
+        <item>Ìṣẹ́jú 20</item>
+        <item>Ìṣẹ́jú 30</item>
+        <item>ìṣẹ́jù 60</item>
+    </string-array>
+    <string-array name="gpuwatch_rendering_api_entries">
+        <item>Vulkan</item>
+        <item>OpenGL</item>
+    </string-array>
+    <string-array name="gpuwatch_widget_positions">
+        <item>Òkè - Apá òsì</item>
+        <item>Òkè - ààrín ìlà fífẹ̀</item>
+        <item>Òkè - Apá ọtún</item>
+        <item>Gígùn àárín - òsì</item>
+        <item>Gígùn àárín - ọ̀tún</item>
+        <item>Ìsàlẹ̀ - Òsì</item>
+        <item>Ìsàlẹ̀ - Ìsàlẹ̀ àárín</item>
+        <item>Ìsàlẹ̀ - Ọ̀tún</item>
+    </string-array>
+    <string-array name="key_backlight_entries">
+        <item>Always off</item>
+        <item>Ìṣẹ́jú àáyá 1</item>
+        <item>Ìséjú-àáyá méta</item>
+        <item>Ìséjú àáyá márùn-ún</item>
+        <item>Ìséjú-àáyá méwàá</item>
+        <item>Ìṣẹ́jú àáyá 15</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Lójú-esè</item>
+        <item>Ìséjú àáyá márùn-ún</item>
+        <item>Ìṣẹ́jú àáyá 15</item>
+        <item>ìṣẹ́jú àáyá 30</item>
+        <item>ìṣẹ́jú 1</item>
+        <item>Ìṣẹ́jú 2</item>
+        <item>ìṣẹ́jú 5</item>
+        <item>Ìṣẹ́jú 10</item>
+        <item>Ìṣẹ́jú 30</item>
+    </string-array>
+    <string-array name="mouse_pointer_color_type">
+        <item>Funfun</item>
+        <item>Dúdú</item>
+        <item>Àwọ̀ turquoise</item>
+        <item>Àwọ̀ yẹ́lò</item>
+        <item>Pupa rẹ́sú rẹ́sú</item>
+        <item>Ìmọ́lẹ̀ aláwọ̀ àlùkò</item>
+        <item>Búlù tí ó fẹ̀rẹ̀</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Kò sí ìkankan</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="num_allowed_devices">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>Normal</item>
+        <item>Moderate</item>
+        <item>Low</item>
+        <item>Critical</item>
+        <item>\?</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>Ìṣẹ́jú àáyá 15</item>
+        <item>ìṣẹ́jú àáyá 30</item>
+        <item>ìṣẹ́jú 1</item>
+        <item>Ìṣẹ́jú 2</item>
+        <item>ìṣẹ́jú 5</item>
+        <item>Ìṣẹ́jú 10</item>
+        <item>Ìṣẹ́jú 30</item>
+    </string-array>
+    <string-array name="sec_bt_stack_log_level_entries">
+        <item>Lílo ọ̀pọ̀ ọ̀rọ̀</item>
+        <item>Ṣàtúnṣe</item>
+        <item>Àlàyé</item>
+        <item>Kìlọ̀</item>
+        <item>Àṣìṣe</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_phone">
+        <item>Wá fóònù rẹ tó bá sọ nù.</item>
+        <item>Mú awọn áàpù ati àwọn ààtò lórí awọn ẹ̀rọ rẹ.</item>
+        <item>Ṣàjọpín àwọn fáìlì pẹ̀lú àwọn ọ̀rẹ́, ẹbí, àti àwọn ẹ̀rọ mìíràn.</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_tablet">
+        <item>Wá tábúlẹ́ẹ̀tì rẹ tó bá sọ nù.</item>
+        <item>Ṣàjọpín àwọn fáìlì pẹ̀lú àwọn ọ̀rẹ́, ẹbí, àti àwọn ẹ̀rọ mìíràn.</item>
+        <item>Ṣe àdàkọ ọ̀rọ̀ kó o sì kọ ọ́ sílẹ̀ láàrin fóònù àti tábúlẹ́ẹ̀tì rẹ.</item>
+        <item>Se ìṣípòpadà aláìfọwọ́yí Buds rẹ láàrin àwọn ẹ̀rọ.</item>
+        <item>Dáhùn àwọn ìpè àti àyọkà lórí tábúlẹ́ẹ̀tì rẹ.</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Béèrè nígbàgbogbo</item>
+        <item>Ko gbà á láàyè</item>
+        <item>Fàyègbà nígbàgbogbo</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_phone">
+        <item>Fóònù</item>
+        <item>Ẹ̀rọ amóhùnmáwòrán tàbí aṣàfihàn ìwòrán</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_tablet">
+        <item>Tábúlẹ́ẹ̀tì</item>
+        <item>Ẹ̀rọ amóhùnmáwòrán tàbí aṣàfihàn ìwòrán</item>
+    </string-array>
+    <string-array name="vpn_proxy_settings">
+        <item>Kò sí ìkankan</item>
+        <item>Ìwé-ìdarí</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Ti gé àsopọ</item>
+        <item>Nbẹ̀̀rẹ̀̀…</item>
+        <item>Sísopò</item>
+        <item>Connected</item>
+        <item>Timeout</item>
+        <item>Kò yege</item>
+    </string-array>
+    <string-array name="wifi_ap_broadcast_channel_entries">
+        <item>Láìfọwọ́yí</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_phone_entries">
+        <item>MAC Alákànse</item>
+        <item>MAC fóònù</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_tablet_entries">
+        <item>MAC Alákànse</item>
+        <item>MAC tábúlẹ́ẹ̀tì</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_security_type_entries1">
+        <item>Sí</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_wpa3_security_type_entries">
+        <item>Sí</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_security_type_entries1">
+        <item>Sí</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_turn_off_hotspot_timer_entries">
+        <item>Akoko iboju o niye láíláí</item>
+        <item>5 minutes</item>
+        <item>Ìṣẹ́jú 10</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="wifi_ap_wifi_sharing">
+        <item>Turn on Wi-Fi sharing</item>
+        <item>Turn off Wi-Fi sharing</item>
+    </string-array>
+    <string-array name="wifi_ap_wpa3_security_type_entries">
+        <item>Sí</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_connect_entries">
+        <item>Àìfọwọ́yí</item>
+        <item>Ìwé-ìdarí</item>
+        <item>Máa bér. nígbà gbgb.</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Lójúkan</item>
+    </string-array>
+    <string-array name="wifi_metered_entries">
+        <item>Detect automatically</item>
+        <item>Treat as metered</item>
+        <item>Treat as unmetered</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Connected</item>
+        <item>Ti pè ọ</item>
+        <item>Ó kùnà láti sopọ̀</item>
+        <item>Tap here to connect.</item>
+        <item>Kò sí ní àrówótó</item>
+        <item>Ti sopọ̀ pẹ̀lú ẹ̀rọ míràn</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Kò sí ìkankan</item>
+        <item>Ìwé-ìdarí</item>
+        <item>Auto-config</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Ń ṣàyẹ̀wò…</item>
+        <item>Sísopò</item>
+        <item>Ìmúdánilójú…</item>
+        <item>Ńgba àdírẹ́sì IP…</item>
+        <item>Ti sopọ̀</item>
+        <item>Ti dá dúró</item>
+        <item>Ń já àsopọ̀…</item>
+        <item>Ti gé àsopọ</item>
+        <item>Kò yege</item>
+        <item>Blocked</item>
+        <item>Checking the quality of your Internet connection…</item>
+    </string-array>
+</resources>

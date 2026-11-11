@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.samsung.android.settings.core.SecColoredPaddingView android:id="@id/included_window_inset" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.core.SecColoredPaddingView android:orientation="vertical" android:id="@id/content_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/coordinator" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/Widget.Design.AppBarLayout">
+                <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll|exitUntilCollapsed" style="@style/Theme.Settings.CollapsingToolbar">
+                    <View android:layout_gravity="bottom" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/sesl_action_bar_height_with_padding" app:background="@android:color/transparent" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior">
+                <FrameLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <FrameLayout android:id="@id/main_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+            </LinearLayout>
+            <View android:id="@id/round_corner" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout android:id="@id/sesl_floating_toolbar_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:applyFloatingItemBackgroundBlur="false" app:layout_anchor="@id/app_bar">
+                <androidx.appcompat.widget.Toolbar android:theme="@style/Theme.Settings.Toolbar" android:layout_gravity="bottom" android:id="@id/action_bar" android:background="@android:color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:background="@android:color/transparent" />
+            </com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout>
+            <com.samsung.android.settings.widget.SecFloatingBottomLayout android:layout_gravity="bottom" android:id="@id/floating_bottom_container" android:paddingBottom="@dimen/sesl_search_plate_margin" android:visibility="gone" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:showFloatingItemBackground="false">
+                <com.samsung.android.settings.homepage.SearchView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/search_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </com.samsung.android.settings.widget.SecFloatingBottomLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <ViewStub android:layout_gravity="center" android:id="@id/homepage_search_deeplink_progress_stub" android:layout="@layout/sec_homepage_search_deeplink_progress" android:inflatedId="@id/homepage_search_deeplink_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.samsung.android.settings.core.SecColoredPaddingView>
+</com.samsung.android.settings.core.SecColoredPaddingView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/app_notifications_title" android:key="app_notifications" settings:topLevelPreferenceKey="top_level_notifications"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="block" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:key="block_desc" />
+    <com.samsung.android.settings.widget.SecButtonPreference android:gravity="center" android:key="deep_sleeping" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:key="desc" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="default_channel_inset" />
+    <PreferenceCategory android:key="noti">
+        <SwitchPreference android:title="@string/zen_mode_block_effect_summary_sound" android:key="app_alert_importance" />
+        <com.samsung.android.settings.widget.SecRecyclerViewPreference android:key="notification_types" settings:controller="com.samsung.android.settings.notification.app.AppNotificationTypeController" />
+        <com.samsung.android.settings.widget.SecTextSummaryPreference android:selectable="false" android:key="popup_notification_text" settings:allowDividerBelow="true" />
+        <SecDropDownPreference android:entries="@array/notification_alert_style" android:title="@string/notification_popup_style" android:key="alert_style" />
+        <SecDropDownPreference android:entries="@array/notification_show_content_on_lockscreen" android:title="@string/sec_app_show_hide_content_when_locked" android:key="hide_content" />
+        <SecSwitchPreference android:title="@string/sec_app_live_notification" android:key="app_show_live_notification" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="noti_ai">
+        <SecSwitchPreference android:title="@string/noti_intelligence_priority_notification" android:key="app_noti_prioritize_ai_notification" />
+        <SeslPreferenceCaption android:title="@string/noti_intelligence_app_prioritize_summary" android:key="app_noti_prioritize_ai_notification_caption" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/noti_intelligence_summarize_notifications" android:key="app_noti_summarize_ai_notification" />
+        <SeslPreferenceCaption android:title="@string/noti_intelligence_app_summarize_summary" android:key="app_noti_summarize_ai_notification_caption" settings:searchable="false" />
+    </PreferenceCategory>
+    <SecPreferenceCategory android:key="conversation_categories">
+        <Preference android:title="@string/app_settings_channel_link" android:key="app_channel_link" />
+        <Preference android:title="@string/app_settings_link" android:key="app_link" />
+    </SecPreferenceCategory>
+</PreferenceScreen>

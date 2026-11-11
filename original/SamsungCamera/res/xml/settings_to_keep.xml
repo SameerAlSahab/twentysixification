@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_SettingsToKeep"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.camera.setting.DescriptionPreference android:selectable="false" android:key="@string/key_settings_to_keep_description" android:summary="@string/settings_to_keep_description" />
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_KeepCameraMode" android:key="@string/key_keep_camera_mode" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_KeepSelfieAngle" android:key="@string/key_keep_selfie_angle" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/title_keep_high_picture_resolution" android:key="@string/key_keep_high_picture_resolution" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_KeepFilters" android:key="@string/key_keep_filters" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Titme_KeepSuperSteady" android:key="@string/key_keep_super_steady" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_KeepPortraitZoom" android:key="@string/key_keep_portrait_zoom" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_ExposureValue" android:key="@string/key_keep_exposure_value" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.EmptyPreference app:emptyHeight="@dimen/navigation_bar_height_in_android_fw" />
+    </PreferenceCategory>
+</PreferenceScreen>

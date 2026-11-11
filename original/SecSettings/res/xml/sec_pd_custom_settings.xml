@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/pd_custom_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="pd_custom_main_switch" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="pd_custom_main_switch_inset_category" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_pd_custom_descriptions" android:selectable="false" android:key="pd_custom_description" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="pd_custom_description_inset_category" />
+    <SecPreference android:title="@string/pd_custom_apps_title" android:key="custom_apps" android:summary="@string/pd_custom_apps_summary" android:fragment="com.samsung.android.settings.bpd.PdCustomAppsSettings" settings:controller="com.samsung.android.settings.bpd.controller.PdCustomAppsPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/pd_custom_apps_summary" android:key="custom_apps_caption" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="condition_inset" />
+    <SecSwitchPreference android:title="@string/pd_custom_ppp_title" android:key="custom_ppp" settings:controller="com.samsung.android.settings.bpd.controller.PdCustomPppPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/pd_custom_ppp_summary" android:key="custom_ppp_caption" settings:searchable="false" />
+    <SecPreferenceCategory android:title="@string/pd_custom_partial_category_title">
+        <SecSwitchPreference android:title="@string/pd_custom_notifications_title" android:key="custom_notifications" settings:controller="com.samsung.android.settings.bpd.controller.PdCustomNotificationsPreferenceController" />
+        <SeslPreferenceCaption android:title="@string/pd_custom_notifications_summary" android:key="custom_notifications_caption" settings:searchable="false" />
+    </SecPreferenceCategory>
+</PreferenceScreen>

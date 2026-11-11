@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/samsung_dex_title" android:key="key_dex_mode_screen" settings:hierarchicalParentFragment="com.samsung.android.settings.multidevices.MultiDevicesFragment" settings:topLevelPreferenceKey="top_level_dex_mode"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_dex_setting_help_vi_container" android:key="dex_help_preview" settings:allowDividerBelow="false" />
+    <PreferenceCategory>
+        <SecPreference android:title="@string/connected_display" android:key="key_external_display" android:fragment="com.samsung.android.settings.desktop.ExternalDisplaySettingsFragment" settings:keywords="@string/connected_display" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <SecPreference android:title="@string/on_sceen_keyboard_title" android:key="key_dex_keyboard" android:fragment="com.samsung.android.settings.desktop.DexModeKeyboardSettingsFragment" />
+        <SecPreference android:title="@string/dex_mouse" android:key="key_mouse_and_trackpad" android:fragment="com.samsung.android.settings.desktop.DexModeMouseSettingsFragment" />
+        <SecPreference android:title="@string/dex_spen_input" android:key="key_dex_mode_spen_input" android:fragment="com.samsung.android.settings.desktop.DexModeSpenSettingsFragment" />
+        <androidx.preference.SecSwitchPreference android:title="@string/dex_cmd_arrow" android:key="key_dex_cmd_arrow" />
+        <SecSwitchPreference android:title="@string/autohide_taskbar_switch" android:key="key_autohide_taskbar" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="quick_panel_pref_category">
+        <SecDropDownPreference android:title="@string/quick_panel_button" android:key="key_quick_panel_button" />
+    </PreferenceCategory>
+    <androidx.preference.PreferenceCategory android:key="blank_pref_category_3" />
+    <com.samsung.android.settings.desktop.DexSettingsCustomSwitchPreference android:title="@string/set_default_audio_output" android:key="key_set_default_audio_output" />
+</PreferenceScreen>

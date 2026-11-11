@@ -1,0 +1,429 @@
+.class public interface abstract Landroid/hardware/radio/V1_4/IRadio;
+.super Ljava/lang/Object;
+.source "IRadio.java"
+
+# interfaces
+.implements Landroid/hardware/radio/V1_3/IRadio;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/hardware/radio/V1_4/IRadio$Proxy;,
+        Landroid/hardware/radio/V1_4/IRadio$Stub;
+    }
+.end annotation
+
+
+# static fields
+.field public static final blacklist kInterfaceName:Ljava/lang/String; = "android.hardware.radio@1.4::IRadio"
+
+
+# direct methods
+.method public static blacklist asInterface(Landroid/os/IHwBinder;)Landroid/hardware/radio/V1_4/IRadio;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    .line 26
+    :cond_0
+    const-string v1, "android.hardware.radio@1.4::IRadio"
+
+    invoke-interface {p0, v1}, Landroid/os/IHwBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IHwInterface;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    .line 28
+    instance-of v3, v2, Landroid/hardware/radio/V1_4/IRadio;
+
+    if-eqz v3, :cond_1
+
+    .line 29
+    check-cast v2, Landroid/hardware/radio/V1_4/IRadio;
+
+    return-object v2
+
+    .line 32
+    :cond_1
+    new-instance v2, Landroid/hardware/radio/V1_4/IRadio$Proxy;
+
+    invoke-direct {v2, p0}, Landroid/hardware/radio/V1_4/IRadio$Proxy;-><init>(Landroid/os/IHwBinder;)V
+
+    .line 35
+    :try_start_0
+    invoke-interface {v2}, Landroid/hardware/radio/V1_4/IRadio;->interfaceChain()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    :cond_2
+    if-ge v4, v3, :cond_3
+
+    invoke-virtual {p0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    add-int/lit8 v4, v4, 0x1
+
+    check-cast v5, Ljava/lang/String;
+
+    .line 36
+    invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v5, :cond_2
+
+    return-object v2
+
+    :catch_0
+    :cond_3
+    return-object v0
+.end method
+
+.method public static blacklist castFrom(Landroid/os/IHwInterface;)Landroid/hardware/radio/V1_4/IRadio;
+    .locals 0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 50
+    :cond_0
+    invoke-interface {p0}, Landroid/os/IHwInterface;->asBinder()Landroid/os/IHwBinder;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/hardware/radio/V1_4/IRadio;->asInterface(Landroid/os/IHwBinder;)Landroid/hardware/radio/V1_4/IRadio;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist getService()Landroid/hardware/radio/V1_4/IRadio;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 92
+    const-string v0, "default"
+
+    invoke-static {v0}, Landroid/hardware/radio/V1_4/IRadio;->getService(Ljava/lang/String;)Landroid/hardware/radio/V1_4/IRadio;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static blacklist getService(Ljava/lang/String;)Landroid/hardware/radio/V1_4/IRadio;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 82
+    const-string v0, "android.hardware.radio@1.4::IRadio"
+
+    invoke-static {v0, p0}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;)Landroid/os/IHwBinder;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/hardware/radio/V1_4/IRadio;->asInterface(Landroid/os/IHwBinder;)Landroid/hardware/radio/V1_4/IRadio;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist getService(Ljava/lang/String;Z)Landroid/hardware/radio/V1_4/IRadio;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 65
+    const-string v0, "android.hardware.radio@1.4::IRadio"
+
+    invoke-static {v0, p0, p1}, Landroid/os/HwBinder;->getService(Ljava/lang/String;Ljava/lang/String;Z)Landroid/os/IHwBinder;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/hardware/radio/V1_4/IRadio;->asInterface(Landroid/os/IHwBinder;)Landroid/hardware/radio/V1_4/IRadio;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist getService(Z)Landroid/hardware/radio/V1_4/IRadio;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 72
+    const-string v0, "default"
+
+    invoke-static {v0, p0}, Landroid/hardware/radio/V1_4/IRadio;->getService(Ljava/lang/String;Z)Landroid/hardware/radio/V1_4/IRadio;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public abstract whitelist asBinder()Landroid/os/IHwBinder;
+.end method
+
+.method public abstract blacklist debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/NativeHandle;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist emergencyDial(ILandroid/hardware/radio/V1_0/Dial;ILjava/util/ArrayList;IZZ)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Landroid/hardware/radio/V1_0/Dial;",
+            "I",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;IZZ)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist getAllowedCarriers_1_4(I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist getDebugInfo()Landroid/internal/hidl/base/V1_0/DebugInfo;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist getHashChain()Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "[B>;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist getPreferredNetworkTypeBitmap(I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist getSignalStrength_1_4(I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist interfaceChain()Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist interfaceDescriptor()Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist notifySyspropsChanged()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist ping()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist setAllowedCarriers_1_4(ILandroid/hardware/radio/V1_4/CarrierRestrictionsWithPriority;I)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist setDataProfile_1_4(ILjava/util/ArrayList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/ArrayList<",
+            "Landroid/hardware/radio/V1_4/DataProfileInfo;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist setHALInstrumentation()V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist setInitialAttachApn_1_4(ILandroid/hardware/radio/V1_4/DataProfileInfo;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist setPreferredNetworkTypeBitmap(II)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist setupDataCall_1_4(IILandroid/hardware/radio/V1_4/DataProfileInfo;ZILjava/util/ArrayList;Ljava/util/ArrayList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(II",
+            "Landroid/hardware/radio/V1_4/DataProfileInfo;",
+            "ZI",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist startNetworkScan_1_4(ILandroid/hardware/radio/V1_2/NetworkScanRequest;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method
+
+.method public abstract blacklist unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method

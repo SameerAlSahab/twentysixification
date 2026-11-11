@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:paddingTop="@dimen/samsung_navigationbar_settings_top_padding" android:paddingBottom="@dimen/samsung_navigationbar_settings_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/task_bar_container" android:focusable="true" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/samsung_navigationbar_settings_side_margin" android:layout_marginEnd="@dimen/samsung_navigationbar_settings_internal_margin">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:gravity="center_vertical" android:id="@id/radio_center" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/samsung_navigationbar_settings_nav_type_font_size" android:gravity="center" android:paddingTop="@dimen/samsung_navigationbar_settings_text_top_padding" android:paddingBottom="@dimen/samsung_navigationbar_settings_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/taskbar_position_center" style="@style/list_title_text_style" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="start" android:id="@id/center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:adjustViewBounds="true" android:maxWidth="262.0dip" android:layout_weight="0.7" android:layout_marginStart="57.0dip" />
+                    <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3" />
+                </LinearLayout>
+                <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="48.0dip" android:layout_marginEnd="18.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/gesture_container_left" android:focusable="true" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/samsung_navigationbar_settings_side_margin" android:layout_marginEnd="@dimen/samsung_navigationbar_settings_internal_margin">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:gravity="center_vertical" android:id="@id/radio_left" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/samsung_navigationbar_settings_nav_type_font_size" android:ellipsize="end" android:gravity="center" android:id="@id/gesture_btn_textView" android:paddingTop="@dimen/samsung_navigationbar_settings_text_top_padding" android:paddingBottom="@dimen/samsung_navigationbar_settings_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/taskbar_position_left" android:maxLines="2" style="@style/list_title_text_style" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="start" android:id="@id/left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/setting_show_navi_img_01_edit" android:adjustViewBounds="true" android:maxWidth="262.0dip" android:layout_weight="0.7" android:layout_marginStart="57.0dip" />
+                    <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3" />
+                </LinearLayout>
+                <View android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="48.0dip" android:layout_marginEnd="18.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/gesture_container_right" android:focusable="true" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/samsung_navigationbar_settings_side_margin" android:layout_marginEnd="@dimen/samsung_navigationbar_settings_internal_margin">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RadioButton android:gravity="center_vertical" android:id="@id/radio_right" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" />
+                <TextView android:textSize="@dimen/samsung_navigationbar_settings_nav_type_font_size" android:ellipsize="end" android:gravity="center" android:id="@id/gesture_btn_textView1" android:paddingTop="@dimen/samsung_navigationbar_settings_text_top_padding" android:paddingBottom="@dimen/samsung_navigationbar_settings_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/taskbar_position_right" android:maxLines="2" style="@style/list_title_text_style" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="start" android:id="@id/right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/setting_show_navi_img_01_edit" android:adjustViewBounds="true" android:maxWidth="262.0dip" android:layout_weight="0.7" android:layout_marginStart="57.0dip" />
+                    <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.3" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

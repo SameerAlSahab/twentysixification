@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="136.0dip" android:width="136.0dip" android:viewportWidth="136.0" android:viewportHeight="136.0" aapt:fps="60"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="s10" android:scaleX="4.0" android:scaleY="4.0" android:translateX="68.0" android:translateY="56.241" aapt:layer_name="Top_BG">
+        <path android:name="s10p10" android:fillColor="#ff000000" android:pathData="M 0 -5.42 C 2.993 -5.42 5.42 -2.993 5.42 0 C 5.42 2.993 2.993 5.42 0 5.42 C -2.993 5.42 -5.42 2.993 -5.42 0 C -5.42 -2.993 -2.993 -5.42 0 -5.42 Z" android:fillAlpha="0.3" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+    </group>
+    <group android:name="s9" android:scaleX="4.0" android:scaleY="4.0" android:translateX="55.92" android:translateY="77.361" aapt:layer_name="Left_BG">
+        <group android:name="s9pg1" aapt:layer_name="Group 1">
+            <path android:name="s9pg1p300" android:fillColor="#ff000000" android:pathData="M5.42,0c0,2.993 -2.427,5.42 -5.42,5.42c-2.993,0 -5.42,-2.427 -5.42,-5.42c0,-2.137 1.238,-3.986 3.035,-4.868c0.21,2.801 2.55,5.008 5.405,5.008c0.856,0 1.665,-0.198 2.385,-0.552c0.01,0.136 0.015,0.273 0.015,0.412z" android:fillAlpha="0.3" aapt:layer_name="Merge Paths 1" aapt:style_name="Fill 1" />
+        </group>
+    </group>
+    <group android:name="s8" android:scaleX="4.0" android:scaleY="4.0" android:translateX="80.08" android:translateY="77.361" aapt:layer_name="Right_BG">
+        <group android:name="s8pg1" aapt:layer_name="Group 1">
+            <path android:name="s8pg1p400" android:fillColor="#ff000000" android:pathData="M5.42,0c0,2.993 -2.427,5.42 -5.42,5.42c-1.118,0 -2.157,-0.339 -3.02,-0.919c1.447,-0.973 2.4,-2.626 2.4,-4.501c0,-0.138 -0.005,-0.276 -0.015,-0.412c1.681,-0.825 2.873,-2.496 3.02,-4.457c1.798,0.882 3.035,2.731 3.035,4.868z" android:fillAlpha="0.3" aapt:layer_name="Merge Paths 1" aapt:style_name="Fill 1" />
+        </group>
+    </group>
+    <group android:name="s6" android:pivotX="20.02" android:pivotY="19.34" android:scaleX="4.0" android:scaleY="4.0" android:translateX="35.9" android:translateY="58.021" aapt:layer_name="Left">
+        <group android:name="s6pg1" android:translateX="20.021" android:translateY="19.342" aapt:layer_name="Group 19">
+            <path android:name="s6pg1p10" android:fillColor="@drawable/$indicator_ai_filter_on_off__1" android:pathData="M 0.035 -4.86 C 2.752 -4.86 4.954 -2.658 4.954 0.059 C 4.954 2.775 2.752 4.977 0.035 4.977 C -2.681 4.977 -4.883 2.775 -4.883 0.059 C -4.883 -2.658 -2.681 -4.86 0.035 -4.86 Z" android:fillAlpha="0.75" aapt:layer_name="Path 4" aapt:style_name="Gradient Fill 1" />
+        </group>
+    </group>
+    <group android:name="s5" android:pivotX="17.0" android:pivotY="17.0" android:scaleX="4.0" android:scaleY="4.0" android:translateX="51.0" android:translateY="51.0" aapt:layer_name="Top">
+        <group android:name="s5pg1" android:translateX="17.004" android:translateY="14.059" aapt:layer_name="Group 18">
+            <path android:name="s5pg1p300" android:fillColor="@drawable/$indicator_ai_filter_on_off__2" android:pathData="M0.059,-4.883c2.716,0 4.918,2.202 4.918,4.919c0,2.716 -2.202,4.918 -4.918,4.918c-2.716,0 -4.92,-2.202 -4.92,-4.918c0,-2.717 2.204,-4.919 4.92,-4.919zM0.059,3.786c2.071,0 3.75,-1.679 3.75,-3.75c0,-2.071 -1.679,-3.751 -3.75,-3.751c-2.071,0 -3.75,1.68 -3.75,3.751c0,2.071 1.679,3.75 3.75,3.75z" android:fillAlpha="1.0" aapt:layer_name="Merge Paths 1" aapt:style_name="Gradient Fill 1" />
+        </group>
+    </group>
+    <group android:name="s4" android:pivotX="13.98" android:pivotY="19.34" android:scaleX="4.0" android:scaleY="4.0" android:translateX="66.1" android:translateY="58.021" aapt:layer_name="Right">
+        <group android:name="s4pg17" android:translateX="13.979" android:translateY="19.342" aapt:layer_name="Group 17">
+            <path android:name="s4pg17p10" android:fillColor="@drawable/$indicator_ai_filter_on_off__3" android:pathData="M 0 -4.918 C 2.716 -4.918 4.918 -2.716 4.918 0 C 4.918 2.717 2.716 4.919 0 4.919 C -2.716 4.919 -4.918 2.717 -4.918 0 C -4.918 -2.716 -2.716 -4.918 0 -4.918 Z" android:fillAlpha="0.5" aapt:layer_name="Path 1" aapt:style_name="Gradient Fill 1" />
+        </group>
+        <group android:name="s4pg16" android:translateX="12.498" android:translateY="17.857" aapt:layer_name="Group 16">
+            <path android:name="s4pg16p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg15" android:translateX="12.498" android:translateY="20.826" aapt:layer_name="Group 15">
+            <path android:name="s4pg15p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg14" android:translateX="15.467" android:translateY="17.857" aapt:layer_name="Group 14">
+            <path android:name="s4pg14p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg13" android:translateX="15.467" android:translateY="20.826" aapt:layer_name="Group 1">
+            <path android:name="s4pg13p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg12" android:translateX="15.182" android:translateY="15.288" aapt:layer_name="Group 13">
+            <path android:name="s4pg12p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg11" android:translateX="17.174" android:translateY="16.151" aapt:layer_name="Group 12">
+            <path android:name="s4pg11p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg10" android:translateX="18.036" android:translateY="18.142" aapt:layer_name="Group 11">
+            <path android:name="s4pg10p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg9" android:translateX="18.036" android:translateY="20.541" aapt:layer_name="Group 10">
+            <path android:name="s4pg9p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg8" android:translateX="17.174" android:translateY="22.53" aapt:layer_name="Group 9">
+            <path android:name="s4pg8p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg7" android:translateX="9.929" android:translateY="18.142" aapt:layer_name="Group 8">
+            <path android:name="s4pg7p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg6" android:translateX="10.795" android:translateY="16.151" aapt:layer_name="Group 7">
+            <path android:name="s4pg6p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg5" android:translateX="9.929" android:translateY="20.541" aapt:layer_name="Group 6">
+            <path android:name="s4pg5p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg4" android:translateX="10.795" android:translateY="22.53" aapt:layer_name="Group 5">
+            <path android:name="s4pg4p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg3" android:translateX="12.784" android:translateY="15.288" aapt:layer_name="Group 4">
+            <path android:name="s4pg3p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg2" android:translateX="15.182" android:translateY="23.395" aapt:layer_name="Group 3">
+            <path android:name="s4pg2p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s4pg1" android:translateX="12.784" android:translateY="23.395" aapt:layer_name="Group 2">
+            <path android:name="s4pg1p10" android:fillColor="#ffffcb0c" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="1.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+    </group>
+    <group android:name="s3" android:pivotX="17.0" android:pivotY="17.0" android:scaleX="4.0" android:scaleY="4.0" android:translateX="51.0" android:translateY="51.0" aapt:layer_name="Right 2">
+        <group android:name="s3pg1" android:translateX="20.021" android:translateY="19.342" aapt:layer_name="Group 19">
+            <path android:name="s3pg1p10" android:fillColor="@drawable/$indicator_ai_filter_on_off__4" android:pathData="M 0.035 -4.86 C 2.752 -4.86 4.954 -2.658 4.954 0.059 C 4.954 2.775 2.752 4.977 0.035 4.977 C -2.681 4.977 -4.883 2.775 -4.883 0.059 C -4.883 -2.658 -2.681 -4.86 0.035 -4.86 Z" android:fillAlpha="0.0" aapt:layer_name="Path 4" aapt:style_name="Gradient Fill 1" />
+        </group>
+    </group>
+    <group android:name="s2" android:pivotX="17.0" android:pivotY="17.0" android:scaleX="4.0" android:scaleY="4.0" android:translateX="51.0" android:translateY="51.0" aapt:layer_name="Top 2">
+        <group android:name="s2pg1" android:translateX="17.004" android:translateY="14.059" aapt:layer_name="Group 18">
+            <path android:name="s2pg1p300" android:fillColor="@drawable/$indicator_ai_filter_on_off__5" android:pathData="M0.059,-4.883c2.716,0 4.918,2.202 4.918,4.919c0,2.716 -2.202,4.918 -4.918,4.918c-2.716,0 -4.92,-2.202 -4.92,-4.918c0,-2.717 2.204,-4.919 4.92,-4.919zM0.059,3.786c2.071,0 3.75,-1.679 3.75,-3.75c0,-2.071 -1.679,-3.751 -3.75,-3.751c-2.071,0 -3.75,1.68 -3.75,3.751c0,2.071 1.679,3.75 3.75,3.75z" android:fillAlpha="0.0" aapt:layer_name="Merge Paths 1" aapt:style_name="Gradient Fill 1" />
+        </group>
+    </group>
+    <group android:name="s1" android:pivotX="17.0" android:pivotY="17.0" android:scaleX="4.0" android:scaleY="4.0" android:translateX="51.0" android:translateY="51.0" aapt:layer_name="Left 2">
+        <group android:name="s1pg17" android:translateX="13.979" android:translateY="19.342" aapt:layer_name="Group 17">
+            <path android:name="s1pg17p10" android:fillColor="#ffffffff" android:pathData="M 0 -4.918 C 2.716 -4.918 4.918 -2.716 4.918 0 C 4.918 2.717 2.716 4.919 0 4.919 C -2.716 4.919 -4.918 2.717 -4.918 0 C -4.918 -2.716 -2.716 -4.918 0 -4.918 Z" android:fillAlpha="0.0" aapt:layer_name="Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg16" android:translateX="12.498" android:translateY="17.857" aapt:layer_name="Group 16">
+            <path android:name="s1pg16p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg15" android:translateX="12.498" android:translateY="20.826" aapt:layer_name="Group 15">
+            <path android:name="s1pg15p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg14" android:translateX="15.467" android:translateY="17.857" aapt:layer_name="Group 14">
+            <path android:name="s1pg14p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg13" android:translateX="15.467" android:translateY="20.826" aapt:layer_name="Group 1">
+            <path android:name="s1pg13p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.915 C 0.505 -0.915 0.915 -0.505 0.915 0 C 0.915 0.505 0.505 0.915 0 0.915 C -0.505 0.915 -0.915 0.505 -0.915 0 C -0.915 -0.505 -0.505 -0.915 0 -0.915 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg12" android:translateX="15.182" android:translateY="15.288" aapt:layer_name="Group 13">
+            <path android:name="s1pg12p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg11" android:translateX="17.174" android:translateY="16.151" aapt:layer_name="Group 12">
+            <path android:name="s1pg11p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg10" android:translateX="18.036" android:translateY="18.142" aapt:layer_name="Group 11">
+            <path android:name="s1pg10p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg9" android:translateX="18.036" android:translateY="20.541" aapt:layer_name="Group 10">
+            <path android:name="s1pg9p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg8" android:translateX="17.174" android:translateY="22.53" aapt:layer_name="Group 9">
+            <path android:name="s1pg8p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg7" android:translateX="9.929" android:translateY="18.142" aapt:layer_name="Group 8">
+            <path android:name="s1pg7p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg6" android:translateX="10.795" android:translateY="16.151" aapt:layer_name="Group 7">
+            <path android:name="s1pg6p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg5" android:translateX="9.929" android:translateY="20.541" aapt:layer_name="Group 6">
+            <path android:name="s1pg5p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg4" android:translateX="10.795" android:translateY="22.53" aapt:layer_name="Group 5">
+            <path android:name="s1pg4p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.4 C 0.221 -0.4 0.4 -0.221 0.4 0 C 0.4 0.221 0.221 0.4 0 0.4 C -0.221 0.4 -0.4 0.221 -0.4 0 C -0.4 -0.221 -0.221 -0.4 0 -0.4 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg3" android:translateX="12.784" android:translateY="15.288" aapt:layer_name="Group 4">
+            <path android:name="s1pg3p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg2" android:translateX="15.182" android:translateY="23.395" aapt:layer_name="Group 3">
+            <path android:name="s1pg2p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+        <group android:name="s1pg1" android:translateX="12.784" android:translateY="23.395" aapt:layer_name="Group 2">
+            <path android:name="s1pg1p10" android:fillColor="#fffcfcfc" android:pathData="M 0 -0.63 C 0.348 -0.63 0.63 -0.348 0.63 0 C 0.63 0.348 0.348 0.63 0 0.63 C -0.348 0.63 -0.63 0.348 -0.63 0 C -0.63 -0.348 -0.348 -0.63 0 -0.63 Z" android:fillAlpha="0.0" aapt:layer_name="Ellipse Path 1" aapt:style_name="Fill 1" />
+        </group>
+    </group>
+</vector>

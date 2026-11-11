@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:paddingLeft="@dimen/wireless_dex_progress_bar_end_margin" android:paddingTop="@dimen/wireless_dex_viewpager_image_top_margin" android:paddingRight="@dimen/wireless_dex_progress_bar_end_margin" android:paddingBottom="@dimen/wireless_dex_viewpager_image_top_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/screen_resolution_msg_1" style="@style/SettingsDisplayResolutionStyle" />
+    <TextView android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/screen_resolution_msg_2" style="@style/SettingsDisplayResolutionStyle" />
+</LinearLayout>

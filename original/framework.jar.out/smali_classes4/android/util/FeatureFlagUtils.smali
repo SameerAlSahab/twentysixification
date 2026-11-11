@@ -1,0 +1,482 @@
+.class public Landroid/util/FeatureFlagUtils;
+.super Ljava/lang/Object;
+.source "FeatureFlagUtils.java"
+
+
+# static fields
+.field private static final greylist-max-o DEFAULT_FLAGS:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final greylist-max-o FFLAG_OVERRIDE_PREFIX:Ljava/lang/String; = "sys.fflag.override."
+
+.field public static final greylist-max-o FFLAG_PREFIX:Ljava/lang/String; = "sys.fflag."
+
+.field public static final blacklist HEARING_AID_SETTINGS:Ljava/lang/String; = "settings_bluetooth_hearing_aid"
+
+.field private static final blacklist PERSISTENT_FLAGS:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final blacklist PERSIST_PREFIX:Ljava/lang/String; = "persist.sys.fflag.override."
+
+.field public static final blacklist SETTINGS_ADB_METRICS_WRITER:Ljava/lang/String; = "settings_adb_metrics_writer"
+
+.field public static final blacklist SETTINGS_APP_ALLOW_DARK_THEME_ACTIVATION_AT_BEDTIME:Ljava/lang/String; = "settings_app_allow_dark_theme_activation_at_bedtime"
+
+.field public static final blacklist SETTINGS_APP_LOCALE_OPT_IN_ENABLED:Ljava/lang/String; = "settings_app_locale_opt_in_enabled"
+
+.field public static final blacklist SETTINGS_AUDIO_ROUTING:Ljava/lang/String; = "settings_audio_routing"
+
+.field public static final blacklist SETTINGS_BIOMETRICS2_FINGERPRINT_SETTINGS:Ljava/lang/String; = "settings_biometrics2_fingerprint"
+
+.field public static final blacklist SETTINGS_DO_NOT_RESTORE_PRESERVED:Ljava/lang/String; = "settings_do_not_restore_preserved"
+
+.field public static final blacklist SETTINGS_ENABLE_LOCKSCREEN_TRANSFER_API:Ljava/lang/String; = "settings_enable_lockscreen_transfer_api"
+
+.field public static final blacklist SETTINGS_ENABLE_MONITOR_PHANTOM_PROCS:Ljava/lang/String; = "settings_enable_monitor_phantom_procs"
+
+.field public static final blacklist SETTINGS_ENABLE_SECURITY_HUB:Ljava/lang/String; = "settings_enable_security_hub"
+
+.field public static final blacklist SETTINGS_ENABLE_SEC_NOTIFICATION_HIGHLIGHT:Ljava/lang/String; = "settings_enable_sec_notification_highlight"
+
+.field public static final blacklist SETTINGS_ENABLE_SEC_NOTIFICATION_SUMMARIZE:Ljava/lang/String; = "settings_enable_sec_notification_summarize"
+
+.field public static final blacklist SETTINGS_ENABLE_SEC_NOTIFICATION_SUMMARIZE_GAUSS:Ljava/lang/String; = "settings_enable_sec_notification_summarize_gauss"
+
+.field public static final blacklist SETTINGS_ENABLE_SPA:Ljava/lang/String; = "settings_enable_spa"
+
+.field public static final blacklist SETTINGS_ENABLE_SPA_METRICS:Ljava/lang/String; = "settings_enable_spa_metrics"
+
+.field public static final blacklist SETTINGS_ENABLE_SPA_PHASE2:Ljava/lang/String; = "settings_enable_spa_phase2"
+
+.field public static final blacklist SETTINGS_FLASH_NOTIFICATIONS:Ljava/lang/String; = "settings_flash_notifications"
+
+.field public static final blacklist SETTINGS_NEED_CONNECTED_BLE_DEVICE_FOR_BROADCAST:Ljava/lang/String; = "settings_need_connected_ble_device_for_broadcast"
+
+.field public static final blacklist SETTINGS_NEW_KEYBOARD_MODIFIER_KEY:Ljava/lang/String; = "settings_new_keyboard_modifier_key"
+
+.field public static final blacklist SETTINGS_NEW_KEYBOARD_TRACKPAD:Ljava/lang/String; = "settings_new_keyboard_trackpad"
+
+.field public static final blacklist SETTINGS_PREFER_ACCESSIBILITY_MENU_IN_SYSTEM:Ljava/lang/String; = "settings_prefer_accessibility_menu_in_system"
+
+.field public static final blacklist SETTINGS_REMOTEAUTH_ENROLLMENT_SETTINGS:Ljava/lang/String; = "settings_remoteauth_enrollment"
+
+.field public static final blacklist SETTINGS_REMOTE_DEVICE_CREDENTIAL_VALIDATION:Ljava/lang/String; = "settings_remote_device_credential_validation"
+
+.field public static final blacklist SETTINGS_SHOW_STYLUS_PREFERENCES:Ljava/lang/String; = "settings_show_stylus_preferences"
+
+.field public static final blacklist SETTINGS_SUPPORT_LARGE_SCREEN:Ljava/lang/String; = "settings_support_large_screen"
+
+.field public static final blacklist SETTINGS_VOLUME_PANEL_IN_SYSTEMUI:Ljava/lang/String; = "settings_volume_panel_in_systemui"
+
+.field public static final blacklist SETTINGS_WIFITRACKER2:Ljava/lang/String; = "settings_wifitracker2"
+
+
+# direct methods
+.method static constructor blacklist <clinit>()V
+    .locals 12
+
+    .line 201
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Landroid/util/FeatureFlagUtils;->DEFAULT_FLAGS:Ljava/util/Map;
+
+    .line 202
+    const-string/jumbo v1, "settings_audio_switcher"
+
+    const-string/jumbo v2, "true"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 203
+    const-string/jumbo v1, "settings_systemui_theme"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 204
+    const-string/jumbo v1, "settings_bluetooth_hearing_aid"
+
+    const-string v3, "false"
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 205
+    const-string/jumbo v1, "settings_wifi_details_datausage_header"
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 206
+    const-string/jumbo v1, "settings_skip_direction_mutable"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 207
+    const-string/jumbo v1, "settings_wifitracker2"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 208
+    const-string/jumbo v1, "settings_controller_loading_enhancement"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 209
+    const-string/jumbo v1, "settings_conditionals"
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 212
+    const-string/jumbo v1, "settings_do_not_restore_preserved"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 214
+    const-string/jumbo v1, "settings_tether_all_in_one"
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 215
+    const-string/jumbo v1, "settings_contextual_home"
+
+    invoke-interface {v0, v1, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 216
+    const-string/jumbo v1, "settings_enable_security_hub"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 217
+    const-string/jumbo v1, "settings_support_large_screen"
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 218
+    const-string/jumbo v4, "settings_search_always_expand"
+
+    invoke-interface {v0, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 219
+    const-string/jumbo v4, "settings_app_locale_opt_in_enabled"
+
+    invoke-interface {v0, v4, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 220
+    const-string/jumbo v5, "settings_volume_panel_in_systemui"
+
+    invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 221
+    const-string/jumbo v5, "settings_enable_monitor_phantom_procs"
+
+    invoke-interface {v0, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 222
+    const-string/jumbo v6, "settings_app_allow_dark_theme_activation_at_bedtime"
+
+    invoke-interface {v0, v6, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 223
+    const-string/jumbo v7, "settings_need_connected_ble_device_for_broadcast"
+
+    invoke-interface {v0, v7, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 224
+    const-string/jumbo v7, "settings_new_keyboard_trackpad"
+
+    invoke-interface {v0, v7, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 226
+    const-string/jumbo v8, "settings_enable_spa"
+
+    invoke-interface {v0, v8, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 227
+    const-string/jumbo v9, "settings_enable_spa_phase2"
+
+    invoke-interface {v0, v9, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 228
+    const-string/jumbo v10, "settings_enable_spa_metrics"
+
+    invoke-interface {v0, v10, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 229
+    const-string/jumbo v10, "settings_adb_metrics_writer"
+
+    invoke-interface {v0, v10, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 230
+    const-string/jumbo v10, "settings_show_stylus_preferences"
+
+    invoke-interface {v0, v10, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 231
+    const-string/jumbo v10, "settings_prefer_accessibility_menu_in_system"
+
+    invoke-interface {v0, v10, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 232
+    const-string/jumbo v11, "settings_audio_routing"
+
+    invoke-interface {v0, v11, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 233
+    const-string/jumbo v11, "settings_flash_notifications"
+
+    invoke-interface {v0, v11, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 234
+    const-string/jumbo v11, "settings_enable_lockscreen_transfer_api"
+
+    invoke-interface {v0, v11, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 235
+    const-string/jumbo v11, "settings_remote_device_credential_validation"
+
+    invoke-interface {v0, v11, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 236
+    const-string/jumbo v2, "settings_biometrics2_fingerprint"
+
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 238
+    const-string/jumbo v2, "settings_remoteauth_enrollment"
+
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 241
+    const-string/jumbo v2, "settings_enable_sec_notification_highlight"
+
+    invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 243
+    const-string/jumbo v11, "settings_enable_sec_notification_summarize"
+
+    invoke-interface {v0, v11, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 249
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    sput-object v0, Landroid/util/FeatureFlagUtils;->PERSISTENT_FLAGS:Ljava/util/Set;
+
+    .line 250
+    invoke-interface {v0, v4}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 251
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 252
+    invoke-interface {v0, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 253
+    invoke-interface {v0, v6}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 254
+    invoke-interface {v0, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 255
+    invoke-interface {v0, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 256
+    invoke-interface {v0, v9}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 257
+    invoke-interface {v0, v10}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 260
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 262
+    invoke-interface {v0, v11}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public constructor greylist-max-o <init>()V
+    .locals 0
+
+    .line 36
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static greylist-max-o getAllFeatureFlags()Ljava/util/Map;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .line 307
+    sget-object v0, Landroid/util/FeatureFlagUtils;->DEFAULT_FLAGS:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method private static blacklist getSystemPropertyPrefix(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .line 311
+    sget-object v0, Landroid/util/FeatureFlagUtils;->PERSISTENT_FLAGS:Ljava/util/Set;
+
+    invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string/jumbo p0, "persist.sys.fflag.override."
+
+    return-object p0
+
+    :cond_0
+    const-string/jumbo p0, "sys.fflag.override."
+
+    return-object p0
+.end method
+
+.method public static greylist-max-o isEnabled(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    .line 278
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p0
+
+    invoke-static {p0, p1}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 279
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 280
+    invoke-static {p0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+
+    .line 286
+    :cond_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p1}, Landroid/util/FeatureFlagUtils;->getSystemPropertyPrefix(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 287
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 288
+    invoke-static {p0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+
+    .line 291
+    :cond_1
+    invoke-static {}, Landroid/util/FeatureFlagUtils;->getAllFeatureFlags()Ljava/util/Map;
+
+    move-result-object p0
+
+    invoke-interface {p0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/String;
+
+    .line 292
+    invoke-static {p0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static greylist-max-o setEnabled(Landroid/content/Context;Ljava/lang/String;Z)V
+    .locals 1
+
+    .line 299
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p1}, Landroid/util/FeatureFlagUtils;->getSystemPropertyPrefix(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p2, :cond_0
+
+    .line 300
+    const-string/jumbo p1, "true"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "false"
+
+    .line 299
+    :goto_0
+    invoke-static {p0, p1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

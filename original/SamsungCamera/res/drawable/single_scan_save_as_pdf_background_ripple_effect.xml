@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <ripple android:color="@color/camera_default_ripple_color">
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="@dimen/single_scan_save_as_pdf_background_radius" />
+                    <solid android:color="@color/single_scan_save_as_pdf_background" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+    <item android:drawable="@drawable/single_scan_save_as_pdf_background" />
+</selector>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_screen_permission_page_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.applications.appinfo.ScreenPermissionTargetAppConsentHeaderPreference android:selectable="false" android:key="screen_permission_target_app_consent_header_preference" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference settings:height="1.0px" />
+    <com.samsung.android.settings.accessibility.base.widget.InlineCuePreference android:selectable="false" android:key="screen_permission_assistant_card_preference" />
+    <PreferenceCategory android:title="@string/sec_screen_permission_category" android:key="screen_permission_target_consent_category">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_screen_permission_always_allowed" android:key="allow" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_screen_permission_ask_every_time" android:key="default" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sec_screen_permission_dont_allow" android:key="ignore" />
+    </PreferenceCategory>
+    <com.samsung.android.settings.applications.appinfo.ScreenPermissionFooterPreference android:selectable="false" android:key="screen_permission_footer_preference" settings:searchable="false" />
+</PreferenceScreen>

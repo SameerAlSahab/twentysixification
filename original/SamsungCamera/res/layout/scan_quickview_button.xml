@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/touch_area" android:tag="layout/scan_quickview_button_0" android:focusable="true" android:clickable="true" android:layout_width="@dimen/base_menu_side_button_touch_area_size" android:layout_height="@dimen/base_menu_side_button_touch_area_size" android:contentDescription="@string/scan_quick_view">
+        <ImageView android:id="@id/quick_view" android:background="@drawable/quick_view_background" android:focusable="false" android:layout_width="@dimen/base_menu_side_button_size" android:layout_height="@dimen/base_menu_side_button_size" android:scaleType="centerCrop" android:layout_centerInParent="true" android:contentDescription="@null" />
+        <ImageView android:id="@id/ripple_effect_view" android:background="@drawable/scan_quick_view_ripple_effect" android:focusable="false" android:layout_width="@dimen/base_menu_side_button_size" android:layout_height="@dimen/base_menu_side_button_size" android:scaleType="centerCrop" android:layout_centerInParent="true" android:contentDescription="@null" />
+        <TextView android:textSize="@dimen/scan_quick_view_counter_text_size" android:textColor="@color/black" android:gravity="center" android:id="@id/counter" android:background="@drawable/scan_quick_view_count_background" android:focusable="false" android:visibility="invisible" android:layout_width="@dimen/scan_quick_view_counter_size" android:layout_height="@dimen/scan_quick_view_counter_size" android:layout_marginTop="@dimen/scan_quick_view_counter_top_margin" android:text="" android:contentDescription="@null" android:textAlignment="center" android:layout_marginEnd="@dimen/scan_quick_view_counter_end_margin" android:layout_alignParentEnd="true" style="@style/SecSemiBold" />
+    </RelativeLayout>
+</merge>

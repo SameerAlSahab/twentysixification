@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/tilta_wireless_controller_list_item_height" android:paddingVertical="@dimen/tilta_wireless_controller_list_item_vertical_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/tilta_wireless_controller_list_item_text_size" android:textColor="@color/tilta_wireless_controller_unselected_list_text_color" android:gravity="start|center" android:id="@id/item_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:maxWidth="@dimen/tilta_wireless_controller_menu_max_text_width" android:minWidth="@dimen/tilta_wireless_controller_menu_min_text_width" android:layout_weight="1.0" style="@style/SecRegular" />
+    <ImageView android:id="@id/item_icon" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/camera_indicator_checkmark" android:contentDescription="@null" android:layout_marginStart="@dimen/tilta_wireless_controller_list_item_drawable_padding" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/help_animation_container" android:background="@color/sec_widget_help_image_backgound_color" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.samsung.android.settings.widget.PlayPauseLottieAnimationView android:id="@id/help_animation" android:paddingTop="@dimen/sec_widget_help_img_margin_top_bottom" android:paddingBottom="@dimen/sec_widget_help_img_margin_top_bottom" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="@dimen/sec_widget_help_img_height" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="@dimen/sec_widget_help_img_width" android:contentDescription="@string/sec_nearby_scan_help_talkback" android:importantForAccessibility="no" android:layout_marginStart="@dimen/sec_widget_help_img_margin_start_end" android:layout_marginEnd="@dimen/sec_widget_help_img_margin_start_end" app:lottie_autoPlay="true" app:lottie_loop="true" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:focusable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:id="@id/help_description_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_help_desc_margin_top" android:text="@string/sec_nearby_device_scanning_help_msg" android:layout_marginStart="@dimen/sec_widget_help_desc_margin_start" android:layout_marginEnd="@dimen/sec_widget_help_desc_margin_end" style="@style/body_text_style" />
+    </LinearLayout>
+</LinearLayout>

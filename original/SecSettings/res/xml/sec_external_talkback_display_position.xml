@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/display_position_title" android:key="key_talkback_display_position"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_external_display_position_help_ui" android:key="sec_external_display_position_helptext" app:allowDividerBelow="false" />
+    <PreferenceCategory>
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/left_of_device" android:key="menu_item_1" settings:allowDividerBelow="false" settings:roundStroke="top_left|top_right" />
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/right_of_device" android:key="menu_item_2" settings:allowDividerBelow="false" />
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/above_device" android:key="menu_item_3" settings:allowDividerBelow="false" />
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/below_device" android:key="menu_item_4" settings:allowDividerBelow="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

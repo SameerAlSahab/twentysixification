@@ -1,0 +1,155 @@
+.class public Landroid/widget/Toolbar$LayoutParams;
+.super Landroid/app/ActionBar$LayoutParams;
+.source "Toolbar.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/widget/Toolbar;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "LayoutParams"
+.end annotation
+
+
+# static fields
+.field static final greylist-max-o CUSTOM:I = 0x0
+
+.field static final greylist-max-o EXPANDED:I = 0x2
+
+.field static final greylist-max-o SYSTEM:I = 0x1
+
+
+# instance fields
+.field greylist-max-o mViewType:I
+
+
+# direct methods
+.method public constructor whitelist <init>(I)V
+    .locals 2
+
+    const/4 v0, -0x2
+
+    const/4 v1, -0x1
+
+    .line 2683
+    invoke-direct {p0, v0, v1, p1}, Landroid/widget/Toolbar$LayoutParams;-><init>(III)V
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(II)V
+    .locals 0
+
+    .line 2673
+    invoke-direct {p0, p1, p2}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
+
+    const/4 p1, 0x0
+
+    .line 2666
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    const p1, 0x800013
+
+    .line 2674
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->gravity:I
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(III)V
+    .locals 0
+
+    .line 2678
+    invoke-direct {p0, p1, p2}, Landroid/app/ActionBar$LayoutParams;-><init>(II)V
+
+    const/4 p1, 0x0
+
+    .line 2666
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    .line 2679
+    iput p3, p0, Landroid/widget/Toolbar$LayoutParams;->gravity:I
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/app/ActionBar$LayoutParams;)V
+    .locals 0
+
+    .line 2693
+    invoke-direct {p0, p1}, Landroid/app/ActionBar$LayoutParams;-><init>(Landroid/app/ActionBar$LayoutParams;)V
+
+    const/4 p1, 0x0
+
+    .line 2666
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 0
+
+    .line 2669
+    invoke-direct {p0, p1, p2}, Landroid/app/ActionBar$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    const/4 p1, 0x0
+
+    .line 2666
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/view/ViewGroup$LayoutParams;)V
+    .locals 0
+
+    .line 2704
+    invoke-direct {p0, p1}, Landroid/app/ActionBar$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 p1, 0x0
+
+    .line 2666
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
+    .locals 1
+
+    .line 2697
+    invoke-direct {p0, p1}, Landroid/app/ActionBar$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v0, 0x0
+
+    .line 2666
+    iput v0, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    .line 2700
+    invoke-virtual {p0, p1}, Landroid/widget/Toolbar$LayoutParams;->copyMarginsFrom(Landroid/view/ViewGroup$MarginLayoutParams;)V
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Landroid/widget/Toolbar$LayoutParams;)V
+    .locals 1
+
+    .line 2687
+    invoke-direct {p0, p1}, Landroid/app/ActionBar$LayoutParams;-><init>(Landroid/app/ActionBar$LayoutParams;)V
+
+    const/4 v0, 0x0
+
+    .line 2666
+    iput v0, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    .line 2689
+    iget p1, p1, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    iput p1, p0, Landroid/widget/Toolbar$LayoutParams;->mViewType:I
+
+    return-void
+.end method

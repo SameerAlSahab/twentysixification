@@ -1,0 +1,25 @@
+.class public final Lcom/android/server/credentials/metrics/CandidatePhaseMetric;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# instance fields
+.field public mCandidateUid:I
+
+.field public mFrameworkException:Ljava/lang/String;
+
+.field public mHasException:Z
+
+.field public mProviderQueryStatus:I
+
+.field public mQueryFinishTimeNanoseconds:J
+
+.field public mQueryReturned:Z
+
+.field public mResponseCollective:Lcom/android/server/credentials/metrics/shared/ResponseCollective;
+
+.field public mServiceBeganTimeNanoseconds:J
+
+.field public mSessionIdProvider:I
+
+.field public mStartQueryTimeNanoseconds:J

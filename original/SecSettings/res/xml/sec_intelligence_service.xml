@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_intelligence_service_title" android:key="galaxy_ai_settings" settings:hierarchicalParentFragment="com.android.settings.homepage.TopLevelSettings" settings:topLevelPreferenceKey="top_level_galaxy_ai"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="50000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="150000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="250000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="350000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="450000" />
+    <com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.SecIntelligenceSwitchPreferenceScreen android:title="@string/sec_intelligence_service_prevent_online_processing_title" android:key="prevent_online_processing" android:order="500000" android:fragment="com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.PreventOnlineProcessingFragment" settings:controller="com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.controller.PreventOnlineProcessingPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/sec_intelligence_service_prevent_online_processing_summary" android:key="prevent_online_processing_caption" android:order="500100" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="600000" />
+    <SecPreference android:title="@string/sec_intelligence_service_about_advanved_intelligence" android:key="about_advanced_intelligence" android:order="700000" android:fragment="com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.AboutAdvancedIntelligenceSettings" settings:controller="com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.controller.PrivacyCenterPreferenceController" />
+    <SecPreference android:title="@string/sec_intelligence_service_terms_and_condition" android:key="terms_and_conditions" android:order="800000" settings:controller="com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.TermsAndConditionsPreferenceController" />
+</PreferenceScreen>

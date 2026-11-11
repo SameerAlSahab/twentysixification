@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Switch to mobile data with AI" android:key="wifi_switch_to_mobile_ai_prefs_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Enable option">
+        <SecSwitchPreference android:title="Intelligent Link Assessment" android:key="ila_enable" android:summary="Learning Wi-Fi link pattern concerned with switch to mobile data" settings:controller="com.samsung.android.settings.wifi.develop.IlaModePreferenceController" />
+        <SecSwitchPreference android:title="Intelligent Network Switch" android:key="ins_enable" android:summary="Learning mobility pattern concerned with switch to mobile data" settings:controller="com.samsung.android.settings.wifi.develop.InsModePreferenceController" />
+    </PreferenceCategory>
+</PreferenceScreen>

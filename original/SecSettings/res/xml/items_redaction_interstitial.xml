@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ItemGroup android:id="@id/items_redaction_interstitial"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SectionItem>
+        <com.android.settings.RestrictedRadioButtonItem android:id="@id/show_all" android:title="@string/lock_screen_notifications_summary_show" />
+        <com.android.settings.RestrictedRadioButtonItem android:id="@id/redact_sensitive" android:title="@string/lock_screen_notifications_summary_hide" />
+        <com.android.settings.NormalRadioButtonItem android:id="@id/hide_all" android:title="@string/lock_screen_notifications_summary_disable" />
+    </SectionItem>
+</ItemGroup>

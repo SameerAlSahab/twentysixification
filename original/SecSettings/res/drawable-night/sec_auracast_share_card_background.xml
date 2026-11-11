@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="574.0dip" android:width="340.0dip" android:viewportWidth="340.0" android:viewportHeight="574.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$sec_auracast_share_card_background__0" android:pathData="M0,0h340v574h-340z" />
+</vector>

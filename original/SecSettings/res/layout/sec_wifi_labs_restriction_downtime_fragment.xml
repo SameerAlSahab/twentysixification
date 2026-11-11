@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:layout_width="fill_parent" android:layout_height="fill_parent" android:key="network_restriction_downtime_root"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:title="@string/sec_wifi_labs_restriction_use_downtime" android:key="DowntimeSwitch" />
+    <PreferenceCategory android:title="@string/sec_wifi_labs_restriction_set_time" android:key="network_restriction_downtime_set_time">
+        <Preference android:title="@string/sec_wifi_labs_restriction_start_time" android:key="network_restriction_downtime_start" />
+        <Preference android:title="@string/sec_wifi_labs_restriction_end_time" android:key="network_restriction_downtime_end" />
+    </PreferenceCategory>
+</PreferenceScreen>

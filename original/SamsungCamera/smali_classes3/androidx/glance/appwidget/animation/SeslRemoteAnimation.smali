@@ -1,0 +1,78 @@
+.class public abstract Landroidx/glance/appwidget/animation/SeslRemoteAnimation;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$ColorAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$DecimalTextAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$DrawableAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$FloatTextAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$ProgressAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$PropertyAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$RemoteTextAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$ViewAnimation;,
+        Landroidx/glance/appwidget/animation/SeslRemoteAnimation$WidthAnimation;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u00087\u0018\u00002\u00020\u0001:\t\u0003\u0004\u0005\u0006\u0007\u0008\t\n\u000bB\u0007\u0008\u0004\u00a2\u0006\u0002\u0010\u0002\u0082\u0001\u0007\u000c\r\u000e\u000f\u0010\u0011\u0012\u00a8\u0006\u0013"
+    }
+    d2 = {
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation;",
+        "",
+        "()V",
+        "ColorAnimation",
+        "DecimalTextAnimation",
+        "DrawableAnimation",
+        "FloatTextAnimation",
+        "ProgressAnimation",
+        "PropertyAnimation",
+        "RemoteTextAnimation",
+        "ViewAnimation",
+        "WidthAnimation",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$ColorAnimation;",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$DrawableAnimation;",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$ProgressAnimation;",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$PropertyAnimation;",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$RemoteTextAnimation;",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$ViewAnimation;",
+        "Landroidx/glance/appwidget/animation/SeslRemoteAnimation$WidthAnimation;",
+        "glance-appwidget_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/k;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Landroidx/glance/appwidget/animation/SeslRemoteAnimation;-><init>()V
+
+    return-void
+.end method

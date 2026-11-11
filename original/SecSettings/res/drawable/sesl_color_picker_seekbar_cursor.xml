@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/sesl_color_picker_seekbar_cursor_inner_size" android:width="@dimen/sesl_color_picker_seekbar_cursor_outer_size" android:viewportWidth="20.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:translateX="2.0">
+        <group>
+            <clip-path android:pathData="M0,0h16v16h-16zM1,8C1,4.134 4.134,1 8,1C11.866,1 15,4.134 15,8C15,11.866 11.866,15 8,15C4.134,15 1,11.866 1,8Z" />
+            <path android:fillColor="#ff000000" android:pathData="M1,8M15,8M15,8M1,8M8,1M15,8M8,15M1,8M8,15V14C4.686,14 2,11.314 2,8H1H0C0,12.418 3.582,16 8,16V15ZM15,8H14C14,11.314 11.314,14 8,14V15V16C12.418,16 16,12.418 16,8H15ZM8,1V2C11.314,2 14,4.686 14,8H15H16C16,3.582 12.418,0 8,0V1ZM8,1V0C3.582,0 0,3.582 0,8H1H2C2,4.686 4.686,2 8,2V1Z" android:fillAlpha="0.2" />
+        </group>
+        <path android:fillColor="@color/sesl_color_picker_seekbar_cursor_background_color" android:pathData="M1,8C1,4.134 4.134,1 8,1C11.866,1 15,4.134 15,8C15,11.866 11.866,15 8,15C4.134,15 1,11.866 1,8Z" />
+    </group>
+</vector>

@@ -1,0 +1,63 @@
+.class Landroid/app/PackageInstallObserver$1;
+.super Landroid/content/pm/IPackageInstallObserver2$Stub;
+.source "PackageInstallObserver.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/app/PackageInstallObserver;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic blacklist this$0:Landroid/app/PackageInstallObserver;
+
+
+# direct methods
+.method constructor blacklist <init>(Landroid/app/PackageInstallObserver;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .line 31
+    iput-object p1, p0, Landroid/app/PackageInstallObserver$1;->this$0:Landroid/app/PackageInstallObserver;
+
+    invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver2$Stub;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist onPackageInstalled(Ljava/lang/String;ILjava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 40
+    iget-object p0, p0, Landroid/app/PackageInstallObserver$1;->this$0:Landroid/app/PackageInstallObserver;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/app/PackageInstallObserver;->onPackageInstalled(Ljava/lang/String;ILjava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public blacklist onUserActionRequired(Landroid/content/Intent;)V
+    .locals 0
+
+    .line 34
+    iget-object p0, p0, Landroid/app/PackageInstallObserver$1;->this$0:Landroid/app/PackageInstallObserver;
+
+    invoke-virtual {p0, p1}, Landroid/app/PackageInstallObserver;->onUserActionRequired(Landroid/content/Intent;)V
+
+    return-void
+.end method

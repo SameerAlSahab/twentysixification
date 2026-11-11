@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sec_intelligence_service_onboarding_layout_padding_horizontal">120.0dip</dimen>
+    <dimen name="ssw_setup_design_content_padding_top">24.0dip</dimen>
+    <dimen name="ssw_setup_design_layout_margin_start_end">24.0dip</dimen>
+    <dimen name="sud_glif_expressive_footer_bar_padding_end">24.0dip</dimen>
+    <dimen name="sud_glif_expressive_footer_bar_padding_start">4.0dip</dimen>
+</resources>

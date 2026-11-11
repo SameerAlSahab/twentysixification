@@ -1,0 +1,203 @@
+.class public Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;
+.super Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/CustomFeatureFlags;
+.source "FakeFeatureFlagsImpl.java"
+
+
+# instance fields
+.field private final blacklist IS_EXPORTED:Z
+
+.field private final blacklist mDefaults:Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FeatureFlags;
+
+.field private final blacklist mFlagMap:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 13
+    invoke-direct {p0, v0}, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;-><init>(Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FeatureFlags;)V
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>(Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FeatureFlags;)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    .line 17
+    invoke-direct {p0, v0}, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/CustomFeatureFlags;-><init>(Ljava/util/function/BiPredicate;)V
+
+    .line 8
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v1, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mFlagMap:Ljava/util/Map;
+
+    const/4 v1, 0x1
+
+    .line 10
+    iput-boolean v1, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->IS_EXPORTED:Z
+
+    .line 18
+    iput-object p1, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mDefaults:Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FeatureFlags;
+
+    .line 20
+    invoke-virtual {p0}, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->getFlagNames()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    .line 21
+    iget-object v2, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mFlagMap:Ljava/util/Map;
+
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method protected blacklist getValue(Ljava/lang/String;Ljava/util/function/Predicate;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/function/Predicate<",
+            "Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FeatureFlags;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .line 27
+    iget-object v0, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mFlagMap:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    if-eqz v0, :cond_0
+
+    .line 29
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    return p0
+
+    .line 31
+    :cond_0
+    iget-object p0, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mDefaults:Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FeatureFlags;
+
+    if-eqz p0, :cond_1
+
+    .line 32
+    invoke-interface {p2, p0}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+
+    .line 34
+    :cond_1
+    const-string p0, " is not set"
+
+    invoke-static {p1, p0}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$1(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public blacklist resetAll()V
+    .locals 2
+
+    .line 45
+    iget-object p0, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mFlagMap:Ljava/util/Map;
+
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    const/4 v1, 0x0
+
+    .line 46
+    invoke-interface {v0, v1}, Ljava/util/Map$Entry;->setValue(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public blacklist setFlag(Ljava/lang/String;Z)V
+    .locals 1
+
+    .line 38
+    iget-object v0, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mFlagMap:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    .line 41
+    iget-object p0, p0, Lcom/android/internal/hidden_from_bootclasspath/android/telecom/flags/FakeFeatureFlagsImpl;->mFlagMap:Ljava/util/Map;
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p2
+
+    invoke-interface {p0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method

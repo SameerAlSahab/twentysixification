@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/later_button" android:title="@string/knox_guide_enroll_twostep_button_prev" app:showAsAction="always" />
+    <item android:id="@id/setup_button" android:title="@string/knox_guide_enroll_twostep_button_next" app:showAsAction="always" />
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:filterTouchesWhenObscured="true" style="?sudItemContainerStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/sud_items_icon_container" android:layout_height="wrap_content" style="?sudItemIconContainerStyle">
+        <ImageView android:id="@id/sud_items_icon" android:layout_height="wrap_content" style="?sudItemIconStyle" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sud_items_padding_bottom_extra" android:layout_weight="1.0">
+        <com.google.android.setupdesign.view.RichTextView android:gravity="start" android:id="@id/sud_items_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" android:labelFor="@id/sud_items_switch" style="?sudItemTitleStyle" />
+        <com.google.android.setupdesign.view.RichTextView android:gravity="start" android:id="@id/sud_items_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="?sudItemSummaryStyle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/two_target_divider" android:layout_width="wrap_content" android:layout_height="fill_parent" android:filterTouchesWhenObscured="false">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settingslib_expressive_icon_chevron" android:paddingEnd="8.0dip" />
+        <View android:background="?android:listDivider" android:layout_width="@dimen/sud_items_divder_width" android:layout_height="@dimen/sud_switch_divider_height" />
+    </LinearLayout>
+    <com.google.android.material.materialswitch.MaterialSwitch android:layout_gravity="end|center" android:id="@id/sud_items_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="0.0dip" style="@style/SudExpressiveSwitchBarStyle" />
+</LinearLayout>

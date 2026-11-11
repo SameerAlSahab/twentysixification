@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:scrollbarStyle="outsideOverlay" android:orientation="vertical" android:id="@id/container_safrica_regulatory" android:background="@color/device_info_regulatory_info_background" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/sec_regulatory_info_safrica" android:layout_width="301.0dip" android:layout_height="102.0dip">
+            <TextView android:textSize="20.0dip" android:textColor="@color/black" android:id="@id/approval_id_safrica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="43.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginEnd="18.0dip" android:layout_alignParentEnd="true" android:letterSpacing="0.18" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

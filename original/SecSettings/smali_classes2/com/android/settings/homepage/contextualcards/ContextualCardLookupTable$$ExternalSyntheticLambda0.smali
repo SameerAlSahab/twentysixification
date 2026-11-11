@@ -1,0 +1,35 @@
+.class public final synthetic Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
+
+
+# instance fields
+.field public synthetic f$0:I
+
+
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
+
+    iget p0, p0, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$$ExternalSyntheticLambda0;->f$0:I
+
+    check-cast p1, Lcom/android/settings/homepage/contextualcards/ContextualCardLookupTable$ControllerRendererMapping;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const p1, 0x7f0e08d8
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method

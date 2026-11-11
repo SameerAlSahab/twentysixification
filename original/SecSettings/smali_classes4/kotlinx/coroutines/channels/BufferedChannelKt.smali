@@ -1,0 +1,268 @@
+.class public abstract Lkotlinx/coroutines/channels/BufferedChannelKt;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# static fields
+.field public static final BUFFERED:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final CHANNEL_CLOSED:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final CLOSE_HANDLER_CLOSED:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final CLOSE_HANDLER_INVOKED:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final DONE_RCV:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final EXPAND_BUFFER_COMPLETION_WAIT_ITERATIONS:I
+
+.field public static final FAILED:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final INTERRUPTED_RCV:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final INTERRUPTED_SEND:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final IN_BUFFER:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final NO_CLOSE_CAUSE:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final NO_RECEIVE_RESULT:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final NULL_SEGMENT:Lkotlinx/coroutines/channels/ChannelSegment;
+
+.field public static final POISONED:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final RESUMING_BY_EB:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final RESUMING_BY_RCV:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final SEGMENT_SIZE:I
+
+.field public static final SUSPEND:Lkotlinx/coroutines/internal/Symbol;
+
+.field public static final SUSPEND_NO_WAITER:Lkotlinx/coroutines/internal/Symbol;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lkotlinx/coroutines/channels/ChannelSegment;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const-wide/16 v1, -0x1
+
+    const/4 v3, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lkotlinx/coroutines/channels/ChannelSegment;-><init>(JLkotlinx/coroutines/channels/ChannelSegment;Lkotlinx/coroutines/channels/BufferedChannel;I)V
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->NULL_SEGMENT:Lkotlinx/coroutines/channels/ChannelSegment;
+
+    const/16 v0, 0x20
+
+    const/16 v1, 0xc
+
+    const-string v2, "kotlinx.coroutines.bufferedChannel.segmentSize"
+
+    invoke-static {v0, v1, v2}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(IILjava/lang/String;)I
+
+    move-result v0
+
+    sput v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->SEGMENT_SIZE:I
+
+    const-string v0, "kotlinx.coroutines.bufferedChannel.expandBufferCompletionWaitIterations"
+
+    const/16 v2, 0x2710
+
+    invoke-static {v2, v1, v0}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(IILjava/lang/String;)I
+
+    move-result v0
+
+    sput v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->EXPAND_BUFFER_COMPLETION_WAIT_ITERATIONS:I
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "BUFFERED"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->BUFFERED:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "SHOULD_BUFFER"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->IN_BUFFER:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "S_RESUMING_BY_RCV"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->RESUMING_BY_RCV:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "RESUMING_BY_EB"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->RESUMING_BY_EB:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "POISONED"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->POISONED:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "DONE_RCV"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->DONE_RCV:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "INTERRUPTED_SEND"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->INTERRUPTED_SEND:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "INTERRUPTED_RCV"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->INTERRUPTED_RCV:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "CHANNEL_CLOSED"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->CHANNEL_CLOSED:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "SUSPEND"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->SUSPEND:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "SUSPEND_NO_WAITER"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->SUSPEND_NO_WAITER:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "FAILED"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->FAILED:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "NO_RECEIVE_RESULT"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->NO_RECEIVE_RESULT:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "CLOSE_HANDLER_CLOSED"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->CLOSE_HANDLER_CLOSED:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "CLOSE_HANDLER_INVOKED"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->CLOSE_HANDLER_INVOKED:Lkotlinx/coroutines/internal/Symbol;
+
+    new-instance v0, Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-string v1, "NO_CLOSE_CAUSE"
+
+    iput-object v1, v0, Lkotlinx/coroutines/internal/Symbol;->symbol:Ljava/lang/String;
+
+    sput-object v0, Lkotlinx/coroutines/channels/BufferedChannelKt;->NO_CLOSE_CAUSE:Lkotlinx/coroutines/internal/Symbol;
+
+    return-void
+.end method
+
+.method public static final tryResume0(Lkotlinx/coroutines/CancellableContinuation;Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Z
+    .locals 0
+
+    invoke-interface {p0, p1, p2}, Lkotlinx/coroutines/CancellableContinuation;->tryResume(Ljava/lang/Object;Lkotlin/jvm/functions/Function3;)Lkotlinx/coroutines/internal/Symbol;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p0, p1}, Lkotlinx/coroutines/CancellableContinuation;->completeResume(Ljava/lang/Object;)V
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method

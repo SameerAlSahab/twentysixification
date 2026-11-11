@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="?android:dividerHorizontal" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <androidx.appcompat.widget.SwitchCompat android:textAppearance="?android:textAppearanceListItem" android:textColor="?android:textColorAlertDialogListItem" android:id="@id/notificationSwitch" android:paddingTop="14.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:text="@string/sec_bluetooth_hearing_device_input_routing_notification_toggle" android:paddingStart="18.0dip" android:paddingEnd="18.0dip" app:switchPadding="12.0dip" />
+</LinearLayout>

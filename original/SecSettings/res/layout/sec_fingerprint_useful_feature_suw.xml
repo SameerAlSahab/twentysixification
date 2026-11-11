@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_unlock" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <CheckBox android:id="@id/fingerprint_unlock_checkbox" style="@style/SecSuwBiometricUsefulFeatureCheckBox" />
+                <TextView android:text="@string/sec_fingerprint_set_as_screen_lock" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_always_on" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <CheckBox android:id="@id/fingerprint_useful_feature_always_on_checkbox" style="@style/SecSuwBiometricUsefulFeatureCheckBox" />
+                <TextView android:text="@string/sec_fingerprint_always_on_title" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:id="@id/fingerprint_useful_feature_always_on_summary" android:layout_marginTop="5.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/SecSuwBiometricUsefulFeatureDescription" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_always_on_type" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <TextView android:text="@string/sec_fingerprint_always_on_title" android:layout_marginHorizontal="12.0dip" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:id="@id/fingerprint_useful_feature_always_on_type_summary" android:layout_marginTop="5.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/SecSuwBiometricUsefulFeatureDescription" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_stay_on_lock" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <CheckBox android:id="@id/fingerprint_useful_feature_stay_on_lock_checkbox" style="@style/SecSuwBiometricUsefulFeatureCheckBox" />
+                <TextView android:text="@string/sec_biometrics_common_option_stay_on_lock_screen_switch" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:layout_marginTop="5.0dip" android:text="@string/sec_fingerprint_stay_on_lock_screen_summary" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/SecSuwBiometricUsefulFeatureDescription" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_screen_off_icon" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <CheckBox android:id="@id/fingerprint_useful_feature_screen_off_icon_checkbox" style="@style/SecSuwBiometricUsefulFeatureCheckBox" />
+                <TextView android:text="@string/sec_fingerprint_screen_off_icon_switch" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_screen_off_icon_aod" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <TextView android:text="@string/sec_fingerprint_screen_off_icon_title" android:layout_marginHorizontal="12.0dip" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+                <Spinner android:id="@id/fingerprint_useful_feature_screen_off_icon_aod_spinner" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/sec_biometrics_common_suw_useful_feature_spinner_height" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:id="@id/fingerprint_useful_feature_screen_off_icon_aod_summary" android:layout_marginTop="5.0dip" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/SecSuwBiometricUsefulFeatureDescription" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_finger_effect" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <CheckBox android:id="@id/fingerprint_useful_feature_finger_effect_checkbox" style="@style/SecSuwBiometricUsefulFeatureCheckBox" />
+                <TextView android:text="@string/sec_fingerprint_effect_title" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <include android:id="@id/tip_register_face" android:visibility="gone" layout="@layout/sec_biometrics_useful_features_tip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/fingerprint_useful_feature_show_fingerprint_icon" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:elevation="1.0dip" android:layout_marginHorizontal="5.0dip" android:paddingVertical="10.0dip">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip" android:layout_marginEnd="10.0dip">
+            <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentStart="true">
+                <TextView android:text="@string/sec_fingerprint_show_fingerprint_icon_title" android:layout_marginHorizontal="12.0dip" style="@style/SecSuwBiometricUsefulFeatureTitle" />
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:layout_marginTop="5.0dip" android:text="@string/sec_fingerprint_show_fingerprint_icon_summary" android:layout_marginStart="12.0dip" android:layout_marginEnd="12.0dip" style="@style/SecSuwBiometricUsefulFeatureDescription" />
+    </LinearLayout>
+</LinearLayout>

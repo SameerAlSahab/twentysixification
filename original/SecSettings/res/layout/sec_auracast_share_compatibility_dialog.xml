@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/sec_auracast_share_compatibility_dialog_space_top" android:paddingBottom="@dimen/sec_auracast_share_compatibility_dialog_space_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/sec_auracast_share_compatibility_dialog_space_horizontal">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/compatibility_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/text_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toStartOf="@id/switch_layout" app:layout_constraintStart_toStartOf="parent">
+                <TextView android:textSize="@dimen/sec_auracast_share_compatibility_dialog_title_text_size" android:textColor="@color/sec_auracast_share_compatibility_dialog_title_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_compatibility_dialog_title" android:fontFamily="sec" android:textAlignment="viewStart" android:textFontWeight="400" />
+                <TextView android:textSize="@dimen/sec_auracast_share_compatibility_dialog_description_text_size" android:textColor="@color/sec_auracast_share_compatibility_dialog_description_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_share_compatibility_dialog_description" android:fontFamily="sec" android:textAlignment="viewStart" android:textFontWeight="400" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/switch_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_auracast_share_compatibility_dialog_space_between_text_and_switch" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/text_layout" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.5">
+                <androidx.appcompat.widget.SwitchCompat android:layout_gravity="center_vertical" android:id="@id/compatibility_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" android:paddingHorizontal="@dimen/sec_auracast_share_compatibility_dialog_switch_space_left_and_right" android:paddingVertical="@dimen/sec_auracast_share_compatibility_dialog_switch_space_top_and_bottom" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

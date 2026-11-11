@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:key="description_image_preference" settings:lottie_rawRes="@raw/a11y_accessibility_screen_magnifier" settings:searchable="false" />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:title="@string/magnifier_camera_desc" android:key="description" settings:searchable="false" />
+    <Preference android:key="open_magnifier_preference" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.MagnifierCameraOpenController" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/accessibility_magnifier_title" android:key="com.samsung.android.settings.accessibility.shortcut.MagnifierCameraShortcut" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.MagnifierShortcutController" />
+</PreferenceScreen>

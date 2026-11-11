@@ -1,0 +1,57 @@
+.class Los_migration_data_types/v1/ExportFailureState$1;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Lcom/google/protobuf/Internal$EnumLiteMap;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Los_migration_data_types/v1/ExportFailureState;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/protobuf/Internal$EnumLiteMap;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic findValueByNumber(I)Lcom/google/protobuf/Internal$EnumLite;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Los_migration_data_types/v1/ExportFailureState$1;->findValueByNumber(I)Los_migration_data_types/v1/ExportFailureState;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public findValueByNumber(I)Los_migration_data_types/v1/ExportFailureState;
+    .locals 0
+
+    .line 5
+    invoke-static {p1}, Los_migration_data_types/v1/ExportFailureState;->forNumber(I)Los_migration_data_types/v1/ExportFailureState;
+
+    move-result-object p0
+
+    return-object p0
+.end method

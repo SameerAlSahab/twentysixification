@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/a11y_ic_expander_open_chevron_down" android:top="@dimen/a11y_list_expander_icon_top_margin" android:bottom="@dimen/a11y_list_expander_icon_bottom_margin" android:start="@dimen/a11y_list_expander_icon_side_margin" android:end="@dimen/a11y_list_expander_icon_side_margin" />
+</layer-list>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.settingslib.widget.DrawableStateLinearLayout android:theme="?expressiveTwoTargetPreferenceTheme" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?expressiveTwoTargetPreferenceRootStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:filterTouchesWhenObscured="false">
+        <include layout="@layout/settingslib_expressive_preference_icon_frame" />
+        <include layout="@layout/settingslib_expressive_preference_text_frame" />
+        <include layout="@layout/settingslib_expressive_two_target_divider" />
+        <LinearLayout android:id="@android:id/widget_frame" style="?expressiveTwoTargetPreferenceWidgetFrameStyle" />
+    </LinearLayout>
+    <include layout="@layout/settingslib_expressive_preference_footer" />
+</com.android.settingslib.widget.DrawableStateLinearLayout>

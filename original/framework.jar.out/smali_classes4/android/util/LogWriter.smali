@@ -1,0 +1,170 @@
+.class public Landroid/util/LogWriter;
+.super Ljava/io/Writer;
+.source "LogWriter.java"
+
+
+# instance fields
+.field private final greylist-max-o mBuffer:I
+
+.field private greylist-max-o mBuilder:Ljava/lang/StringBuilder;
+
+.field private final greylist-max-o mPriority:I
+
+.field private final greylist-max-o mTag:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor greylist-max-r <init>(ILjava/lang/String;)V
+    .locals 2
+
+    .line 45
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+
+    .line 30
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x80
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iput-object v0, p0, Landroid/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    .line 46
+    iput p1, p0, Landroid/util/LogWriter;->mPriority:I
+
+    .line 47
+    iput-object p2, p0, Landroid/util/LogWriter;->mTag:Ljava/lang/String;
+
+    const/4 p1, 0x0
+
+    .line 48
+    iput p1, p0, Landroid/util/LogWriter;->mBuffer:I
+
+    return-void
+.end method
+
+.method public constructor greylist-max-o <init>(ILjava/lang/String;I)V
+    .locals 2
+
+    .line 55
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+
+    .line 30
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x80
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iput-object v0, p0, Landroid/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    .line 56
+    iput p1, p0, Landroid/util/LogWriter;->mPriority:I
+
+    .line 57
+    iput-object p2, p0, Landroid/util/LogWriter;->mTag:Ljava/lang/String;
+
+    .line 58
+    iput p3, p0, Landroid/util/LogWriter;->mBuffer:I
+
+    return-void
+.end method
+
+.method private greylist-max-o flushBuilder()V
+    .locals 4
+
+    .line 82
+    iget-object v0, p0, Landroid/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 83
+    iget v0, p0, Landroid/util/LogWriter;->mBuffer:I
+
+    iget v1, p0, Landroid/util/LogWriter;->mPriority:I
+
+    iget-object v2, p0, Landroid/util/LogWriter;->mTag:Ljava/lang/String;
+
+    iget-object v3, p0, Landroid/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v1, v2, v3}, Landroid/util/Log;->println_native(IILjava/lang/String;Ljava/lang/String;)I
+
+    .line 84
+    iget-object p0, p0, Landroid/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist test-api close()V
+    .locals 0
+
+    .line 62
+    invoke-direct {p0}, Landroid/util/LogWriter;->flushBuilder()V
+
+    return-void
+.end method
+
+.method public whitelist test-api flush()V
+    .locals 0
+
+    .line 66
+    invoke-direct {p0}, Landroid/util/LogWriter;->flushBuilder()V
+
+    return-void
+.end method
+
+.method public whitelist test-api write([CII)V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, p3, :cond_1
+
+    add-int v1, p2, v0
+
+    .line 71
+    aget-char v1, p1, v1
+
+    const/16 v2, 0xa
+
+    if-ne v1, v2, :cond_0
+
+    .line 73
+    invoke-direct {p0}, Landroid/util/LogWriter;->flushBuilder()V
+
+    goto :goto_1
+
+    .line 76
+    :cond_0
+    iget-object v2, p0, Landroid/util/LogWriter;->mBuilder:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/sec_auracast_listen_background_color" />
+        </shape>
+    </item>
+    <item>
+        <androidx.appcompat.graphics.drawable.SeslRecoilDrawable app:seslRecoilColor="@color/sec_widget_ripple_color" app:seslRecoilMask="@drawable/sesl_list_item_recoil_mask"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </item>
+</layer-list>

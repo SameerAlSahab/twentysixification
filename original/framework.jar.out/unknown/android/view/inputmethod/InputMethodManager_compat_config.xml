@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="36" id="395521150" name="ALWAYS_RETURN_TRUE_HIDE_SOFT_INPUT_FROM_WINDOW"><meta-data definedIn="android.view.inputmethod.InputMethodManager"/></compat-change></config>

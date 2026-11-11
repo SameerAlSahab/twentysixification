@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:focusable="false" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/switch_horizontal_margin" android:layout_marginEnd="@dimen/switch_horizontal_margin" android:paddingVertical="@dimen/winset_list_item_margin">
+        <TextView android:textAppearance="@style/SecRegular" android:textSize="@dimen/swipe_shutter_button_to_description_text_size" android:textColor="@color/setting_description_text_color" android:ellipsize="marquee" android:id="@id/description" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:paddingHorizontal="@dimen/winset_list_item_end_padding" android:lineHeight="@dimen/custom_filter_text_line_height" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="37" id="454307959" name="DEPRECATE_SET_CONTENT_CAPTURE_ENABLED"><meta-data definedIn="android.view.contentcapture.ContentCaptureManager"/></compat-change></config>

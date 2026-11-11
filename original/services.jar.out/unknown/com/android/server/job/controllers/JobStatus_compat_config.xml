@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change id="430347691" name="INTRODUCE_NEW_PENDING_AND_STOP_DEVICE_STATE_REASONS"><meta-data definedIn="com.android.server.job.controllers.JobStatus"/></compat-change></config>

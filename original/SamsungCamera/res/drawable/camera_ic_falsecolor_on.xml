@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/pro_exposure_monitor_button_drawable_size" android:width="@dimen/pro_exposure_monitor_button_drawable_size" android:viewportWidth="22.0" android:viewportHeight="22.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffffcb0c" android:pathData="M11,3.667C15.05,3.667 18.333,6.95 18.334,11C18.334,15.05 15.05,18.334 11,18.334C6.95,18.333 3.667,15.05 3.667,11C3.667,6.95 6.95,3.667 11,3.667ZM11,4.584C7.456,4.584 4.584,7.456 4.584,11C4.584,14.543 7.456,17.417 11,17.417C14.543,17.417 17.417,14.543 17.417,11C17.417,7.456 14.543,4.584 11,4.584Z" />
+    <group>
+        <clip-path android:pathData="M6.558,13.564L6.558,13.564A5.126,5.126 104.987,0 1,8.432 6.561L8.432,6.561A5.126,5.126 104.987,0 1,15.435 8.436L15.435,8.436A5.126,5.126 104.987,0 1,13.561 15.439L13.561,15.439A5.126,5.126 104.987,0 1,6.558 13.564z" />
+        <path android:fillColor="#ffffcb0c" android:pathData="M4.638,11.028l-1.578,-2.731l10.928,-6.31l1.578,2.731z" android:fillAlpha="0.2" />
+        <path android:fillColor="#ffffcb0c" android:pathData="M6.216,13.76l-1.578,-2.731l10.928,-6.31l1.578,2.731z" android:fillAlpha="0.4" />
+        <path android:fillColor="#ffffcb0c" android:pathData="M7.793,16.493l-1.578,-2.731l10.928,-6.31l1.578,2.731z" android:fillAlpha="0.6" />
+        <path android:fillColor="#ffffcb0c" android:pathData="M9.371,19.225l-1.578,-2.731l10.928,-6.31l1.578,2.731z" android:fillAlpha="0.8" />
+    </group>
+</vector>

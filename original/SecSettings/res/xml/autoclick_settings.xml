@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/accessibility_dwell_actions_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:apps="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="dwell_action_main_switch_preference" apps:controller="com.samsung.android.settings.accessibility.dexterity.autoclick.SecAutoClickPreferenceController" apps:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:title="@string/accessibility_dwell_actions_desciptions" android:key="guide_description" apps:image_contentDescription="@string/accessibility_auto_click_description" apps:lottie_rawRes="@raw/auto_click_help_vi" apps:searchable="false" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/accessibility_dwell_actions_title" android:key="autoclick_shortcut_preference" apps:controller="com.android.settings.accessibility.ToggleShortcutPreferenceController" />
+    <PreferenceCategory android:key="empty_category_1" />
+    <SecDropDownPreference android:persistent="false" android:title="@string/accessibility_auto_click_cursor_area_size" android:key="accessibility_control_autoclick_cursor_area_size" apps:controller="com.samsung.android.settings.accessibility.dexterity.autoclick.SecAutoclickCursorSizeController" />
+    <SwitchPreferenceCompat android:title="@string/accessibility_auto_click_ignore_cursor_movements" android:key="accessibility_control_autoclick_ignore_minor_cursor_movement" apps:controller="com.android.settings.accessibility.ToggleAutoclickIgnoreMinorCursorMovementController" />
+    <SwitchPreferenceCompat android:title="@string/accessibility_auto_click_set_left_click" android:key="accessibility_control_autoclick_revert_to_left_click" apps:controller="com.android.settings.accessibility.ToggleAutoclickRevertToLeftClickController" />
+    <PreferenceCategory>
+        <com.samsung.android.settings.accessibility.base.widget.A11ySeekBarWithButtonsPreference android:layout="@layout/auto_action_delay" android:max="39" android:title="@string/accessibility_auto_action_delay_seekbar_title" android:key="accessibility_control_autoclick_delay_before_click" apps:controller="com.samsung.android.settings.accessibility.dexterity.autoclick.SecAutoClickDelayBeforeClickSliderController" apps:seekBarMode="expand" />
+    </PreferenceCategory>
+</PreferenceScreen>

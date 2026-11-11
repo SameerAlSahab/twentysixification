@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d päivää sitten</item>
+        <item quantity="one">%d päivä sitten</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d min sitten</item>
+        <item quantity="one">%d min sitten</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d vuotta sitten</item>
+        <item quantity="one">%d vuosi sitten</item>
+    </plurals>
+    <plurals name="accessibility_timeout_summary_minutes">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minuutti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="accessibility_timeout_summary_seconds">
+        <item quantity="other">%d sekuntia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sekunti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="alert_center_status_sub_text_suggestion">
+        <item quantity="other">+%d hälytystä vielä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">+%d hälytys vielä</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="app_interaction_agent_usage_preference_label">
+        <item quantity="other">Käytetty %d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Käytetty %d sovellusta</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="bluetooth_tethering_connected_devices_subtext">
+        <item quantity="other">Internet-yhteys jaetaan %d laitteen kanssa.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Internet-yhteys jaetaan %d laitteen kanssa.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="camera_flash_notification_n_apps">
+        <item quantity="other">%d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="dex_timeout_day">
+        <item quantity="other">%d päivää</item>
+        <item quantity="one">1 päivä</item>
+    </plurals>
+    <plurals name="dex_timeout_hour">
+        <item quantity="other">%d tuntia </item>
+        <item quantity="one">1 tunti</item>
+    </plurals>
+    <plurals name="dex_timeout_minute">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="one">1 minuutti</item>
+    </plurals>
+    <plurals name="dex_timeout_second">
+        <item quantity="other">%d sekuntia</item>
+        <item quantity="one">1 sekunti</item>
+    </plurals>
+    <plurals name="dex_timeout_week">
+        <item quantity="other">%d viikkoa</item>
+        <item quantity="one">1 viikko</item>
+    </plurals>
+    <plurals name="installed_apps_summary_no_enabled_app">
+        <item quantity="other">%d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="kt_sim_wrong_pin_code">
+        <item quantity="other">Annettu väärä PIN-koodi. Jos annat PIN-koodin 3 kertaa väärin, sinun on käytävä KT:n palvelukeskuksessa. %d yritystä jäljellä.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Annettu väärä PIN-koodi. Jos annat PIN-koodin 3 kertaa väärin, sinun on käytävä KT:n palvelukeskuksessa. %d yritys jäljellä.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="lock_timeout_hours">
+        <item quantity="other">%d tuntia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d tunti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minuutti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mandatory_biometric_necessary_elements_error_message">
+        <item quantity="other">Sijaintisi määrittämiseksi on muutettava %d asetusta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Sijaintisi määrittämiseksi on muutettava %d asetus.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mandatory_biometric_trusted_places_delete_dialog_title">
+        <item quantity="other">Poistetaanko %d paikkaa?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poistetaanko %d paikka?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mandatory_biometric_trusted_places_summary">
+        <item quantity="other">%1$s ja %2$d muuta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s ja %2$d muu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="max_char_reached_msg_plural">
+        <item quantity="other">Yli %d merkkiä ei voi kirjoittaa.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yli %d merkkiä ei voi kirjoittaa.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d uutta ilmoitusta</item>
+        <item quantity="one">%d uusi ilmoitus</item>
+    </plurals>
+    <plurals name="no_memory_use_summary">
+        <item quantity="other">Muistia ei ole käytetty viimeisen %d tunnin aikana</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Muistia ei ole käytetty viimeisen %d tunnin aikana</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="notification_history_count">
+        <item quantity="other">%d ilmoitusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ilmoitus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="notification_reminder_custom_summary">
+        <item quantity="other">Muistuta %d minuutin välein valittuja sovelluksia koskevista ilmoituksista</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Muistuta %d minuutin välein valittuja sovelluksia koskevista ilmoituksista</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="number_of_recent_apps">
+        <item quantity="other">%d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="number_of_recent_upto_apps">
+        <item quantity="other">Enintään %d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Enintään %d sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="passkeys_and_autofill_subtext">
+        <item quantity="other">%1$s ja %2$d muuta sovellusta käyttävät todentamisavaimia ja antavat automaattisesti salasanoja ja muita tietoja.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s ja %2$d muu sovellus käyttävät todentamisavaimia ja antavat automaattisesti salasanoja ja muita tietoja.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="pd_a11y_function_in_use">
+        <item quantity="other">%d helppokäyttötoimintoa käytössä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d helppokäyttötoiminto käytössä</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="plural_other_wlt_opt_pd_more_items">
+        <item quantity="other">Vielä %d kohdetta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Vielä %d kohde</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="ps_apps">
+        <item quantity="other">%1$s käyttöoikeus oli %2$d sovelluksen käytössä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s käyttöoikeus oli %2$d sovelluksen käytössä</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="reminder_select_apps">
+        <item quantity="other">%d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="remove_language_title_multiple_plurals">
+        <item quantity="other">Poistetaanko %d kieltä?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poistetaanko %d kieli?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_accessibility_usage_summary">
+        <item quantity="other">%d sovelluksella on täydet oikeudet puhelimesi käyttöön</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovelluksella on täydet oikeudet puhelimesi käyttöön</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_auto_power_off_dialog_text_plurals">
+        <item quantity="other">Puhelin sammutetaan automaattisesti %d sekunnin kuluttua. Jos haluat tällä kertaa pitää puhelimen virran kytkettynä, napauta Peruuta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Puhelin sammutetaan automaattisesti %d sekunnin kuluttua. Jos haluat tällä kertaa pitää puhelimen virran kytkettynä, napauta Peruuta.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_auto_power_off_dialog_text_plurals_tablet">
+        <item quantity="other">Tablet-laite sammutetaan automaattisesti %d sekunnin kuluttua. Jos haluat tällä kertaa pitää tablet-laitteen virran kytkettynä, napauta Peruuta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Tablet-laite sammutetaan automaattisesti %d sekunnin kuluttua. Jos haluat tällä kertaa pitää tablet-laitteen virran kytkettynä, napauta Peruuta.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_biometrics_common_about_security_notice_body_strong">
+        <item quantity="other">%d tunnin välein</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d tunnin välein</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_bluetooth_ask_discovery">
+        <item quantity="other">%1$s pyytää lupaa tehdä puhelimesi Bluetoothin avulla näkyväksi muille laitteille %2$d sekunniksi.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s pyytää lupaa tehdä puhelimesi Bluetoothin avulla näkyväksi muille laitteille %2$d sekunniksi.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_bluetooth_ask_discovery_tablet">
+        <item quantity="other">%1$s pyytää lupaa tehdä tablet-laitteesi Bluetoothin avulla näkyväksi muille laitteille %2$d sekunniksi.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s pyytää lupaa tehdä tablet-laitteesi Bluetoothin avulla näkyväksi muille laitteille %2$d sekunniksi.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_choose_lock_password_password_too_short">
+        <item quantity="other">Salasanassa on oltava vähintään %d merkkiä, niiden joukossa vähintään 1 kirjain.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Salasanassa on oltava vähintään %d merkki, jonka on oltava kirjain.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_choose_lock_pin_pin_too_short">
+        <item quantity="other">PIN-koodissa on oltava ainakin %d numeroa.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">PIN-koodissa on oltava ainakin %d numero.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_attempts_left_before_permanent_locking">
+        <item quantity="other">%d yritystä jäljellä ennen pysyvää lukitusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d yritys jäljellä ennen pysyvää lukitusta</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_attempts_left_in_details">
+        <item quantity="other">%d yritystä jäljellä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d yritys jäljellä</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">Yritä uudelleen 1 tunnin %d minuutin kuluttua</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yritä uudelleen 1 tunnin %d minuutin kuluttua</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_hour">
+        <item quantity="other">Yritä uudelleen %d tunnin kuluttua</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yritä uudelleen %d tunnin kuluttua</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">Yritä uudelleen %d tunnin 1 minuutin kuluttua</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yritä uudelleen %d tunnin 1 minuutin kuluttua</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_min">
+        <item quantity="other">Yritä %d minuutin kuluttua uudelleen</item>
+        <item quantity="one">Yritä %d minuutin kuluttua uudelleen</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_sec">
+        <item quantity="other">Yritä %d sekunnin kuluttua uudelleen</item>
+        <item quantity="one">Yritä %d sekunnin kuluttua uudelleen</item>
+    </plurals>
+    <plurals name="sec_credman_services_limit_text">
+        <item quantity="other">Yli %d lisäpalvelua ei voi käynnistää.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Yli %d lisäpalvelua ei voi käynnistää.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_dnd_allow_all_except_select_contact">
+        <item quantity="other">Kaikki sallittu, paitsi %d yhteyshenkilöä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Kaikki sallittu, paitsi %d yhteyshenkilö</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_dnd_select_contact">
+        <item quantity="other">%d yhteyshenkilöä sallittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d yhteyshenkilö sallittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_fingerprint_added_summary">
+        <item quantity="other">%d sormenjälkeä lisätty</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sormenjälki lisätty</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_flex_mode_panel_auto_show_panel_when_folded_summary_more">
+        <item quantity="other">%1$s, %2$s ja %3$d muuta sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s, %2$s ja %3$d muu sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">Väärä salasana. %d yritystä jäljellä.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Väärä salasana. %d yritys jäljellä.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">Väärä kuvio. %d yritystä jäljellä.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Väärä kuvio. %d yritys jäljellä.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">Väärä PIN-koodi. %d yritystä jäljellä.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Väärä PIN-koodi. %d yritys jäljellä.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_intelligence_service_child_popup_message">
+        <item quantity="other">Sinun on oltava vähintään %d-vuotias, jotta voit käyttää Galaxy AI:n edistyksellisiä älytoimintoja.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Sinun on oltava vähintään %d-vuotias, jotta voit käyttää Galaxy AI:n edistyksellisiä älytoimintoja.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_letters">
+        <item quantity="other">Salasanassa on oltava ainakin %d kirjainta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Salasanassa on oltava ainakin %d kirjain.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_lowercase">
+        <item quantity="other">Salasanassa on oltava ainakin %d pientä kirjainta.</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 pieni kirjain.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_nonletter">
+        <item quantity="other">Salasanassa on oltava ainakin %d numeroa tai symbolia.</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 numero tai symboli.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_numeric">
+        <item quantity="other">Salasanassa on oltava ainakin %d numeroa.</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 numero.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_symbols">
+        <item quantity="other">Salasanassa on oltava ainakin %d symbolia.</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 symboli.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_uppercase">
+        <item quantity="other">Salasanassa on oltava ainakin %d suurta kirjainta.</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 suuri kirjain.</item>
+    </plurals>
+    <plurals name="sec_mde_suggestions_summary">
+        <item quantity="other">Vielä %d ehdotusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Vielä %d ehdotus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_number_of_device_admins">
+        <item quantity="other">%d aktiivista sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d aktiivinen sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_offline_lang_pack_remove_dialog_title">
+        <item quantity="other">Poistetaanko %d kielipakettia?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poistetaanko %d kielipaketti?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_offline_lang_pack_tts_title">
+        <item quantity="other">%d ääntä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ääni</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_runtime_permissions_additional_count">
+        <item quantity="other">%d valinnaista käyttöoikeutta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d valinnainen käyttöoikeus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_screen_permission_apps_allowed">
+        <item quantity="other">%d sovellusta sallittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus sallittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_screen_permission_target_app_agents_allowed">
+        <item quantity="other">%d sovellusta sallittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus sallittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_screen_permission_target_app_agents_allowed_flag_per_app_consent_v2">
+        <item quantity="other">%d digitaalista avustajaa sallittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d digitaalinen avustaja sallittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_show_dev_countdown">
+        <item quantity="other">Olet %d napautuksen päässä kehittäjätasosta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Olet %d napautuksen päässä kehittäjätasosta.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_zen_items_allowed">
+        <item quantity="other">%d sovellusta sallittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sovellus sallittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_zen_items_not_allowed">
+        <item quantity="other">Kaikki sallittu, paitsi %d sovellusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Kaikki sallittu, paitsi %d sovellus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_zen_mode_selected_rules">
+        <item quantity="other">%d valittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d valittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="secure_folder_attempts_left_before_permanent_locking">
+        <item quantity="other">%d yritystä jäljellä ennen pysyvää lukitusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d yritys jäljellä ennen pysyvää lukitusta</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_malware_apps_detected">
+        <item quantity="other">%d haittaohjelmaa havaittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d haittaohjelma havaittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_malware_detected_card_subtext">
+        <item quantity="other">Puhelimesta löytyi %d haittaohjelmaa. Poista näiden sovellusten asennus puhelimen suojaamiseksi.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Puhelimesta löytyi %d haittaohjelma. Poista tämän sovelluksen asennus puhelimen suojaamiseksi.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_malware_detected_card_subtext_tablet">
+        <item quantity="other">Tablet-laitteesta löytyi %d haittaohjelmaa. Poista näiden sovellusten asennus tablet-laitteen suojaamiseksi.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Tablet-laitteesta löytyi %d haittaohjelma. Poista tämän sovelluksen asennus tablet-laitteen suojaamiseksi.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_suggestion">
+        <item quantity="other">%d ehdotusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ehdotus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_warning">
+        <item quantity="other">%d varoitusta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d varoitus</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_hour_plurals">
+        <item quantity="other">Uniaika: %d tuntia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Uniaika: %d tunti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_min_plurals">
+        <item quantity="other">Uniaika: %d minuuttia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Uniaika: %d minuutti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="temporary_cloud_backup_summary_plurals">
+        <item quantity="other">Varmuuskopioi rajoittamaton määrä tietoja kohteeseen %1$s enintään %2$d päiväksi tai palauta varmuuskopioimasi tiedot.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Varmuuskopioi rajoittamaton määrä tietoja kohteeseen %1$s enintään %2$d päiväksi tai palauta varmuuskopioimasi tiedot.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="touch_settings_test_will_reset">
+        <item quantity="other">Tämä testi nollataan %d sekunnin kuluttua.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Tämä testi nollataan %d sekunnin kuluttua.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_device_connected">
+        <item quantity="other">%d laitetta yhdistetty</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d laite yhdistetty</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_beyond">
+        <item quantity="other">Muunna puhelimesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään puhelimesi mobiilidata- tai Wi-Fi-yhteyden välityksellä enintään %d muuta laitetta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Muunna puhelimesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään puhelimesi mobiilidata- tai Wi-Fi-yhteyden välityksellä enintään %d muu laite.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_no_wifisharing">
+        <item quantity="other">Muunna puhelimesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään puhelimesi mobiilidatayhteyden välityksellä enintään %d muuta laitetta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Muunna puhelimesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään puhelimesi mobiilidatayhteyden välityksellä enintään %d muu laite.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_no_wifisharing_tablet">
+        <item quantity="other">Muunna tablet-laitteesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään tablet-laitteesi mobiilidatayhteyden välityksellä enintään %d muuta laitetta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Muunna tablet-laitteesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään tablet-laitteesi mobiilidatayhteyden välityksellä enintään %d muu laite.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_tablet">
+        <item quantity="other">Muunna tablet-laitteesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään tablet-laitteesi mobiilidata- tai Wi-Fi-yhteyden välityksellä enintään %d muuta laitetta.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Muunna tablet-laitteesi Wi-Fi-tukiasemaksi. Internetiä pystyy käyttämään tablet-laitteesi mobiilidata- tai Wi-Fi-yhteyden välityksellä enintään %d muu laite.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_n_members">
+        <item quantity="other">%d jäsentä</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d jäsen</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_delete_item_network">
+        <item quantity="other">Poistetaanko %d verkkoa?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Poistetaanko %d verkko?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_select_item_network">
+        <item quantity="other">%d valittu</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d valittu</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_phone_incorrect_dialog_2">
+        <item quantity="other">Työprofiilisi lukitus on yritetty poistaa 1 kerran. Voit yrittää vielä %d kertaa, ennen kuin tämän puhelimen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Työprofiilisi lukitus on yritetty poistaa 1 kerran. Voit yrittää vielä %d kerran, ennen kuin tämän puhelimen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_phone_incorrect_dialog_4">
+        <item quantity="other">Työprofiilisi lukitus on yritetty poistaa %d kertaa. Voit yrittää vielä 1 kerran, ennen kuin tämän puhelimen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Työprofiilisi lukitus on yritetty poistaa %d kerran. Voit yrittää vielä 1 kerran, ennen kuin tämän puhelimen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_tablet_incorrect_dialog_2">
+        <item quantity="other">Työprofiilisi lukitus on yritetty poistaa 1 kerran. Voit yrittää vielä %d kertaa, ennen kuin tämän tablet-laitteen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Työprofiilisi lukitus on yritetty poistaa 1 kerran. Voit yrittää vielä %d kerran, ennen kuin tämän tablet-laitteen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_tablet_incorrect_dialog_4">
+        <item quantity="other">Työprofiilisi lukitus on yritetty poistaa %d kertaa. Voit yrittää vielä 1 kerran, ennen kuin tämän tablet-laitteen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Työprofiilisi lukitus on yritetty poistaa %d kerran. Voit yrittää vielä 1 kerran, ennen kuin tämän tablet-laitteen tehdasasetukset palautetaan ja kaikki tiedot poistetaan.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="zen_mode_duration_summary_time_hours">
+        <item quantity="other">%d tuntia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d tunti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="zen_mode_duration_summary_time_minutes">
+        <item quantity="other">%d minuuttia</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minuutti</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+</resources>

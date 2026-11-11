@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:theme="@style/Theme.AppCompat.DayNight" android:orientation="horizontal" android:id="@id/listview" android:background="@color/theme_bg_color" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:orientation="vertical" android:id="@id/setting_image_layer" android:paddingBottom="@dimen/widget_setting_preview_layout_bottom_padding" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.505" android:paddingHorizontal="@dimen/widget_setting_preview_layout_side_padding">
+                    <ImageView android:id="@id/image_background" android:background="@drawable/widget_background_border" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:clipToOutline="true" />
+                    <FrameLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/image_group" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <include android:layout_gravity="center" android:id="@id/widget_small_image_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_widget_small" />
+                        <include android:layout_gravity="center" android:id="@id/widget_medium_image_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_widget_medium" />
+                        <include android:layout_gravity="center" android:id="@id/widget_medium_image_irregular_type_1_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_widget_medium_irregular_type_1" />
+                        <include android:layout_gravity="center" android:id="@id/widget_medium_image_irregular_type_2_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_widget_medium_irregular_type_2" />
+                        <include android:layout_gravity="center" android:id="@id/widget_large_image_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/camera_widget_large" />
+                    </FrameLayout>
+                    <ImageView android:layout_gravity="end|bottom" android:id="@id/crop_image_button" android:visibility="invisible" android:layout_width="@dimen/widget_crop_image_button_size" android:layout_height="@dimen/widget_crop_image_button_size" android:layout_marginBottom="@dimen/widget_crop_image_bottom_margin" android:src="@drawable/widget_btn_crop" android:layout_marginEnd="@dimen/widget_crop_image_end_margin" />
+                </FrameLayout>
+                <androidx.core.widget.NestedScrollView android:id="@id/nestedScrollView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.495" android:overScrollMode="always">
+                    <LinearLayout android:orientation="vertical" android:id="@id/fragment_container_layout" android:background="@color/theme_list_color" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:expanded="false" app:seslHeightProportion="0.0" app:seslUseCustomHeight="false" style="@style/Widget.Design.AppBarLayout">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:extendedTitleEnabled="false" app:layout_collapseMode="pin" app:layout_scrollFlags="scroll|exitUntilCollapsed" app:supportActionModeOverLay="false" style="@style/CollapsingToolbarLayoutStyle" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout android:id="@id/sesl_floating_toolbar_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:layout_anchor="@id/app_bar">
+        <androidx.appcompat.widget.Toolbar android:theme="@style/AppCompat.AppbarTheme" android:layout_gravity="top" android:id="@id/toolbar" android:background="@android:color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:background="@android:color/transparent" app:title="@string/widget_setting_title" />
+    </com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

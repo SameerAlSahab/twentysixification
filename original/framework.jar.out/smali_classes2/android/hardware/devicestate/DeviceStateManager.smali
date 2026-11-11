@@ -1,0 +1,179 @@
+.class public final Landroid/hardware/devicestate/DeviceStateManager;
+.super Ljava/lang/Object;
+.source "DeviceStateManager.java"
+
+
+# annotations
+.annotation runtime Landroid/annotation/SystemApi;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;,
+        Landroid/hardware/devicestate/DeviceStateManager$FoldStateListener;
+    }
+.end annotation
+
+
+# static fields
+.field public static final blacklist ACTION_SHOW_REAR_DISPLAY_OVERLAY:Ljava/lang/String; = "com.android.intent.action.SHOW_REAR_DISPLAY_OVERLAY"
+
+.field public static final blacklist EXTRA_ORIGINAL_DEVICE_BASE_STATE:Ljava/lang/String; = "original_device_base_state"
+
+.field public static final blacklist INVALID_DEVICE_STATE:Landroid/hardware/devicestate/DeviceState;
+
+.field public static final blacklist INVALID_DEVICE_STATE_IDENTIFIER:I = -0x1
+
+.field public static final blacklist MAXIMUM_DEVICE_STATE_IDENTIFIER:I = 0x2710
+
+.field public static final blacklist MINIMUM_DEVICE_STATE_IDENTIFIER:I
+
+
+# instance fields
+.field private final blacklist mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+
+# direct methods
+.method static constructor blacklist <clinit>()V
+    .locals 4
+
+    .line 76
+    new-instance v0, Landroid/hardware/devicestate/DeviceState;
+
+    new-instance v1, Landroid/hardware/devicestate/DeviceState$Configuration$Builder;
+
+    const/4 v2, -0x1
+
+    const-string v3, "INVALID"
+
+    invoke-direct {v1, v2, v3}, Landroid/hardware/devicestate/DeviceState$Configuration$Builder;-><init>(ILjava/lang/String;)V
+
+    .line 78
+    invoke-virtual {v1}, Landroid/hardware/devicestate/DeviceState$Configuration$Builder;->build()Landroid/hardware/devicestate/DeviceState$Configuration;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/hardware/devicestate/DeviceState;-><init>(Landroid/hardware/devicestate/DeviceState$Configuration;)V
+
+    sput-object v0, Landroid/hardware/devicestate/DeviceStateManager;->INVALID_DEVICE_STATE:Landroid/hardware/devicestate/DeviceState;
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>()V
+    .locals 1
+
+    .line 99
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 100
+    invoke-static {}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->getInstance()Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 105
+    iput-object v0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    return-void
+
+    .line 102
+    :cond_0
+    const-string p0, "Failed to get instance of global device state manager."
+
+    invoke-static {p0}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$5(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public blacklist cancelBaseStateOverride()V
+    .locals 0
+
+    .line 208
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->cancelBaseStateOverride()V
+
+    return-void
+.end method
+
+.method public blacklist cancelStateRequest()V
+    .locals 0
+
+    .line 162
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->cancelStateRequest()V
+
+    return-void
+.end method
+
+.method public whitelist getSupportedDeviceStates()Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/hardware/devicestate/DeviceState;",
+            ">;"
+        }
+    .end annotation
+
+    .line 114
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->getSupportedDeviceStates()Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist registerCallback(Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;)V
+    .locals 0
+
+    .line 221
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0, p2, p1}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->registerDeviceStateCallback(Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;Ljava/util/concurrent/Executor;)V
+
+    return-void
+.end method
+
+.method public blacklist requestBaseStateOverride(Landroid/hardware/devicestate/DeviceStateRequest;Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateRequest$Callback;)V
+    .locals 0
+
+    .line 194
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->requestBaseStateOverride(Landroid/hardware/devicestate/DeviceStateRequest;Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateRequest$Callback;)V
+
+    return-void
+.end method
+
+.method public blacklist requestState(Landroid/hardware/devicestate/DeviceStateRequest;Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateRequest$Callback;)V
+    .locals 0
+
+    .line 144
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->requestState(Landroid/hardware/devicestate/DeviceStateRequest;Ljava/util/concurrent/Executor;Landroid/hardware/devicestate/DeviceStateRequest$Callback;)V
+
+    return-void
+.end method
+
+.method public whitelist unregisterCallback(Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;)V
+    .locals 0
+
+    .line 229
+    iget-object p0, p0, Landroid/hardware/devicestate/DeviceStateManager;->mGlobal:Landroid/hardware/devicestate/DeviceStateManagerGlobal;
+
+    invoke-virtual {p0, p1}, Landroid/hardware/devicestate/DeviceStateManagerGlobal;->unregisterDeviceStateCallback(Landroid/hardware/devicestate/DeviceStateManager$DeviceStateCallback;)V
+
+    return-void
+.end method

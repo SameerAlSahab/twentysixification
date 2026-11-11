@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/sec_app_info_button_clear_storage" android:id="@id/storage_button" android:visible="true" android:title="@string/clear_user_data_text" android:contentDescription="@string/clear_user_data_text" android:tooltipText="@string/clear_user_data_text" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/sec_app_info_button_clear" android:id="@id/cache_button" android:visible="true" android:title="@string/clear_cache_btn_text" android:contentDescription="@string/clear_cache_btn_text" android:tooltipText="@string/clear_cache_btn_text" app:showAsAction="ifRoom" />
+</menu>

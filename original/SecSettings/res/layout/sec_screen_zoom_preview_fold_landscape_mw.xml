@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ScreenZoomLayout" android:background="@color/sec_widget_round_and_bgcolor" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:descendantFocusability="beforeDescendants" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.core.widget.NestedScrollView android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:id="@id/screenSelectLayout" android:background="@drawable/sec_display_setting_screen_zoom_button_background" android:paddingTop="@dimen/sec_screen_zoom_top_layout_container_padding_top_bottom" android:paddingBottom="@dimen/sec_screen_zoom_top_layout_container_padding_top_bottom" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_widget_body_text_padding_start_end" android:paddingEnd="@dimen/sec_widget_body_text_padding_start_end">
+                    <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/moreContentLayout" android:background="?android:selectableItemBackground" android:focusable="true" android:clipChildren="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingEnd="@dimen/sec_screen_zoom_top_layout_padding">
+                            <LinearLayout android:orientation="horizontal" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="4.0">
+                                <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                                <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                                    <ImageView android:id="@id/moreContentPreview" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+                                </FrameLayout>
+                                <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                            </LinearLayout>
+                            <RadioButton android:gravity="center" android:layout_gravity="center" android:id="@id/moreContentButton" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_screen_zoom_top_layout_imageview_padding" />
+                            <TextView android:textSize="@dimen/sec_body_text_size" android:gravity="center_horizontal" android:id="@id/moreContentText" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_screen_zoom_top_layout_button_padding" android:text="@string/sec_screen_zoom_foldable_multi_view" style="@style/sec_regular" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/largerContentLayout" android:background="?android:selectableItemBackground" android:focusable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/sec_screen_zoom_top_layout_padding">> <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="4.0">
+                                <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                                <FrameLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="2.0">
+                                    <ImageView android:id="@id/largerContentPreview" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" />
+                                </FrameLayout>
+                                <LinearLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                            </LinearLayout>
+                            <RadioButton android:gravity="center" android:layout_gravity="center" android:id="@id/largerContentButton" android:background="@android:color/transparent" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_screen_zoom_top_layout_imageview_padding" />
+                            <TextView android:textSize="@dimen/sec_body_text_size" android:gravity="center_horizontal" android:id="@id/largerContentText" android:paddingTop="@dimen/sec_screen_zoom_top_layout_button_padding" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_screen_zoom_foldable_standard_view" style="@style/sec_regular" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_widget_body_text_padding_start_end" android:paddingEnd="@dimen/sec_widget_body_text_padding_start_end">
+                    <TextView android:gravity="start" android:id="@id/fontSizeStyleLink" android:paddingTop="@dimen/sec_screen_zoom_text_link_padding_top" android:paddingBottom="@dimen/sec_widget_body_text_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:bufferType="spannable" style="@style/sec_relative_link_description" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout android:orientation="vertical" android:id="@id/screenSizeLayoutContainer" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/screenSizeLayout" android:background="@drawable/sec_display_setting_seek_bar_controller_background" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/sec_screen_zoom_seekbar_bottom_margin" android:paddingStart="@dimen/sec_widget_body_text_padding_start_end" android:paddingEnd="@dimen/sec_widget_body_text_padding_start_end" android:elevation="@dimen/sec_display_setting_seek_bar_container_elevation">
+                <LinearLayout android:id="@id/spaceFromTiletxtToSeekbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <RelativeLayout android:gravity="center_vertical" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageButton android:id="@id/smaller" android:background="?android:selectableItemBackgroundBorderless" android:layout_width="@dimen/sec_widget_list_icon_create_width" android:layout_height="@dimen/sec_widget_list_icon_create_height" android:src="@drawable/sec_display_ic_minus_mtrl" android:scaleType="center" android:layout_alignParentTop="true" android:contentDescription="@string/screen_zoom_decrease_size_description" android:layout_alignParentStart="true" android:tooltipText="@string/screen_zoom_decrease_size_description" />
+                    <androidx.appcompat.widget.SeslSeekBar android:id="@id/seek_bar" android:layout_width="fill_parent" android:layout_height="@dimen/sec_widget_list_icon_create_height" android:layout_alignParentTop="true" android:layout_toStartOf="@id/larger" android:layout_toEndOf="@id/smaller" android:min="0" />
+                    <ImageButton android:id="@id/larger" android:background="?android:selectableItemBackgroundBorderless" android:layout_width="@dimen/sec_widget_list_icon_create_width" android:layout_height="@dimen/sec_widget_list_icon_create_height" android:src="@drawable/sec_display_ic_plus_mtrl" android:scaleType="center" android:layout_alignParentTop="true" android:contentDescription="@string/screen_zoom_increase_size_description" android:layout_alignParentEnd="true" android:tooltipText="@string/screen_zoom_increase_size_description" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

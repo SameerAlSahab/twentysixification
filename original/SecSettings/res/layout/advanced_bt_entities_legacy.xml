@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/layout_left" layout="@layout/advanced_bt_entity_sub" />
+    <include android:id="@id/layout_middle" layout="@layout/advanced_bt_entity_sub" />
+    <include android:id="@id/layout_right" layout="@layout/advanced_bt_entity_sub" />
+</LinearLayout>

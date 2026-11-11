@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/sec_lock_routine_padding_top" android:paddingBottom="@dimen/sec_lock_routine_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_lock_routine_padding_start" android:paddingEnd="@dimen/sec_lock_routine_padding_start"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/sec_lockscreen_biometric_face_switch_main_layout" android:layout_width="fill_parent" android:layout_height="@dimen/sec_lock_routine_height">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sec_face_title" android:layout_alignParentStart="true" style="@style/dialog_list_text_style" />
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/sec_lockscreen_biometric_face_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/sec_lockscreen_biometric_fingerprint_switch_main_layout" android:layout_width="fill_parent" android:layout_height="@dimen/sec_lock_routine_height">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sec_fingerprint" android:layout_alignParentStart="true" style="@style/dialog_list_text_style" />
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/sec_lockscreen_biometric_fingerprint_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_cover_screen_settings_title" settings:hierarchicalParentFragment="com.android.settings.notification.ConfigureNotificationSettings" settings:topLevelPreferenceKey="top_level_notifications"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <Preference android:title="@string/sec_cover_screen_notifications_quick_responses_title" android:key="quick_response_settings_subscreen">
+        <intent android:action="com.samsung.settings.SubScreenQuickReplySettings" />
+    </Preference>
+    <SeslPreferenceCaption android:title="@string/sec_cover_screen_quick_responses_caption" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecDisabledAppearanceSwitchPreference android:title="@string/sec_cover_screen_hide_alert_when_screen_is_off" android:key="show_alerts_on_cover_screen" />
+</PreferenceScreen>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_lockscreen_notifications_hide_content_while_unlocked" android:key="apps_that_can_show_content" settings:hierarchicalParentFragment="com.android.settings.notification.ConfigureNotificationSettings" settings:topLevelPreferenceKey="top_level_notifications"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/sec_lockscreen_notifications_hide_content_when_locked_summary" android:key="apps_that_can_show_content_description" />
+    <com.samsung.android.settings.widget.SecHorizontalRadioPreference android:key="hide_content_style" settings:controller="com.samsung.android.settings.lockscreen.HideContentNotificationStylePreferenceController" settings:viewType="image" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/sec_lockscreen_notifications_hide_content_when_locked_chooser_summary" android:key="apps_that_can_show_content_description" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_bullet_desc_text" android:selectable="false" android:key="summary_key" />
+</PreferenceScreen>

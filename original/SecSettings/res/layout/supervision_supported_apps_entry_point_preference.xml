@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/supervision_supported_apps_entry_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:filterTouchesWhenObscured="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/supervision_supported_apps_entry_point_icon_1" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:scaleType="fitCenter" />
+    <ImageView android:id="@id/supervision_supported_apps_entry_point_icon_2" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:scaleType="fitCenter" android:layout_marginStart="8.0dip" />
+    <ImageView android:id="@id/supervision_supported_apps_entry_point_icon_3" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:scaleType="fitCenter" android:layout_marginStart="8.0dip" />
+    <FrameLayout android:gravity="center" android:id="@id/supervision_supported_apps_entry_point_remaining_apps_icon" android:background="@drawable/supervision_circle_background_for_icon" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginStart="8.0dip">
+        <TextView android:textAppearance="@style/TextAppearance.SettingsLib.BodySmall.Emphasized" android:textColor="@color/materialColorOnSurfaceVariant" android:layout_gravity="center" android:id="@id/supervision_supported_apps_entry_point_remaining_apps_count" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

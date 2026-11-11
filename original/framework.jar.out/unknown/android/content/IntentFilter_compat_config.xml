@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change disabled="true" id="293560872" name="BLOCK_NULL_ACTION_INTENTS" overridable="true"><meta-data definedIn="android.content.IntentFilter"/></compat-change></config>

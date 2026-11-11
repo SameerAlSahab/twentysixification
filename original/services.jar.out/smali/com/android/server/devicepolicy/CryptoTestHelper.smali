@@ -1,0 +1,30 @@
+.class public abstract Lcom/android/server/devicepolicy/CryptoTestHelper;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# direct methods
+.method public static runAndLogSelfTest()V
+    .locals 2
+
+    invoke-static {}, Lcom/android/server/devicepolicy/CryptoTestHelper;->runSelfTest()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    filled-new-array {v0}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    const v1, 0x3346f
+
+    invoke-static {v1, v0}, Landroid/app/admin/SecurityLog;->writeEvent(I[Ljava/lang/Object;)I
+
+    return-void
+.end method
+
+.method private static native runSelfTest()I
+.end method

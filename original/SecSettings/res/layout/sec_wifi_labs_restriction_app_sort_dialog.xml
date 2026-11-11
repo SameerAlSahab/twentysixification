@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/network_restriction_app_sort_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioGroup android:orientation="vertical" android:id="@id/network_restriction_app_sort_group_order" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/order_category" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/sec_wifi_labs_restriction_sort_radiobutton" />
+        <include android:id="@id/order_frequently_used" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/sec_wifi_labs_restriction_sort_radiobutton" />
+        <include android:id="@id/order_last_used" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/sec_wifi_labs_restriction_sort_radiobutton" />
+    </RadioGroup>
+</ScrollView>

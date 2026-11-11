@@ -1,0 +1,39 @@
+.class public abstract Lcom/android/server/backup/params/AdbParams;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# instance fields
+.field public curPassword:Ljava/lang/String;
+
+.field public encryptPassword:Ljava/lang/String;
+
+.field public fd:Landroid/os/ParcelFileDescriptor;
+
+.field public final latch:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public observer:Landroid/app/backup/IFullBackupRestoreObserver;
+
+.field public privilegeApp:Z
+
+.field public typeMigration:Z
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Lcom/android/server/backup/params/AdbParams;->latch:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iput-boolean v1, p0, Lcom/android/server/backup/params/AdbParams;->privilegeApp:Z
+
+    return-void
+.end method

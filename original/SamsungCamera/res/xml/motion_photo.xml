@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_Motion_photos"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/motion_photo_capture_range" android:key="@string/key_motion_photo_capture_range">
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/motion_photo_before_and_after_shutter" android:key="@string/key_capture_range_before_and_after_shutter" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/motion_photo_before_shutter_only" android:key="@string/key_capture_range_before_shutter_only" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/motion_photo_shutter_sound" android:key="@string/key_motion_photo_shutter_sound">
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/value_motion_photo_sound_type_camera_shutter" android:key="@string/key_shutter_sound_type_camera_shutter_sound" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/value_motion_photo_sound_type_recording_finished" android:key="@string/key_shutter_sound_type_recording_finished_sound" />
+        <androidx.preference.PreferenceCategory android:layout="@layout/subheader_divider_layout" android:title="@string/motion_photo_sound_timing_header" android:selectable="false" android:key="@string/key_motion_photo_shutter_sound_timing" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/value_motion_photo_sound_timing_when_picture_is_taken" android:key="@string/key_shutter_sound_timing_when_picture_is_taken" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/value_motion_photo_sound_timing_when_recording_finishes" android:key="@string/key_shutter_sound_timing_when_recording_finishes" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="" android:key="@string/dep_empty" />
+</PreferenceScreen>

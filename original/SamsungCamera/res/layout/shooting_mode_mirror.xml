@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/shooting_mode_mirror_0" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="locale"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/top_guideline" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintGuide_percent="@integer/top_guideline_percent" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/navigation_bar_guideline" android:layout_width="wrap_content" android:layout_height="0.0dip" app:layout_constraintGuide_end="@dimen/navigation_bar_height_in_android_fw" />
+    <ImageView android:id="@id/lighting_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/mirror_frame" android:scaleType="centerCrop" android:contentDescription="@null" android:alpha="0.0" />
+    <com.sec.android.app.camera.widget.ZoomableImageView android:id="@id/freeze_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:id="@id/freeze_button_touch_area" android:clickable="true" android:layout_width="@dimen/mirror_button_touch_area_size" android:layout_height="@dimen/mirror_button_touch_area_size" android:layout_marginBottom="@dimen/mirror_button_bottom_margin" android:layout_marginStart="@dimen/mirror_button_side_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/freeze_button" android:layout_width="@dimen/mirror_button_bg_size" android:layout_height="@dimen/mirror_button_bg_size">
+            <ImageView android:layout_gravity="center" android:id="@id/freeze_button_icon" android:layout_width="@dimen/mirror_button_icon_size" android:layout_height="@dimen/mirror_button_icon_size" android:src="@drawable/ic_mirror_check_box_uncheck_circle" android:scaleType="center" android:contentDescription="@null" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/lighting_button_touch_area" android:clickable="true" android:layout_width="@dimen/mirror_button_touch_area_size" android:layout_height="@dimen/mirror_button_touch_area_size" android:layout_marginBottom="@dimen/mirror_button_bottom_margin" android:layout_marginEnd="@dimen/mirror_button_side_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/lighting_button" android:layout_width="@dimen/mirror_button_bg_size" android:layout_height="@dimen/mirror_button_bg_size">
+            <ImageView android:layout_gravity="center" android:id="@id/lighting_button_icon" android:layout_width="@dimen/mirror_button_icon_size" android:layout_height="@dimen/mirror_button_icon_size" android:src="@drawable/ic_brightness_sun_max" android:scaleType="center" android:contentDescription="@null" />
+        </FrameLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/freeze_stop_button_touch_area" android:visibility="invisible" android:clickable="true" android:layout_width="@dimen/mirror_button_touch_area_size" android:layout_height="@dimen/mirror_button_touch_area_size" android:layout_marginBottom="@dimen/mirror_button_bottom_margin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <FrameLayout android:layout_gravity="center" android:id="@id/freeze_stop_button" android:background="@drawable/mirror_freeze_stop_button_bg" android:layout_width="@dimen/mirror_button_bg_size" android:layout_height="@dimen/mirror_button_bg_size">
+            <ImageView android:layout_gravity="center" android:id="@id/freeze_stop_button_icon" android:layout_width="@dimen/mirror_button_icon_size" android:layout_height="@dimen/mirror_button_icon_size" android:src="@drawable/ic_button_close_xmark_circle" android:scaleType="center" android:contentDescription="@null" />
+        </FrameLayout>
+    </FrameLayout>
+    <ImageButton android:id="@id/close_button" android:background="@null" android:layout_width="@dimen/mirror_button_icon_size" android:layout_height="@dimen/mirror_button_icon_size" android:layout_marginTop="@dimen/mirror_close_button_margin" android:src="@drawable/mirror_close" android:scaleType="center" android:layout_marginEnd="@dimen/mirror_close_button_margin" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Group android:id="@id/bottom_buttons" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" app:constraint_referenced_ids="freeze_button_touch_area,lighting_button_touch_area" />
+</androidx.constraintlayout.widget.ConstraintLayout>

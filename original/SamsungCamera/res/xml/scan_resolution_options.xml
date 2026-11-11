@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/title_scan_resolution"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="" android:key="@string/dep_scan_resolution">
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/title_scan_resolution_high" android:key="@string/key_scan_resolution_max" android:dependency="@string/dep_scan_resolution" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/title_scan_resolution_default" android:key="@string/key_scan_resolution_mid" android:dependency="@string/dep_scan_resolution" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/title_scan_resolution_low" android:key="@string/key_scan_resolution_min" android:dependency="@string/dep_scan_resolution" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="" android:key="@string/dep_empty" />
+</PreferenceScreen>

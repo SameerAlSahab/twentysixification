@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/winset_list_item_end_padding" android:paddingVertical="@dimen/winset_sub_header_item_vertical_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/SecSemiBold" android:textSize="@dimen/setting_sub_header_title_text_size" android:textColor="@color/sesl_list_subheader_text_color" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <View android:background="@drawable/subheader_divider" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/setting_sub_header_dash_dot_line_start_margin" />
+</LinearLayout>

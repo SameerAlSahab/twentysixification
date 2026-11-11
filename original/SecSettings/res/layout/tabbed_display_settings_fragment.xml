@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar_layout" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" app:elevation="0.0dip">
+        <FrameLayout android:id="@id/display_topology_preference_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="@dimen/display_topology_pane_in_appbar_layout_horizontal_padding" app:layout_scrollFlags="scroll" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.android.settings.connecteddevice.display.FocusAwareFrameLayout android:id="@id/selected_display_preference_container" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <include android:layout_gravity="center" android:id="@id/no_display_connected_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/no_external_display_connected_screen" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

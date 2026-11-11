@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/sesl_round_and_bgcolor_light" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="?android:listPreferredItemPaddingEnd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?textAppearanceListItem" android:textColor="@color/sec_no_item_text_color" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@android:id/title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_interaction_empty_agent_activity_preference_title" android:maxLines="5" android:textAlignment="center" />
+</LinearLayout>

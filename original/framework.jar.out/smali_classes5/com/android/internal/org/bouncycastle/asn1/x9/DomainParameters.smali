@@ -1,0 +1,428 @@
+.class public Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+.super Lcom/android/internal/org/bouncycastle/asn1/ASN1Object;
+.source "DomainParameters.java"
+
+
+# instance fields
+.field private final blacklist g:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+.field private final blacklist j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+.field private final blacklist p:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+.field private final blacklist q:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+.field private final blacklist validationParams:Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+
+# direct methods
+.method private constructor blacklist <init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;)V
+    .locals 3
+
+    .line 108
+    invoke-direct {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Object;-><init>()V
+
+    .line 109
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-lt v0, v1, :cond_2
+
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    if-gt v0, v1, :cond_2
+
+    .line 114
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getObjects()Ljava/util/Enumeration;
+
+    move-result-object p1
+
+    .line 115
+    invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->p:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 116
+    invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->g:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 117
+    invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->q:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 119
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->getNext(Ljava/util/Enumeration;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 121
+    instance-of v2, v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    if-eqz v2, :cond_0
+
+    .line 123
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 124
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->getNext(Ljava/util/Enumeration;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 128
+    :cond_0
+    iput-object v1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    .line 133
+    invoke-interface {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;->toASN1Primitive()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->validationParams:Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+    return-void
+
+    .line 137
+    :cond_1
+    iput-object v1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->validationParams:Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+    return-void
+
+    .line 111
+    :cond_2
+    const-string p0, "Bad sequence size: "
+
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->size()I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$3(Ljava/lang/String;I)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public constructor blacklist <init>(Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;)V
+    .locals 1
+
+    .line 78
+    invoke-direct {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Object;-><init>()V
+
+    if-eqz p1, :cond_3
+
+    if-eqz p2, :cond_2
+
+    if-eqz p3, :cond_1
+
+    .line 92
+    new-instance v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-direct {v0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;-><init>(Ljava/math/BigInteger;)V
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->p:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 93
+    new-instance p1, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-direct {p1, p2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;-><init>(Ljava/math/BigInteger;)V
+
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->g:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 94
+    new-instance p1, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-direct {p1, p3}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;-><init>(Ljava/math/BigInteger;)V
+
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->q:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    if-eqz p4, :cond_0
+
+    .line 98
+    new-instance p1, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-direct {p1, p4}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;-><init>(Ljava/math/BigInteger;)V
+
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 102
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    .line 104
+    :goto_0
+    iput-object p5, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->validationParams:Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+    return-void
+
+    .line 89
+    :cond_1
+    const-string p0, "\'q\' cannot be null"
+
+    invoke-static {p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$3(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    .line 85
+    :cond_2
+    const-string p0, "\'g\' cannot be null"
+
+    invoke-static {p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$3(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    .line 81
+    :cond_3
+    const-string p0, "\'p\' cannot be null"
+
+    invoke-static {p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$3(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public static blacklist getInstance(Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;Z)Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+    .locals 0
+
+    .line 44
+    invoke-static {p0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getInstance(Lcom/android/internal/org/bouncycastle/asn1/ASN1TaggedObject;Z)Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+    .locals 1
+
+    .line 55
+    instance-of v0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+
+    if-eqz v0, :cond_0
+
+    .line 57
+    check-cast p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+
+    return-object p0
+
+    :cond_0
+    if-eqz p0, :cond_1
+
+    .line 61
+    new-instance v0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;
+
+    invoke-static {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;-><init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;)V
+
+    return-object v0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private static blacklist getNext(Ljava/util/Enumeration;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+    .locals 1
+
+    .line 143
+    invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public blacklist getG()Ljava/math/BigInteger;
+    .locals 0
+
+    .line 163
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->g:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getPositiveValue()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist getJ()Ljava/math/BigInteger;
+    .locals 0
+
+    .line 183
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 188
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getPositiveValue()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist getP()Ljava/math/BigInteger;
+    .locals 0
+
+    .line 153
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->p:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getPositiveValue()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist getQ()Ljava/math/BigInteger;
+    .locals 0
+
+    .line 173
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->q:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getPositiveValue()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist getValidationParams()Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+    .locals 0
+
+    .line 198
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->validationParams:Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+    return-object p0
+.end method
+
+.method public blacklist toASN1Primitive()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+    .locals 2
+
+    .line 208
+    new-instance v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;-><init>(I)V
+
+    .line 209
+    iget-object v1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->p:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 210
+    iget-object v1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->g:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 211
+    iget-object v1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->q:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 213
+    iget-object v1, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->j:Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    if-eqz v1, :cond_0
+
+    .line 215
+    invoke-virtual {v0, v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 218
+    :cond_0
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/asn1/x9/DomainParameters;->validationParams:Lcom/android/internal/org/bouncycastle/asn1/x9/ValidationParams;
+
+    if-eqz p0, :cond_1
+
+    .line 220
+    invoke-virtual {v0, p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;->add(Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 223
+    :cond_1
+    new-instance p0, Lcom/android/internal/org/bouncycastle/asn1/DERSequence;
+
+    invoke-direct {p0, v0}, Lcom/android/internal/org/bouncycastle/asn1/DERSequence;-><init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1EncodableVector;)V
+
+    return-object p0
+.end method

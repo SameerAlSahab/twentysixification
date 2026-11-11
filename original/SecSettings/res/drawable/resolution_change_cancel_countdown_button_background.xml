@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="360.0dip" />
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="1.0dip" android:color="@color/materialColorOutlineVariant" />
+        </shape>
+    </item>
+    <item android:id="@id/resolution_change_cancel_countdown_progress">
+        <clip android:gravity="start" android:clipOrientation="horizontal">
+            <shape android:shape="rectangle">
+                <corners android:radius="360.0dip" />
+                <solid android:color="@color/resolution_change_cancel_countdown_color" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

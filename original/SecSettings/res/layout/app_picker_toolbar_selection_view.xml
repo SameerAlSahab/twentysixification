@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="start|center" android:orientation="horizontal" android:id="@id/customview_selection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:animateLayoutChanges="true" android:paddingStart="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <CheckBox android:id="@id/toolbar_custom_checkbox" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:contentDescription="@string/dnd_app_picker_all" />
+            <TextView android:textColor="?actionMenuTextColor" android:id="@id/side_text_float" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dnd_app_picker_selection_title" android:singleLine="true" android:paddingStart="6.0dip" android:paddingEnd="18.0dip" style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" />
+        </LinearLayout>
+        <TextView android:textSize="12.0dip" android:textColor="@color/sec_dnd_add_app_exception_all_text" android:id="@id/bottom_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_zen_mode_custom_actionbar_text_margin_top" android:text="@string/dnd_app_picker_all" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <TextView android:textColor="?actionMenuTextColor" android:id="@id/side_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dnd_app_picker_selection_title" android:singleLine="true" android:paddingStart="14.0dip" android:paddingEnd="18.0dip" style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse" />
+</LinearLayout>

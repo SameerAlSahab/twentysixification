@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_screen_permission_page_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecPreferenceCategory android:title="@string/sec_screen_permission_target_app_allowed_agents" android:key="screen_permission_app_list_container_preference" />
+    <com.samsung.android.settings.applications.appinfo.ScreenPermissionFooterPreference android:selectable="false" android:key="screen_permission_footer_preference" settings:searchable="false" />
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_continue_apps_folding_unfolding"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_guide_main_continuity" android:selectable="false" android:key="main_screen_apps_continuity_preview" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/sec_continue_apps_summary_folding_unfolding" android:selectable="false" android:key="main_screen_apps_description" style="@style/description_text" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/sec_main_screen_apps_summary_cover_screen_resolution" android:selectable="false" android:key="main_screen_apps_description_cover_screen_resolution" style="@style/description_text" />
+    <SecSwitchPreference android:title="@string/sec_continue_apps_folding_unfolding_main_screen" android:key="screen_apps_continuity" />
+    <SecDropDownPreference android:title="@string/sec_continue_apps_folding_unfolding_cover_screen" android:key="key_fold_lock_behavior" />
+</PreferenceScreen>

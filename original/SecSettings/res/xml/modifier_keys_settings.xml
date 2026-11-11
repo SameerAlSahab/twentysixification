@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/modifier_keys_settings" android:key="modifier_keys_all" settings:controller="com.android.settings.inputmethod.ModifierKeysPreferenceController"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory>
+        <Preference android:key="modifier_keys_caps_lock" />
+        <Preference android:key="modifier_keys_ctrl" />
+        <Preference android:key="modifier_keys_meta" />
+        <Preference android:key="modifier_keys_alt" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference android:icon="@drawable/ic_modifier_keys_reset" android:key="modifier_keys_restore" settings:controller="com.android.settings.inputmethod.ModifierKeysRestorePreferenceController" />
+    </PreferenceCategory>
+</PreferenceScreen>

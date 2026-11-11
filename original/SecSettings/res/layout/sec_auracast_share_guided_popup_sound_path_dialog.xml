@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout style="@style/SecAuracastGuidedPopupRootStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/guided_popup_close_area" android:elevation="@dimen/sec_auracast_guided_popup_close_priority_elevation_value" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SecAuracastGuidedPopupCloseArea">
+        <ImageView android:id="@id/guided_popup_close_button" style="@style/SecAuracastGuidedPopupCloseButton" />
+    </LinearLayout>
+    <LinearLayout app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/SecAuracastGuidedPopupInfoArea">
+        <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/sec_auracast_guided_popup_image_layout_end_margin" android:paddingVertical="@dimen/sec_auracast_guided_popup_image_layout_vertical_padding">
+            <ImageView android:background="@drawable/sec_auracast_ic_guided_popup_bt_headset" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ScrollView style="@style/SecAuracastGuidedPopupScrollView">
+            <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sec_auracast_guided_popup_sound_path_guide" style="@style/SecAuracastGuidedPopupBodyText" />
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

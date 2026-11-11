@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/setting_list_ic_hearing_color" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/ic_hearing_enhancements_speaker_plusminus" android:color="@color/setting_list_ic_color" android:top="10.0dip" android:bottom="10.0dip" android:start="10.0dip" android:end="10.0dip" />
+</layer-list>

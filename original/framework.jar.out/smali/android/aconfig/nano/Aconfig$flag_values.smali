@@ -1,0 +1,376 @@
+.class public final Landroid/aconfig/nano/Aconfig$flag_values;
+.super Landroid/internal/framework/protobuf/nano/MessageNano;
+.source "Aconfig.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/aconfig/nano/Aconfig;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "flag_values"
+.end annotation
+
+
+# static fields
+.field private static volatile blacklist _emptyArray:[Landroid/aconfig/nano/Aconfig$flag_values;
+
+
+# instance fields
+.field public blacklist flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 0
+
+    .line 689
+    invoke-direct {p0}, Landroid/internal/framework/protobuf/nano/MessageNano;-><init>()V
+
+    .line 690
+    invoke-virtual {p0}, Landroid/aconfig/nano/Aconfig$flag_values;->clear()Landroid/aconfig/nano/Aconfig$flag_values;
+
+    return-void
+.end method
+
+.method public static blacklist emptyArray()[Landroid/aconfig/nano/Aconfig$flag_values;
+    .locals 2
+
+    .line 675
+    sget-object v0, Landroid/aconfig/nano/Aconfig$flag_values;->_emptyArray:[Landroid/aconfig/nano/Aconfig$flag_values;
+
+    if-nez v0, :cond_1
+
+    .line 676
+    sget-object v0, Landroid/internal/framework/protobuf/nano/InternalNano;->LAZY_INIT_LOCK:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    .line 678
+    :try_start_0
+    sget-object v1, Landroid/aconfig/nano/Aconfig$flag_values;->_emptyArray:[Landroid/aconfig/nano/Aconfig$flag_values;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    .line 679
+    new-array v1, v1, [Landroid/aconfig/nano/Aconfig$flag_values;
+
+    sput-object v1, Landroid/aconfig/nano/Aconfig$flag_values;->_emptyArray:[Landroid/aconfig/nano/Aconfig$flag_values;
+
+    .line 681
+    :cond_0
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
+
+    .line 683
+    :cond_1
+    :goto_0
+    sget-object v0, Landroid/aconfig/nano/Aconfig$flag_values;->_emptyArray:[Landroid/aconfig/nano/Aconfig$flag_values;
+
+    return-object v0
+.end method
+
+.method public static blacklist parseFrom(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;)Landroid/aconfig/nano/Aconfig$flag_values;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 775
+    new-instance v0, Landroid/aconfig/nano/Aconfig$flag_values;
+
+    invoke-direct {v0}, Landroid/aconfig/nano/Aconfig$flag_values;-><init>()V
+
+    invoke-virtual {v0, p0}, Landroid/aconfig/nano/Aconfig$flag_values;->mergeFrom(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;)Landroid/aconfig/nano/Aconfig$flag_values;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist parseFrom([B)Landroid/aconfig/nano/Aconfig$flag_values;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/internal/framework/protobuf/nano/InvalidProtocolBufferNanoException;
+        }
+    .end annotation
+
+    .line 769
+    new-instance v0, Landroid/aconfig/nano/Aconfig$flag_values;
+
+    invoke-direct {v0}, Landroid/aconfig/nano/Aconfig$flag_values;-><init>()V
+
+    invoke-static {v0, p0}, Landroid/internal/framework/protobuf/nano/MessageNano;->mergeFrom(Landroid/internal/framework/protobuf/nano/MessageNano;[B)Landroid/internal/framework/protobuf/nano/MessageNano;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/aconfig/nano/Aconfig$flag_values;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public blacklist clear()Landroid/aconfig/nano/Aconfig$flag_values;
+    .locals 1
+
+    .line 694
+    invoke-static {}, Landroid/aconfig/nano/Aconfig$flag_value;->emptyArray()[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    const/4 v0, -0x1
+
+    .line 695
+    iput v0, p0, Landroid/aconfig/nano/Aconfig$flag_values;->cachedSize:I
+
+    return-object p0
+.end method
+
+.method protected blacklist computeSerializedSize()I
+    .locals 4
+
+    .line 715
+    invoke-super {p0}, Landroid/internal/framework/protobuf/nano/MessageNano;->computeSerializedSize()I
+
+    move-result v0
+
+    .line 716
+    iget-object v1, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    if-eqz v1, :cond_1
+
+    array-length v1, v1
+
+    if-lez v1, :cond_1
+
+    const/4 v1, 0x0
+
+    .line 717
+    :goto_0
+    iget-object v2, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    array-length v3, v2
+
+    if-ge v1, v3, :cond_1
+
+    .line 718
+    aget-object v2, v2, v1
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x1
+
+    .line 721
+    invoke-static {v3, v2}, Landroid/internal/framework/protobuf/nano/CodedOutputByteBufferNano;->computeMessageSize(ILandroid/internal/framework/protobuf/nano/MessageNano;)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return v0
+.end method
+
+.method public blacklist mergeFrom(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;)Landroid/aconfig/nano/Aconfig$flag_values;
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 733
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;->readTag()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xa
+
+    if-eq v0, v1, :cond_1
+
+    .line 738
+    invoke-static {p1, v0}, Landroid/internal/framework/protobuf/nano/WireFormatNano;->parseUnknownField(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_3
+
+    .line 745
+    :cond_1
+    invoke-static {p1, v1}, Landroid/internal/framework/protobuf/nano/WireFormatNano;->getRepeatedFieldArrayLength(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;I)I
+
+    move-result v0
+
+    .line 746
+    iget-object v1, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_2
+    array-length v3, v1
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    .line 747
+    new-array v4, v0, [Landroid/aconfig/nano/Aconfig$flag_value;
+
+    if-eqz v3, :cond_3
+
+    .line 750
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_3
+    :goto_2
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_4
+
+    .line 753
+    new-instance v1, Landroid/aconfig/nano/Aconfig$flag_value;
+
+    invoke-direct {v1}, Landroid/aconfig/nano/Aconfig$flag_value;-><init>()V
+
+    aput-object v1, v4, v3
+
+    .line 754
+    invoke-virtual {p1, v1}, Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;->readMessage(Landroid/internal/framework/protobuf/nano/MessageNano;)V
+
+    .line 755
+    invoke-virtual {p1}, Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;->readTag()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    .line 758
+    :cond_4
+    new-instance v0, Landroid/aconfig/nano/Aconfig$flag_value;
+
+    invoke-direct {v0}, Landroid/aconfig/nano/Aconfig$flag_value;-><init>()V
+
+    aput-object v0, v4, v3
+
+    .line 759
+    invoke-virtual {p1, v0}, Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;->readMessage(Landroid/internal/framework/protobuf/nano/MessageNano;)V
+
+    .line 760
+    iput-object v4, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    goto :goto_0
+
+    :cond_5
+    :goto_3
+    return-object p0
+.end method
+
+.method public bridge synthetic blacklist mergeFrom(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;)Landroid/internal/framework/protobuf/nano/MessageNano;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 669
+    invoke-virtual {p0, p1}, Landroid/aconfig/nano/Aconfig$flag_values;->mergeFrom(Landroid/internal/framework/protobuf/nano/CodedInputByteBufferNano;)Landroid/aconfig/nano/Aconfig$flag_values;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist writeTo(Landroid/internal/framework/protobuf/nano/CodedOutputByteBufferNano;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 702
+    iget-object v0, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    if-eqz v0, :cond_1
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    .line 703
+    :goto_0
+    iget-object v1, p0, Landroid/aconfig/nano/Aconfig$flag_values;->flagValue:[Landroid/aconfig/nano/Aconfig$flag_value;
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    .line 704
+    aget-object v1, v1, v0
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x1
+
+    .line 706
+    invoke-virtual {p1, v2, v1}, Landroid/internal/framework/protobuf/nano/CodedOutputByteBufferNano;->writeMessage(ILandroid/internal/framework/protobuf/nano/MessageNano;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 710
+    :cond_1
+    invoke-super {p0, p1}, Landroid/internal/framework/protobuf/nano/MessageNano;->writeTo(Landroid/internal/framework/protobuf/nano/CodedOutputByteBufferNano;)V
+
+    return-void
+.end method

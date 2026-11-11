@@ -1,0 +1,3238 @@
+.class Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;
+.super Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+
+# static fields
+.field private static final SLOW_MOTION_VIDEO_TAG:Ljava/lang/String; = "SlowMotionVideoMaker"
+
+
+# instance fields
+.field private mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+.field private mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+.field private final mEventDetectNodeCallback:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase$EventDetectNodeCallback;
+
+.field private final mPalmNodeCallback:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$ArcPalmNodeCallback;
+
+.field private mSlowMotionBgNodeChainExecutor:Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Class;Landroid/content/Context;Landroid/os/Handler;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Landroid/content/Context;",
+            "Landroid/os/Handler;",
+            ")V"
+        }
+    .end annotation
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;-><init>(Ljava/lang/Class;Landroid/content/Context;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance p1, Lcom/samsung/android/camera/core2/maker/t3;
+
+    .line 5
+    .line 6
+    invoke-direct {p1, p0}, Lcom/samsung/android/camera/core2/maker/t3;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object p1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNodeCallback:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase$EventDetectNodeCallback;
+
+    .line 10
+    .line 11
+    new-instance p1, Lcom/samsung/android/camera/core2/maker/n0;
+
+    .line 12
+    .line 13
+    const/4 p2, 0x5
+
+    .line 14
+    invoke-direct {p1, p0, p2}, Lcom/samsung/android/camera/core2/maker/n0;-><init>(Lcom/samsung/android/camera/core2/maker/MakerBase;I)V
+
+    .line 15
+    .line 16
+    .line 17
+    iput-object p1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mPalmNodeCallback:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$ArcPalmNodeCallback;
+
+    .line 18
+    .line 19
+    new-instance p1, Lcom/samsung/android/camera/core2/maker/e;
+
+    .line 20
+    .line 21
+    const/16 p2, 0xb
+
+    .line 22
+    .line 23
+    invoke-direct {p1, p0, p2}, Lcom/samsung/android/camera/core2/maker/e;-><init>(Lcom/samsung/android/camera/core2/maker/MakerBase;I)V
+
+    .line 24
+    .line 25
+    .line 26
+    iput-object p1, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mCamDeviceMainPreviewCallback:Lcom/samsung/android/camera/core2/CamDevice$PreviewCallback;
+
+    .line 27
+    .line 28
+    return-void
+.end method
+
+.method public static synthetic D(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Landroid/media/Image;Lcom/samsung/android/camera/core2/CamCapability;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$new$4(Landroid/media/Image;Lcom/samsung/android/camera/core2/CamCapability;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic E(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/Object;)Ljava/lang/Integer;
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$getSupportedRepeatingKeyExecutorMap$9(Ljava/lang/Object;)Ljava/lang/Integer;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
+.end method
+
+.method public static synthetic F(Ljava/lang/Long;Landroid/graphics/Rect;Lcom/samsung/android/camera/core2/CamDevice;Lcom/samsung/android/camera/core2/callback/PalmDetectionEventCallback;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$new$2(Ljava/lang/Long;Landroid/graphics/Rect;Lcom/samsung/android/camera/core2/CamDevice;Lcom/samsung/android/camera/core2/callback/PalmDetectionEventCallback;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic G(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/Object;)Ljava/lang/Integer;
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$getSupportedRepeatingKeyExecutorMap$8(Ljava/lang/Object;)Ljava/lang/Integer;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
+.end method
+
+.method public static synthetic H(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;[Lcom/samsung/android/camera/core2/container/SlowMotionEvent;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$new$1([Lcom/samsung/android/camera/core2/container/SlowMotionEvent;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic I([Lcom/samsung/android/camera/core2/container/SlowMotionEvent;Lcom/samsung/android/camera/core2/CamDevice;Lcom/samsung/android/camera/core2/callback/SlowMotionEventDetectionEventCallback;)V
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1, p2}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$new$0([Lcom/samsung/android/camera/core2/container/SlowMotionEvent;Lcom/samsung/android/camera/core2/CamDevice;Lcom/samsung/android/camera/core2/callback/SlowMotionEventDetectionEventCallback;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic J(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$getSupportedPrivateKeyExecutorMap$6(Ljava/lang/Object;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic K(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/Long;Landroid/graphics/Rect;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$new$3(Ljava/lang/Long;Landroid/graphics/Rect;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic L(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$getSupportedPrivateKeyExecutorMap$5(Ljava/lang/Object;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic M(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->lambda$getSupportedPrivateKeyExecutorMap$7(Ljava/lang/Object;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method private synthetic lambda$getSupportedPrivateKeyExecutorMap$5(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 2
+    .line 3
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p1
+
+    .line 9
+    if-eqz p1, :cond_0
+
+    .line 10
+    .line 11
+    const/4 p1, 0x2
+
+    .line 12
+    goto :goto_0
+
+    .line 13
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 14
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->setMode(I)Z
+
+    .line 15
+    .line 16
+    .line 17
+    return-void
+.end method
+
+.method private synthetic lambda$getSupportedPrivateKeyExecutorMap$6(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 2
+    .line 3
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p1
+
+    .line 9
+    const/4 v0, 0x0
+
+    .line 10
+    invoke-virtual {p0, p1, v0}, Lcom/samsung/android/camera/core2/node/Node;->initializeNode(ZZ)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method private synthetic lambda$getSupportedPrivateKeyExecutorMap$7(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 2
+    .line 3
+    check-cast p1, Ljava/lang/Integer;
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p1
+
+    .line 9
+    invoke-virtual {p0, p1}, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->setDeviceOrientation(I)V
+
+    .line 10
+    .line 11
+    .line 12
+    return-void
+.end method
+
+.method private synthetic lambda$getSupportedRepeatingKeyExecutorMap$8(Ljava/lang/Object;)Ljava/lang/Integer;
+    .locals 1
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase$VideoMakerRepeatingModeManager;->REPEATING_KEY_PALM_DETECTION:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 2
+    .line 3
+    check-cast p1, Ljava/lang/Boolean;
+
+    .line 4
+    .line 5
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p1
+
+    .line 9
+    invoke-virtual {p0, v0, p1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->applyRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Z)I
+
+    .line 10
+    .line 11
+    .line 12
+    move-result p0
+
+    .line 13
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p0
+
+    .line 17
+    return-object p0
+.end method
+
+.method private synthetic lambda$getSupportedRepeatingKeyExecutorMap$9(Ljava/lang/Object;)Ljava/lang/Integer;
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase$VideoMakerRepeatingModeManager;->REPEATING_KEY_PALM_DETECTION:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 4
+    .line 5
+    check-cast p1, Ljava/lang/Integer;
+
+    .line 6
+    .line 7
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    .line 8
+    .line 9
+    .line 10
+    move-result p1
+
+    .line 11
+    invoke-virtual {v1, p1}, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;->setMode(I)Z
+
+    .line 12
+    .line 13
+    .line 14
+    move-result p1
+
+    .line 15
+    invoke-virtual {p0, v0, p1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->applyRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Z)I
+
+    .line 16
+    .line 17
+    .line 18
+    move-result p0
+
+    .line 19
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 20
+    .line 21
+    .line 22
+    move-result-object p0
+
+    .line 23
+    return-object p0
+.end method
+
+.method private static synthetic lambda$new$0([Lcom/samsung/android/camera/core2/container/SlowMotionEvent;Lcom/samsung/android/camera/core2/CamDevice;Lcom/samsung/android/camera/core2/callback/SlowMotionEventDetectionEventCallback;)V
+    .locals 0
+
+    .line 1
+    invoke-interface {p2, p0, p1}, Lcom/samsung/android/camera/core2/callback/SlowMotionEventDetectionEventCallback;->m([Lcom/samsung/android/camera/core2/container/SlowMotionEvent;Lcom/samsung/android/camera/core2/CamDevice;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method private synthetic lambda$new$1([Lcom/samsung/android/camera/core2/container/SlowMotionEvent;)V
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mCamDevice:Lcom/samsung/android/camera/core2/CamDevice;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    invoke-static {p1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v1
+
+    .line 9
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object v1
+
+    .line 13
+    const-string v2, "SlowMotionVideoMaker"
+
+    .line 14
+    .line 15
+    const-string v3, "onEventDetectionResult %s"
+
+    .line 16
+    .line 17
+    invoke-static {v2, v3, v1}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 18
+    .line 19
+    .line 20
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mMakerCallbackManager:Lcom/samsung/android/camera/core2/maker/MakerCallbackManager;
+
+    .line 21
+    .line 22
+    sget-object v1, Lcom/samsung/android/camera/core2/maker/MakerCallbackType;->SLOW_MOTION_EVENT_DETECTION_EVENT_CALLBACK:Lcom/samsung/android/camera/core2/maker/MakerCallbackType;
+
+    .line 23
+    .line 24
+    invoke-virtual {p0, v1}, Lcom/samsung/android/camera/core2/maker/MakerCallbackManager;->getCallback(Lcom/samsung/android/camera/core2/maker/MakerCallbackType;)Ljava/lang/Object;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p0
+
+    .line 28
+    invoke-static {p0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
+
+    .line 29
+    .line 30
+    .line 31
+    move-result-object p0
+
+    .line 32
+    new-instance v1, Lcom/samsung/android/camera/core2/maker/u2;
+
+    .line 33
+    .line 34
+    const/4 v2, 0x4
+
+    .line 35
+    invoke-direct {v1, v2}, Lcom/samsung/android/camera/core2/maker/u2;-><init>(I)V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {p0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
+
+    .line 39
+    .line 40
+    .line 41
+    move-result-object p0
+
+    .line 42
+    new-instance v1, Lcom/samsung/android/camera/core2/maker/s0;
+
+    .line 43
+    .line 44
+    const/16 v2, 0xb
+
+    .line 45
+    .line 46
+    invoke-direct {v1, v2, p1, v0}, Lcom/samsung/android/camera/core2/maker/s0;-><init>(ILjava/lang/Object;Ljava/lang/Object;)V
+
+    .line 47
+    .line 48
+    .line 49
+    invoke-virtual {p0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    .line 50
+    .line 51
+    .line 52
+    :cond_0
+    return-void
+.end method
+
+.method private static synthetic lambda$new$2(Ljava/lang/Long;Landroid/graphics/Rect;Lcom/samsung/android/camera/core2/CamDevice;Lcom/samsung/android/camera/core2/callback/PalmDetectionEventCallback;)V
+    .locals 0
+
+    .line 1
+    invoke-interface {p3, p0, p1, p2}, Lcom/samsung/android/camera/core2/callback/PalmDetectionEventCallback;->Z0(Ljava/lang/Long;Landroid/graphics/Rect;Lcom/samsung/android/camera/core2/CamDevice;)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method private synthetic lambda$new$3(Ljava/lang/Long;Landroid/graphics/Rect;)V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mCamDevice:Lcom/samsung/android/camera/core2/CamDevice;
+
+    .line 2
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 4
+    .line 5
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mMakerCallbackManager:Lcom/samsung/android/camera/core2/maker/MakerCallbackManager;
+
+    .line 6
+    .line 7
+    sget-object v1, Lcom/samsung/android/camera/core2/maker/MakerCallbackType;->PALM_DETECTION_EVENT_CALLBACK:Lcom/samsung/android/camera/core2/maker/MakerCallbackType;
+
+    .line 8
+    .line 9
+    invoke-virtual {p0, v1}, Lcom/samsung/android/camera/core2/maker/MakerCallbackManager;->getCallback(Lcom/samsung/android/camera/core2/maker/MakerCallbackType;)Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-object p0
+
+    .line 13
+    invoke-static {p0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-object p0
+
+    .line 17
+    new-instance v1, Lcom/samsung/android/camera/core2/maker/f0;
+
+    .line 18
+    .line 19
+    const/16 v2, 0x10
+
+    .line 20
+    .line 21
+    invoke-direct {v1, v2}, Lcom/samsung/android/camera/core2/maker/f0;-><init>(I)V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {p0, v1}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p0
+
+    .line 28
+    new-instance v1, Lcom/samsung/android/camera/core2/maker/w;
+
+    .line 29
+    .line 30
+    const/4 v2, 0x6
+
+    .line 31
+    invoke-direct {v1, p1, p2, v0, v2}, Lcom/samsung/android/camera/core2/maker/w;-><init>(Ljava/lang/Long;Landroid/graphics/Rect;Lcom/samsung/android/camera/core2/CamDevice;I)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {p0, v1}, Ljava/util/Optional;->ifPresent(Ljava/util/function/Consumer;)V
+
+    .line 35
+    .line 36
+    .line 37
+    :cond_0
+    return-void
+.end method
+
+.method private synthetic lambda$new$4(Landroid/media/Image;Lcom/samsung/android/camera/core2/CamCapability;)V
+    .locals 1
+
+    .line 1
+    iget-object p2, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 2
+    .line 3
+    invoke-virtual {p2}, Lcom/samsung/android/camera/core2/util/FlagLock;->lockIfFlagEnabled()Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p2
+
+    .line 7
+    if-eqz p2, :cond_0
+
+    .line 8
+    .line 9
+    :try_start_0
+    iget-object p2, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mSlowMotionBgNodeChainExecutor:Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+
+    .line 10
+    .line 11
+    new-instance v0, Lcom/samsung/android/camera/core2/container/ExtraBundle;
+
+    .line 12
+    .line 13
+    invoke-direct {v0}, Lcom/samsung/android/camera/core2/container/ExtraBundle;-><init>()V
+
+    .line 14
+    .line 15
+    .line 16
+    invoke-virtual {p2, p1, v0}, Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;->execute(Landroid/media/Image;Lcom/samsung/android/camera/core2/container/ExtraBundle;)Ljava/lang/Void;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 17
+    .line 18
+    .line 19
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 20
+    .line 21
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 22
+    .line 23
+    .line 24
+    return-void
+
+    .line 25
+    :catchall_0
+    move-exception p1
+
+    .line 26
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 27
+    .line 28
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 29
+    .line 30
+    .line 31
+    throw p1
+
+    .line 32
+    :cond_0
+    return-void
+.end method
+
+.method private restartEventDetection()V
+    .locals 2
+
+    .line 1
+    const-string v0, "SlowMotionVideoMaker"
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 4
+    .line 5
+    invoke-virtual {v1}, Lcom/samsung/android/camera/core2/util/FlagLock;->lockIfFlagEnabled()Z
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v1
+
+    .line 9
+    if-eqz v1, :cond_0
+
+    .line 10
+    .line 11
+    :try_start_0
+    const-string v1, "restartEventDetection E"
+
+    .line 12
+    .line 13
+    invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 17
+    .line 18
+    invoke-virtual {v1}, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;->releaseEventDetection()V
+
+    .line 19
+    .line 20
+    .line 21
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 22
+    .line 23
+    invoke-virtual {v1}, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;->initEventDetection()V
+
+    .line 24
+    .line 25
+    .line 26
+    const-string v1, "restartEventDetection X"
+
+    .line 27
+    .line 28
+    invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 29
+    .line 30
+    .line 31
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 32
+    .line 33
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 34
+    .line 35
+    .line 36
+    return-void
+
+    .line 37
+    :catchall_0
+    move-exception v0
+
+    .line 38
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 39
+    .line 40
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 41
+    .line 42
+    .line 43
+    throw v0
+
+    .line 44
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public calculateSlowMotionPreviewRepeatingCnt(I)Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$HighSpeedRepeatingCount;
+    .locals 5
+
+    .line 1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object v0
+
+    .line 5
+    iget v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 6
+    .line 7
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 8
+    .line 9
+    .line 10
+    move-result-object v1
+
+    .line 11
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object v0
+
+    .line 15
+    const-string v1, "SlowMotionVideoMaker"
+
+    .line 16
+    .line 17
+    const-string v2, "calculateSlowMotionPreviewRepeatingCnt - maxAeTargetFps(%d), previewFps(%d)"
+
+    .line 18
+    .line 19
+    invoke-static {v1, v2, v0}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 20
+    .line 21
+    .line 22
+    const/16 v0, 0x64
+
+    .line 23
+    .line 24
+    iget v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 25
+    .line 26
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v0
+
+    .line 30
+    if-lt p1, v0, :cond_6
+
+    .line 31
+    .line 32
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_FIRST_RECORD_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 33
+    .line 34
+    const/4 v1, 0x0
+
+    .line 35
+    invoke-virtual {p0, v0, v1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Z)Z
+
+    .line 36
+    .line 37
+    .line 38
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 39
+    .line 40
+    sget-object v2, Lcom/samsung/android/camera/core2/container/FrameRate;->RATIO_MAX_PREVIEW_FPS:Lcom/samsung/android/camera/core2/container/FrameRate;
+
+    .line 41
+    .line 42
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getMainPreviewSurface()Landroid/view/Surface;
+
+    .line 43
+    .line 44
+    .line 45
+    move-result-object v3
+
+    .line 46
+    const/4 v4, 0x1
+
+    .line 47
+    if-eqz v3, :cond_0
+
+    .line 48
+    .line 49
+    move v3, v4
+
+    .line 50
+    goto :goto_0
+
+    .line 51
+    :cond_0
+    move v3, v1
+
+    .line 52
+    :goto_0
+    invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 53
+    .line 54
+    .line 55
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_FIRST_EXTRA_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 56
+    .line 57
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getFirstExtraPreviewSurface()Landroid/view/Surface;
+
+    .line 58
+    .line 59
+    .line 60
+    move-result-object v3
+
+    .line 61
+    if-eqz v3, :cond_1
+
+    .line 62
+    .line 63
+    move v3, v4
+
+    .line 64
+    goto :goto_1
+
+    .line 65
+    :cond_1
+    move v3, v1
+
+    .line 66
+    :goto_1
+    invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 67
+    .line 68
+    .line 69
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_SECOND_EXTRA_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 70
+    .line 71
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getSecondExtraPreviewSurface()Landroid/view/Surface;
+
+    .line 72
+    .line 73
+    .line 74
+    move-result-object v3
+
+    .line 75
+    if-eqz v3, :cond_2
+
+    .line 76
+    .line 77
+    move v3, v4
+
+    .line 78
+    goto :goto_2
+
+    .line 79
+    :cond_2
+    move v3, v1
+
+    .line 80
+    :goto_2
+    invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 81
+    .line 82
+    .line 83
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_MIRROR_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 84
+    .line 85
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getMirrorPreviewSurface()Landroid/view/Surface;
+
+    .line 86
+    .line 87
+    .line 88
+    move-result-object v3
+
+    .line 89
+    if-eqz v3, :cond_3
+
+    .line 90
+    .line 91
+    move v3, v4
+
+    .line 92
+    goto :goto_3
+
+    .line 93
+    :cond_3
+    move v3, v1
+
+    .line 94
+    :goto_3
+    invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 95
+    .line 96
+    .line 97
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_MAIN_PREVIEW_CALLBACK:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 98
+    .line 99
+    iget-object v3, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mMainPreviewCallbackForwarder:Lcom/samsung/android/camera/core2/callback/forwarder/PreviewBufferCallbackForwarder;
+
+    .line 100
+    .line 101
+    if-eqz v3, :cond_4
+
+    .line 102
+    .line 103
+    move v3, v4
+
+    .line 104
+    goto :goto_4
+
+    .line 105
+    :cond_4
+    move v3, v1
+
+    .line 106
+    :goto_4
+    invoke-virtual {p0, v0, v2, v3}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 107
+    .line 108
+    .line 109
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase$VideoMakerRepeatingModeManager;->REPEATING_KEY_EVENT_DRIVEN:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 110
+    .line 111
+    invoke-virtual {p0, v0, v1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Z)Z
+
+    .line 112
+    .line 113
+    .line 114
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase$VideoMakerRepeatingModeManager;->REPEATING_KEY_PALM_DETECTION:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 115
+    .line 116
+    iget-object v3, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 117
+    .line 118
+    if-eqz v3, :cond_5
+
+    .line 119
+    .line 120
+    invoke-virtual {v3}, Lcom/samsung/android/camera/core2/node/Node;->isActivated()Z
+
+    .line 121
+    .line 122
+    .line 123
+    move-result v3
+
+    .line 124
+    if-eqz v3, :cond_5
+
+    .line 125
+    .line 126
+    move v1, v4
+
+    .line 127
+    :cond_5
+    invoke-virtual {p0, v0, v2, v1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 128
+    .line 129
+    .line 130
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->mRepeatingModeManager:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;
+
+    .line 131
+    .line 132
+    iget p0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 133
+    .line 134
+    div-int/2addr p1, p0
+
+    .line 135
+    invoke-virtual {v0, p1}, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->calculateHighSpeedRepeatingCount(I)Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$HighSpeedRepeatingCount;
+
+    .line 136
+    .line 137
+    .line 138
+    move-result-object p0
+
+    .line 139
+    return-object p0
+
+    .line 140
+    :cond_6
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    .line 141
+    .line 142
+    sget-object v1, Ljava/util/Locale;->UK:Ljava/util/Locale;
+
+    .line 143
+    .line 144
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 145
+    .line 146
+    .line 147
+    move-result-object p1
+
+    .line 148
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 149
+    .line 150
+    .line 151
+    move-result-object v0
+
+    .line 152
+    filled-new-array {p1, v0}, [Ljava/lang/Object;
+
+    .line 153
+    .line 154
+    .line 155
+    move-result-object p1
+
+    .line 156
+    const-string v0, "calculateSlowMotionPreviewRepeatingCnt fail - wrong maxAeTargetFps(%d), which is less than minFps(%d)"
+
+    .line 157
+    .line 158
+    invoke-static {v1, v0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 159
+    .line 160
+    .line 161
+    move-result-object p1
+
+    .line 162
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 163
+    .line 164
+    .line 165
+    throw p0
+.end method
+
+.method public calculateSlowMotionRecordRepeatingCnt(I)Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$HighSpeedRepeatingCount;
+    .locals 7
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mCamDevice:Lcom/samsung/android/camera/core2/CamDevice;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/CamDevice;->j()Lcom/samsung/android/camera/core2/CamCapability;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    iget-object v0, v0, Lcom/samsung/android/camera/core2/CamCapability;->f:Lcom/samsung/android/camera/core2/local/capability/ControlCapability;
+
+    .line 8
+    .line 9
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 10
+    .line 11
+    .line 12
+    sget-object v1, Lcom/samsung/android/camera/core2/local/capability/ControlCapabilityType;->AVAILABLE_CALLBACK_STREAM_FPS:Lcom/samsung/android/camera/core2/local/capability/ControlCapabilityType;
+
+    .line 13
+    .line 14
+    invoke-virtual {v0, v1}, Lcom/samsung/android/camera/core2/local/capability/ControlCapability;->a(Lcom/samsung/android/camera/core2/local/capability/ControlCapabilityType;)[I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result-object v0
+
+    .line 18
+    array-length v1, v0
+
+    .line 19
+    const/4 v2, 0x0
+
+    .line 20
+    if-lez v1, :cond_0
+
+    .line 21
+    .line 22
+    aget v0, v0, v2
+
+    .line 23
+    .line 24
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object v0
+
+    .line 28
+    goto :goto_0
+
+    .line 29
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 30
+    :goto_0
+    invoke-static {v0}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object v1
+
+    .line 34
+    iget v3, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 35
+    .line 36
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 37
+    .line 38
+    .line 39
+    move-result-object v3
+
+    .line 40
+    invoke-virtual {v1, v3}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v1
+
+    .line 44
+    check-cast v1, Ljava/lang/Integer;
+
+    .line 45
+    .line 46
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    .line 47
+    .line 48
+    .line 49
+    move-result v3
+
+    .line 50
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 51
+    .line 52
+    .line 53
+    move-result-object v4
+
+    .line 54
+    iget v5, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 55
+    .line 56
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 57
+    .line 58
+    .line 59
+    move-result-object v5
+
+    .line 60
+    filled-new-array {v4, v5, v0, v1}, [Ljava/lang/Object;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v0
+
+    .line 64
+    const-string v1, "SlowMotionVideoMaker"
+
+    .line 65
+    .line 66
+    const-string v4, "calculateSlowMotionRecordRepeatingCnt - maxAeTargetFps(%d), previewFps(%d), SMPreviewCallbackStreamFps(%s), previewCbFps(%d)"
+
+    .line 67
+    .line 68
+    invoke-static {v1, v4, v0}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 69
+    .line 70
+    .line 71
+    const/16 v0, 0x64
+
+    .line 72
+    .line 73
+    iget v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 74
+    .line 75
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    .line 76
+    .line 77
+    .line 78
+    move-result v0
+
+    .line 79
+    invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
+
+    .line 80
+    .line 81
+    .line 82
+    move-result v0
+
+    .line 83
+    if-lt p1, v0, :cond_9
+
+    .line 84
+    .line 85
+    sget-object v0, Lcom/samsung/android/camera/core2/container/FrameRate;->RATIO_MAX_PREVIEW_FPS:Lcom/samsung/android/camera/core2/container/FrameRate;
+
+    .line 86
+    .line 87
+    new-instance v1, Landroid/util/Rational;
+
+    .line 88
+    .line 89
+    iget v4, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 90
+    .line 91
+    invoke-direct {v1, v4, p1}, Landroid/util/Rational;-><init>(II)V
+
+    .line 92
+    .line 93
+    .line 94
+    sget-object v4, Ljava/util/Locale;->UK:Ljava/util/Locale;
+
+    .line 95
+    .line 96
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    .line 97
+    .line 98
+    const-string v5, "can\'t find previewFrameRate corresponding "
+
+    .line 99
+    .line 100
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 101
+    .line 102
+    .line 103
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 104
+    .line 105
+    .line 106
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 107
+    .line 108
+    .line 109
+    move-result-object v4
+
+    .line 110
+    invoke-static {v1, v4}, Lcom/samsung/android/camera/core2/container/FrameRate;->b(Landroid/util/Rational;Ljava/lang/String;)Lcom/samsung/android/camera/core2/container/FrameRate;
+
+    .line 111
+    .line 112
+    .line 113
+    move-result-object v1
+
+    .line 114
+    new-instance v4, Landroid/util/Rational;
+
+    .line 115
+    .line 116
+    invoke-direct {v4, v3, p1}, Landroid/util/Rational;-><init>(II)V
+
+    .line 117
+    .line 118
+    .line 119
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 120
+    .line 121
+    const-string v5, "can\'t find previewCbFrameRate corresponding "
+
+    .line 122
+    .line 123
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 124
+    .line 125
+    .line 126
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 127
+    .line 128
+    .line 129
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 130
+    .line 131
+    .line 132
+    move-result-object v3
+
+    .line 133
+    invoke-static {v4, v3}, Lcom/samsung/android/camera/core2/container/FrameRate;->b(Landroid/util/Rational;Ljava/lang/String;)Lcom/samsung/android/camera/core2/container/FrameRate;
+
+    .line 134
+    .line 135
+    .line 136
+    move-result-object v3
+
+    .line 137
+    sget-object v4, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_FIRST_RECORD_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 138
+    .line 139
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getFirstRecorderSurface()Landroid/view/Surface;
+
+    .line 140
+    .line 141
+    .line 142
+    move-result-object v5
+
+    .line 143
+    const/4 v6, 0x1
+
+    .line 144
+    if-eqz v5, :cond_1
+
+    .line 145
+    .line 146
+    move v5, v6
+
+    .line 147
+    goto :goto_1
+
+    .line 148
+    :cond_1
+    move v5, v2
+
+    .line 149
+    :goto_1
+    invoke-virtual {p0, v4, v0, v5}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 150
+    .line 151
+    .line 152
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 153
+    .line 154
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getMainPreviewSurface()Landroid/view/Surface;
+
+    .line 155
+    .line 156
+    .line 157
+    move-result-object v4
+
+    .line 158
+    if-eqz v4, :cond_2
+
+    .line 159
+    .line 160
+    move v4, v6
+
+    .line 161
+    goto :goto_2
+
+    .line 162
+    :cond_2
+    move v4, v2
+
+    .line 163
+    :goto_2
+    invoke-virtual {p0, v0, v1, v4}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 164
+    .line 165
+    .line 166
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_FIRST_EXTRA_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 167
+    .line 168
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getFirstExtraPreviewSurface()Landroid/view/Surface;
+
+    .line 169
+    .line 170
+    .line 171
+    move-result-object v4
+
+    .line 172
+    if-eqz v4, :cond_3
+
+    .line 173
+    .line 174
+    move v4, v6
+
+    .line 175
+    goto :goto_3
+
+    .line 176
+    :cond_3
+    move v4, v2
+
+    .line 177
+    :goto_3
+    invoke-virtual {p0, v0, v1, v4}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 178
+    .line 179
+    .line 180
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_SECOND_EXTRA_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 181
+    .line 182
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getSecondExtraPreviewSurface()Landroid/view/Surface;
+
+    .line 183
+    .line 184
+    .line 185
+    move-result-object v4
+
+    .line 186
+    if-eqz v4, :cond_4
+
+    .line 187
+    .line 188
+    move v4, v6
+
+    .line 189
+    goto :goto_4
+
+    .line 190
+    :cond_4
+    move v4, v2
+
+    .line 191
+    :goto_4
+    invoke-virtual {p0, v0, v1, v4}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 192
+    .line 193
+    .line 194
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_MIRROR_PREVIEW_SURFACE:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 195
+    .line 196
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getMirrorPreviewSurface()Landroid/view/Surface;
+
+    .line 197
+    .line 198
+    .line 199
+    move-result-object v4
+
+    .line 200
+    if-eqz v4, :cond_5
+
+    .line 201
+    .line 202
+    move v4, v6
+
+    .line 203
+    goto :goto_5
+
+    .line 204
+    :cond_5
+    move v4, v2
+
+    .line 205
+    :goto_5
+    invoke-virtual {p0, v0, v1, v4}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 206
+    .line 207
+    .line 208
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->REPEATING_KEY_MAIN_PREVIEW_CALLBACK:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 209
+    .line 210
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mMainPreviewCallbackForwarder:Lcom/samsung/android/camera/core2/callback/forwarder/PreviewBufferCallbackForwarder;
+
+    .line 211
+    .line 212
+    if-eqz v1, :cond_6
+
+    .line 213
+    .line 214
+    move v1, v6
+
+    .line 215
+    goto :goto_6
+
+    .line 216
+    :cond_6
+    move v1, v2
+
+    .line 217
+    :goto_6
+    invoke-virtual {p0, v0, v3, v1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 218
+    .line 219
+    .line 220
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase$VideoMakerRepeatingModeManager;->REPEATING_KEY_EVENT_DRIVEN:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 221
+    .line 222
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 223
+    .line 224
+    if-eqz v1, :cond_7
+
+    .line 225
+    .line 226
+    invoke-virtual {v1}, Lcom/samsung/android/camera/core2/node/Node;->isActivated()Z
+
+    .line 227
+    .line 228
+    .line 229
+    move-result v1
+
+    .line 230
+    if-eqz v1, :cond_7
+
+    .line 231
+    .line 232
+    move v1, v6
+
+    .line 233
+    goto :goto_7
+
+    .line 234
+    :cond_7
+    move v1, v2
+
+    .line 235
+    :goto_7
+    invoke-virtual {p0, v0, v3, v1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 236
+    .line 237
+    .line 238
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase$VideoMakerRepeatingModeManager;->REPEATING_KEY_PALM_DETECTION:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;
+
+    .line 239
+    .line 240
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 241
+    .line 242
+    if-eqz v1, :cond_8
+
+    .line 243
+    .line 244
+    invoke-virtual {v1}, Lcom/samsung/android/camera/core2/node/Node;->isActivated()Z
+
+    .line 245
+    .line 246
+    .line 247
+    move-result v1
+
+    .line 248
+    if-eqz v1, :cond_8
+
+    .line 249
+    .line 250
+    move v2, v6
+
+    .line 251
+    :cond_8
+    invoke-virtual {p0, v0, v3, v2}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->enableRepeatingKey(Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$RepeatingKey;Lcom/samsung/android/camera/core2/container/FrameRate;Z)Z
+
+    .line 252
+    .line 253
+    .line 254
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->mRepeatingModeManager:Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;
+
+    .line 255
+    .line 256
+    iget p0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMakerBase;->mSlowMotionPreviewFps:I
+
+    .line 257
+    .line 258
+    div-int/2addr p1, p0
+
+    .line 259
+    invoke-virtual {v0, p1}, Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager;->calculateHighSpeedRepeatingCount(I)Lcom/samsung/android/camera/core2/maker/MakerRepeatingModeManager$HighSpeedRepeatingCount;
+
+    .line 260
+    .line 261
+    .line 262
+    move-result-object p0
+
+    .line 263
+    return-object p0
+
+    .line 264
+    :cond_9
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    .line 265
+    .line 266
+    sget-object v1, Ljava/util/Locale;->UK:Ljava/util/Locale;
+
+    .line 267
+    .line 268
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 269
+    .line 270
+    .line 271
+    move-result-object p1
+
+    .line 272
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 273
+    .line 274
+    .line 275
+    move-result-object v0
+
+    .line 276
+    filled-new-array {p1, v0}, [Ljava/lang/Object;
+
+    .line 277
+    .line 278
+    .line 279
+    move-result-object p1
+
+    .line 280
+    const-string v0, "calculateSlowMotionRecordRepeatingCnt fail - wrong maxAeTargetFps(%d), which is less than minFps(%d)"
+
+    .line 281
+    .line 282
+    invoke-static {v1, v0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 283
+    .line 284
+    .line 285
+    move-result-object p1
+
+    .line 286
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 287
+    .line 288
+    .line 289
+    throw p0
+.end method
+
+.method public bridge synthetic cancelTakePicture()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->cancelTakePicture()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic enablePendingRequest(Z)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->enablePendingRequest(Z)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+.method public final getAvailableMakerPrivateCommandsInternal()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/samsung/android/camera/core2/MakerPrivateCommand;",
+            ">;"
+        }
+    .end annotation
+
+    .line 1
+    sget-object p0, Lcom/samsung/android/camera/core2/MakerPrivateCommand;->c:Lcom/samsung/android/camera/core2/MakerPrivateCommand;
+
+    .line 2
+    .line 3
+    sget-object v0, Lcom/samsung/android/camera/core2/MakerPrivateCommand;->d:Lcom/samsung/android/camera/core2/MakerPrivateCommand;
+
+    .line 4
+    .line 5
+    invoke-static {p0, v0}, Ljava/util/List;->of(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/List;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    return-object p0
+.end method
+
+.method public getMakerShootingMode()I
+    .locals 0
+
+    .line 1
+    const/16 p0, 0xd
+
+    .line 2
+    .line 3
+    return p0
+.end method
+
+.method public getMakerTag()Ljava/lang/String;
+    .locals 0
+
+    .line 1
+    const-string p0, "SlowMotionVideoMaker"
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public getSupportedPrivateKeyExecutorMap()Ljava/util/HashMap;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashMap<",
+            "Lcom/samsung/android/camera/core2/MakerPrivateKey<",
+            "*>;",
+            "Lcom/samsung/android/camera/core2/maker/MakerBase$PrivateKeyExecutor<",
+            "Ljava/lang/Object;",
+            ">;>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedPrivateKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getSupportedPrivateKeyExecutorMap()Ljava/util/HashMap;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedPrivateKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 10
+    .line 11
+    sget-object v1, Lcom/samsung/android/camera/core2/MakerPrivateKey;->C:Lcom/samsung/android/camera/core2/MakerPrivateKey;
+
+    .line 12
+    .line 13
+    new-instance v2, Lcom/samsung/android/camera/core2/maker/r3;
+
+    .line 14
+    .line 15
+    const/4 v3, 0x0
+
+    .line 16
+    invoke-direct {v2, p0, v3}, Lcom/samsung/android/camera/core2/maker/r3;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedPrivateKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/samsung/android/camera/core2/MakerPrivateKey;->E:Lcom/samsung/android/camera/core2/MakerPrivateKey;
+
+    .line 25
+    .line 26
+    new-instance v2, Lcom/samsung/android/camera/core2/maker/r3;
+
+    .line 27
+    .line 28
+    const/4 v3, 0x1
+
+    .line 29
+    invoke-direct {v2, p0, v3}, Lcom/samsung/android/camera/core2/maker/r3;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;I)V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 33
+    .line 34
+    .line 35
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedPrivateKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 36
+    .line 37
+    sget-object v1, Lcom/samsung/android/camera/core2/MakerPrivateKey;->v:Lcom/samsung/android/camera/core2/MakerPrivateKey;
+
+    .line 38
+    .line 39
+    new-instance v2, Lcom/samsung/android/camera/core2/maker/r3;
+
+    .line 40
+    .line 41
+    const/4 v3, 0x2
+
+    .line 42
+    invoke-direct {v2, p0, v3}, Lcom/samsung/android/camera/core2/maker/r3;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;I)V
+
+    .line 43
+    .line 44
+    .line 45
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 46
+    .line 47
+    .line 48
+    :cond_0
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedPrivateKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 49
+    .line 50
+    return-object p0
+.end method
+
+.method public getSupportedRepeatingKeyExecutorMap()Ljava/util/HashMap;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/HashMap<",
+            "Lcom/samsung/android/camera/core2/MakerPrivateKey<",
+            "*>;",
+            "Lcom/samsung/android/camera/core2/maker/MakerBase$ApplyRepeatingKeyExecutor<",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Integer;",
+            ">;>;"
+        }
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedRepeatingKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 2
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 4
+    .line 5
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getSupportedRepeatingKeyExecutorMap()Ljava/util/HashMap;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object v0
+
+    .line 9
+    iput-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedRepeatingKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 10
+    .line 11
+    sget-object v1, Lcom/samsung/android/camera/core2/MakerPrivateKey;->C:Lcom/samsung/android/camera/core2/MakerPrivateKey;
+
+    .line 12
+    .line 13
+    new-instance v2, Lcom/samsung/android/camera/core2/maker/s3;
+
+    .line 14
+    .line 15
+    const/4 v3, 0x1
+
+    .line 16
+    invoke-direct {v2, p0, v3}, Lcom/samsung/android/camera/core2/maker/s3;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 20
+    .line 21
+    .line 22
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedRepeatingKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 23
+    .line 24
+    sget-object v1, Lcom/samsung/android/camera/core2/MakerPrivateKey;->T:Lcom/samsung/android/camera/core2/MakerPrivateKey;
+
+    .line 25
+    .line 26
+    new-instance v2, Lcom/samsung/android/camera/core2/maker/s3;
+
+    .line 27
+    .line 28
+    const/4 v3, 0x0
+
+    .line 29
+    invoke-direct {v2, p0, v3}, Lcom/samsung/android/camera/core2/maker/s3;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;I)V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 33
+    .line 34
+    .line 35
+    :cond_0
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mSupportedRepeatingKeyExecutorMap:Ljava/util/HashMap;
+
+    .line 36
+    .line 37
+    return-object p0
+.end method
+
+.method public initializeMaker(Lcom/samsung/android/camera/core2/CamCapability;)V
+    .locals 6
+
+    .line 1
+    const-class v0, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 2
+    .line 3
+    const-string v1, "initializeMaker E"
+
+    .line 4
+    .line 5
+    const-string v2, "SlowMotionVideoMaker"
+
+    .line 6
+    .line 7
+    invoke-static {v2, v1}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 8
+    .line 9
+    .line 10
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 11
+    .line 12
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 13
+    .line 14
+    .line 15
+    :try_start_0
+    iget-object v1, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mMainPreviewCbStreamInfo:Lcom/samsung/android/camera/core2/container/PictureStreamInfo;
+
+    .line 16
+    .line 17
+    invoke-static {v1}, Ljava/util/Optional;->ofNullable(Ljava/lang/Object;)Ljava/util/Optional;
+
+    .line 18
+    .line 19
+    .line 20
+    move-result-object v1
+
+    .line 21
+    new-instance v3, Lcom/samsung/android/camera/core2/container/k;
+
+    .line 22
+    .line 23
+    const/4 v4, 0x6
+
+    .line 24
+    invoke-direct {v3, v4}, Lcom/samsung/android/camera/core2/container/k;-><init>(I)V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {v1, v3}, Ljava/util/Optional;->map(Ljava/util/function/Function;)Ljava/util/Optional;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object v1
+
+    .line 31
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/MakerBase;->getMainPreviewSurfaceSize()Landroid/util/Size;
+
+    .line 32
+    .line 33
+    .line 34
+    move-result-object v3
+
+    .line 35
+    invoke-virtual {v1, v3}, Ljava/util/Optional;->orElse(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 36
+    .line 37
+    .line 38
+    move-result-object v1
+
+    .line 39
+    check-cast v1, Landroid/util/Size;
+
+    .line 40
+    .line 41
+    new-instance v3, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 42
+    .line 43
+    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 44
+    .line 45
+    .line 46
+    iget-object v4, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mPalmNodeCallback:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$ArcPalmNodeCallback;
+
+    .line 47
+    .line 48
+    invoke-direct {v3, v1, p1, v4}, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;-><init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/CamCapability;Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode$ArcPalmNodeCallback;)V
+
+    .line 49
+    .line 50
+    .line 51
+    iput-object v3, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 52
+    .line 53
+    new-instance v3, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase$EventDetectionInitParam;
+
+    .line 54
+    .line 55
+    invoke-direct {v3, v1, p1}, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase$EventDetectionInitParam;-><init>(Landroid/util/Size;Lcom/samsung/android/camera/core2/CamCapability;)V
+
+    .line 56
+    .line 57
+    .line 58
+    iget-object v4, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNodeCallback:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase$EventDetectNodeCallback;
+
+    .line 59
+    .line 60
+    filled-new-array {v3, v4}, [Ljava/lang/Object;
+
+    .line 61
+    .line 62
+    .line 63
+    move-result-object v3
+
+    .line 64
+    invoke-static {v0, v3}, Lcom/samsung/android/camera/core2/node/NodeFactory;->b(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 65
+    .line 66
+    .line 67
+    move-result-object v3
+
+    .line 68
+    check-cast v3, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 69
+    .line 70
+    iput-object v3, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 71
+    .line 72
+    iget-object p1, p1, Lcom/samsung/android/camera/core2/CamCapability;->e:Lcom/samsung/android/camera/core2/local/capability/FeatureCapability;
+
+    .line 73
+    .line 74
+    sget-object v3, Lcom/samsung/android/camera/core2/local/capability/AvailableFeature;->CHS_DISABLE_PREVIEW_CB:Lcom/samsung/android/camera/core2/local/capability/AvailableFeature;
+
+    .line 75
+    .line 76
+    invoke-virtual {p1, v3}, Lcom/samsung/android/camera/core2/local/capability/FeatureCapability;->a(Lcom/samsung/android/camera/core2/local/capability/AvailableFeature;)Ljava/lang/Boolean;
+
+    .line 77
+    .line 78
+    .line 79
+    move-result-object p1
+
+    .line 80
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 81
+    .line 82
+    .line 83
+    move-result p1
+
+    .line 84
+    if-nez p1, :cond_0
+
+    .line 85
+    .line 86
+    new-instance p1, Lcom/samsung/android/camera/core2/node/NodeChain;
+
+    .line 87
+    .line 88
+    new-instance v3, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker$1;
+
+    .line 89
+    .line 90
+    const-string v4, "BACKGROUND_PREVIEW"
+
+    .line 91
+    .line 92
+    sget-object v5, Lcom/samsung/android/camera/core2/node/Node;->PORT_TYPE_BACKGROUND_PREVIEW:Lcom/samsung/android/camera/core2/node/PortType;
+
+    .line 93
+    .line 94
+    invoke-direct {v3, p0, v4, v5}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker$1;-><init>(Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;Ljava/lang/String;Lcom/samsung/android/camera/core2/node/PortType;)V
+
+    .line 95
+    .line 96
+    .line 97
+    invoke-direct {p1, v3}, Lcom/samsung/android/camera/core2/node/NodeChain;-><init>(Lcom/samsung/android/camera/core2/node/NodeChain$Key;)V
+
+    .line 98
+    .line 99
+    .line 100
+    iget-object v3, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 101
+    .line 102
+    invoke-virtual {p1, v3, v0, v5}, Lcom/samsung/android/camera/core2/node/NodeChain;->addNode(Lcom/samsung/android/camera/core2/node/Node;Ljava/lang/Class;Lcom/samsung/android/camera/core2/node/PortType;)V
+
+    .line 103
+    .line 104
+    .line 105
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 106
+    .line 107
+    const-class v3, Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+
+    .line 108
+    .line 109
+    invoke-virtual {p1, v0, v3, v5}, Lcom/samsung/android/camera/core2/node/NodeChain;->addNode(Lcom/samsung/android/camera/core2/node/Node;Ljava/lang/Class;Lcom/samsung/android/camera/core2/node/PortType;)V
+
+    .line 110
+    .line 111
+    .line 112
+    new-instance v0, Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+
+    .line 113
+    .line 114
+    invoke-direct {v0, p1, v1}, Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;-><init>(Lcom/samsung/android/camera/core2/node/NodeChain;Landroid/util/Size;)V
+
+    .line 115
+    .line 116
+    .line 117
+    iput-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mSlowMotionBgNodeChainExecutor:Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 118
+    .line 119
+    goto :goto_0
+
+    .line 120
+    :catchall_0
+    move-exception p1
+
+    .line 121
+    goto :goto_1
+
+    .line 122
+    :cond_0
+    :goto_0
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 123
+    .line 124
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 125
+    .line 126
+    .line 127
+    const-string p0, "initializeMaker X"
+
+    .line 128
+    .line 129
+    invoke-static {v2, p0}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 130
+    .line 131
+    .line 132
+    return-void
+
+    .line 133
+    :goto_1
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 134
+    .line 135
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 136
+    .line 137
+    .line 138
+    throw p1
+.end method
+
+.method public preparePreviewCbConfig(Lcom/samsung/android/camera/core2/CamCapability;Lcom/samsung/android/camera/core2/container/DeviceConfiguration;)V
+    .locals 1
+
+    .line 1
+    iget-object p1, p1, Lcom/samsung/android/camera/core2/CamCapability;->e:Lcom/samsung/android/camera/core2/local/capability/FeatureCapability;
+
+    .line 2
+    .line 3
+    sget-object v0, Lcom/samsung/android/camera/core2/local/capability/AvailableFeature;->CHS_DISABLE_PREVIEW_CB:Lcom/samsung/android/camera/core2/local/capability/AvailableFeature;
+
+    .line 4
+    .line 5
+    invoke-virtual {p1, v0}, Lcom/samsung/android/camera/core2/local/capability/FeatureCapability;->a(Lcom/samsung/android/camera/core2/local/capability/AvailableFeature;)Ljava/lang/Boolean;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p1
+
+    .line 9
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    .line 10
+    .line 11
+    .line 12
+    move-result p1
+
+    .line 13
+    if-nez p1, :cond_0
+
+    .line 14
+    .line 15
+    invoke-virtual {p0, p2}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->prepareMainPreviewCbStreamConfig(Lcom/samsung/android/camera/core2/container/DeviceConfiguration;)V
+
+    .line 16
+    .line 17
+    .line 18
+    :cond_0
+    return-void
+.end method
+
+.method public prepareStartRecordRepeating()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/util/FlagLock;->lockIfFlagEnabled()Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    :try_start_0
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;->initEventDetection()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 12
+    .line 13
+    .line 14
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 15
+    .line 16
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+
+    .line 20
+    :catchall_0
+    move-exception v0
+
+    .line 21
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 22
+    .line 23
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 24
+    .line 25
+    .line 26
+    throw v0
+
+    .line 27
+    :cond_0
+    return-void
+.end method
+
+.method public prepareStopRecordRepeating()V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 2
+    .line 3
+    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/util/FlagLock;->lockIfFlagEnabled()Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result v0
+
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    :try_start_0
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 10
+    .line 11
+    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;->releaseEventDetection()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 12
+    .line 13
+    .line 14
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 15
+    .line 16
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 17
+    .line 18
+    .line 19
+    return-void
+
+    .line 20
+    :catchall_0
+    move-exception v0
+
+    .line 21
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 22
+    .line 23
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 24
+    .line 25
+    .line 26
+    throw v0
+
+    .line 27
+    :cond_0
+    return-void
+.end method
+
+.method public releaseMaker(Lcom/samsung/android/camera/core2/CamCapability;)V
+    .locals 3
+
+    .line 1
+    const-string v0, "SlowMotionVideoMaker"
+
+    .line 2
+    .line 3
+    const-string v1, "releaseMaker"
+
+    .line 4
+    .line 5
+    invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/util/CLog;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 9
+    .line 10
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 11
+    .line 12
+    .line 13
+    :try_start_0
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mSlowMotionBgNodeChainExecutor:Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+
+    .line 14
+    .line 15
+    new-instance v1, Lcom/samsung/android/camera/core2/maker/b;
+
+    .line 16
+    .line 17
+    const/4 v2, 0x0
+
+    .line 18
+    invoke-direct {v1, v2}, Lcom/samsung/android/camera/core2/maker/b;-><init>(I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-static {v0, v1}, Lcom/samsung/android/camera/core2/maker/MakerUtils;->releaseAndNull(Ljava/lang/Object;Ljava/util/function/Consumer;)Ljava/lang/Object;
+
+    .line 22
+    .line 23
+    .line 24
+    move-result-object v0
+
+    .line 25
+    check-cast v0, Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+
+    .line 26
+    .line 27
+    iput-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mSlowMotionBgNodeChainExecutor:Lcom/samsung/android/camera/core2/maker/MakerUtils$BgNodeChainExecutor;
+
+    .line 28
+    .line 29
+    const/4 v0, 0x0
+
+    .line 30
+    iput-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 31
+    .line 32
+    iput-object v0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mArcPalmNode:Lcom/samsung/android/camera/core2/node/palm/ArcPalmNode;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 33
+    .line 34
+    iget-object v0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 35
+    .line 36
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/maker/VideoMakerBase;->releaseMaker(Lcom/samsung/android/camera/core2/CamCapability;)V
+
+    .line 40
+    .line 41
+    .line 42
+    return-void
+
+    .line 43
+    :catchall_0
+    move-exception p1
+
+    .line 44
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/MakerBase;->mPreviewProcessLock:Lcom/samsung/android/camera/core2/util/FlagLock;
+
+    .line 45
+    .line 46
+    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p1
+.end method
+
+.method public bridge synthetic setAePreCaptureTrigger(I)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->setAePreCaptureTrigger(I)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setAfAndAePreCaptureTrigger(II)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setAfAndAePreCaptureTrigger(II)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setAstroPictureCallback(Lcom/samsung/android/camera/core2/callback/AstroPictureCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setAstroPictureCallback(Lcom/samsung/android/camera/core2/callback/AstroPictureCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setBurstShotFpsCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setBurstShotFpsCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setLensSuggestionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setLensSuggestionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setMultiExposurePictureCallback(Lcom/samsung/android/camera/core2/callback/MultiExposurePictureCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setMultiExposurePictureCallback(Lcom/samsung/android/camera/core2/callback/MultiExposurePictureCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setNightSceneInfoCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setNightSceneInfoCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setObjectDetectionInfoCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setObjectDetectionInfoCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public setPrivateCommandInternal(Lcom/samsung/android/camera/core2/MakerPrivateCommand;)I
+    .locals 3
+
+    .line 1
+    sget-object v0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker$2;->$SwitchMap$com$samsung$android$camera$core2$MakerPrivateCommand$ID:[I
+
+    .line 2
+    .line 3
+    iget-object v1, p1, Lcom/samsung/android/camera/core2/MakerPrivateCommand;->a:Lcom/samsung/android/camera/core2/MakerPrivateCommand$ID;
+
+    .line 4
+    .line 5
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result v1
+
+    .line 9
+    aget v0, v0, v1
+
+    .line 10
+    .line 11
+    const/4 v1, 0x1
+
+    .line 12
+    if-eq v0, v1, :cond_1
+
+    .line 13
+    .line 14
+    const/4 v1, 0x2
+
+    .line 15
+    if-ne v0, v1, :cond_0
+
+    .line 16
+    .line 17
+    invoke-direct {p0}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->restartEventDetection()V
+
+    .line 18
+    .line 19
+    .line 20
+    goto :goto_0
+
+    .line 21
+    :cond_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    .line 22
+    .line 23
+    sget-object v1, Ljava/util/Locale;->UK:Ljava/util/Locale;
+
+    .line 24
+    .line 25
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->getMakerTag()Ljava/lang/String;
+
+    .line 26
+    .line 27
+    .line 28
+    move-result-object p0
+
+    .line 29
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 30
+    .line 31
+    const-string v2, "privateCommand: "
+
+    .line 32
+    .line 33
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 37
+    .line 38
+    .line 39
+    const-string p1, " is not supported in "
+
+    .line 40
+    .line 41
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-object p0
+
+    .line 51
+    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    .line 52
+    .line 53
+    .line 54
+    throw v0
+
+    .line 55
+    :cond_1
+    iget-object p0, p0, Lcom/samsung/android/camera/core2/maker/SlowMotionVideoMaker;->mEventDetectNode:Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;
+
+    .line 56
+    .line 57
+    invoke-virtual {p0}, Lcom/samsung/android/camera/core2/node/eventDetection/EventDetectNodeBase;->requestEventDetectionResult()V
+
+    .line 58
+    .line 59
+    .line 60
+    :goto_0
+    const/4 p0, -0x1
+
+    .line 61
+    return p0
+.end method
+
+.method public bridge synthetic setRawPictureCallback(Lcom/samsung/android/camera/core2/callback/RawPictureCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setRawPictureCallback(Lcom/samsung/android/camera/core2/callback/RawPictureCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setStillCaptureProgressCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setStillCaptureProgressCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setSubPreviewCallback(Lcom/samsung/android/camera/core2/callback/PreviewCallback;Landroid/os/Handler;)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setSubPreviewCallback(Lcom/samsung/android/camera/core2/callback/PreviewCallback;Landroid/os/Handler;)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setSwNdFilterPictureCallback(Lcom/samsung/android/camera/core2/callback/SwNdFilterPictureCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setSwNdFilterPictureCallback(Lcom/samsung/android/camera/core2/callback/SwNdFilterPictureCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setTextDetectionInfoCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setTextDetectionInfoCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setThumbnailCallback(Lcom/samsung/android/camera/core2/callback/ThumbnailCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setThumbnailCallback(Lcom/samsung/android/camera/core2/callback/ThumbnailCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setUnihalBeautyFaceDetectionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setUnihalBeautyFaceDetectionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setUnihalDocumentDetectionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setUnihalDocumentDetectionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic setUnihalQrCodeDetectionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->setUnihalQrCodeDetectionCallback(Lcom/samsung/android/camera/core2/callback/MakerCallback;Landroid/os/Handler;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic startAgifBurstPictureRepeating(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;Ljava/io/File;I)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/MakerInterface;->startAgifBurstPictureRepeating(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;Ljava/io/File;I)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic startBurstPicRecordRepeating(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;II)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/MakerInterface;->startBurstPicRecordRepeating(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;II)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic startBurstPictureRepeating(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;I)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->startBurstPictureRepeating(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;I)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic startMultiExposureBurstPictureRepeating()I
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->startMultiExposureBurstPictureRepeating()I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic stopAgifBurstPictureRepeating()I
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->stopAgifBurstPictureRepeating()I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic stopBurstPicRecordRepeating()I
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->stopBurstPicRecordRepeating()I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic stopBurstPictureRepeating()I
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->stopBurstPictureRepeating()I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic stopTakePicture()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->stopTakePicture()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeAstroCalibrationPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->takeAstroCalibrationPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeAstroPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->takeAstroPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeMultiExposurePicture()V
+    .locals 0
+
+    .line 1
+    invoke-super {p0}, Lcom/samsung/android/camera/core2/MakerInterface;->takeMultiExposurePicture()V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takePicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->takePicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public bridge synthetic takePicture(Ljava/io/File;)V
+    .locals 0
+
+    .line 2
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->takePicture(Ljava/io/File;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method public bridge synthetic takePostProcessingPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;[Ljava/io/File;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2, p3}, Lcom/samsung/android/camera/core2/MakerInterface;->takePostProcessingPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;[Ljava/io/File;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeProcessingPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->takeProcessingPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeRawPicture(Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->takeRawPicture(Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeStitchingPicture(Ljava/io/File;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1, p2}, Lcom/samsung/android/camera/core2/MakerInterface;->takeStitchingPicture(Ljava/io/File;Lcom/samsung/android/camera/core2/container/CaptureExtraInfo;)I
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method
+
+.method public bridge synthetic takeSwNdFilterPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
+    .locals 0
+
+    .line 1
+    invoke-super {p0, p1}, Lcom/samsung/android/camera/core2/MakerInterface;->takeSwNdFilterPicture(Lcom/samsung/android/camera/core2/container/DynamicShotInfo;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const/4 p0, 0x0
+
+    .line 5
+    throw p0
+.end method

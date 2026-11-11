@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/item_root" android:paddingTop="15.0dip" android:paddingBottom="10.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rel1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@id/ellipse_1" android:background="@drawable/sec_bluetooth_ellipse_disabled_bg" android:clickable="true" android:layout_width="@dimen/sec_bt_ha_ambient_person_bg_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_bg_size" android:contentDescription="@string/sec_bluetooth_aics_off" />
+                <ImageView android:id="@id/noise_controls_off" android:layout_width="@dimen/sec_bt_ha_ambient_person_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_size" android:src="@drawable/ic_noise_controls_off_person" android:layout_centerInParent="true" android:importantForAccessibility="no" />
+            </RelativeLayout>
+            <TextView android:gravity="center" android:id="@id/mute" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/sec_bluetooth_aics_off" android:importantForAccessibility="no" style="@style/HaAmbientText" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rel2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-28.0dip" android:layout_marginTop="19.0dip" android:layout_toRightOf="@id/rel1" android:layout_alignTop="@id/rel1">
+        <View android:id="@id/rectangle" android:background="#ffccccce" android:layout_width="90.0dip" android:layout_height="6.0dip" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-28.0dip" android:layout_toRightOf="@id/rel2">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <View android:id="@id/ellipse_2" android:background="@drawable/sec_bluetooth_ellipse_disabled_bg" android:clickable="true" android:layout_width="@dimen/sec_bt_ha_ambient_person_bg_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_bg_size" android:contentDescription="@string/sec_bluetooth_aics_ambient_sound" />
+                <ImageView android:id="@id/ambient_sound_person" android:layout_width="@dimen/sec_bt_ha_ambient_person_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_size" android:src="@drawable/ic_ambient_sound_person" android:layout_centerInParent="true" android:importantForAccessibility="no" />
+            </RelativeLayout>
+            <TextView android:gravity="center" android:id="@id/ambient" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:text="@string/sec_bluetooth_aics_ambient_sound" android:importantForAccessibility="no" style="@style/HaAmbientText" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

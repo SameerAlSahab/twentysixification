@@ -1,0 +1,44 @@
+.class public final synthetic Landroid/service/personalcontext/understander/ContextUnderstanderService$Binder$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/service/personalcontext/util/BinderRequestProcessor$OperationHandler;
+
+
+# instance fields
+.field public final synthetic blacklist f$0:Landroid/service/personalcontext/refiner/IRefineCallback;
+
+.field public final synthetic blacklist f$1:Ljava/util/List;
+
+
+# direct methods
+.method public synthetic constructor blacklist <init>(Landroid/service/personalcontext/refiner/IRefineCallback;Ljava/util/List;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/service/personalcontext/understander/ContextUnderstanderService$Binder$$ExternalSyntheticLambda0;->f$0:Landroid/service/personalcontext/refiner/IRefineCallback;
+
+    iput-object p2, p0, Landroid/service/personalcontext/understander/ContextUnderstanderService$Binder$$ExternalSyntheticLambda0;->f$1:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final blacklist handle(Ljava/lang/Object;)V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Landroid/service/personalcontext/understander/ContextUnderstanderService$Binder$$ExternalSyntheticLambda0;->f$0:Landroid/service/personalcontext/refiner/IRefineCallback;
+
+    iget-object p0, p0, Landroid/service/personalcontext/understander/ContextUnderstanderService$Binder$$ExternalSyntheticLambda0;->f$1:Ljava/util/List;
+
+    check-cast p1, Landroid/service/personalcontext/understander/ContextUnderstanderService;
+
+    invoke-static {v0, p0, p1}, Landroid/service/personalcontext/understander/ContextUnderstanderService$Binder;->lambda$refine$0(Landroid/service/personalcontext/refiner/IRefineCallback;Ljava/util/List;Landroid/service/personalcontext/understander/ContextUnderstanderService;)V
+
+    return-void
+.end method

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/bluetooth_map_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <Preference android:layout="@layout/bluetooth_apply_btn" android:key="bluetooth_apply_button" />
+    <PreferenceCategory android:title="@string/bluetooth_map_ss_versions" android:key="bluetooth_map_version_title">
+        <ListPreference android:entries="@array/bluetooth_map_ss_versions" android:title="@string/bluetooth_map_ss_versions" android:key="bluetooth_map_ss_versions" android:dialogTitle="@string/bluetooth_map_ss_versions" android:entryValues="@array/bluetooth_map_version_ss_values" settings:controller="com.samsung.android.settings.development.bluetooth.MapVersionController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bluetooth_map_option_lists_title" android:key="bluetooth_map_option_title">
+        <ListPreference android:entries="@array/bluetooth_map_mce_delete_message" android:title="@string/bluetooth_map_mce_delete_message" android:key="bluetooth_map_mce_delete_msg" android:dialogTitle="@string/bluetooth_map_mce_delete_message" android:entryValues="@array/bluetooth_map_mce_delete_message_value" settings:controller="com.samsung.android.settings.development.bluetooth.MapMceDeleteMessageController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/bluetooth_map_option_lists_title" android:key="bluetooth_map_option_group_title">
+        <ListPreference android:entries="@array/bluetooth_map_mce_group_message" android:title="@string/bluetooth_map_mce_group_message" android:key="bluetooth_map_mce_group_msg" android:dialogTitle="@string/bluetooth_map_mce_group_message" android:entryValues="@array/bluetooth_map_mce_group_message_value" settings:controller="com.samsung.android.settings.development.bluetooth.MapMceGroupMessageController" />
+    </PreferenceCategory>
+</PreferenceScreen>

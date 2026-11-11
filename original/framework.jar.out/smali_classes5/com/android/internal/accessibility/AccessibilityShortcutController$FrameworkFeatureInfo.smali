@@ -1,0 +1,89 @@
+.class public abstract Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;
+.super Ljava/lang/Object;
+.source "AccessibilityShortcutController.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/internal/accessibility/AccessibilityShortcutController;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "FrameworkFeatureInfo"
+.end annotation
+
+
+# instance fields
+.field private final blacklist mLabelStringResourceId:I
+
+.field private final blacklist mSettingKey:Ljava/lang/String;
+
+.field private final blacklist mSettingOffValue:Ljava/lang/String;
+
+.field private final blacklist mSettingOnValue:Ljava/lang/String;
+
+
+# direct methods
+.method constructor blacklist <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 0
+
+    .line 886
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 887
+    iput-object p1, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mSettingKey:Ljava/lang/String;
+
+    .line 888
+    iput-object p2, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mSettingOnValue:Ljava/lang/String;
+
+    .line 889
+    iput-object p3, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mSettingOffValue:Ljava/lang/String;
+
+    .line 890
+    iput p4, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mLabelStringResourceId:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist getLabel(Landroid/content/Context;)Ljava/lang/String;
+    .locals 0
+
+    .line 915
+    iget p0, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mLabelStringResourceId:I
+
+    invoke-virtual {p1, p0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist getSettingKey()Ljava/lang/String;
+    .locals 0
+
+    .line 897
+    iget-object p0, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mSettingKey:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public blacklist getSettingOffValue()Ljava/lang/String;
+    .locals 0
+
+    .line 911
+    iget-object p0, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mSettingOffValue:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public blacklist getSettingOnValue()Ljava/lang/String;
+    .locals 0
+
+    .line 904
+    iget-object p0, p0, Lcom/android/internal/accessibility/AccessibilityShortcutController$FrameworkFeatureInfo;->mSettingOnValue:Ljava/lang/String;
+
+    return-object p0
+.end method

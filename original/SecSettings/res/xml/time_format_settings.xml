@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/time_format_page_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:title="@string/time_format_subtitle" android:key="time_format_selection_intro" />
+    <PreferenceCategory android:title="@string/time_format_options_category_title" android:key="time_format_options_category">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/time_format_automatic" android:key="time_format_automatic" android:summary="@string/time_format_automatic_summary" settings:controller="com.android.settings.datetime.TimeFormatOptionsController" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/time_format_12_hour" android:key="time_format_12_hour" android:summary="@string/summary_placeholder" settings:controller="com.android.settings.datetime.TimeFormatOptionsController" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/time_format_24_hour" android:key="time_format_24_hour" android:summary="@string/summary_placeholder" settings:controller="com.android.settings.datetime.TimeFormatOptionsController" />
+    </PreferenceCategory>
+</PreferenceScreen>

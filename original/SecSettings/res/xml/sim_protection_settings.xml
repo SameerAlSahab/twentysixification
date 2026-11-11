@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/automatic_sim_lock_protection"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/choose_sim_pin_protection_mode" android:key="radiobutton_group">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sim_pin_protection_mode_manual" android:key="sim_protection_mode_manual_key" settings:controller="com.android.settings.security.ManualSimProtectionModePreferenceController" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/sim_pin_protection_mode_automatic" android:key="sim_protection_mode_automatic_key" settings:controller="com.android.settings.security.AutomaticSimProtectionModePreferenceController" />
+    </PreferenceCategory>
+    <Preference android:title="@string/sim_display_platform_managed_pin_title" android:key="show_platform_managed_sim_pin_key" settings:controller="com.android.settings.security.ShowAutoManagedSimPinController" />
+    <Preference android:title="@string/sim_pin_change" android:key="change_manually_managed_sim_pin" settings:controller="com.android.settings.security.ChangeSimPinPreferenceController" />
+</PreferenceScreen>

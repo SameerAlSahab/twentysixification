@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/connected_display" android:key="external_display_screen" settings:hierarchicalParentFragment="com.android.settings.homepage.TopLevelSettings" settings:topLevelPreferenceKey="top_level_external_display"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecPreference android:title="@string/display_style_title" android:key="key_display_style_talkback" android:fragment="com.samsung.android.settings.desktop.DexTalkbackSettingsDisplayStyleFragment" />
+    <SecPreference android:title="@string/display_position_title" android:key="key_display_position_talkback" android:fragment="com.samsung.android.settings.desktop.DexTalkbackSettingsDisplayPositionFragment" settings:allowDividerBelow="false" />
+    <PreferenceCategory android:key="extended_display_category">
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/extended_title" android:key="key_extended_display" android:summary="@string/extended_summary" settings:allowDividerAbove="false" settings:allowDividerBelow="false" />
+        <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/mirrored_title" android:key="key_mirror_display" android:summary="@string/mirrored_summary" />
+        <SecSwitchPreference android:title="@string/flow_pointer_to_external_display" android:key="key_flow_pointer" android:summary="@string/flow_pointer_summary_phone" settings:allowDividerBelow="false" />
+        <SecSwitchPreference android:title="@string/flow_pointer_to_tablet" android:key="key_flow_pointer_large_screen" android:summary="@string/flow_pointer_summary_tablet" settings:allowDividerBelow="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="wallpaper_settings_category">
+        <SecPreference android:title="@string/external_display_wallpaper" android:key="key_external_display_wallpaper" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="display_settings_category">
+        <SecPreference android:title="@string/font_size" android:key="key_font_size" />
+        <SecPreference android:title="@string/screen_zoom" android:key="key_screen-zoom" />
+        <com.samsung.android.settings.desktop.ExternalDisplayDisabledPreference android:title="@string/display_resolution" android:key="key_display_resolution" android:summary="@string/fhd_display_resolution" />
+        <SecDropDownPreference android:title="@string/display_rotation" android:key="key_display_orientation" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="screen_settings_category">
+        <com.samsung.android.settings.widget.SecRestrictedPreference android:title="@string/screen_timeout" android:key="key_screen_time_out" android:summary="@string/screen_timeout_for_connected_display_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

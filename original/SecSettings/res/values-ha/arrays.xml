@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apn_auth_entries">
+        <item>Ba ko ɗaya</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP ko CHAP</item>
+    </string-array>
+    <string-array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="bluetooth_cast_timeout_entries">
+        <item>Mintoci 5</item>
+        <item>Mintoci 10</item>
+        <item>30 mintuna</item>
+        <item>Kar ka katse</item>
+    </string-array>
+    <string-array name="bluetooth_max_connected_audio_devices">
+        <item>Tsari na asali: %d</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="bluetooth_sap_activation_entries">
+        <item>Na asali (babu tasiri)</item>
+        <item>Kunna SAP da karfi</item>
+        <item>Kashe SAP da karfi</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Na asali</item>
+        <item>Babu</item>
+        <item>Bijirarwa</item>
+        <item>Drop Shadow</item>
+        <item>Raised</item>
+        <item>Depressed</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Ƙarami sosai</item>
+        <item>Ƙarami</item>
+        <item>Daidai</item>
+        <item>Babba</item>
+        <item>Babba sosai</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Na asali</item>
+        <item>White on black</item>
+        <item>Black on white</item>
+        <item>Yellow on black</item>
+        <item>Yellow on blue</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Na asali</item>
+        <item>Sans serif</item>
+        <item>Sans serif condensed</item>
+        <item>Sans serif monospace</item>
+        <item>Serif</item>
+        <item>Serif monospace</item>
+        <item>Kullum</item>
+        <item>Cursive</item>
+        <item>Small caps</item>
+    </string-array>
+    <string-array name="data_usage_billing_cycle_summary">
+        <item>1st rana na kowane wata</item>
+        <item>2nd rana na kowane wata</item>
+        <item>3rd rana na kowane wata</item>
+        <item>4th rana na kowane wata</item>
+        <item>5th rana na kowane wata</item>
+        <item>6th rana na kowane wata</item>
+        <item>7th rana na kowane wata</item>
+        <item>8th rana na kowane wata</item>
+        <item>9th rana na kowane wata</item>
+        <item>10th rana na kowane wata</item>
+        <item>11th rana na kowane wata</item>
+        <item>12th rana na kowane wata</item>
+        <item>13th rana na kowane wata</item>
+        <item>14th rana na kowane wata</item>
+        <item>15th rana na kowane wata</item>
+        <item>16th rana na kowane wata</item>
+        <item>17th rana na kowane wata</item>
+        <item>18th rana na kowane wata</item>
+        <item>19th rana na kowane wata</item>
+        <item>20th rana na kowane wata</item>
+        <item>21st rana na kowane wata</item>
+        <item>22nd rana na kowane wata</item>
+        <item>23rd rana na kowane wata</item>
+        <item>24th rana na kowane wata</item>
+        <item>25th rana na kowane wata</item>
+        <item>26th rana na kowane wata</item>
+        <item>27th rana na kowane wata</item>
+        <item>28th rana na kowane wata</item>
+        <item>29th rana na kowane wata</item>
+        <item>30th rana na kowane wata</item>
+        <item>31st rana na kowane wata</item>
+    </string-array>
+    <string-array name="dex_timeout_entries">
+        <item>15 sakanni</item>
+        <item>30 sakanni</item>
+        <item>1 minti</item>
+        <item>2 mintuna</item>
+        <item>Mintoci 5</item>
+        <item>Mintoci 10</item>
+        <item>Mintoci 20</item>
+        <item>30 mintuna</item>
+        <item>Mintuna 60</item>
+    </string-array>
+    <string-array name="external_display_timeout_entries">
+        <item>15 sakanni</item>
+        <item>30 sakanni</item>
+        <item>1 minti</item>
+        <item>2 mintuna</item>
+        <item>Mintoci 5</item>
+        <item>Mintoci 10</item>
+        <item>Mintoci 20</item>
+        <item>30 mintuna</item>
+        <item>Mintuna 60</item>
+    </string-array>
+    <string-array name="gpuwatch_rendering_api_entries">
+        <item>Vulkan</item>
+        <item>OpenGL</item>
+    </string-array>
+    <string-array name="gpuwatch_widget_positions">
+        <item>Sama - Hagu</item>
+        <item>Sama - Tsakiya kwance</item>
+        <item>Sama - Dama</item>
+        <item>Tsakiya kwance - Hagu</item>
+        <item>Tsakiya kwance - Dama</item>
+        <item>Ƙasa - Hagu</item>
+        <item>Ƙasa - Tsakiya a kwance</item>
+        <item>Ƙasa - Dama</item>
+    </string-array>
+    <string-array name="key_backlight_entries">
+        <item>Always off</item>
+        <item>Daƙiƙa 1</item>
+        <item>Sakan 32</item>
+        <item>Sakan 5</item>
+        <item>dakika 10</item>
+        <item>15 sakanni</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Cikin sauri</item>
+        <item>Sakan 5</item>
+        <item>15 sakanni</item>
+        <item>30 sakanni</item>
+        <item>1 minti</item>
+        <item>2 mintuna</item>
+        <item>Mintoci 5</item>
+        <item>Mintoci 10</item>
+        <item>30 mintuna</item>
+    </string-array>
+    <string-array name="mouse_pointer_color_type">
+        <item>Fari</item>
+        <item>Baƙi</item>
+        <item>Kore mai haske shigen shuɗi</item>
+        <item>Ruwan ɗorawa</item>
+        <item>Ja mai haske</item>
+        <item>Shanshanbale mai haske</item>
+        <item>Shuɗi mai haske</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Babu</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="num_allowed_devices">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>Normal</item>
+        <item>Moderate</item>
+        <item>Low</item>
+        <item>Critical</item>
+        <item>\?</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sakanni</item>
+        <item>30 sakanni</item>
+        <item>1 minti</item>
+        <item>2 mintuna</item>
+        <item>Mintoci 5</item>
+        <item>Mintoci 10</item>
+        <item>30 mintuna</item>
+    </string-array>
+    <string-array name="sec_bt_stack_log_level_entries">
+        <item>Mai yawa</item>
+        <item>Gyara</item>
+        <item>Bayani</item>
+        <item>Gargaɗi</item>
+        <item>Kuskure</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_phone">
+        <item>Nemo wayarku idan ta ɓata.</item>
+        <item>"Daidaita manhajoji da saituna a duka na'urorin ku."</item>
+        <item>"Raba fayiloli tare da abokai, dangi, da ma sauran na'urori."</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_tablet">
+        <item>Nemo tabulet ɗinku idan ta ɓata.</item>
+        <item>"Raba fayiloli tare da abokai, dangi, da ma sauran na'urori."</item>
+        <item>Kwafi da manna tsakanin wayarku da tabulet.</item>
+        <item>"Canza Buds ɗinku a atomatik tsakanin na'urori."</item>
+        <item>Amsa kira da yin rubutu akan tabulet ɗinku.</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Tambaya koyaushe</item>
+        <item>Ka da a amince samsam</item>
+        <item>Ba da dama kullum</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_phone">
+        <item>Waya</item>
+        <item>Talabijin ko monito</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_tablet">
+        <item>Tabulet</item>
+        <item>Talabijin ko monito</item>
+    </string-array>
+    <string-array name="vpn_proxy_settings">
+        <item>Babu</item>
+        <item>Kundin bayanai</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Wanda aka kashe</item>
+        <item>Ana farawa…</item>
+        <item>Haɗuwa</item>
+        <item>Connected</item>
+        <item>Timeout</item>
+        <item>Bai yi nasara ba</item>
+    </string-array>
+    <string-array name="wifi_ap_broadcast_channel_entries">
+        <item>Atomatik</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_phone_entries">
+        <item>Bazuwar MAC</item>
+        <item>MAC ɗin waya</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_tablet_entries">
+        <item>Bazuwar MAC</item>
+        <item>MAC ɗin tabulet</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_security_type_entries1">
+        <item>Bude</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_wpa3_security_type_entries">
+        <item>Bude</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_security_type_entries1">
+        <item>Bude</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_turn_off_hotspot_timer_entries">
+        <item>Ka da ya kasu</item>
+        <item>5 minutes</item>
+        <item>Mintoci 10</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="wifi_ap_wifi_sharing">
+        <item>Turn on Wi-Fi sharing</item>
+        <item>Turn off Wi-Fi sharing</item>
+    </string-array>
+    <string-array name="wifi_ap_wpa3_security_type_entries">
+        <item>Bude</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_connect_entries">
+        <item>Atomatik</item>
+        <item>Kundin bayanai</item>
+        <item>A tamabaya ko yaushe</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Mara motsawa</item>
+    </string-array>
+    <string-array name="wifi_metered_entries">
+        <item>Detect automatically</item>
+        <item>Treat as metered</item>
+        <item>Treat as unmetered</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Connected</item>
+        <item>An gayyata</item>
+        <item>Haɗawa bai yi nasara ba</item>
+        <item>Tap here to connect.</item>
+        <item>Waje da tazara</item>
+        <item>An haɗa tare da wata naúra</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Babu</item>
+        <item>Kundin bayanai</item>
+        <item>Auto-config</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Yi sikanin…</item>
+        <item>Haɗuwa</item>
+        <item>Tabbatarwa…</item>
+        <item>Ana samo adireshin IP…</item>
+        <item>An haɗa</item>
+        <item>An dakatar</item>
+        <item>Ana cire haɗin…</item>
+        <item>Wanda aka kashe</item>
+        <item>Bai yi nasara ba</item>
+        <item>Blocked</item>
+        <item>Checking the quality of your Internet connection…</item>
+    </string-array>
+</resources>

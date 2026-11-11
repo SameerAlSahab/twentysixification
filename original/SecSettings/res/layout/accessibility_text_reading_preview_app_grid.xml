@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clipChildren="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/preview_pager_home_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/preview_pager_home_title" android:importantForAccessibility="noHideDescendants" style="@style/AccessibilityTextReadingPreviewPageTitle" />
+    <com.android.settings.display.AppGridView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:numColumns="3" android:importantForAccessibility="noHideDescendants" android:nestedScrollingEnabled="true" app:appCount="6" />
+</LinearLayout>

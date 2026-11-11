@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_scan"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.camera.setting.SwitchListPreference android:persistent="false" android:title="@string/Title_document_scan" android:key="@string/key_scan_documents" />
+    <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_scan_text" android:key="@string/key_scan_text" />
+    <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_scan_qr" android:key="@string/key_qr_code_detection" />
+    <PreferenceCategory />
+    <com.sec.android.app.camera.setting.DescriptionPreference android:selectable="false" android:key="@string/key_scan_affect_mode_description" android:summary="@string/scan_affect_mode_description" />
+    <PreferenceCategory android:title="" android:key="@string/dep_empty" />
+</PreferenceScreen>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="device_container_width">0.92</item>
+    <item type="dimen" name="device_container_width_fold">0.85</item>
+    <item type="dimen" name="device_container_width_land_fold">0.8</item>
+    <item type="dimen" name="device_container_width_tablet">0.85</item>
+    <dimen name="device_image_size_fold">93.0dip</dimen>
+    <dimen name="device_image_size_land_fold">93.0dip</dimen>
+    <dimen name="device_image_size_tablet">100.0dip</dimen>
+</resources>

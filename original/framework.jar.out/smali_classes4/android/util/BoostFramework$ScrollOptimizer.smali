@@ -1,0 +1,743 @@
+.class public Landroid/util/BoostFramework$ScrollOptimizer;
+.super Ljava/lang/Object;
+.source "BoostFramework.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/util/BoostFramework;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "ScrollOptimizer"
+.end annotation
+
+
+# static fields
+.field public static final blacklist FLING_END:I = 0x0
+
+.field public static final blacklist FLING_START:I = 0x1
+
+.field private static final blacklist QXPERFORMANCE_JAR:Ljava/lang/String; = "/system/framework/QXPerformance.jar"
+
+.field private static final blacklist SCROLL_OPT_CLASS:Ljava/lang/String; = "com.qualcomm.qti.QXPerformance.ScrollOptimizer"
+
+.field private static final blacklist SCROLL_OPT_PROP:Ljava/lang/String; = "ro.vendor.perf.scroll_opt"
+
+.field private static blacklist sGetAdjustedAnimationClock:Ljava/lang/reflect/Method; = null
+
+.field private static blacklist sGetFrameDelay:Ljava/lang/reflect/Method; = null
+
+.field private static blacklist sQXIsLoaded:Z = false
+
+.field private static blacklist sQXPerfClass:Ljava/lang/Class; = null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+.field private static blacklist sScrollOptEnable:Z = false
+
+.field private static blacklist sScrollOptProp:Z = false
+
+.field private static blacklist sSetBLASTBufferQueue:Ljava/lang/reflect/Method;
+
+.field private static blacklist sSetFlingFlag:Ljava/lang/reflect/Method;
+
+.field private static blacklist sSetFrameInterval:Ljava/lang/reflect/Method;
+
+.field private static blacklist sSetMotionType:Ljava/lang/reflect/Method;
+
+.field private static blacklist sSetUITaskStatus:Ljava/lang/reflect/Method;
+
+.field private static blacklist sSetVsyncTime:Ljava/lang/reflect/Method;
+
+.field private static blacklist sShouldUseVsync:Ljava/lang/reflect/Method;
+
+
+# direct methods
+.method static bridge synthetic blacklist -$$Nest$sfgetsScrollOptProp()Z
+    .locals 1
+
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptProp:Z
+
+    return v0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$sfgetsSetFrameInterval()Ljava/lang/reflect/Method;
+    .locals 1
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetFrameInterval:Ljava/lang/reflect/Method;
+
+    return-object v0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$sfputsScrollOptEnable(Z)V
+    .locals 0
+
+    sput-boolean p0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    return-void
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$sminitQXPerfFuncs()V
+    .locals 0
+
+    invoke-static {}, Landroid/util/BoostFramework$ScrollOptimizer;->initQXPerfFuncs()V
+
+    return-void
+.end method
+
+.method static constructor blacklist <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>()V
+    .locals 0
+
+    .line 653
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static blacklist getAdjustedAnimationClock(J)J
+    .locals 3
+
+    .line 842
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sGetAdjustedAnimationClock:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 845
+    :try_start_0
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    .line 844
+    invoke-virtual {v0, v2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 846
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-wide p0
+
+    :catch_0
+    move-exception v0
+
+    .line 848
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-wide p0
+.end method
+
+.method public static blacklist getFrameDelay(JJ)J
+    .locals 1
+
+    .line 828
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sGetFrameDelay:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 830
+    :try_start_0
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p2
+
+    filled-new-array {p2}, [Ljava/lang/Object;
+
+    move-result-object p2
+
+    const/4 p3, 0x0
+
+    invoke-virtual {v0, p3, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    .line 831
+    check-cast p2, Ljava/lang/Long;
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-wide p0
+
+    :catch_0
+    move-exception p2
+
+    .line 833
+    invoke-virtual {p2}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-wide p0
+.end method
+
+.method private static blacklist initQXPerfFuncs()V
+    .locals 5
+
+    .line 678
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sQXIsLoaded:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 681
+    :cond_0
+    :try_start_0
+    const-string/jumbo v0, "ro.vendor.perf.scroll_opt"
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    sput-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptProp:Z
+
+    const/4 v2, 0x1
+
+    if-nez v0, :cond_1
+
+    .line 683
+    sput-boolean v1, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    .line 684
+    sput-boolean v2, Landroid/util/BoostFramework$ScrollOptimizer;->sQXIsLoaded:Z
+
+    return-void
+
+    .line 688
+    :cond_1
+    new-instance v0, Ldalvik/system/PathClassLoader;
+
+    const-string v3, "/system/framework/QXPerformance.jar"
+
+    .line 689
+    invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v4
+
+    invoke-direct {v0, v3, v4}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+
+    .line 690
+    const-string v3, "com.qualcomm.qti.QXPerformance.ScrollOptimizer"
+
+    invoke-virtual {v0, v3}, Ldalvik/system/PathClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    .line 691
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 692
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v4, "setFrameInterval"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetFrameInterval:Ljava/lang/reflect/Method;
+
+    .line 695
+    new-array v0, v2, [Ljava/lang/Class;
+
+    const-class v3, Landroid/graphics/BLASTBufferQueue;
+
+    aput-object v3, v0, v1
+
+    .line 696
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v4, "setBLASTBufferQueue"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetBLASTBufferQueue:Ljava/lang/reflect/Method;
+
+    .line 698
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 699
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v4, "setMotionType"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetMotionType:Ljava/lang/reflect/Method;
+
+    .line 701
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 702
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v4, "setVsyncTime"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetVsyncTime:Ljava/lang/reflect/Method;
+
+    .line 704
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 705
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v4, "setUITaskStatus"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetUITaskStatus:Ljava/lang/reflect/Method;
+
+    .line 707
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 708
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v4, "setFlingFlag"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetFlingFlag:Ljava/lang/reflect/Method;
+
+    .line 710
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string/jumbo v3, "shouldUseVsync"
+
+    new-array v4, v1, [Ljava/lang/Class;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sShouldUseVsync:Ljava/lang/reflect/Method;
+
+    .line 712
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 713
+    sget-object v3, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string v4, "getFrameDelay"
+
+    invoke-virtual {v3, v4, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sGetFrameDelay:Ljava/lang/reflect/Method;
+
+    .line 715
+    new-array v0, v2, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v0, v1
+
+    .line 716
+    sget-object v1, Landroid/util/BoostFramework$ScrollOptimizer;->sQXPerfClass:Ljava/lang/Class;
+
+    const-string v3, "getAdjustedAnimationClock"
+
+    invoke-virtual {v1, v3, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sGetAdjustedAnimationClock:Ljava/lang/reflect/Method;
+
+    .line 719
+    sput-boolean v2, Landroid/util/BoostFramework$ScrollOptimizer;->sQXIsLoaded:Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    .line 721
+    const-string v1, "BoostFramework"
+
+    const-string v2, "initQXPerfFuncs failed"
+
+    invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 722
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    return-void
+.end method
+
+.method public static blacklist setBLASTBufferQueue(Landroid/graphics/BLASTBufferQueue;)V
+    .locals 2
+
+    .line 758
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetBLASTBufferQueue:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 760
+    :try_start_0
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 762
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static blacklist setFlingFlag(I)V
+    .locals 2
+
+    .line 802
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetFlingFlag:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 804
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 806
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static blacklist setFrameInterval(J)V
+    .locals 2
+
+    .line 728
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sQXIsLoaded:Z
+
+    if-eqz v0, :cond_1
+
+    .line 729
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetFrameInterval:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 731
+    :try_start_0
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 733
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-void
+
+    .line 738
+    :cond_1
+    new-instance v0, Ljava/lang/Thread;
+
+    new-instance v1, Landroid/util/BoostFramework$ScrollOptimizer$1;
+
+    invoke-direct {v1, p0, p1}, Landroid/util/BoostFramework$ScrollOptimizer$1;-><init>(J)V
+
+    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+
+    .line 753
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+
+    return-void
+.end method
+
+.method public static blacklist setMotionType(I)V
+    .locals 2
+
+    .line 769
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetMotionType:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 771
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 773
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static blacklist setUITaskStatus(Z)V
+    .locals 2
+
+    .line 791
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetUITaskStatus:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 793
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 795
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static blacklist setVsyncTime(J)V
+    .locals 1
+
+    .line 780
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sSetVsyncTime:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    .line 782
+    :try_start_0
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 784
+    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public static blacklist shouldUseVsync(Z)Z
+    .locals 2
+
+    .line 814
+    sget-boolean v0, Landroid/util/BoostFramework$ScrollOptimizer;->sScrollOptEnable:Z
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Landroid/util/BoostFramework$ScrollOptimizer;->sShouldUseVsync:Ljava/lang/reflect/Method;
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x0
+
+    .line 816
+    :try_start_0
+    invoke-virtual {v0, v1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 817
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception v0
+
+    .line 819
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_0
+    return p0
+.end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/continuity_privacy" settings:hierarchicalParentFragment="com.samsung.android.settings.multidevices.continuity.ContinuitySettings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <Preference android:title="@string/continuity_privacy_notice" android:key="key_continuity_privacy_notice" />
+    <Preference android:title="@string/continuity_permissions" android:key="key_continuity_permissions" />
+</PreferenceScreen>

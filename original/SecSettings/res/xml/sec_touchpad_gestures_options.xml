@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/touchpad_gestures" android:key="key_touchpad_gesture" settings:hierarchicalParentFragment="com.samsung.android.settings.desktop.DexModeMouseSettingsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.Preference android:title="@string/touchpad_gestures_option_three_finger" android:key="three_finger_touch" android:summary="@string/touchpad_gestures_option_back" />
+    <androidx.preference.Preference android:title="@string/touchpad_gestures_option_four_finger" android:key="four_finger_touch" android:summary="@string/touchpad_gestures_option_apps" />
+</PreferenceScreen>

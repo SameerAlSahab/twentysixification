@@ -1,0 +1,123 @@
+.class Landroid/media/tv/ad/TvAdService$Session$1;
+.super Ljava/lang/Object;
+.source "TvAdService.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/media/tv/ad/TvAdService$Session;->setMediaViewEnabled(Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic blacklist this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+.field final synthetic blacklist val$enable:Z
+
+
+# direct methods
+.method constructor blacklist <init>(Landroid/media/tv/ad/TvAdService$Session;Z)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            null,
+            null
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .line 204
+    iput-object p1, p0, Landroid/media/tv/ad/TvAdService$Session$1;->this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+    iput-boolean p2, p0, Landroid/media/tv/ad/TvAdService$Session$1;->val$enable:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist test-api run()V
+    .locals 2
+
+    .line 207
+    iget-boolean v0, p0, Landroid/media/tv/ad/TvAdService$Session$1;->val$enable:Z
+
+    iget-object v1, p0, Landroid/media/tv/ad/TvAdService$Session$1;->this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+    invoke-static {v1}, Landroid/media/tv/ad/TvAdService$Session;->-$$Nest$fgetmMediaViewEnabled(Landroid/media/tv/ad/TvAdService$Session;)Z
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    .line 210
+    :cond_0
+    iget-object v0, p0, Landroid/media/tv/ad/TvAdService$Session$1;->this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+    iget-boolean v1, p0, Landroid/media/tv/ad/TvAdService$Session$1;->val$enable:Z
+
+    invoke-static {v0, v1}, Landroid/media/tv/ad/TvAdService$Session;->-$$Nest$fputmMediaViewEnabled(Landroid/media/tv/ad/TvAdService$Session;Z)V
+
+    .line 211
+    iget-boolean v0, p0, Landroid/media/tv/ad/TvAdService$Session$1;->val$enable:Z
+
+    .line 216
+    iget-object v1, p0, Landroid/media/tv/ad/TvAdService$Session$1;->this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+    if-eqz v0, :cond_2
+
+    .line 212
+    invoke-static {v1}, Landroid/media/tv/ad/TvAdService$Session;->-$$Nest$fgetmWindowToken(Landroid/media/tv/ad/TvAdService$Session;)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 213
+    iget-object v0, p0, Landroid/media/tv/ad/TvAdService$Session$1;->this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+    invoke-static {v0}, Landroid/media/tv/ad/TvAdService$Session;->-$$Nest$fgetmWindowToken(Landroid/media/tv/ad/TvAdService$Session;)Landroid/os/IBinder;
+
+    move-result-object v1
+
+    iget-object p0, p0, Landroid/media/tv/ad/TvAdService$Session$1;->this$0:Landroid/media/tv/ad/TvAdService$Session;
+
+    invoke-static {p0}, Landroid/media/tv/ad/TvAdService$Session;->-$$Nest$fgetmMediaFrame(Landroid/media/tv/ad/TvAdService$Session;)Landroid/graphics/Rect;
+
+    move-result-object p0
+
+    invoke-virtual {v0, v1, p0}, Landroid/media/tv/ad/TvAdService$Session;->createMediaView(Landroid/os/IBinder;Landroid/graphics/Rect;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :cond_2
+    const/4 p0, 0x0
+
+    .line 216
+    invoke-virtual {v1, p0}, Landroid/media/tv/ad/TvAdService$Session;->removeMediaView(Z)V
+
+    return-void
+.end method

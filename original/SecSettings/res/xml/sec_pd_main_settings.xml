@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/pd_main_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_pd_settings_preview" android:selectable="false" android:key="pd_preview" settings:allowDividerBelow="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference settings:roundStroke="top_left|top_right" />
+    <SecSwitchPreference android:title="@string/pd_turn_on_title" android:key="pd_activation" settings:controller="com.samsung.android.settings.bpd.controller.PdActivationPreferenceController" />
+    <com.samsung.android.settings.bpd.widget.PdCustomSwitchPreference android:title="@string/pd_custom_title" android:key="pd_custom" android:fragment="com.samsung.android.settings.bpd.PdCustomSettings" settings:controller="com.samsung.android.settings.bpd.controller.PdCustomPreferenceController" />
+    <SecPreferenceCategory android:title="@string/pd_display_category">
+        <SecSwitchPreference android:title="@string/pd_extra_dim_title" android:key="pd_extra_dim" settings:controller="com.samsung.android.settings.bpd.controller.PdExtraDimPreferenceController" />
+        <SeslPreferenceCaption android:title="@string/pd_extra_dim_summary" android:key="pd_extra_dim_caption" settings:searchable="false" />
+    </SecPreferenceCategory>
+</PreferenceScreen>

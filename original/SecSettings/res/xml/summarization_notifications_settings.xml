@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/notification_summarization_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:title="@string/notification_summarization_description" android:key="feature_description" app:controller="com.android.settings.notification.SummarizationSummaryPreferenceController" app:searchable="false" />
+    <com.android.settingslib.widget.IllustrationPreference android:selectable="false" android:key="notification_summarization_illustration" app:dynamicColor="true" app:lottie_cacheComposition="false" app:lottie_rawRes="@raw/lottie_notification_summarization" app:searchable="false" />
+    <PreferenceCategory android:key="enabled_settings">
+        <com.android.settingslib.widget.MainSwitchPreference android:title="@string/notification_summarization_main_control_title" android:key="global_pref" />
+        <SwitchPreferenceCompat android:title="@string/notification_adjustment_work_switch_title" android:key="work_profile_pref" />
+        <PreferenceCategory android:title="@string/notification_excluded_apps" android:key="notification_summarization_excluded_apps_list" app:controller="com.android.settings.notification.AdjustmentExcludedAppsPreferenceController">
+            <Preference android:icon="@drawable/ic_chevron_right_24dp" android:title="@string/notification_summarization_manage_excluded_apps" android:key="notification_summarization_manage_apps" android:order="1000" android:fragment="com.android.settings.applications.manageapplications.ManageApplications" app:controller="com.android.settings.notification.SummarizationManageAppsPreferenceController">
+                <extra android:name="classname" android:value="com.android.settings.Settings$NotificationExcludeSummarizationActivity" />
+            </Preference>
+        </PreferenceCategory>
+    </PreferenceCategory>
+</PreferenceScreen>

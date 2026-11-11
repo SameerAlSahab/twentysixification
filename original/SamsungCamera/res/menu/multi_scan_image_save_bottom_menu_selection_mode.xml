@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/group_action_bottom_bar">
+        <item android:icon="@drawable/ic_delete_uninstall_remove_trash" android:id="@id/action_bottom_bar_delete" android:title="@string/delete" app:showAsAction="always" />
+        <item android:icon="@drawable/ic_share_point_3_connected_dotted" android:id="@id/action_bottom_bar_share" android:title="@string/share" app:showAsAction="always" />
+        <item android:icon="@drawable/ic_gallery_download_photo_arrow_down_to_line" android:id="@id/action_bottom_bar_save_as_image" android:title="@string/save" app:showAsAction="always" />
+        <item android:icon="@drawable/pdf_save" android:id="@id/action_bottom_bar_save_as_pdf" android:title="@string/scan_save_as_pdf_bottom_bar" app:showAsAction="always" />
+    </group>
+</menu>

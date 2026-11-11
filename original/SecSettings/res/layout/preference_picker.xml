@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.samsung.android.settings.accessibility.base.widget.PickerCompat android:id="@id/picker" android:background="@color/content_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

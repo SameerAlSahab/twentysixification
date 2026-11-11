@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.button.MaterialButton android:theme="@style/Theme.Material3.DynamicColors.DayNight" android:id="@id/settingslib_menu_button" android:layout_width="wrap_content" android:layout_height="wrap_content" app:icon="@drawable/settingslib_expressive_icon_more_vert" style="@style/Widget.Material3.Button.IconButton"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

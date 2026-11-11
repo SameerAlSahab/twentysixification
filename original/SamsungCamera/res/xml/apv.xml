@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_Apv"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/apv_hdr" android:key="@string/key_capture_type_hdr" />
+    <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/apv_log" android:key="@string/key_capture_type_log" />
+    <PreferenceCategory android:title="@string/apv_profile" android:key="@string/key_profile">
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/apv_422_hq" android:key="@string/key_profile_hq" />
+        <com.sec.android.app.camera.setting.CameraRadioButtonPreference android:persistent="false" android:title="@string/apv_422_lq" android:key="@string/key_profile_lq" />
+    </PreferenceCategory>
+</PreferenceScreen>

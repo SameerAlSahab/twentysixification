@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/alert_center_margin_start_end" android:layout_marginEnd="@dimen/alert_center_margin_start_end">
+        <TextView android:id="@id/alert_center_about_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/alert_center_info_description" style="@style/security_dashboard_about_description" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/theft_protection_info_margin_bottom" android:text="@string/alert_center_info_security_alerts" style="@style/security_dashboard_about_title" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_security_dashboard_card_indicator_bottom_margin" android:text="@string/alert_center_info_security_alerts_description" style="@style/security_dashboard_about_description" />
+        <TextView android:id="@id/privacy_alerts_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/theft_protection_info_margin_bottom" android:text="@string/privacy_dashboard_title" style="@style/security_dashboard_about_title" />
+        <TextView android:id="@id/privacy_alert_descriptions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_security_dashboard_card_indicator_bottom_margin" android:text="@string/alerts_center_privacy_descriptions" style="@style/security_dashboard_about_description" />
+        <TextView android:id="@id/privacy_alerts_headers" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_security_dashboard_card_indicator_bottom_margin" android:layout_marginBottom="@dimen/theft_protection_info_margin_bottom" android:text="@string/privacy_alerts_headers" style="@style/security_dashboard_about_description" />
+    </LinearLayout>
+</RelativeLayout>

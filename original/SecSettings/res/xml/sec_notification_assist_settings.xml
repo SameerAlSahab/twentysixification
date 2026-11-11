@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/noti_intelligence_notification_assist_title" android:key="ai_notification_settings" settings:hierarchicalParentFragment="com.android.settings.notification.ConfigureNotificationSettings"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_noti_summarize_layout" android:selectable="false" android:key="summarize_content_main" />
+    <PreferenceCategory android:key="auto_group_preview" settings:allowDividerAbove="false">
+        <SecPreferenceScreen android:title="@string/noti_intelligence_priority_notification" android:key="priority_converstation" android:fragment="com.samsung.android.settings.notification.SecSummarizeContentFragment">
+            <extra android:name="path" android:value="false" />
+        </SecPreferenceScreen>
+        <SecPreferenceScreen android:title="@string/noti_intelligence_summarize_notifications" android:key="summarize_content" android:fragment="com.samsung.android.settings.notification.SecSummarizeContentFragment">
+            <extra android:name="path" android:value="true" />
+        </SecPreferenceScreen>
+    </PreferenceCategory>
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="inset_category_2" />
+    <Preference android:title="@string/noti_intelligence_more_ai_features" android:key="more_ai_feature" android:fragment="com.samsung.android.settings.usefulfeature.intelligence.intelligenceservice.IntelligenceServiceSettings" />
+</PreferenceScreen>

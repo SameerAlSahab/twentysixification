@@ -1,0 +1,11 @@
+signature,properties
+Lcom/android/internal/util/ArrayUtils;->newUnpaddedIntArray(I)[I,maxTargetSdk=30&trackingBug=170729553L
+Lcom/android/internal/util/ArrayUtils;->newUnpaddedArray(Ljava/lang/Class;I)[Ljava/lang/Object;,maxTargetSdk=30&trackingBug=170729553L
+Lcom/android/internal/util/ArrayUtils;->emptyArray(Ljava/lang/Class;)[Ljava/lang/Object;,
+Lcom/android/internal/util/ArrayUtils;->isEmpty([Ljava/lang/Object;)Z,
+Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z,
+Lcom/android/internal/util/ArrayUtils;->indexOf([Ljava/lang/Object;Ljava/lang/Object;)I,
+Lcom/android/internal/util/ArrayUtils;->contains([II)Z,
+Lcom/android/internal/util/ArrayUtils;->appendElement(Ljava/lang/Class;[Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;,maxTargetSdk=30&trackingBug=170729553L
+Lcom/android/internal/util/ArrayUtils;->removeElement(Ljava/lang/Class;[Ljava/lang/Object;Ljava/lang/Object;)[Ljava/lang/Object;,maxTargetSdk=30&trackingBug=170729553L
+Lcom/android/internal/util/ArrayUtils;->appendInt([II)[I,

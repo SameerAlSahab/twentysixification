@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.graphics.drawable.SeslRecoilDrawable app:seslRecoilColor="@color/camera_default_ripple_color"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <shape android:shape="oval">
+        <solid android:color="@color/none_color" />
+    </shape>
+</androidx.appcompat.graphics.drawable.SeslRecoilDrawable>

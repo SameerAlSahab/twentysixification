@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:title="@string/Title_Custom_Filter"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:expanded="false" style="@style/Widget.Design.AppBarLayout">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_toolbar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll|exitUntilCollapsed|snap" app:supportActionModeOverLay="false" style="@style/CollapsingToolbarLayoutStyle">
+            <View android:layout_gravity="bottom" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:background="@android:color/transparent" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout android:id="@id/listview" android:background="@color/theme_bg_color" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.core.widget.NestedScrollView android:id="@id/nestedScrollView" android:background="@color/theme_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="always">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/sub_setting_activity_bottom_padding">
+                <ImageView android:id="@id/awesome_intelligence_img" android:layout_width="fill_parent" android:layout_height="@dimen/awesome_intelligence_im_height" android:src="@drawable/custom_filter_img" android:layout_marginStart="@dimen/custom_filter_layout_margin" android:layout_marginEnd="@dimen/custom_filter_layout_margin" app:layout_constraintBottom_toTopOf="@id/txt_filter_descp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <TextView android:id="@id/txt_filter_descp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/custom_filter_text_top_margin" android:text="@string/txt_create_own_filter" android:layout_marginStart="@dimen/create_own_filter_margin" android:layout_marginEnd="@dimen/create_own_filter_margin" android:lineHeight="@dimen/custom_filter_text_line_height" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/awesome_intelligence_img" app:layout_constraintVertical_chainStyle="packed" style="@style/CustomFilterTextStyle" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+    <com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout android:id="@id/sesl_floating_toolbar_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:layout_anchor="@id/app_bar">
+        <androidx.appcompat.widget.Toolbar android:layout_gravity="bottom" android:id="@id/toolbar" android:background="@android:color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:background="@android:color/transparent" />
+    </com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

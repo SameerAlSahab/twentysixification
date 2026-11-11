@@ -1,0 +1,58 @@
+.class interface abstract Landroidx/appcompat/widget/AppCompatSpinner$SpinnerPopup;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/appcompat/widget/AppCompatSpinner;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "SpinnerPopup"
+.end annotation
+
+
+# virtual methods
+.method public abstract dismiss()V
+.end method
+
+.method public abstract getBackground()Landroid/graphics/drawable/Drawable;
+.end method
+
+.method public abstract getHintText()Ljava/lang/CharSequence;
+.end method
+
+.method public abstract getHorizontalOffset()I
+.end method
+
+.method public abstract getHorizontalOriginalOffset()I
+.end method
+
+.method public abstract getVerticalOffset()I
+.end method
+
+.method public abstract isShowing()Z
+.end method
+
+.method public abstract setAdapter(Landroid/widget/ListAdapter;)V
+.end method
+
+.method public abstract setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+.end method
+
+.method public abstract setHorizontalOffset(I)V
+.end method
+
+.method public abstract setHorizontalOriginalOffset(I)V
+.end method
+
+.method public abstract setPromptText(Ljava/lang/CharSequence;)V
+.end method
+
+.method public abstract setVerticalOffset(I)V
+.end method
+
+.method public abstract show(II)V
+.end method

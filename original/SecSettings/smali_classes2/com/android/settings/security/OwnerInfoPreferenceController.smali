@@ -1,0 +1,380 @@
+.class public final Lcom/android/settings/security/OwnerInfoPreferenceController;
+.super Lcom/android/settingslib/core/AbstractPreferenceController;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Lcom/android/settings/core/PreferenceControllerMixin;
+.implements Lcom/android/settingslib/core/lifecycle/LifecycleObserver;
+.implements Lcom/android/settingslib/core/lifecycle/events/OnResume;
+
+
+# static fields
+.field static final KEY_OWNER_INFO:Ljava/lang/String; = "owner_info_settings"
+
+.field public static final MY_USER_ID:I
+
+
+# instance fields
+.field public final mDpm:Landroid/app/admin/DevicePolicyManager;
+
+.field public final mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+.field public mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+.field public final mParent:Lcom/android/settings/core/ObservablePreferenceFragment;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    invoke-static {}, Landroid/os/UserHandle;->myUserId()I
+
+    move-result v0
+
+    sput v0, Lcom/android/settings/security/OwnerInfoPreferenceController;->MY_USER_ID:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcom/android/settings/dashboard/DashboardFragment;)V
+    .locals 1
+
+    invoke-direct {p0, p1}, Lcom/android/settingslib/core/AbstractPreferenceController;-><init>(Landroid/content/Context;)V
+
+    iput-object p2, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mParent:Lcom/android/settings/core/ObservablePreferenceFragment;
+
+    new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-direct {v0, p1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p2}, Lcom/android/settings/core/ObservablePreferenceFragment;->getSettingsLifecycle()Lcom/android/settingslib/core/lifecycle/Lifecycle;
+
+    move-result-object p2
+
+    invoke-virtual {p2, p0}, Lcom/android/settingslib/core/lifecycle/Lifecycle;->addObserver(Landroidx/lifecycle/LifecycleObserver;)V
+
+    :cond_0
+    const-class p2, Landroid/app/admin/DevicePolicyManager;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/admin/DevicePolicyManager;
+
+    iput-object p1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mDpm:Landroid/app/admin/DevicePolicyManager;
+
+    if-eqz p1, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    const-string p1, "DevicePolicyManager is not available."
+
+    invoke-static {p0, p1}, Lcom/android/internal/util/Preconditions;->checkState(ZLjava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final displayPreference(Landroidx/preference/PreferenceScreen;)V
+    .locals 1
+
+    const-string v0, "owner_info_settings"
+
+    invoke-virtual {p1, v0}, Landroidx/preference/PreferenceGroup;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/android/settingslib/RestrictedPreference;
+
+    iput-object p1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    return-void
+.end method
+
+.method public getDeviceOwner()Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {p0}, Lcom/android/settingslib/RestrictedLockUtilsInternal;->getDeviceOwner(Landroid/content/Context;)Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getDeviceOwnerEnforcingAdmin()Landroid/app/admin/EnforcingAdmin;
+    .locals 4
+
+    iget-object v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mDpm:Landroid/app/admin/DevicePolicyManager;
+
+    invoke-virtual {v0}, Landroid/app/admin/DevicePolicyManager;->getDeviceOwnerComponentOnAnyUser()Landroid/content/ComponentName;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mDpm:Landroid/app/admin/DevicePolicyManager;
+
+    invoke-virtual {p0}, Landroid/app/admin/DevicePolicyManager;->getDeviceOwnerUser()Landroid/os/UserHandle;
+
+    move-result-object p0
+
+    new-instance v1, Landroid/app/admin/EnforcingAdmin;
+
+    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget-object v3, Landroid/app/admin/DpcAuthority;->DPC_AUTHORITY:Landroid/app/admin/DpcAuthority;
+
+    invoke-direct {v1, v2, v3, p0, v0}, Landroid/app/admin/EnforcingAdmin;-><init>(Ljava/lang/String;Landroid/app/admin/Authority;Landroid/os/UserHandle;Landroid/content/ComponentName;)V
+
+    return-object v1
+.end method
+
+.method public getDeviceOwnerInfo()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->getDeviceOwnerInfo()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getOwnerInfo()Ljava/lang/String;
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    sget v0, Lcom/android/settings/security/OwnerInfoPreferenceController;->MY_USER_ID:I
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->getOwnerInfo(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getPreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "owner_info_settings"
+
+    return-object p0
+.end method
+
+.method public final handlePreferenceTreeClick(Landroidx/preference/Preference;)Z
+    .locals 2
+
+    const-string v0, "owner_info_settings"
+
+    invoke-virtual {p1}, Landroidx/preference/Preference;->getKey()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mParent:Lcom/android/settings/core/ObservablePreferenceFragment;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Lcom/android/settings/users/OwnerInfoSettings;
+
+    invoke-direct {v1}, Lcom/android/settings/users/OwnerInfoSettings;-><init>()V
+
+    invoke-virtual {v1, p0, v0}, Landroidx/fragment/app/Fragment;->setTargetFragment(Landroidx/fragment/app/Fragment;I)V
+
+    iput-object p1, v1, Lcom/android/settings/users/OwnerInfoSettings;->mPreference:Landroidx/preference/Preference;
+
+    invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object p0
+
+    const-string p1, "ownerInfo"
+
+    invoke-virtual {v1, p0, p1}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final isAvailable()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public isDeviceOwnerInfoEnabled()Z
+    .locals 0
+
+    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    invoke-virtual {p0}, Lcom/android/internal/widget/LockPatternUtils;->isDeviceOwnerInfoEnabled()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public isOwnerInfoEnabled()Z
+    .locals 1
+
+    iget-object p0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    sget v0, Lcom/android/settings/security/OwnerInfoPreferenceController;->MY_USER_ID:I
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/widget/LockPatternUtils;->isOwnerInfoEnabled(I)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final onResume()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->isDeviceOwnerInfoEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->getDeviceOwner()Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    invoke-virtual {v1, v0}, Lcom/android/settingslib/RestrictedPreference;->setDisabledByAdmin(Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/android/settingslib/RestrictedPreference;->setDisabledByAdmin(Landroid/app/admin/EnforcingAdmin;)V
+
+    iget-object v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    iget-object v1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+
+    sget v2, Lcom/android/settings/security/OwnerInfoPreferenceController;->MY_USER_ID:I
+
+    invoke-virtual {v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->isLockScreenDisabled(I)Z
+
+    move-result v1
+
+    xor-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/android/settingslib/RestrictedPreference;->setEnabled(Z)V
+
+    :goto_0
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->updateSummary()V
+
+    return-void
+.end method
+
+.method public final updateSummary()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->isDeviceOwnerInfoEnabled()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/android/settings/security/OwnerInfoPreferenceController;->mOwnerInfoPref:Lcom/android/settingslib/RestrictedPreference;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->getDeviceOwnerInfo()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->isOwnerInfoEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/android/settings/security/OwnerInfoPreferenceController;->getOwnerInfo()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    const v0, 0x7f1521ad
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-virtual {v1, p0}, Landroidx/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
+
+    :cond_2
+    return-void
+.end method

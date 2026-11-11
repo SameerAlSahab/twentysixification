@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/airplane_mode"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="airplane_mode_switch" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference settings:height="16.0dip" settings:roundStroke="top_left|top_right" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/airplane_mode_desc" android:selectable="false" android:key="airplane_mode_desc_key" settings:positionMode="first_item" settings:searchable="false" />
+</PreferenceScreen>

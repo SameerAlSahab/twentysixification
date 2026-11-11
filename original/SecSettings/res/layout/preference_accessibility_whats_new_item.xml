@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="@dimen/whats_new_preference_side_padding" android:paddingBottom="@dimen/whats_new_preference_side_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/whats_new_preference_bottom_padding" android:paddingEnd="@dimen/whats_new_preference_top_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/icon_frame" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/whats_new_preference_icon_end_margin">
+            <androidx.preference.internal.PreferenceImageView android:id="@android:id/icon" android:background="@drawable/shortcut_icon_background" android:layout_width="@dimen/whats_new_preference_icon_size" android:layout_height="@dimen/whats_new_preference_icon_size" android:clipToOutline="true" />
+        </LinearLayout>
+        <TextView android:textAppearance="?android:textAppearanceListItem" android:textSize="@dimen/whats_new_preference_title_text_size" android:textStyle="bold" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sec" android:fontWeight="600" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/whats_new_preference_content_text_size" android:textColor="@color/whats_new_preference_content_text_color" android:id="@android:id/summary" android:paddingTop="@dimen/whats_new_preference_content_top_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sec" android:fontWeight="400" />
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/whats_new_preference_button_top_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.samsung.android.settings.accessibility.base.widget.ContainedButton android:textSize="13.0sp" android:layout_gravity="end" android:id="@id/action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/whats_new_in_accessibility_button_try_it_out" android:fontFamily="sec" android:paddingHorizontal="@dimen/body_contained_button_horizontal_padding" android:textFontWeight="600" />
+    </LinearLayout>
+</LinearLayout>

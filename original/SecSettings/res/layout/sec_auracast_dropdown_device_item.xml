@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/device_item_top_spacer" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="6.0dip">
+        <Space android:layout_width="16.0dip" android:layout_height="1.0dip" />
+        <ImageView android:layout_gravity="center" android:id="@id/device_item_icon" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_margin="4.0dip" android:src="@drawable/sec_auracast_ic_headphones_square" android:tint="@color/sec_auracast_device_icon_color" android:selectable="true" />
+        <Space android:layout_width="4.0dip" android:layout_height="1.0dip" />
+        <TextView android:textSize="17.0sp" android:id="@id/device_item_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="No Available Device" android:layout_weight="1.0" android:fontFamily="sec" android:textFontWeight="400" />
+        <Space android:layout_width="24.0dip" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <View android:id="@id/device_item_bottom_spacer" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+</LinearLayout>

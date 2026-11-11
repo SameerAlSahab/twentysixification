@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="30" id="119147584" name="CALLBACK_ON_CLEAR_CHANGE"><meta-data definedIn="android.app.SharedPreferencesImpl"/></compat-change></config>

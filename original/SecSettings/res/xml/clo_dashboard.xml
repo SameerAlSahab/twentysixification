@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/cross_layer_optimizer_for_mobile_network"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/cross_layer_optimizer_for_mobile_network" android:key="cross_layer_optimizer_category" settings:controller="com.samsung.android.settings.development.clo.CloPreferenceController" />
+</PreferenceScreen>

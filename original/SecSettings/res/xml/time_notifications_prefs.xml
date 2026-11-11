@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/time_notifications_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat android:title="@string/time_zone_change_notifications_toggle_title" android:key="time_zone_change_notifications" android:summary="@string/summary_placeholder" settings:controller="com.android.settings.datetime.TimeZoneNotificationsPreferenceController" settings:keywords="@string/keywords_time_notification_category" />
+    <SwitchPreferenceCompat android:title="@string/time_zone_offset_change_notification_toggle_title" android:key="time_zone_offset_change_notification" android:summary="@string/time_zone_offset_change_notification_toggle_summary" settings:controller="com.android.settings.datetime.TimeZoneOffsetChangeNotificationsPreferenceController" settings:keywords="@string/keywords_time_zone_offset_change_notification_category" />
+    <Preference android:title="@string/footer_time_zone_offset_change_next_change" android:key="time_zone_offset_change_footer" android:summary="@string/summary_placeholder" settings:controller="com.android.settings.datetime.TimeZoneOffsetInfoPreferenceController" />
+</PreferenceScreen>

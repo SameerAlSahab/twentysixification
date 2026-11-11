@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.util.SeslShapeDrawable android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/multi_scan_image_save_item_add_page_background_start_color" android:endColor="@color/multi_scan_image_save_item_add_page_background_end_color" android:angle="135.0" android:type="linear" />
+    <corners android:radius="@dimen/multi_scan_image_save_item_card_view_radius" />
+</androidx.appcompat.util.SeslShapeDrawable>

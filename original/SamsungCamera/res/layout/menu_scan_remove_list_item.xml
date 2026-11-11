@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/item_layout" android:tag="layout/menu_scan_remove_list_item_0" android:focusable="true" android:clickable="true" android:layout_width="@dimen/menu_scan_remove_menu_list_item_width" android:layout_height="@dimen/menu_scan_remove_menu_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="center" android:id="@id/item_image" android:visibility="gone" android:layout_width="@dimen/menu_scan_remove_menu_list_icon_size" android:layout_height="@dimen/menu_scan_remove_menu_list_icon_size" android:layout_marginTop="@dimen/menu_scan_remove_menu_list_top_margin">
+        <ImageView android:gravity="center" android:layout_gravity="center" android:id="@id/item_icon" android:background="@null" android:layout_width="@dimen/menu_scan_remove_menu_item_icon_size" android:layout_height="@dimen/menu_scan_remove_menu_item_icon_size" android:scaleType="centerCrop" android:contentDescription="@null" />
+        <com.airbnb.lottie.LottieAnimationView android:gravity="center" android:layout_gravity="center" android:id="@id/icon_lottie" android:visibility="gone" android:layout_width="@dimen/menu_scan_remove_menu_item_icon_size" android:layout_height="@dimen/menu_scan_remove_menu_item_icon_size" />
+    </FrameLayout>
+    <TextView android:textSize="@dimen/menu_scan_remove_menu_text_font_size" android:textColor="@color/default_text_color" android:gravity="center|top" android:id="@id/item_text" android:visibility="gone" android:layout_width="@dimen/menu_scan_remove_menu_list_item_width" android:layout_height="@dimen/menu_scan_remove_menu_text_height" android:layout_marginTop="@dimen/menu_scan_remove_menu_text_top_margin" android:maxLines="2" android:textAlignment="center" android:lineHeight="@dimen/menu_scan_remove_menu_text_line_height" style="@style/SecRegular" />
+</LinearLayout>

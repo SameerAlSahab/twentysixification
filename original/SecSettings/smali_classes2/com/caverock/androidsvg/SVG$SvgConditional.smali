@@ -1,0 +1,35 @@
+.class public interface abstract Lcom/caverock/androidsvg/SVG$SvgConditional;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# virtual methods
+.method public abstract getRequiredExtensions()Ljava/lang/String;
+.end method
+
+.method public abstract getRequiredFeatures()Ljava/util/Set;
+.end method
+
+.method public abstract getRequiredFonts()Ljava/util/Set;
+.end method
+
+.method public abstract getRequiredFormats()Ljava/util/Set;
+.end method
+
+.method public abstract getSystemLanguage()Ljava/util/Set;
+.end method
+
+.method public abstract setRequiredExtensions(Ljava/lang/String;)V
+.end method
+
+.method public abstract setRequiredFeatures(Ljava/util/Set;)V
+.end method
+
+.method public abstract setRequiredFonts(Ljava/util/Set;)V
+.end method
+
+.method public abstract setRequiredFormats(Ljava/util/Set;)V
+.end method
+
+.method public abstract setSystemLanguage(Ljava/util/Set;)V
+.end method

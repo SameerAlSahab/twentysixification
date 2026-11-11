@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/dex_divider_margin_start" android:insetRight="@dimen/dex_divider_margin_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <size android:height="@dimen/dex_divider_height" />
+        <solid android:color="@color/sec_widget_list_divider_color" />
+    </shape>
+</inset>

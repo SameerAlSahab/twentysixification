@@ -1,0 +1,22 @@
+.class public final Landroidx/preference/SwitchPreference$DummyClickListener;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public synthetic this$0:Landroidx/preference/SwitchPreference;
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
+
+    iget-object p0, p0, Landroidx/preference/SwitchPreference$DummyClickListener;->this$0:Landroidx/preference/SwitchPreference;
+
+    invoke-virtual {p0}, Landroidx/preference/Preference;->callClickListener()V
+
+    return-void
+.end method

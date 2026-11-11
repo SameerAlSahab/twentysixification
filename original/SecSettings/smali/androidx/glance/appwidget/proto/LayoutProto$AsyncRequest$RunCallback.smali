@@ -1,0 +1,237 @@
+.class public final Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+.super Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# static fields
+.field public static final ACTION_PARAMETERS_FIELD_NUMBER:I = 0x3
+
+.field public static final APP_WIDGET_ID_FIELD_NUMBER:I = 0x2
+
+.field public static final CLASS_NAME_FIELD_NUMBER:I = 0x1
+
+.field private static final DEFAULT_INSTANCE:Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+.field private static volatile PARSER:Landroidx/glance/appwidget/protobuf/Parser;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/glance/appwidget/protobuf/Parser;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field private actionParameters_:Landroidx/glance/appwidget/protobuf/ByteString;
+
+.field private appWidgetId_:I
+
+.field private className_:Ljava/lang/String;
+
+
+# direct methods
+.method public static -$$Nest$msetActionParameters(Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;Landroidx/glance/appwidget/protobuf/ByteString;)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->actionParameters_:Landroidx/glance/appwidget/protobuf/ByteString;
+
+    return-void
+.end method
+
+.method public static -$$Nest$msetAppWidgetId(Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;I)V
+    .locals 0
+
+    iput p1, p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->appWidgetId_:I
+
+    return-void
+.end method
+
+.method public static -$$Nest$msetClassName(Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->className_:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    invoke-direct {v0}, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;-><init>()V
+
+    sput-object v0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->DEFAULT_INSTANCE:Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    const-class v1, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    invoke-static {v1, v0}, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;->registerDefaultInstance(Ljava/lang/Class;Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;)V
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;-><init>()V
+
+    const-string v0, ""
+
+    iput-object v0, p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->className_:Ljava/lang/String;
+
+    sget-object v0, Landroidx/glance/appwidget/protobuf/ByteString;->EMPTY:Landroidx/glance/appwidget/protobuf/ByteString;
+
+    iput-object v0, p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->actionParameters_:Landroidx/glance/appwidget/protobuf/ByteString;
+
+    return-void
+.end method
+
+.method public static newBuilder()Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback$Builder;
+    .locals 2
+
+    sget-object v0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->DEFAULT_INSTANCE:Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    sget-object v1, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$MethodToInvoke;->NEW_BUILDER:Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$MethodToInvoke;
+
+    invoke-virtual {v0, v1}, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->dynamicMethod(Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$MethodToInvoke;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$Builder;
+
+    check-cast v0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback$Builder;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final dynamicMethod(Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$MethodToInvoke;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result p0
+
+    const/4 p1, 0x0
+
+    packed-switch p0, :pswitch_data_0
+
+    invoke-static {}, Lcom/google/protobuf/FieldSet$$ExternalSyntheticBUOutline0;->m()V
+
+    return-object p1
+
+    :pswitch_0
+    sget-object p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->PARSER:Landroidx/glance/appwidget/protobuf/Parser;
+
+    if-nez p0, :cond_1
+
+    const-class p1, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    monitor-enter p1
+
+    :try_start_0
+    sget-object p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->PARSER:Landroidx/glance/appwidget/protobuf/Parser;
+
+    if-nez p0, :cond_0
+
+    new-instance p0, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sput-object p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->PARSER:Landroidx/glance/appwidget/protobuf/Parser;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p1
+
+    return-object p0
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_1
+    return-object p0
+
+    :pswitch_1
+    sget-object p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->DEFAULT_INSTANCE:Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    return-object p0
+
+    :pswitch_2
+    new-instance p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback$Builder;
+
+    sget-object p1, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->DEFAULT_INSTANCE:Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    invoke-direct {p0, p1}, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite$Builder;-><init>(Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;)V
+
+    return-object p0
+
+    :pswitch_3
+    new-instance p0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    invoke-direct {p0}, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;-><init>()V
+
+    return-object p0
+
+    :pswitch_4
+    const-string p0, "className_"
+
+    const-string p1, "appWidgetId_"
+
+    const-string v0, "actionParameters_"
+
+    filled-new-array {p0, p1, v0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const-string p1, "\u0000\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001\u0208\u0002\u0004\u0003\n"
+
+    sget-object v0, Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;->DEFAULT_INSTANCE:Landroidx/glance/appwidget/proto/LayoutProto$AsyncRequest$RunCallback;
+
+    invoke-static {v0, p1, p0}, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;->newMessageInfo(Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;Ljava/lang/String;[Ljava/lang/Object;)Landroidx/glance/appwidget/protobuf/RawMessageInfo;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_5
+    return-object p1
+
+    :pswitch_6
+    const/4 p0, 0x1
+
+    invoke-static {p0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

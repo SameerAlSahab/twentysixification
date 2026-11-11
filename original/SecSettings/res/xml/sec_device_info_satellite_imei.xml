@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.samsung.android.settings.widget.SecCopyableDescriptionPreference android:persistent="false" android:key="imei_Satellite" android:summary="@string/summary_placeholder" />
+</PreferenceScreen>

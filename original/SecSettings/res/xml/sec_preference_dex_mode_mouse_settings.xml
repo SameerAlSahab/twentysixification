@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/dex_mouse" android:key="key_dex_mode_mouse_settings_screen" settings:hierarchicalParentFragment="com.samsung.android.settings.desktop.ExternalDisplaySettingsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.SwitchPreferenceCompat android:title="@string/touchpad_auto_run_title" android:key="touchpad_auto_run" />
+    <androidx.preference.DropDownPreference android:title="@string/touchpad_scrolling_direction" android:key="touchpad_scrolling_direction" />
+    <androidx.preference.Preference android:title="@string/touchpad_gestures" android:key="touchpad_gestures" android:summary="@string/touchpad_gestures_summary" android:fragment="com.samsung.android.settings.desktop.DexModeTouchGestureSettingsFragment" />
+    <androidx.preference.PreferenceCategory android:key="blank_pref_category_2" />
+    <androidx.preference.Preference android:title="@string/ime_more_settings" android:key="mouse_trackpad_more_settings" />
+    <androidx.preference.PreferenceCategory android:key="blank_pref_category_3" />
+</PreferenceScreen>

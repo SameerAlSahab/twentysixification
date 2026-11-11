@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/app_redirect_interception_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="app_jump_block_switch" />
+    <SecPreferenceCategory android:persistent="false" android:title="@string/app_jump_block_always_allow_setting" android:key="always_allow_setting" android:order="150" />
+</PreferenceScreen>

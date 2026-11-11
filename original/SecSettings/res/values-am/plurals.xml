@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="abc_slice_duration_days">
+        <item quantity="other">%d ቀናት በፊት</item>
+        <item quantity="one">%d ቀናት በፊት</item>
+    </plurals>
+    <plurals name="abc_slice_duration_min">
+        <item quantity="other">%d ደቂቃ በፊት</item>
+        <item quantity="one">%d ደቂቃ በፊት</item>
+    </plurals>
+    <plurals name="abc_slice_duration_years">
+        <item quantity="other">%d ዓመት በፊት</item>
+        <item quantity="one">%d ዓመት በፊት</item>
+    </plurals>
+    <plurals name="accessibility_timeout_summary_minutes">
+        <item quantity="other">%d ደቂቃዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ደቂቃ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="accessibility_timeout_summary_seconds">
+        <item quantity="other">%d ሰከንዶች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ሰከንድ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="alert_center_status_sub_text_suggestion">
+        <item quantity="other">+%d ተጨማሪ ማንቂያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">+%d ተጨማሪ ማንቂያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="app_interaction_agent_usage_preference_label">
+        <item quantity="other">Accessed %d apps</item>
+        <item quantity="zero">%d መተግበሪያዎች ተጠቅመዋል</item>
+        <item quantity="one">Accessed %d app</item>
+        <item quantity="two">%d መተግበሪያዎች ተጠቅመዋል</item>
+        <item quantity="few">%d መተግበሪያዎች ተጠቅመዋል</item>
+        <item quantity="many">%d መተግበሪያዎች ተጠቅመዋል</item>
+    </plurals>
+    <plurals name="bluetooth_tethering_connected_devices_subtext">
+        <item quantity="other">የበይነመረብ ግንኙነትን ማጋራት። %d መሳሪያዎች።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የበይነመረብ ግንኙነትን ማጋራት። %d መሳሪያ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="camera_flash_notification_n_apps">
+        <item quantity="other">%d መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="dex_timeout_day">
+        <item quantity="other">%d days</item>
+        <item quantity="one">1 ቀን</item>
+    </plurals>
+    <plurals name="dex_timeout_hour">
+        <item quantity="other">%d ሰዓታት</item>
+        <item quantity="one">1 ሰዓት</item>
+    </plurals>
+    <plurals name="dex_timeout_minute">
+        <item quantity="other">%d ደቂቃዎች</item>
+        <item quantity="one">1 ደቂቃ</item>
+    </plurals>
+    <plurals name="dex_timeout_second">
+        <item quantity="other">%d ሰከንድ</item>
+        <item quantity="one">1 ሰከንድ</item>
+    </plurals>
+    <plurals name="dex_timeout_week">
+        <item quantity="other">%d ሳምንታት</item>
+        <item quantity="one">1 ሳምንት</item>
+    </plurals>
+    <plurals name="installed_apps_summary_no_enabled_app">
+        <item quantity="other">%d መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="kt_sim_wrong_pin_code">
+        <item quantity="other">ትክክል ያልሆነ ፒን ገብቷል። ትክክል ያልሆነ ፒን 3 ጊዜ ካስገቡ የKT አገልግሎት ማእከልን መጎብኘት ያስፈልግዎታል። %d ሙከራዎች ይቀራሉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ትክክል ያልሆነ ፒን ገብቷል። ትክክል ያልሆነ ፒን 3 ጊዜ ካስገቡ የKT አገልግሎት ማእከልን መጎብኘት ያስፈልግዎታል። %d ሙከራ ይቀራል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="lock_timeout_hours">
+        <item quantity="other">%d ሰዓታት</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ሰዓት</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d ደቂቃዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ደቂቃ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d ሰከንዶች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ሰከንድ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mandatory_biometric_necessary_elements_error_message">
+        <item quantity="other">እከባቢህን ለማወቅ፣ የ%d ቅንብሮች መቀየር አለባቸው።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">እከባቢህን ለማወቅ፣ የ%d ቅንብር መቀየር አለበት።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mandatory_biometric_trusted_places_delete_dialog_title">
+        <item quantity="other">%d ቦታዎች ይሰርዛሉ?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ቦታ ይሰረዝ?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mandatory_biometric_trusted_places_summary">
+        <item quantity="other">%1$s እና %2$d ሌሎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s እና %2$d ሌላ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="max_char_reached_msg_plural">
+        <item quantity="other">ከ%d በላይ ቁምፊዎች ማስገባት አይችሉም።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ከ%d በላይ ቁምፊ ማስገባት አይችሉም።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d አዲስ ማሳወቂያዎች</item>
+        <item quantity="one">%d አዲስ ማሳወቂያዎች</item>
+    </plurals>
+    <plurals name="no_memory_use_summary">
+        <item quantity="other">ባለፈው %d ሰዓታት ውስጥ ምንም ትውስታ ጥቅም ላይ አልዋለም</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ባለፈው %d ሰዓት ውስጥ ምንም ትውስታ ጥቅም ላይ አልዋለም</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="notification_history_count">
+        <item quantity="other">%d ማሳወቂያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ማሳወቂያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="notification_reminder_custom_summary">
+        <item quantity="other">በየ %d ደቂቃዎቹ ለተመረጡ መተግበሪያዎች ስለ ማሳወቂያዎች አስታውስ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">በየ %d ደቂቃው ለተመረጡ መተግበሪያዎች ስለ ማሳወቂያዎች አስታውስ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="number_of_recent_apps">
+        <item quantity="other">%d መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="number_of_recent_upto_apps">
+        <item quantity="other">እስከ %d መተግበሪያዎች ድረስ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">እስከ %d መተግበሪያ ድረስ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="passkeys_and_autofill_subtext">
+        <item quantity="other">%1$s እና %2$d ሌሎች መተግበሪያዎች የይለፍ ቁልፎችን ይጠቀማሉ እና የይለፍ-ቃሎችን እና ሌሎች መረጃዎችን በራስ ሰር ያስገባሉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s እና %2$d ሌላ መተግበሪያ የይለፍ ቁልፎችን ይጠቀማሉ እና የይለፍ-ቃሎችን እና ሌሎች መረጃዎችን በራስ ሰር ያስገባሉ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="pd_a11y_function_in_use">
+        <item quantity="other">%d የተደራሽነት ተግባራት በጥቅም ላይ ናቸው</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የተደራሽነት ተግባር በጥቅም ላይ ነው</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="plural_other_wlt_opt_pd_more_items">
+        <item quantity="other">%d ተጨማሪ ዝርዝር ነገሮች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ተጨማሪ ዝርዝር ነገር</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="ps_apps">
+        <item quantity="other">%1$s ፈቃድ በ %2$d መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s ፈቃድ በ %2$d መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="reminder_select_apps">
+        <item quantity="other">%d መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="remove_language_title_multiple_plurals">
+        <item quantity="other">%d ቋንቋዎች ይወገዱ?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ቋንቋ ይወገድ?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_accessibility_usage_summary">
+        <item quantity="other">%d መተግበሪያዎች ወደ ስልክዎ ሙሉ መዳረሻ አላቸው።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መተግበሪያ ወደ ስልክዎ ሙሉ መዳረሻ አለው።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_auto_power_off_dialog_text_plurals">
+        <item quantity="other">ስልክዎ በ%d ሰከንዶች ውስጥ በራስ-ሰር ይዘጋል። ስልክዎ እንደተከፈተ ለማቆየት፣ ሰርዝ የሚለውን መታ ያድርጉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ስልክዎ በ%d ሰከንድ ውስጥ በራስ-ሰር ይዘጋል። ስልክዎ እንደተከፈተ ለማቆየት፣ ሰርዝ የሚለውን መታ ያድርጉ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_auto_power_off_dialog_text_plurals_tablet">
+        <item quantity="other">ታብሌትዎ በ%d ሰከንዶች ውስጥ በራስ-ሰር ይዘጋል። ታብሌትዎ እንደተከፈተ ለማቆየት፣ ሰርዝ የሚለውን መታ ያድርጉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ታብሌትዎ በ%d ሰከንድ ውስጥ በራስ-ሰር ይዘጋል። ታብሌትዎ እንደተከፈተ ለማቆየት፣ ሰርዝ የሚለውን መታ ያድርጉ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_biometrics_common_about_security_notice_body_strong">
+        <item quantity="other">በየ %d ሰዓታቱ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">በየ %d ሰዓቱ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_bluetooth_ask_discovery">
+        <item quantity="other">%1$s ለ %2$d ሰከንዶች ብሉይቱዝ በመጠቀም ስልክዎን ለሌላ መሳሪያዎች እንዲታይ ለማድረግ እየጠየቀ ነው።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s ለ %2$d ሰከንድ ብሉይቱዝ በመጠቀም ስልክዎን ለሌላ መሳሪያዎች እንዲታይ ለማድረግ እየጠየቀ ነው።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_bluetooth_ask_discovery_tablet">
+        <item quantity="other">%1$s ለ %2$d ሰከንዶች ብሉይቱዝ በመጠቀም ታብሌትዎን ለሌላ መሳሪያዎች እንዲታይ ለማድረግ እየጠየቀ ነው።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s ለ %2$d ሰከንድ ብሉይቱዝ በመጠቀም ታብሌትዎን ለሌላ መሳሪያዎች እንዲታይ ለማድረግ እየጠየቀ ነው።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_choose_lock_password_password_too_short">
+        <item quantity="other">የይለፍ-ቃልህ ቢያንስ 1 ፊደልን ጨምሮ ቢያንስ %d ቁምፊዎችን መያዝ አለበት።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የይለፍ ቃልዎ ቢያንስ 1 ፊደልን ጨምሮ ቢያንስ %d ባህሪ መያዝ አለበት።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_choose_lock_pin_pin_too_short">
+        <item quantity="other">ፒኖ ቢያንስ %d አሃዞችን መያዝ አለበት።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ፒኖ ቢያንስ %d አሃዝ መያዝ አለበት።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_attempts_left_before_permanent_locking">
+        <item quantity="other">ከዘላቂ መቆለፍ በፊት %d ሙከራዎች ይቀራሉ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ከዘላቂ መቆለፍ በፊት %d ሙከራ ይቀራል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_attempts_left_in_details">
+        <item quantity="other">%d ሙከራዎች ቀርተዋል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ሙከራ ይቀራል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_1_hour_and_min">
+        <item quantity="other">በ1 ሰዓት ከ%d ደቂቃዎች ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">በ1 ሰዓት ከ%d ደቂቃ ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_hour">
+        <item quantity="other">በ%d ሰዓታት ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">በ%d ሰዓት ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_hour_and_1_min">
+        <item quantity="other">በ%d ሰዓታት 1 ደቂቃ ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">በ%d ሰዓት 1 ደቂቃ ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_min">
+        <item quantity="other">በ %d ደቂቃዎች ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="one">በ %d ደቂቃ ውስጥ እንደገና ይሞክሩ</item>
+    </plurals>
+    <plurals name="sec_confirm_lock_too_many_failed_attempts_countdown_sec">
+        <item quantity="other">በ %d ሰከንዶች ውስጥ እንደገና ይሞክሩ</item>
+        <item quantity="one">በ %d ሰከንድ ውስጥ እንደገና ይሞክሩ</item>
+    </plurals>
+    <plurals name="sec_credman_services_limit_text">
+        <item quantity="other">ከ%d ተጨማሪ አገልግሎቶች በላይ መክፈት አይቻልም።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ከ%d ተጨማሪ አገልግሎት በላይ መክፈት አይቻልም።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_dnd_allow_all_except_select_contact">
+        <item quantity="other">%d መገናኛ መተግበሪያዎች በስተቀር ሁሉም ተፈቅዷል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መገናኛ መተግበሪያ በስተቀር ሁሉም ተፈቅዷል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_dnd_select_contact">
+        <item quantity="other">%d የመገኛ አድራሻዎች ተፈቅደዋል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የመገኛ አድራሻ ተፈቅዷል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_fingerprint_added_summary">
+        <item quantity="other">%d የጣት አሻራዎች ታክለዋል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የጣት አሻራ ታክሏል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_flex_mode_panel_auto_show_panel_when_folded_summary_more">
+        <item quantity="other">%1$s፣ %2$s እና %3$d ተጨማሪ መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$s፣ %2$s እና %3$d ተጨማሪ መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_password_attempts_left">
+        <item quantity="other">የይለፍ-ቃል ትክክል ያልሆነ ነው። %d ሙከራ ይቀርዎታል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የይለፍ-ቃል ትክክል ያልሆነ ነው። %d ሙከራ ይቀርዎታል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pattern_attempts_left">
+        <item quantity="other">ፓተርን ትክክል ያልሆነ ነው። %d ሙከራ ይቀርዎታል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ፓተርን ትክክል ያልሆነ ነው። %d ሙከራ ይቀርዎታል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_incorrect_pin_attempts_left">
+        <item quantity="other">ትክክል ያልሆነ PIN። %d ሙከራዎች ቀርቷል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ትክክል ያልሆነ PIN። %d ሙከራ ቀርቷል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_intelligence_service_child_popup_message">
+        <item quantity="other">የGalaxy AI የላቀ የማሰብ ችሎታ ባህሪያትን ለመጠቀም ቢያንስ %d አመታት መሆን አለቦት።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የGalaxy AI የላቀ የማሰብ ችሎታ ባህሪያትን ለመጠቀም ቢያንስ %d አመት መሆን አለቦት።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_letters">
+        <item quantity="other">የይለፍ-ቃሎ ቢያንስ %d ፊደልዎች መያዝ አለበት።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የ ይለፍ-ቃሎ ቢያንስ %d ፊደል መያዝ አለበት።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_lowercase">
+        <item quantity="other">Password must contain at least %d lowercase letters.</item>
+        <item quantity="one">Password must contain at least 1 lowercase letter.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_nonletter">
+        <item quantity="other">Password must contain at least %d numbers or symbols.</item>
+        <item quantity="one">Password must contain at least 1 number or symbol.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_numeric">
+        <item quantity="other">Password must contain at least %d numbers.</item>
+        <item quantity="one">Password must contain at least 1 number.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_symbols">
+        <item quantity="other">Password must contain at least %d symbols.</item>
+        <item quantity="one">Password must contain at least 1 symbol.</item>
+    </plurals>
+    <plurals name="sec_lockpassword_password_requires_uppercase">
+        <item quantity="other">Password must contain at least %d uppercase letters.</item>
+        <item quantity="one">Password must contain at least 1 uppercase letter.</item>
+    </plurals>
+    <plurals name="sec_mde_suggestions_summary">
+        <item quantity="other">%d ተጨማሪ ጥቆማዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ተጨማሪ ጥቆማ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_number_of_device_admins">
+        <item quantity="other">%d ተግባር ላይ ያሉ መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ተግባር ላይ ያለው መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_offline_lang_pack_remove_dialog_title">
+        <item quantity="other">%d የቋንቋ ጥቅሎች ይሰርዛሉ?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የቋንቋ ጥቅል ይሰርዛሉ?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_offline_lang_pack_tts_title">
+        <item quantity="other">%d ድምጾች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ድምጽ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_runtime_permissions_additional_count">
+        <item quantity="other">%d ተጨማሪ ፈቃዶች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ተጨማሪ ፈቃድ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_screen_permission_apps_allowed">
+        <item quantity="other">%d የተፈቀደላቸው መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የተፈቀደ መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_screen_permission_target_app_agents_allowed">
+        <item quantity="other">%d የተፈቀደላቸው መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የተፈቀደ መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_screen_permission_target_app_agents_allowed_flag_per_app_consent_v2">
+        <item quantity="other">%d የዲጂታል ረዳት ተፈቅደዋል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የዲጂታል ረዳት ተፈቅዷል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_show_dev_countdown">
+        <item quantity="other">ገንቢ ከመሆን %d ነካዎች ነው የራቁት።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ገንቢ ከመሆን %d ነካ ነው የራቁት።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_zen_items_allowed">
+        <item quantity="other">%d የተፈቀደላቸው መተግበሪያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የተፈቀደ መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_zen_items_not_allowed">
+        <item quantity="other">%d መተግበሪያዎች በስተቀር ሁሉም ተፈቅዷል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መተግበሪያ በስተቀር ሁሉም ተፈቅዷል መተግበሪያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sec_zen_mode_selected_rules">
+        <item quantity="other">%d ተመርጧል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ተመርጧል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="secure_folder_attempts_left_before_permanent_locking">
+        <item quantity="other">ከዘላቂ መቆለፍ በፊት %d ሙከራዎች ይቀራሉ</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ከዘላቂ መቆለፍ በፊት %d ሙከራ ይቀራል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_malware_apps_detected">
+        <item quantity="other">%d የማልዌር መተግበሪያዎች ተገኝተዋል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የማልዌር መተግበሪያዎች ተገኝቷል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_malware_detected_card_subtext">
+        <item quantity="other">%d የማልዌር መተግበሪያዎች በስልክዎ ላይ ተገኝተዋል። የስልክዎን ደህንነት ለመጠበቅ እነዚህን መተግበሪያዎች ያራግፉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የማልዌር መተግበሪያ በስልክዎ ላይ ተገኝቷል። የስልክዎን ደህንነት ለመጠበቅ ይህን መተግበሪያ ያራግፉ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_malware_detected_card_subtext_tablet">
+        <item quantity="other">%d የማልዌር መተግበሪያዎች በታብሌትዎ ላይ ተገኝተዋል። የታብሌትዎን ደህንነት ለመጠበቅ እነዚህን መተግበሪያዎች ያራግፉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d የማልዌር መተግበሪያ በታብሌትዎ ላይ ተገኝቷል። የታብሌትዎን ደህንነት ለመጠበቅ ይህን መተግበሪያ ያራግፉ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_suggestion">
+        <item quantity="other">%d ጥቆማዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ጥቆማ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="security_dashboard_warning">
+        <item quantity="other">%d ማስጠንቀቂያዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ማስጠንቀቂያ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_hour_plurals">
+        <item quantity="other">የእንቅልፍ ጊዜ፡ %d ሰዓታት</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የእንቅልፍ ጊዜ፡ %d ሰዓት</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_min_plurals">
+        <item quantity="other">የእንቅልፍ ጊዜ፡ %d ደቂቃዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የእንቅልፍ ጊዜ፡ %d ደቂቃ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="temporary_cloud_backup_summary_plurals">
+        <item quantity="other">ያልተገደበ ውሂብ ወደ %1$s እስከ %2$d ቀናት መጠባበቂያ ያስቀመጡ ወይም መጠባበቂያ ያስቀመጡትን ውሂብ መልሰው ወደ ቦታው ያስመጡ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ያልተገደበ ውሂብ ወደ %1$s እስከ %2$d ቀን መጠባበቂያ ያስቀምጡ ወይም መጠባበቂያ ያስቀመጡትን ውሂብ መልሰው ወደ ቦታው ያስመጡ።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="touch_settings_test_will_reset">
+        <item quantity="other">ይህ ሙከራ በ %d ሰከንዶች ውስጥ መጀመሪያ ወደ ነበረበት የመለሳል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ይህ ሙከራ በ %d ሰከንድ ውስጥ መጀመሪያ ወደ ነበረበት የመለሳል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_device_connected">
+        <item quantity="other">%d መሣሪያዎች ተገናኝተዋል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d መሳሪያ ተገናኝቷል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_beyond">
+        <item quantity="other">ስልክዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌሎች መሣሪያዎች ወደ በይነ-መረብ ለመድረስ የስልክዎን የሞባይል ዳታ ወይም የዋይ-ፋይ ግንኙነት መጠቀም ይችላሉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ስልክዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌላ መሣሪያ ወደ በይነ-መረብ ለመድረስ የስልክዎን የሞባይል ዳታ ወይም የዋይ-ፋይ ግንኙነት መጠቀም ይችላል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_no_wifisharing">
+        <item quantity="other">ስልክዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌሎች መሣሪያዎች ወደ በይነ-መረብ ለመድረስ የስልክዎን የሞባይል ዳታ መጠቀም ይችላሉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ስልክዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌላ መሣሪያ ወደ በይነ-መረብ ለመድረስ የስልክዎን የሞባይል ዳታ መጠቀም ይችላል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_no_wifisharing_tablet">
+        <item quantity="other">ታብሌትዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌሎች መሣሪያዎች ወደ በይነ-መረብ ለመድረስ የታብሌትዎን የሞባይል ዳታ መጠቀም ይችላል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ታብሌትዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌላ መሣሪያ ወደ በይነ-መረብ ለመድረስ የታብሌትዎን የሞባይል ዳታ መጠቀም ይችላል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_instruction_changeable_maxclient_plurals_tablet">
+        <item quantity="other">ታብሌትዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌሎች መሣሪያዎች ወደ በይነ-መረብ ለመድረስ የታብሌትዎን የሞባይል ዳታ ወይም የዋይ-ፋይ ግንኙነት መጠቀም ይችላሉ።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">ታብሌትዎን ወደ የዋይ-ፋይ መዳረሻ ነጥብ ይለውጡት። እስከ %d ሌላ መሣሪያ ወደ በይነ-መረብ ለመድረስ የታብሌትዎን የሞባይል ዳታ ወይም የዋይ-ፋይ ግንኙነት መጠቀም ይችላል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_ap_n_members">
+        <item quantity="other">%d አባላት</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d አባል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_delete_item_network">
+        <item quantity="other">%d አውታረ መረቦች ይሰርዛሉ?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d አውታረ መረብ ይሰርዛሉ?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wifi_select_item_network">
+        <item quantity="other">%d ተመርጧል</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ተመርጧል</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_phone_incorrect_dialog_2">
+        <item quantity="other">የእርስዎን የስራ መገለጫ ለመክፈት 1 ሙከራ ተደርጓል። ይህ ስልክ ወደ ፋብሪካው ቅንጅቶች ከመጀመሩ በፊት %d ሙከራዎች አሉ እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የእርስዎን የስራ መገለጫ ለመክፈት 1 ሙከራ ተደርጓል። ይህ ስልክ ወደ ፋብሪካው ቅንጅቶች ከመጀመሩ በፊት %d ሙከራ አለህ እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_phone_incorrect_dialog_4">
+        <item quantity="other">የስራ መገለጫዎን ለመክፈት %d ን ሙከራዎች ተደርገዋል። ይህ ስልክ ወደ ፋብሪካ ቅንጅቶች ከመጀመሩ በፊት 1 ሙከራ ቀርተሃል እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የስራ መገለጫዎን ለመክፈት %d ን ሙከራ ተደርጓል። ይህ ስልክ ወደ ፋብሪካ ቅንጅቶች ከመጀመሩ በፊት 1 ሙከራ ቀርተሃል እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_tablet_incorrect_dialog_2">
+        <item quantity="other">የእርስዎን የስራ መገለጫ ለመክፈት 1 ሙከራ ተደርጓል። ይህ ታብሌት ወደ ፋብሪካው ቅንጅቶች ከመጀመሩ በፊት %d ሙከራዎች አሉ እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የእርስዎን የስራ መገለጫ ለመክፈት 1 ሙከራ ተደርጓል። ይህ ታብሌት ወደ ፋብሪካው ቅንጅቶች ከመጀመሩ በፊት %d ሙከራ አለህ እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="wpc_tablet_incorrect_dialog_4">
+        <item quantity="other">የስራ መገለጫዎን ለመክፈት %d ን ሙከራዎች ተደርገዋል። ይህ ታብሌት ወደ ፋብሪካ ቅንጅቶች ከመጀመሩ በፊት 1 ሙከራ ቀርተሃል እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">የእርስዎን የስራ ፕሮፋይል ለመክፈት %d ሙከራ ተደርጓል። ይህ ታብሌት ወደ ፋብሪካው ቅንጅቶች መልሶ ከመጀመሩ በፊት 1 ሙከራ ይቀራል እና ሁሉም ውሂብ ይሰረዛል።</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="zen_mode_duration_summary_time_hours">
+        <item quantity="other">%d ሰዓታት</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ሰዓት</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="zen_mode_duration_summary_time_minutes">
+        <item quantity="other">%d ደቂቃዎች</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ደቂቃ</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+</resources>

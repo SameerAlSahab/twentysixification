@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_spen_primary_image_container" android:key="key_spen_layout_preference" />
+    <PreferenceCategory>
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/pen_setting_option" android:key="key_pen_mode" android:summary="@string/spen_setting_pen_description" />
+        <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+        <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/mouse_setting_option" android:key="key_mouse_mode" android:summary="@string/spen_setting_mouse_description" />
+    </PreferenceCategory>
+</PreferenceScreen>

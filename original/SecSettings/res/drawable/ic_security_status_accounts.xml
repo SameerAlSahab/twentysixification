@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="16.0dip" android:viewportWidth="16.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/security_status_icon_color" android:pathData="M3.896,11.569C4.317,9.689 5.993,8.284 8,8.284C10.006,8.284 11.682,9.689 12.103,11.569C11.139,12.77 9.66,13.54 8,13.54C6.339,13.54 4.859,12.77 3.896,11.569ZM9.929,5.006C9.929,6.079 9.058,6.949 7.986,6.949C6.912,6.949 6.043,6.079 6.043,5.006C6.043,3.934 6.912,3.063 7.986,3.063C9.058,3.063 9.929,3.934 9.929,5.006ZM0,8C0,12.418 3.581,16 8,16C12.419,16 16,12.418 16,8C16,3.581 12.419,0 8,0C3.581,0 0,3.581 0,8Z" />
+</vector>

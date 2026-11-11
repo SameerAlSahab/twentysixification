@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_preference" settings:controller="com.samsung.android.settings.accessibility.dexterity.controllers.BounceKeysPreferenceController" settings:searchable="false" />/> <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:title="@string/bounce_keys_summary" android:key="description_preference" settings:searchable="false" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/bounce_keys" android:key="com.samsung.android.settings.accessibility.shortcut.BounceKeysShortcut" settings:controller="com.android.settings.accessibility.ToggleShortcutPreferenceController" />
+    <PreferenceCategory />
+    <com.samsung.android.settings.accessibility.base.widget.PickerPreference android:key="picker_preference" settings:controller="com.samsung.android.settings.accessibility.dexterity.controllers.BounceKeysPickerPreferenceController" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <PreferenceCategory android:title="@string/test_with_physical_keyboard">
+        <com.samsung.android.settings.accessibility.base.widget.TestTextInputPreference android:title="@string/accessibility_connect_keyboard_msg" android:key="test_text_input_preference" settings:searchable="false" />
+        <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    </PreferenceCategory>
+</PreferenceScreen>

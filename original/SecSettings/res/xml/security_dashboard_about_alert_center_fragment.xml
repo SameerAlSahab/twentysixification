@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/alert_center_about" settings:hierarchicalParentFragment="com.samsung.android.settings.privacy.alertcenter.SecurityDashboardAlertCenterFragment" settings:topLevelPreferenceKey="top_level_security_and_privacy"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.privacy.alertcenter.AlertCenterAboutPreference android:key="key_about_items" android:order="-700" />
+    <SecPreferenceCategory android:order="-600" />
+    <SecSwitchPreference android:title="@string/privacy_alerts_switch_text" android:key="receive_privacy_alerts" android:order="-500" settings:allowDividerAbove="false" settings:controller="com.samsung.android.settings.privacy.alertcenter.SecurityDashboardPrivacyAlertsSwitchController" />
+</PreferenceScreen>

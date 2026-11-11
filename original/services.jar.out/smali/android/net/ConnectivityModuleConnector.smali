@@ -1,0 +1,638 @@
+.class public Landroid/net/ConnectivityModuleConnector;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# static fields
+.field private static final CONFIG_ALWAYS_RATELIMIT_NETWORKSTACK_CRASH:Ljava/lang/String; = "always_ratelimit_networkstack_crash"
+
+.field private static final CONFIG_MIN_CRASH_INTERVAL_MS:Ljava/lang/String; = "min_crash_interval"
+
+.field private static final DEFAULT_MIN_CRASH_INTERVAL_MS:J = 0x1499700L
+
+.field private static final IN_PROCESS_SUFFIX:Ljava/lang/String; = ".InProcess"
+
+.field private static final PREFS_FILE:Ljava/lang/String; = "ConnectivityModuleConnector.xml"
+
+.field private static final PREF_KEY_LAST_CRASH_TIME:Ljava/lang/String; = "lastcrash_time"
+
+.field private static final TAG:Ljava/lang/String; = "ConnectivityModuleConnector"
+
+.field private static sInstance:Landroid/net/ConnectivityModuleConnector;
+
+
+# instance fields
+.field private mContext:Landroid/content/Context;
+
+.field private final mDeps:Landroid/net/ConnectivityModuleConnector$Dependencies;
+
+.field private final mHealthListeners:Landroid/util/ArraySet;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/ArraySet<",
+            "Landroid/net/ConnectivityModuleConnector$ConnectivityModuleHealthListener;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static bridge synthetic -$$Nest$mlogi(Landroid/net/ConnectivityModuleConnector;)V
+    .locals 1
+
+    const-string/jumbo v0, "Networking module service connected"
+
+    invoke-direct {p0, v0}, Landroid/net/ConnectivityModuleConnector;->logi(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic -$$Nest$mmaybeCrashWithTerribleFailure(Landroid/net/ConnectivityModuleConnector;Ljava/lang/String;)V
+    .locals 1
+
+    const-string/jumbo v0, "Lost network stack. This is not the root cause of any issue, it is a side effect of a crash that happened earlier. Earlier logs should point to the actual issue."
+
+    invoke-direct {p0, v0, p1}, Landroid/net/ConnectivityModuleConnector;->maybeCrashWithTerribleFailure(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic -$$Nest$smcheckModuleServicePermission(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/net/ConnectivityModuleConnector;->checkModuleServicePermission(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 1
+
+    .line 13
+    new-instance v0, Landroid/net/ConnectivityModuleConnector$DependenciesImpl;
+
+    .line 14
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    invoke-direct {p0, v0}, Landroid/net/ConnectivityModuleConnector;-><init>(Landroid/net/ConnectivityModuleConnector$Dependencies;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/net/ConnectivityModuleConnector$Dependencies;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/util/ArraySet;
+
+    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
+
+    iput-object v0, p0, Landroid/net/ConnectivityModuleConnector;->mHealthListeners:Landroid/util/ArraySet;
+
+    iput-object p1, p0, Landroid/net/ConnectivityModuleConnector;->mDeps:Landroid/net/ConnectivityModuleConnector$Dependencies;
+
+    return-void
+.end method
+
+.method private static checkModuleServicePermission(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p2, p1}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    const-string/jumbo p0, "Networking module does not have permission "
+
+    invoke-static {p0, p2}, Landroid/net/ConnectivityModuleConnector$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/server/wm/Task$$ExternalSyntheticBUOutline0;->m(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static declared-synchronized getInstance()Landroid/net/ConnectivityModuleConnector;
+    .locals 2
+
+    const-class v0, Landroid/net/ConnectivityModuleConnector;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Landroid/net/ConnectivityModuleConnector;->sInstance:Landroid/net/ConnectivityModuleConnector;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Landroid/net/ConnectivityModuleConnector;
+
+    invoke-direct {v1}, Landroid/net/ConnectivityModuleConnector;-><init>()V
+
+    sput-object v1, Landroid/net/ConnectivityModuleConnector;->sInstance:Landroid/net/ConnectivityModuleConnector;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Landroid/net/ConnectivityModuleConnector;->sInstance:Landroid/net/ConnectivityModuleConnector;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+.method private getSharedPreferences()Landroid/content/SharedPreferences;
+    .locals 4
+
+    :try_start_0
+    new-instance v0, Ljava/io/File;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Landroid/os/Environment;->getDataSystemDeDirectory(I)Ljava/io/File;
+
+    move-result-object v2
+
+    const-string v3, "ConnectivityModuleConnector.xml"
+
+    invoke-direct {v0, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    iget-object v2, p0, Landroid/net/ConnectivityModuleConnector;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->createDeviceProtectedStorageContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/io/File;I)Landroid/content/SharedPreferences;
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p0
+
+    :catchall_0
+    move-exception v0
+
+    const-string v1, "Error loading shared preferences"
+
+    invoke-direct {p0, v1, v0}, Landroid/net/ConnectivityModuleConnector;->logWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private log(Ljava/lang/String;)V
+    .locals 0
+
+    sget-object p0, Landroid/net/ConnectivityModuleConnector;->TAG:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method private logWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    sget-object p0, Landroid/net/ConnectivityModuleConnector;->TAG:Ljava/lang/String;
+
+    invoke-static {p0, p1, p2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+.end method
+
+.method private loge(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    sget-object p0, Landroid/net/ConnectivityModuleConnector;->TAG:Ljava/lang/String;
+
+    invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+.end method
+
+.method private logi(Ljava/lang/String;)V
+    .locals 0
+
+    sget-object p0, Landroid/net/ConnectivityModuleConnector;->TAG:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+.end method
+
+.method private declared-synchronized maybeCrashWithTerribleFailure(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 13
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-direct {p0, p1, v0}, Landroid/net/ConnectivityModuleConnector;->logWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    const-string/jumbo v2, "connectivity"
+
+    const-string/jumbo v3, "min_crash_interval"
+
+    const-wide/32 v4, 0x1499700
+
+    invoke-static {v2, v3, v4, v5}, Landroid/provider/DeviceConfig;->getLong(Ljava/lang/String;Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    const-string/jumbo v4, "connectivity"
+
+    const-string/jumbo v5, "always_ratelimit_networkstack_crash"
+
+    const/4 v6, 0x0
+
+    invoke-static {v4, v5, v6}, Landroid/provider/DeviceConfig;->getBoolean(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v4
+
+    invoke-direct {p0}, Landroid/net/ConnectivityModuleConnector;->getSharedPreferences()Landroid/content/SharedPreferences;
+
+    move-result-object v5
+
+    invoke-direct {p0, v5}, Landroid/net/ConnectivityModuleConnector;->tryGetLastCrashTime(Landroid/content/SharedPreferences;)J
+
+    move-result-wide v7
+
+    sget-boolean v9, Landroid/os/Build;->IS_DEBUGGABLE:Z
+
+    const/4 v10, 0x1
+
+    if-eqz v9, :cond_0
+
+    if-nez v4, :cond_0
+
+    move v4, v10
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v6
+
+    :goto_0
+    const-wide/16 v11, 0x0
+
+    cmp-long v9, v7, v11
+
+    if-eqz v9, :cond_1
+
+    cmp-long v9, v7, v0
+
+    if-gez v9, :cond_1
+
+    add-long/2addr v7, v2
+
+    cmp-long v2, v0, v7
+
+    if-gez v2, :cond_1
+
+    move v6, v10
+
+    :cond_1
+    if-nez v4, :cond_3
+
+    if-eqz v6, :cond_3
+
+    if-eqz p2, :cond_2
+
+    iget-object p1, p0, Landroid/net/ConnectivityModuleConnector;->mHealthListeners:Landroid/util/ArraySet;
+
+    monitor-enter p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    new-instance v0, Landroid/util/ArraySet;
+
+    iget-object v1, p0, Landroid/net/ConnectivityModuleConnector;->mHealthListeners:Landroid/util/ArraySet;
+
+    invoke-direct {v0, v1}, Landroid/util/ArraySet;-><init>(Landroid/util/ArraySet;)V
+
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v0}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityModuleConnector$ConnectivityModuleHealthListener;
+
+    invoke-interface {v0, p2}, Landroid/net/ConnectivityModuleConnector$ConnectivityModuleHealthListener;->onNetworkStackFailure(Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p2
+
+    :try_start_3
+    monitor-exit p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw p2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :cond_2
+    monitor-exit p0
+
+    return-void
+
+    :cond_3
+    :try_start_5
+    invoke-direct {p0, v5, v0, v1}, Landroid/net/ConnectivityModuleConnector;->tryWriteLastCrashTime(Landroid/content/SharedPreferences;J)V
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :goto_2
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    throw p1
+.end method
+
+.method private tryGetLastCrashTime(Landroid/content/SharedPreferences;)J
+    .locals 3
+
+    const-wide/16 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    return-wide v0
+
+    :cond_0
+    :try_start_0
+    const-string/jumbo v2, "lastcrash_time"
+
+    invoke-interface {p1, v2, v0, v1}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-wide p0
+
+    :catchall_0
+    move-exception p1
+
+    const-string v2, "Error getting last crash time"
+
+    invoke-direct {p0, v2, p1}, Landroid/net/ConnectivityModuleConnector;->logWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-wide v0
+.end method
+
+.method private tryWriteLastCrashTime(Landroid/content/SharedPreferences;J)V
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    :try_start_0
+    invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p1
+
+    const-string/jumbo v0, "lastcrash_time"
+
+    invoke-interface {p1, v0, p2, p3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    const-string p2, "Error writing last crash time"
+
+    invoke-direct {p0, p2, p1}, Landroid/net/ConnectivityModuleConnector;->logWtf(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public init(Landroid/content/Context;)V
+    .locals 1
+
+    const-string/jumbo v0, "Network stack init"
+
+    invoke-direct {p0, v0}, Landroid/net/ConnectivityModuleConnector;->log(Ljava/lang/String;)V
+
+    iput-object p1, p0, Landroid/net/ConnectivityModuleConnector;->mContext:Landroid/content/Context;
+
+    return-void
+.end method
+
+.method public registerHealthListener(Landroid/net/ConnectivityModuleConnector$ConnectivityModuleHealthListener;)V
+    .locals 1
+
+    iget-object v0, p0, Landroid/net/ConnectivityModuleConnector;->mHealthListeners:Landroid/util/ArraySet;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p0, p0, Landroid/net/ConnectivityModuleConnector;->mHealthListeners:Landroid/util/ArraySet;
+
+    invoke-virtual {p0, p1}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public startModuleService(Ljava/lang/String;Ljava/lang/String;Landroid/net/ConnectivityModuleConnector$ModuleServiceCallback;)V
+    .locals 3
+
+    const-string/jumbo v0, "Starting networking module "
+
+    invoke-static {v0, p1}, Landroid/net/ConnectivityModuleConnector$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Landroid/net/ConnectivityModuleConnector;->logi(Ljava/lang/String;)V
+
+    iget-object v0, p0, Landroid/net/ConnectivityModuleConnector;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/net/ConnectivityModuleConnector;->mDeps:Landroid/net/ConnectivityModuleConnector$Dependencies;
+
+    const/4 v2, 0x1
+
+    invoke-interface {v1, v0, p1, p2, v2}, Landroid/net/ConnectivityModuleConnector$Dependencies;->getModuleServiceIntent(Landroid/content/pm/PackageManager;Ljava/lang/String;Ljava/lang/String;Z)Landroid/content/Intent;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Landroid/net/ConnectivityModuleConnector;->mDeps:Landroid/net/ConnectivityModuleConnector$Dependencies;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v1, v0, p1, p2, v2}, Landroid/net/ConnectivityModuleConnector$Dependencies;->getModuleServiceIntent(Landroid/content/pm/PackageManager;Ljava/lang/String;Ljava/lang/String;Z)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string/jumbo p1, "Starting networking module in network_stack process"
+
+    invoke-direct {p0, p1}, Landroid/net/ConnectivityModuleConnector;->logi(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string/jumbo p1, "Starting networking module in system_server process"
+
+    invoke-direct {p0, p1}, Landroid/net/ConnectivityModuleConnector;->logi(Ljava/lang/String;)V
+
+    :goto_0
+    if-nez v1, :cond_1
+
+    const-string p1, "Could not resolve the networking module"
+
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Landroid/net/ConnectivityModuleConnector;->maybeCrashWithTerribleFailure(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {v1}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iget-object p2, p0, Landroid/net/ConnectivityModuleConnector;->mContext:Landroid/content/Context;
+
+    new-instance v0, Landroid/net/ConnectivityModuleConnector$ModuleServiceConnection;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p0, v0, Landroid/net/ConnectivityModuleConnector$ModuleServiceConnection;->this$0:Landroid/net/ConnectivityModuleConnector;
+
+    iput-object p1, v0, Landroid/net/ConnectivityModuleConnector$ModuleServiceConnection;->mPackageName:Ljava/lang/String;
+
+    iput-object p3, v0, Landroid/net/ConnectivityModuleConnector$ModuleServiceConnection;->mModuleServiceCallback:Landroid/net/ConnectivityModuleConnector$ModuleServiceCallback;
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    const/16 p3, 0x41
+
+    sget-object v2, Landroid/os/UserHandle;->SYSTEM:Landroid/os/UserHandle;
+
+    invoke-virtual {p2, v1, v0, p3, v2}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    const-string p3, "Could not bind to networking module in-process, or in app with "
+
+    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p0, p2, p1}, Landroid/net/ConnectivityModuleConnector;->maybeCrashWithTerribleFailure(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    const-string/jumbo p1, "Networking module service start requested"
+
+    invoke-direct {p0, p1}, Landroid/net/ConnectivityModuleConnector;->log(Ljava/lang/String;)V
+
+    return-void
+.end method

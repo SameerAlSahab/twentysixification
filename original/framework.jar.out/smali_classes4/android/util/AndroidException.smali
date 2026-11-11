@@ -1,0 +1,50 @@
+.class public Landroid/util/AndroidException;
+.super Ljava/lang/Exception;
+.source "AndroidException.java"
+
+
+# direct methods
+.method public constructor whitelist <init>()V
+    .locals 0
+
+    .line 24
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Ljava/lang/Exception;)V
+    .locals 0
+
+    .line 36
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Ljava/lang/String;)V
+    .locals 0
+
+    .line 28
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    .line 32
+    invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method protected constructor greylist-max-o <init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+    .locals 0
+
+    .line 42
+    invoke-direct {p0, p1, p2, p3, p4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ZZ)V
+
+    return-void
+.end method

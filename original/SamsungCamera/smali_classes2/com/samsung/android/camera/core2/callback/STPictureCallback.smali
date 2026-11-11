@@ -1,0 +1,26 @@
+.class public interface abstract Lcom/samsung/android/camera/core2/callback/STPictureCallback;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+# interfaces
+.implements Lcom/samsung/android/camera/core2/callback/MakerCallback;
+
+
+# virtual methods
+.method public abstract L0(ILcom/samsung/android/camera/core2/CamDevice;)V
+.end method
+
+.method public abstract U(ILcom/samsung/android/camera/core2/CamDevice;)V
+.end method
+
+.method public abstract a(ILcom/samsung/android/camera/core2/CamDevice;)V
+.end method
+
+.method public abstract b(ILjava/lang/Long;Lcom/samsung/android/camera/core2/CamDevice;)V
+.end method
+
+.method public abstract p(Ljava/nio/ByteBuffer;Lcom/samsung/android/camera/core2/container/PictureDataInfo;Lcom/samsung/android/camera/core2/CamDevice;)V
+.end method
+
+.method public abstract r0(Lcom/samsung/android/camera/core2/CamDevice;)V
+.end method

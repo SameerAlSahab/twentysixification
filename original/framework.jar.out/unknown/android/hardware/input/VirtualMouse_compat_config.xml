@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="10000" id="431622043" name="VIRTUAL_MOUSE_CURSOR_POTION_IN_LOGICAL_COORDINATES"><meta-data definedIn="android.hardware.input.VirtualMouse"/></compat-change></config>

@@ -1,0 +1,145 @@
+.class Lcom/samsung/android/core/AppJumpBlockTool$AppInfo$1;
+.super Ljava/lang/Object;
+.source "AppJumpBlockTool.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor blacklist <init>()V
+    .locals 0
+
+    .line 409
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+    .locals 1
+
+    .line 413
+    new-instance p0, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;-><init>(Lcom/samsung/android/core/AppJumpBlockTool-IA;)V
+
+    .line 414
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;->appName:Ljava/lang/String;
+
+    .line 415
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iput-boolean v0, p0, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;->isSystemApp:Z
+
+    .line 416
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;->packageName:Ljava/lang/String;
+
+    .line 417
+    const-class v0, Landroid/content/pm/ResolveInfo;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/content/pm/ResolveInfo;
+
+    iput-object p1, p0, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;->resolvedInfo:Landroid/content/pm/ResolveInfo;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic whitelist createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .line 409
+    invoke-virtual {p0, p1}, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo$1;->createFromParcel(Landroid/os/Parcel;)Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist newArray(I)[Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+    .locals 0
+
+    .line 423
+    new-array p0, p1, [Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic whitelist newArray(I)[Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .line 409
+    invoke-virtual {p0, p1}, Lcom/samsung/android/core/AppJumpBlockTool$AppInfo$1;->newArray(I)[Lcom/samsung/android/core/AppJumpBlockTool$AppInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method

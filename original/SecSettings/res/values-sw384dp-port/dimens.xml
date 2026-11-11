@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sesl_color_picker_oneui_3_color_spectrum_view_width">328.0dip</dimen>
+    <dimen name="sesl_color_picker_oneui_3_color_spectrum_view_width_background">364.0dip</dimen>
+    <dimen name="sesl_color_picker_oneui_3_color_swatch_view_width_background">364.0dip</dimen>
+    <dimen name="sesl_color_picker_oneui_3_used_color_item_gap_margin">16.0dip</dimen>
+    <dimen name="sesl_color_picker_selected_color_item_margin">10.0dip</dimen>
+    <dimen name="sesl_color_picker_used_color_divider_container_width">316.0dip</dimen>
+    <dimen name="sesl_spectrum_rect_starting">36.0dip</dimen>
+    <dimen name="sesl_swatch_rect_starting">35.0dip</dimen>
+</resources>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apn_auth_entries">
+        <item>Enweghị</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP ma ọ bụ CHAP</item>
+    </string-array>
+    <string-array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="bluetooth_cast_timeout_entries">
+        <item>Nkeji 5</item>
+        <item>Nkeji 10</item>
+        <item>Nkeji 30</item>
+        <item>Akwụpụla njikọ</item>
+    </string-array>
+    <string-array name="bluetooth_max_connected_audio_devices">
+        <item>Sistemụ ndabara: %d</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="bluetooth_sap_activation_entries">
+        <item>Ndabere (enweghị mmetụta)</item>
+        <item>Gbanye SAP site na ike</item>
+        <item>Gbanyụọ SAP site na ike</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Ndabara</item>
+        <item>Ọnweghị</item>
+        <item>Depụta</item>
+        <item>Drop Shadow</item>
+        <item>Raised</item>
+        <item>Depressed</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Dị oke ntakịrị</item>
+        <item>Obere</item>
+        <item>Eburupụta</item>
+        <item>Nnukwu</item>
+        <item>Buru oke ibu</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Ndabara</item>
+        <item>White on black</item>
+        <item>Black on white</item>
+        <item>Yellow on black</item>
+        <item>Yellow on blue</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Ndabara</item>
+        <item>Sans serif</item>
+        <item>Sans serif condensed</item>
+        <item>Sans serif monospace</item>
+        <item>Serif</item>
+        <item>Serif monospace</item>
+        <item>Nkịtị</item>
+        <item>Cursive</item>
+        <item>Small caps</item>
+    </string-array>
+    <string-array name="data_usage_billing_cycle_summary">
+        <item>Ụbọchị nke mbụ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke abụọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke atọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke anọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke ise nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke isii nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke asaa nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke asatọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke itoolu nke ọnwa ọ bụla</item>
+        <item>Ụbọchị iri nke ọnwa ọ bụla</item>
+        <item>Ụbọchị iri na otu nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na abụọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na atọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na anọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na ise nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na isii nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na asaa nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na asatọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri na itoolu nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na mbụ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na abụọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na atọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na anọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na ise nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na isii nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na asaa nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na asatọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri abụọ na itoolu nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri atọ nke ọnwa ọ bụla</item>
+        <item>Ụbọchị nke iri atọ na mbụ nke ọnwa ọ bụla</item>
+    </string-array>
+    <string-array name="dex_timeout_entries">
+        <item>15 sekọnd</item>
+        <item>30 sekọnd</item>
+        <item>1 nkeji</item>
+        <item>Nkeji 2</item>
+        <item>Nkeji 5</item>
+        <item>Nkeji 10</item>
+        <item>Nkeji 20</item>
+        <item>Nkeji 30</item>
+        <item>Nkeji 60</item>
+    </string-array>
+    <string-array name="external_display_timeout_entries">
+        <item>15 sekọnd</item>
+        <item>30 sekọnd</item>
+        <item>1 nkeji</item>
+        <item>Nkeji 2</item>
+        <item>Nkeji 5</item>
+        <item>Nkeji 10</item>
+        <item>Nkeji 20</item>
+        <item>Nkeji 30</item>
+        <item>Nkeji 60</item>
+    </string-array>
+    <string-array name="gpuwatch_rendering_api_entries">
+        <item>Vulkan</item>
+        <item>OpenGL</item>
+    </string-array>
+    <string-array name="gpuwatch_widget_positions">
+        <item>"N'elu - Aka ekpe"</item>
+        <item>"N'elu - Etiti kwụ ọtọ"</item>
+        <item>"N'elu - Aka nri"</item>
+        <item>Oghere etiti etiti - aka ekpe</item>
+        <item>Oghere etiti - aka nri</item>
+        <item>"N'okpuru - aka ekpe"</item>
+        <item>"N'okpuru ala - etiti kwụ ọtọ"</item>
+        <item>"N'okpuru - Aka nri"</item>
+    </string-array>
+    <string-array name="key_backlight_entries">
+        <item>Always off</item>
+        <item>1 ntakịrị nkeji</item>
+        <item>3 ntabianya</item>
+        <item>Ntabianya 5</item>
+        <item>10 Ntabianya</item>
+        <item>15 sekọnd</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Ozigbo</item>
+        <item>Ntabianya 5</item>
+        <item>15 sekọnd</item>
+        <item>30 sekọnd</item>
+        <item>1 nkeji</item>
+        <item>Nkeji 2</item>
+        <item>Nkeji 5</item>
+        <item>Nkeji 10</item>
+        <item>Nkeji 30</item>
+    </string-array>
+    <string-array name="mouse_pointer_color_type">
+        <item>Ọcha</item>
+        <item>Oji</item>
+        <item>Turkwọisi</item>
+        <item>Odo</item>
+        <item>Mmemme Ihè</item>
+        <item>Violet ihe</item>
+        <item>Anụnụ ihe</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Ọnweghị</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="num_allowed_devices">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>Normal</item>
+        <item>Moderate</item>
+        <item>Low</item>
+        <item>Critical</item>
+        <item>\?</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekọnd</item>
+        <item>30 sekọnd</item>
+        <item>1 nkeji</item>
+        <item>Nkeji 2</item>
+        <item>Nkeji 5</item>
+        <item>Nkeji 10</item>
+        <item>Nkeji 30</item>
+    </string-array>
+    <string-array name="sec_bt_stack_log_level_entries">
+        <item>Okwu</item>
+        <item>Chọta nsogbu</item>
+        <item>Ozi</item>
+        <item>Dọọ aka na ntị</item>
+        <item>Mperi</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_phone">
+        <item>Chọta ekwentị gị ma ọ bụrụ na ọ furu efu.</item>
+        <item>"Mekọrịta ngwa na ntọala n'ofe njiarụ gị."</item>
+        <item>Kekọrịta ndị enyi, ezinụlọ na njiarụ ndị ọzọ faịlụ.</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_tablet">
+        <item>Chọta tabletị gị ma ọ bụrụ na ọ furu efu.</item>
+        <item>Kekọrịta ndị enyi, ezinụlọ na njiarụ ndị ọzọ faịlụ.</item>
+        <item>"Detuo na mado n'etiti ekwentị na tabletị gị."</item>
+        <item>"Gbanwee Nfachi gị na-akpaghị aka n'etiti njiarụ."</item>
+        <item>Zaa oku na ederede na tabletị gị.</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Jụọ oge niile</item>
+        <item>Ahapughi anwala anwa</item>
+        <item>Kwere mgbe niile</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_phone">
+        <item>Ekwentị</item>
+        <item>TV ma ọ bụ ihe nleba anya</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_tablet">
+        <item>Tabletị</item>
+        <item>TV ma ọ bụ ihe nleba anya</item>
+    </string-array>
+    <string-array name="vpn_proxy_settings">
+        <item>Ọnweghị</item>
+        <item>Mkpanaka</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Akwụpụla ya</item>
+        <item>Na-amalite…</item>
+        <item>Na-ejikọ</item>
+        <item>Connected</item>
+        <item>Timeout</item>
+        <item>Ọgaghị</item>
+    </string-array>
+    <string-array name="wifi_ap_broadcast_channel_entries">
+        <item>Akpaghị aka</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_phone_entries">
+        <item>MAC Agbagharaghị</item>
+        <item>Ekwentị MAC</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_tablet_entries">
+        <item>MAC Agbagharaghị</item>
+        <item>Tabletị MAC</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_security_type_entries1">
+        <item>Mepee</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_wpa3_security_type_entries">
+        <item>Mepee</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_security_type_entries1">
+        <item>Mepee</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_turn_off_hotspot_timer_entries">
+        <item>Apụla ma ncha</item>
+        <item>5 minutes</item>
+        <item>Nkeji 10</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="wifi_ap_wifi_sharing">
+        <item>Turn on Wi-Fi sharing</item>
+        <item>Turn off Wi-Fi sharing</item>
+    </string-array>
+    <string-array name="wifi_ap_wpa3_security_type_entries">
+        <item>Mepee</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_connect_entries">
+        <item>Akpaghị aka</item>
+        <item>Mkpanaka</item>
+        <item>Jụọ oge niile</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Inọ otu ebe</item>
+    </string-array>
+    <string-array name="wifi_metered_entries">
+        <item>Detect automatically</item>
+        <item>Treat as metered</item>
+        <item>Treat as unmetered</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Connected</item>
+        <item>Akpọrọ oku</item>
+        <item>Njikọ agaghị</item>
+        <item>Tap here to connect.</item>
+        <item>Pụọ na nsụ̀ba</item>
+        <item>Eji ngwaọrụ ọzọ jikọọ</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Ọnweghị</item>
+        <item>Mkpanaka</item>
+        <item>Auto-config</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>"Na-enyocha ọkụ n'onyinyo…"</item>
+        <item>Na-ejikọ</item>
+        <item>Na-achọpụta…</item>
+        <item>Na-enweta adreesị IP…</item>
+        <item>Ejikọtara</item>
+        <item>Akwụsịtụrụ</item>
+        <item>Ịkwụpụ…</item>
+        <item>Akwụpụla ya</item>
+        <item>Ọgaghị</item>
+        <item>Blocked</item>
+        <item>Checking the quality of your Internet connection…</item>
+    </string-array>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:paddingTop="@dimen/sesl_dialog_title_padding_bottom" android:paddingBottom="@dimen/sesl_dialog_body_text_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/radio_on_list" android:background="?listChoiceBackgroundIndicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeightSmall" android:layout_marginStart="@dimen/controller_item_start_padding" android:layout_marginEnd="?dialogPreferredPadding">
+            <RadioButton android:layout_gravity="center" android:id="@id/radio_on" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/controller_item_start_padding" />
+            <TextView android:textAppearance="?android:textAppearanceListItem" android:ellipsize="marquee" android:paddingTop="@dimen/list_item_top_padding" android:paddingBottom="@dimen/sec_list_item_bottom_padding" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/routine_switch_on_text" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/radio_off_list" android:background="?listChoiceBackgroundIndicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeightSmall" android:layout_marginStart="@dimen/controller_item_start_padding" android:layout_marginEnd="?dialogPreferredPadding">
+            <RadioButton android:layout_gravity="center" android:id="@id/radio_off" android:background="@null" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/controller_item_end_padding" />
+            <TextView android:textAppearance="?android:textAppearanceListItem" android:ellipsize="marquee" android:paddingTop="@dimen/list_item_top_padding" android:paddingBottom="@dimen/sec_list_item_bottom_padding" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/routine_switch_off_text" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

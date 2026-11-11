@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/pro_preset_menu_lens_bg_stroke_size" android:color="@color/pro_preset_lens_stroke_color" />
+    <corners android:radius="@dimen/pro_preset_menu_lens_bg_radius_size" />
+</shape>

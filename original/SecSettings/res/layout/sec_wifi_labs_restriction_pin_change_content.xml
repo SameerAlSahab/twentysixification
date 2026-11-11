@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/network_restriction_pin_change_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="24.0dip" android:paddingEnd="24.0dip">
+        <TextView android:textAppearance="?android:textAppearanceListItemSecondary" android:id="@id/network_restriction_pin_change_label_new" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_wifi_activity_label_padding_start" />
+        <EditText android:id="@id/network_restriction_pin_change_new" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:inputType="numberPassword" android:imeOptions="flagNoExtractUi" android:layout_marginStart="@dimen/sec_wifi_activity_edit_text_default_padding_start" android:importantForAutofill="no" />
+        <TextView android:textAppearance="?android:textAppearanceListItemSecondary" android:id="@id/network_restriction_pin_change_label_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:paddingStart="@dimen/sec_wifi_activity_label_padding_start" />
+        <EditText android:id="@id/network_restriction_pin_change_confirm" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:inputType="numberPassword" android:imeOptions="flagNoExtractUi" android:layout_marginStart="@dimen/sec_wifi_activity_edit_text_default_padding_start" android:importantForAutofill="no" />
+    </LinearLayout>
+</ScrollView>

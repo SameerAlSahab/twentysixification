@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_notification_sort_and_filter_notifications"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/sec_notification_sort_notifications" android:key="key_notification_sort">
+        <com.samsung.android.settings.notification.SecRadioPreference android:title="@string/sec_notification_sort_notification_sort_by_time" android:key="notifications_by_time" settings:allowDividerBelow="false" />
+        <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+        <com.samsung.android.settings.notification.SecRadioPreference android:title="@string/sec_notification_sort_notification_sort_by_priority" android:key="notifications_by_priority" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sec_notification_filter_notifications" android:key="filter_category" settings:allowDividerAbove="false" settings:allowDividerBelow="false">
+        <SecSwitchPreference android:title="@string/noti_filter_advertisement" android:key="filter_advertisements" />
+        <SeslPreferenceCaption android:title="@string/noti_filter_advertisement_subtext" android:key="filter_advertisements_caption" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/noti_filter_old_notifications" android:key="filer_old_notification" />
+        <SeslPreferenceCaption android:title="@string/noti_filter_old_notifications_subtext" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/noti_filter_background_activites" android:key="filter_background_activites" />
+        <SeslPreferenceCaption android:title="@string/noti_filter_background_activites_subtext" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/noti_filter_minimized_notifications" android:key="filter_minimized_notification" />
+        <SeslPreferenceCaption android:title="@string/noti_filter_minimized_notifications_subtext" settings:searchable="false" />
+        <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/noti_filter_categories_will_be_grouped" android:key="filter_category_summary" settings:positionMode="first_item" settings:searchable="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

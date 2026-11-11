@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:filterTouchesWhenObscured="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/sud_info_footer_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_alignParentBottom="true" style="?sudInfoFooterContainerStyle">
+        <ImageView android:id="@id/sud_info_footer_icon" android:visibility="gone" style="?sudInfoFooterIconStyle" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.setupdesign.view.RichTextView android:gravity="start" android:id="@id/sud_info_footer_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="?sudInfoFooterTitleStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

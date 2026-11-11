@@ -1,0 +1,67 @@
+.class public Lcom/samsung/android/sdk/ocr/SOCRecognizer_OneUI411;
+.super Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+# interfaces
+.implements Lcom/samsung/android/sdk/ocr/IOCRecognizer;
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "SOCRecognizer_OneUI411"
+
+
+# direct methods
+.method public constructor <init>(Lcom/samsung/android/sdk/pen/ocr/SpenIOcrEngine;Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2}, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;-><init>(Lcom/samsung/android/sdk/pen/ocr/SpenIOcrEngine;Lcom/samsung/android/sdk/ocr/RecognizerParams;)V
+
+    .line 2
+    .line 3
+    .line 4
+    const-string p0, "SOCRecognizer_OneUI411"
+
+    .line 5
+    .line 6
+    const-string p1, "SpenRecognizer(SOCRecognizer_OneUI411) is created"
+
+    .line 7
+    .line 8
+    invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 9
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public recognizeBlockAt(Landroid/graphics/Bitmap;Landroid/graphics/Point;ZLcom/samsung/android/sdk/ocr/OCRResult;)Z
+    .locals 0
+
+    .line 1
+    const-string p2, "SOCRecognizer_OneUI411"
+
+    .line 2
+    .line 3
+    const-string p3, "recognizeBlockAt is not supported at OneUI4.1, use recognize() instead!"
+
+    .line 4
+    .line 5
+    invoke-static {p2, p3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 6
+    .line 7
+    .line 8
+    invoke-virtual {p0, p1, p4}, Lcom/samsung/android/sdk/ocr/SOCRecognizerBase;->recognizeBase(Landroid/graphics/Bitmap;Lcom/samsung/android/sdk/ocr/OCRResult;)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result p0
+
+    .line 12
+    return p0
+.end method

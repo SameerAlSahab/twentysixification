@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_digital_assistant_app_title" settings:topLevelPreferenceKey="top_level_advanced_features"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecPreferenceCategory android:layout_width="fill_parent" android:title="@string/sec_digital_assistant_app_subtitle_main_category" android:key="digital_assistant_app_main_category" settings:searchable="false" />
+    <SecPreferenceCategory android:layout_width="fill_parent" android:key="digital_assistant_app_other_category" settings:searchable="false">
+        <com.samsung.android.settings.widget.SecRadioButtonGearPreference android:layout_width="fill_parent" android:title="@string/sec_digital_assistant_app_subtitle_other_category" android:key="other_apps" settings:searchable="false" />
+    </SecPreferenceCategory>
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <SecSwitchPreference android:title="@string/sec_digital_assistant_app_read_screen_context_setting_title" android:key="digital_assistant_app_read_screen_context_setting" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:clickable="false" android:title="@string/sec_digital_assistant_app_footer_description" android:key="digital_assistant_app_footer_description" settings:searchable="false" style="@style/description_text" />
+</PreferenceScreen>

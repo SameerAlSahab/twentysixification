@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="@drawable/sec_auracast_listen_source_item_round_ripple" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/sec_auracast_listen_list_item_min_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/sec_auracast_listen_list_item_icon_area_width">
+            <ImageView android:layout_gravity="center" android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sec_auracast_listen_ic_stream" android:layout_marginStart="@dimen/sec_auracast_listen_list_item_icon_left_margin" android:layout_marginEnd="@dimen/sec_auracast_listen_list_item_icon_right_margin" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/sec_auracast_listen_list_item_right_margin">
+            <LinearLayout android:orientation="vertical" android:id="@id/source_info_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/sec_auracast_listen_list_item_title_text_size" android:textColor="@color/sec_auracast_listen_list_title_color_default" android:ellipsize="marquee" android:layout_gravity="start" android:id="@id/source_title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:fontFamily="sec" android:textFontWeight="400" />
+                <TextView android:textSize="@dimen/sec_auracast_listen_list_item_summary_text_size" android:textColor="@color/sec_auracast_listen_list_summary_color_default" android:ellipsize="marquee" android:id="@id/source_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/source_title" android:fontFamily="sec" android:layout_alignStart="@id/source_title" android:textFontWeight="400" />
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0">
+                <ImageView android:id="@id/icon_lock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sec_auracast_listen_ic_lock" android:layout_marginStart="@dimen/sec_auracast_listen_list_item_lock_icon_left_margin" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

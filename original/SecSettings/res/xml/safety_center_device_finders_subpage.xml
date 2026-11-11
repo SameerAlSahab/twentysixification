@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/device_finders_subpage_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.IllustrationPreference android:selectable="false" android:key="device_finders_illustration" android:order="10" />
+    <com.android.settingslib.widget.BannerMessagePreferenceGroup android:key="device_finders_issues_banner_group" android:order="20" settings:collapseDismissedTitle="@string/safety_center_collapse_dismissed_issues" settings:expandDismissedTitle="@string/safety_center_expand_dismissed_issues" settings:showDismissedPreferences="true" />
+    <com.android.settingslib.safetycenter.SafetySourcePreference android:key="device_finder" android:order="30" settings:controller="com.android.settings.safetycenter.ui.SafetySourcePreferenceController" settings:keywords="@string/safety_center_device_finder_search_terms" settings:profile="personal_profile" settings:safetySource="@string/config_safety_center_device_finder_source_id" />
+    <com.android.settingslib.safetycenter.SafetySourcePreference android:key="android_theft_protection" android:order="40" settings:controller="com.android.settings.safetycenter.ui.SafetySourcePreferenceController" settings:profile="personal_profile" settings:safetySource="@string/config_safety_center_auto_lock_source_id" />
+</PreferenceScreen>

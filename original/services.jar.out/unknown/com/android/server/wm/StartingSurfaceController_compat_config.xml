@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="33" id="205907456" name="ALLOW_COPY_SOLID_COLOR_VIEW"><meta-data definedIn="com.android.server.wm.StartingSurfaceController"/></compat-change></config>

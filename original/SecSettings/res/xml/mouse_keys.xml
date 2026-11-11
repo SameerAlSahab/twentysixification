@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_preference" settings:controller="com.samsung.android.settings.accessibility.dexterity.controllers.MouseKeysPreferenceController" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:title="@string/accessibility_mouse_keys_summary" android:key="guide_description" settings:lottie_rawRes="@raw/accessibility_mouse_keys_help" settings:searchable="false" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/accessibility_mouse_keys" android:key="com.samsung.android.settings.accessibility.shortcut.MouseKeysShortcut" settings:controller="com.android.settings.accessibility.ToggleShortcutPreferenceController" />
+    <com.samsung.android.settings.accessibility.base.widget.A11ySeekBarWithButtonsPreference android:persistent="false" android:layout="@layout/mouse_keys_seekbar" android:max="10" android:title="@string/accessibility_mouse_keys_acceleration" android:key="mouse_keys_acceleration_preference" android:defaultValue="2" android:min="0" settings:controller="com.samsung.android.settings.accessibility.dexterity.controllers.MouseKeysAccelerationPreferenceController" settings:seekBarIncrement="1" settings:seekBarMode="levelbar" />
+    <com.samsung.android.settings.accessibility.base.widget.A11ySeekBarWithButtonsPreference android:persistent="false" android:layout="@layout/mouse_keys_seekbar" android:max="9" android:title="@string/accessibility_mouse_keys_speed" android:key="mouse_keys_speed_preference" android:defaultValue="4" android:min="0" settings:controller="com.samsung.android.settings.accessibility.dexterity.controllers.MouseKeysSpeedPreferenceController" settings:seekBarIncrement="1" settings:seekBarMode="levelbar" />
+    <SwitchPreference android:title="@string/accessibility_mouse_keys_enable_keyboard_keys" android:key="mouse_keys_use_numeric_keyboard" settings:controller="com.samsung.android.settings.accessibility.dexterity.controllers.MouseKeysNumericKeypadPreferenceController" />
+    <PreferenceCategory />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:key="key_guide_description" settings:searchable="false" />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:key="numeric_key_guide_description" settings:searchable="false" />
+</PreferenceScreen>

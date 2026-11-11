@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/camera_default_ripple_color"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/scan_top_menu_background_color" />
+            <corners android:radius="@dimen/single_scan_save_as_pdf_background_radius" />
+        </shape>
+    </item>
+</ripple>

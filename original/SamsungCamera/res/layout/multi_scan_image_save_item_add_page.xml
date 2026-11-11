@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/add_page_grid" android:background="@drawable/multi_scan_image_save_item_add_page_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/multi_scan_image_save_grid_view_item_number_text_view_height">
+        <TextView android:textSize="@dimen/multi_scan_image_save_add_page_item_text_size" android:textColor="@color/multi_scan_image_save_item_text_color" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_scan" android:drawableTop="@drawable/add_page" android:drawablePadding="0.0dip" android:textAlignment="center" style="@style/SecSemiBold" />
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="center" android:id="@id/add_page_list" android:background="@drawable/multi_scan_image_save_item_add_page_background" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/multi_scan_image_save_add_page_item_text_size" android:textColor="@color/multi_scan_image_save_item_text_color" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/add_scan" android:drawableLeft="@drawable/add_page" android:drawablePadding="@dimen/multi_scan_image_save_list_view_add_page_item_image_padding" android:textAlignment="center" style="@style/SecSemiBold" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

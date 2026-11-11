@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifi_intelligent_wifi_header" android:key="intelligent_wifi"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecSwitchPreferenceScreen android:title="@string/wifi_switch_to_mobile_data" android:key="wifi_poor_network_detection" settings:controller="com.samsung.android.settings.wifi.intelligent.SmartNetworkSwitchPreferenceController" />
+    <SecSwitchPreference android:title="@string/wifi_switch_to_better_wifi_title" android:key="switch_to_better_wifi_with_screen_off_only" settings:controller="com.samsung.android.settings.wifi.intelligent.SwitchToBetterWifiPreferenceController" />
+    <SecSwitchPreferenceScreen android:title="@string/wifi_switch_to_better_wifi_title" android:key="switch_to_better_wifi" settings:controller="com.samsung.android.settings.wifi.intelligent.SwitchToBetterWifiPreferenceController" settings:fragment="com.samsung.android.settings.wifi.intelligent.SwitchToBetterWifiSettings" />
+    <SecSwitchPreferenceScreen android:title="@string/wifi_autowifi_title" android:key="auto_wifi" android:fragment="com.samsung.android.settings.wifi.intelligent.TurnOnWifiAutomaticallySettings" settings:controller="com.samsung.android.settings.wifi.intelligent.AutoWifiPreferenceController" />
+    <SecSwitchPreference android:title="@string/wifi_wakeup" android:key="enable_wifi_wakeup" settings:controller="com.android.settings.wifi.WifiWakeupPreferenceController" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <SecSwitchPreferenceScreen android:title="@string/wifi_mobile_wips" android:key="MobileWIPS" android:fragment="com.samsung.android.settings.wifi.intelligent.MobileWIPSSettings" settings:controller="com.samsung.android.settings.wifi.intelligent.MobileWIPSPrefController" />
+    <Preference android:persistent="true" android:title="@string/wifi_auto_connect_hotspot_title" android:key="auto_connect_hotspot" android:fragment="com.samsung.android.settings.wifi.intelligent.AutoConnectHotspotSettings" settings:controller="com.samsung.android.settings.wifi.intelligent.AutoConnectHotspotPrefereneController" />
+    <PreferenceCategory android:key="intelligent_wifi_version_category" android:order="200">
+        <com.samsung.android.settings.wifi.intelligent.WifiVersionPreference android:title="@string/wifi_intelligent_wifi_header" android:key="intelligent_wifi_version" settings:controller="com.samsung.android.settings.wifi.intelligent.IntelligentWifiVersionPreferenceController" />
+        <Preference android:title="@string/wifi_development_wifi_labs_header" android:key="wifi_developer_options" android:fragment="com.samsung.android.settings.wifi.develop.WifiConnectivityLabsFragment" settings:controller="com.samsung.android.settings.wifi.develop.WifiConnectivityLabsController" />
+    </PreferenceCategory>
+</PreferenceScreen>

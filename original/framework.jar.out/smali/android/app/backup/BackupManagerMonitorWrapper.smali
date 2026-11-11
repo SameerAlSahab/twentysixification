@@ -1,0 +1,45 @@
+.class public Landroid/app/backup/BackupManagerMonitorWrapper;
+.super Landroid/app/backup/IBackupManagerMonitor$Stub;
+.source "BackupManagerMonitorWrapper.java"
+
+
+# instance fields
+.field private final blacklist mMonitor:Landroid/app/backup/BackupManagerMonitor;
+
+
+# direct methods
+.method public constructor blacklist <init>(Landroid/app/backup/BackupManagerMonitor;)V
+    .locals 0
+
+    .line 40
+    invoke-direct {p0}, Landroid/app/backup/IBackupManagerMonitor$Stub;-><init>()V
+
+    .line 41
+    iput-object p1, p0, Landroid/app/backup/BackupManagerMonitorWrapper;->mMonitor:Landroid/app/backup/BackupManagerMonitor;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist onEvent(Landroid/os/Bundle;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 46
+    iget-object p0, p0, Landroid/app/backup/BackupManagerMonitorWrapper;->mMonitor:Landroid/app/backup/BackupManagerMonitor;
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    .line 50
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/app/backup/BackupManagerMonitor;->onEvent(Landroid/os/Bundle;)V
+
+    return-void
+.end method

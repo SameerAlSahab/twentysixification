@@ -1,0 +1,71 @@
+.class Landroid/os/HapticPlayer$StepParameter;
+.super Ljava/lang/Object;
+.source "HapticPlayer.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/os/HapticPlayer;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "StepParameter"
+.end annotation
+
+
+# instance fields
+.field private final blacklist amplitude:F
+
+.field private final blacklist duration:I
+
+.field private final blacklist frequency:F
+
+
+# direct methods
+.method constructor blacklist <init>(FFI)V
+    .locals 0
+
+    .line 372
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 373
+    iput p1, p0, Landroid/os/HapticPlayer$StepParameter;->amplitude:F
+
+    .line 374
+    iput p2, p0, Landroid/os/HapticPlayer$StepParameter;->frequency:F
+
+    .line 375
+    iput p3, p0, Landroid/os/HapticPlayer$StepParameter;->duration:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist getAmplitude()F
+    .locals 0
+
+    .line 383
+    iget p0, p0, Landroid/os/HapticPlayer$StepParameter;->amplitude:F
+
+    return p0
+.end method
+
+.method public blacklist getDuration()I
+    .locals 0
+
+    .line 379
+    iget p0, p0, Landroid/os/HapticPlayer$StepParameter;->duration:I
+
+    return p0
+.end method
+
+.method public blacklist getFrequency()F
+    .locals 0
+
+    .line 387
+    iget p0, p0, Landroid/os/HapticPlayer$StepParameter;->frequency:F
+
+    return p0
+.end method

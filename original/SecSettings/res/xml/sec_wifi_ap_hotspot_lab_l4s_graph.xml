@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:order="1">
+        <com.samsung.android.settings.wifi.mobileap.views.WifiApEditTextPreference android:title="Ip Detail" android:key="ip_edit_text_preference" android:order="2" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="2">
+        <SwitchPreference android:title="Start Graph Data collection" android:key="graph_switch_preference" android:order="1" />
+        <com.samsung.android.settings.wifi.mobileap.hotspotlabs.l4sRttGraph.WifiApLineChartPreference1 android:key="speed_line_chart_preference" android:order="2" />
+        <Preference android:title="Latency" android:key="cur_lat_preference" android:order="3" />
+        <Preference android:title="Avg Latency" android:key="avr_preference" android:order="4" />
+        <Preference android:title="Port List" android:key="port_preference" android:order="5" />
+        <Preference android:title="L4S switch status" android:key="l4s_status_preference" android:order="6" />
+    </PreferenceCategory>
+</PreferenceScreen>

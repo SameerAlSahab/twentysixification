@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_wifi_development_btm_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecSwitchPreference android:title="Robust Wi-Fi connection" android:key="wifi_labs_compatibility_reconnect_same_bssid" android:summary="Prevent one-time Wi-Fi disconnections by improving keep-alive interoperability" settings:controller="com.samsung.android.settings.wifi.develop.compatibility.WifiLabsCompatibilityReconnectSameBssidPreferenceController" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.wifi.develop.compatibility.WifiLabsCompatibilityBtmPreference />
+</PreferenceScreen>

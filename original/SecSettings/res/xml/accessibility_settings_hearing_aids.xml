@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/hearing_aid_support_title" android:key="hearing_aid" settings:hierarchicalParentFragment="com.samsung.android.settings.accessibility.hearing.HearingEnhancementsFragment" settings:topLevelPreferenceKey="top_level_accessibility"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:title="@string/hearing_aid_intro" android:key="description" settings:searchable="false" />
+    <SecSwitchPreference android:title="@string/accessibility_hac_mode_title" android:key="call_hearing_aid" settings:controller="com.samsung.android.settings.accessibility.hearing.controllers.SecHearingAidCompatibilityPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/hearing_aid_compatibility_summary" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/hearing_aid_support_title" android:key="com.samsung.android.settings.accessibility.shortcut.HearingAidSupportShortcut" settings:controller="com.android.settings.accessibility.ToggleShortcutPreferenceController" />
+    <PreferenceCategory android:title="@string/sec_bluetooth_preference_paired_devices" android:key="previously_connected_hearing_devices" android:accessibilityHeading="true" settings:controller="com.samsung.android.settings.accessibility.hearing.controllers.SecAccessibilityHearingAidPairedPreferenceController" />
+    <com.samsung.android.settings.accessibility.hearing.controllers.HearingAidCustomCategoryPreference android:layout="@layout/hearing_devices_autoscan" android:title="@string/bluetooth_preference_found_devices" android:key="available_connect_hearing_devices" android:accessibilityHeading="true" settings:controller="com.samsung.android.settings.accessibility.hearing.controllers.SecAccessibilityHearingAidAvailablePreferenceController" />
+    <Preference android:layout="@layout/sec_bluetooth_available_no_item" android:title="@string/sec_bluetooth_no_devices_found" android:selectable="false" android:key="hearing_aid_no_devices" />
+    <com.samsung.android.settings.accessibility.base.widget.HearingAidLinkablePreference android:persistent="false" android:key="bt_setting_link" settings:controller="com.samsung.android.settings.accessibility.hearing.controllers.SecHearingAidLinkableController" style="@style/description_text" />
+</PreferenceScreen>

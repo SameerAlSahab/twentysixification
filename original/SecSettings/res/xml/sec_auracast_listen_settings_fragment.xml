@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_auracast_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_auracast_listen_settings_layout" android:selectable="false" android:key="key_auracast_listen_layout" settings:controller="com.samsung.android.settings.bluetooth.audiobroadcast.SecAuracastListenViewController" settings:searchable="false" />
+</PreferenceScreen>

@@ -1,0 +1,32 @@
+.class interface abstract Lcom/google/common/collect/MapMakerInternalMap$StrongValueEntry;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+# interfaces
+.implements Lcom/google/common/collect/MapMakerInternalMap$InternalEntry;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/common/collect/MapMakerInternalMap;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "StrongValueEntry"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<K:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        "E::",
+        "Lcom/google/common/collect/MapMakerInternalMap$InternalEntry<",
+        "TK;TV;TE;>;>",
+        "Ljava/lang/Object;",
+        "Lcom/google/common/collect/MapMakerInternalMap$InternalEntry<",
+        "TK;TV;TE;>;"
+    }
+.end annotation

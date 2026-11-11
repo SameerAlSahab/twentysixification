@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/touchpad_gestures" android:key="key_touch_gesture_options" settings:hierarchicalParentFragment="com.samsung.android.settings.desktop.DexModeMouseSettingsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/touchpad_gestures_help_summary" android:key="help_preview" app:isPreferenceVisible="true" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/touchpad_gestures_option_none" android:key="menu_item_1" settings:roundStroke="top_left|top_right" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/touchpad_gestures_option_apps" android:key="menu_item_2" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/touchpad_gestures_option_back" android:key="menu_item_5" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/touchpad_gestures_option_view_notifications" android:key="menu_item_6" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/touchpad_gestures_option_open_quick_settings" android:key="menu_item_7" />
+</PreferenceScreen>

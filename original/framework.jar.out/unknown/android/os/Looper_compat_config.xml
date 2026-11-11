@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableSinceTargetSdk="37" id="458413887" name="LOOPER_CLEARS_THREAD_INTERRUPTED" overridable="true"><meta-data definedIn="android.os.Looper"/></compat-change></config>

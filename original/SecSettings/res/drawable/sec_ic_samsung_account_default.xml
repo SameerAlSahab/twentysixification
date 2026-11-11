@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/sec_ic_samsung_account_default_bg" />
+    <item android:gravity="center" android:drawable="@drawable/sec_ic_samsung_account_default_fg" />
+</layer-list>

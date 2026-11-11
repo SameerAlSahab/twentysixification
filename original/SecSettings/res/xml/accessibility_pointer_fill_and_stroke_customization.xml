@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:persistent="false" android:title="@string/accessibility_pointer_color_customization_title" android:key="accessibility_pointer_color_customization"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.inputmethod.PointerFillStylePreference android:title="@string/pointer_fill_style" android:key="pointer_fill_style" settings:controller="com.android.settings.inputmethod.PointerFillStylePreferenceController" />
+    <PreferenceCategory android:persistent="false" android:title="@string/pointer_stroke_style" android:key="touchpad_category">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/pointer_stroke_style_name_white" android:key="stroke_style_white" settings:controller="com.android.settings.inputmethod.PointerStrokePreferenceController" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/pointer_stroke_style_name_black" android:key="stroke_style_black" settings:controller="com.android.settings.inputmethod.PointerStrokePreferenceController" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/pointer_stroke_style_name_none" android:key="stroke_style_none" settings:controller="com.android.settings.inputmethod.PointerStrokePreferenceController" />
+    </PreferenceCategory>
+</PreferenceScreen>

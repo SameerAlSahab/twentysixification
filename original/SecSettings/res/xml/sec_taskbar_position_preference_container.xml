@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/taskbar_position_header" android:key="pref_taskbar_position" settings:hierarchicalParentFragment="com.android.settings.DisplaySettings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_taskbar_position_settings_gesture" android:title="TaskBarPositionGesture" android:selectable="false" android:key="gesture_preview" android:order="40" settings:allowDividerBelow="true" app:isPreferenceVisible="false" settings:keywords="TaskBarPositionGesture" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_taskbar_position_settings_btn" android:title="TaskBarPositionBtn" android:selectable="false" android:key="btn_preview" android:order="40" settings:allowDividerBelow="true" app:isPreferenceVisible="false" settings:keywords="TaskBarPositionBtn" />
+</PreferenceScreen>

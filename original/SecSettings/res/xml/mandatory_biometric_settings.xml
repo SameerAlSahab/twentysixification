@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_preference" settings:controller="com.samsung.android.settings.theftprotection.MandatoryBiometricMainSwitchController" settings:searchable="false" />
+    <com.samsung.android.settings.theftprotection.MandatoryBiometricDescriptionPreference android:title="@string/mandatory_biometric_description" android:key="mandatory_biometric_description" />
+    <com.samsung.android.settings.theftprotection.TrustedPlacesPreference android:icon="@drawable/ic_perm_group_location" android:title="@string/mandatory_biometric_trusted_places" android:key="trusted_places" settings:controller="com.samsung.android.settings.theftprotection.MandatoryBiometricLocationController" />
+</PreferenceScreen>

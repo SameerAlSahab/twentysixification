@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <androidx.appcompat.util.SeslShapeDrawable android:shape="oval">
+            <solid android:color="@color/camera_pausing_view_icon" />
+            <size android:height="@dimen/camera_pausing_view_icon_size" android:width="@dimen/camera_pausing_view_icon_size" />
+        </androidx.appcompat.util.SeslShapeDrawable>
+    </item>
+    <item android:gravity="center" android:drawable="@drawable/multi_window_camera_on" />
+</layer-list>

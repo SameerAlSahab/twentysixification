@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingEnd="16.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="14.0sp" android:textColor="@color/materialColorOnPrimary" android:layout_gravity="center" android:id="@id/resolution_change_apply_button_view" android:background="@drawable/resolution_change_apply_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/apply" android:textAllCaps="false" android:fontFamily="@android:string/duration_days_shortest_past" android:paddingHorizontal="16.0dip" android:paddingVertical="10.0dip" android:lineHeight="20.0sp" />
+</FrameLayout>

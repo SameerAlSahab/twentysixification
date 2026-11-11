@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.settingslib.widget.DrawableStateLinearLayout android:theme="?expressiveSelectorWithWidgetPreferenceTheme" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?expressiveSelectorWithWidgetPreferenceRootLayoutStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@android:id/widget_frame" style="?expressiveSelectorWithWidgetPreferenceWidgetFrameStyle" />
+    <include layout="@layout/settingslib_expressive_preference_icon_frame" />
+    <LinearLayout style="?expressiveSelectorWithWidgetPreferenceTextContainerStyle">
+        <TextView android:id="@android:id/title" style="?expressiveSelectorWithWidgetPreferenceTitleStyle" />
+        <LinearLayout android:id="@id/summary_container" style="?expressiveSelectorWithWidgetPreferenceSummaryContainerStyle">
+            <TextView android:id="@android:id/summary" style="?expressiveSelectorWithWidgetPreferenceSummaryStyle" />
+            <TextView android:id="@id/appendix" style="?expressiveSelectorWithWidgetPreferenceAppendixStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/selector_extra_widget_container" style="?expressiveSelectorWithWidgetPreferenceExtraWidgetContainerStyle">
+        <include layout="@layout/settingslib_expressive_two_target_divider" />
+        <ImageView android:id="@id/selector_extra_widget" style="?expressiveSelectorWithWidgetPreferenceExtraWidgetImageStyle" />
+    </LinearLayout>
+</com.android.settingslib.widget.DrawableStateLinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/security_dashboard_theft_protection" settings:hierarchicalParentFragment="com.samsung.android.settings.privacy.SecurityDashboardDeviceFindersFragment" settings:topLevelPreferenceKey="top_level_security_and_privacy"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/theft_protection_main_activity_description" android:selectable="false" android:key="theft_protection_activity_description" android:order="-1300" settings:positionMode="first_item" settings:searchable="false" />
+    <SecPreferenceCategory android:order="-1200">
+        <SecPreferenceScreen android:title="@string/theft_protection_mandatory_biometric_title" android:key="mandatory_biometric_lock_onboarding" android:fragment="com.samsung.android.settings.theftprotection.MandatoryBiometricOnboardingFragment" settings:controller="com.samsung.android.settings.theftprotection.MandatoryBiometricOnboardingController" />
+        <SecSwitchPreferenceScreen android:title="@string/theft_protection_mandatory_biometric_title" android:key="mandatory_biometric_lock" android:fragment="com.samsung.android.settings.theftprotection.MandatoryBiometricFragment" settings:controller="com.samsung.android.settings.theftprotection.MandatoryBiometricController" />
+    </SecPreferenceCategory>
+    <SecPreferenceCategory android:title="@string/theft_protection_screen_lock_category" android:key="key_screen_locking_category" android:order="-1100">
+        <SecPreference android:title="@string/theft_protection_theft_detection_lock_menu_title" android:key="key_theft_detection_lock" android:order="-1050" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardTheftDetectionLockPreferenceController" />
+        <SecSwitchPreference android:title="@string/theft_protection_theft_detection_lock_menu_title" android:key="key_theft_detection_lock_switch" android:order="-1000" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardTheftDetectionSwitchController" settings:isDividerVisible="false" />
+        <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="key_theft_space" android:order="-950" />
+        <SeslPreferenceCaption android:title="@string/theft_protection_theft_detection_lock_menu_description" android:key="theft_detection_category_preference" android:order="-900" settings:searchable="false" />
+        <SecPreference android:title="@string/theft_protection_offline_lock_menu_title" android:key="key_offline_lock" android:order="-850" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardOfflineLockPreferenceController" />
+        <SecSwitchPreference android:title="@string/theft_protection_offline_lock_menu_title" android:key="key_offline_lock_switch" android:order="-800" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardOfflineLockSwitchController" settings:isDividerVisible="false" />
+        <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="key_offline_space" android:order="-700" />
+        <SeslPreferenceCaption android:title="@string/theft_protection_offline_lock_menu_description" android:key="offline_lock_category_preference" android:order="-600" settings:searchable="false" />
+        <SecPreference android:title="@string/failed_authentication_lock_title" android:key="key_failed_authentication_lock" android:order="-550" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardFailedLockAuthController" />
+        <SecSwitchPreference android:title="@string/failed_authentication_lock_title" android:key="key_failed_authentication_lock_switch" android:order="-500" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardFailedLockAuthSwitchController" settings:isDividerVisible="false" />
+        <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="key_failed_auth_space" android:order="-400" />
+        <SeslPreferenceCaption android:title="@string/failed_authentication_lock_message" android:key="failed_lock_category_preference" android:order="-300" settings:searchable="false" />
+        <SecPreference android:title="@string/theft_protection_remote_lock_menu_title" android:key="key_remote_lock" android:order="-200" settings:controller="com.samsung.android.settings.privacy.SecurityDashboardRemoteLockPreferenceController" />
+    </SecPreferenceCategory>
+</PreferenceScreen>

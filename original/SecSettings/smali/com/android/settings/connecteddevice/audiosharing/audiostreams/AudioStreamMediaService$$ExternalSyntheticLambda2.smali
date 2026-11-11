@@ -1,0 +1,74 @@
+.class public final synthetic Lcom/android/settings/connecteddevice/audiosharing/audiostreams/AudioStreamMediaService$$ExternalSyntheticLambda2;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
+
+
+# instance fields
+.field public final synthetic $r8$classId:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/settings/connecteddevice/audiosharing/audiostreams/AudioStreamMediaService$$ExternalSyntheticLambda2;->$r8$classId:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 2
+
+    iget p0, p0, Lcom/android/settings/connecteddevice/audiosharing/audiostreams/AudioStreamMediaService$$ExternalSyntheticLambda2;->$r8$classId:I
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    packed-switch p0, :pswitch_data_0
+
+    check-cast p1, Ljava/util/Map$Entry;
+
+    sget-object p0, Lcom/android/settings/connecteddevice/audiosharing/audiostreams/AudioStreamMediaService;->LEAVE_BROADCAST_ACTION:Ljava/lang/String;
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant$LocalBluetoothLeBroadcastSourceState;->DECRYPTION_FAILED:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant$LocalBluetoothLeBroadcastSourceState;
+
+    if-eq p0, p1, :cond_0
+
+    move v0, v1
+
+    :cond_0
+    return v0
+
+    :pswitch_0
+    check-cast p1, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant$LocalBluetoothLeBroadcastSourceState;
+
+    sget-object p0, Lcom/android/settings/connecteddevice/audiosharing/audiostreams/AudioStreamMediaService;->LEAVE_BROADCAST_ACTION:Ljava/lang/String;
+
+    sget-object p0, Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant$LocalBluetoothLeBroadcastSourceState;->STREAMING:Lcom/android/settingslib/bluetooth/LocalBluetoothLeBroadcastAssistant$LocalBluetoothLeBroadcastSourceState;
+
+    if-ne p1, p0, :cond_1
+
+    move v0, v1
+
+    :cond_1
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

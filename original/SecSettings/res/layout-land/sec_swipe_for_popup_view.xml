@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:scrollbarStyle="outsideOverlay" android:id="@id/nested_scroll_view" android:background="@color/sec_widget_round_and_bgcolor" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:measureAllChildren="true" android:overScrollMode="always" app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.android.settings.widget.SettingsMainSwitchBar android:id="@id/switch_bar_popup_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/sec_popup_view_settings_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/popup_view_preview_parent" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="50.5">
+                <FrameLayout android:id="@id/popup_view_preview_container" android:paddingBottom="@dimen/sec_widget_body_text_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <FrameLayout android:id="@id/popup_view_preference_container" android:background="@color/content_background" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="49.5" android:layout_marginStart="@dimen/sec_widget_body_text_padding_start_end" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

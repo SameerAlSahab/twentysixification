@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:background="@color/sec_wifi_action_bar_background_color" android:paddingTop="@dimen/sec_wifi_advanced_warning_pref_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_wifi_advanced_warning_pref_side_padding" android:paddingEnd="@dimen/sec_wifi_advanced_warning_pref_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/sec_wifi_version_text_size" android:textColor="@color/wifi_preference_summary_color" android:id="@id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sec" android:textAlignment="viewStart" android:textFontWeight="400" />
+</LinearLayout>

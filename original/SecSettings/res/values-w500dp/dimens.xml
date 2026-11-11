@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="device_image_size_fold">126.0dip</dimen>
+    <dimen name="device_image_size_land_fold">126.0dip</dimen>
+    <dimen name="device_image_size_tablet">140.0dip</dimen>
+    <dimen name="sim_category_margin_horizontal">0.0dip</dimen>
+    <dimen name="sim_container_padding_end">26.0dip</dimen>
+    <dimen name="sim_container_padding_horizontal">0.0dip</dimen>
+    <dimen name="sim_container_padding_top">20.0dip</dimen>
+    <item type="dimen" name="sim_container_width">0.9</item>
+    <item type="dimen" name="sim_container_width_fold">0.93</item>
+    <item type="dimen" name="sim_container_width_land_fold">0.93</item>
+    <item type="dimen" name="sim_container_width_tablet">0.86</item>
+    <dimen name="sim_item_padding_end">0.0dip</dimen>
+    <dimen name="sim_item_padding_start">20.0dip</dimen>
+</resources>

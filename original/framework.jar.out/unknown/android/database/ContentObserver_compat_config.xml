@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableAfterTargetSdk="29" id="150939131" name="ADD_CONTENT_OBSERVER_FLAGS"><meta-data definedIn="android.database.ContentObserver"/></compat-change></config>

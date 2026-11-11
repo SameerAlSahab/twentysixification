@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/tips_connected_button" android:visibility="gone" android:src="@drawable/sec_ic_wifi_tips" android:contentDescription="@string/wifi_tips" style="@style/wifi_preference_list_icon_button" />
+    <LinearLayout android:id="@id/details_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View style="@style/wifi_preference_list_icon_button_divider" />
+        <ImageButton android:id="@id/details_button" android:src="@drawable/sec_wifi_list_settings" style="@style/wifi_preference_list_icon_button" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/tips_disable_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <View android:layout_marginStart="@dimen/sec_wifi_ap_pref_icon_button_divider_margin_start" style="@style/wifi_preference_list_icon_button_divider" />
+        <ImageButton android:id="@id/tips_disable_button" android:src="@drawable/sec_ic_wifi_tips" android:contentDescription="@string/wifi_tips" style="@style/wifi_preference_list_icon_button" />
+    </LinearLayout>
+</LinearLayout>

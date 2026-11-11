@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/dark_ui_mode" settings:keywords="@string/keywords_dark_ui_mode"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.TopIntroPreference android:key="dark_ui_top_intro" settings:controller="com.android.settings.display.darkmode.DarkModeTopIntroPreferenceController" settings:searchable="false" />
+    <com.android.settingslib.widget.MainSwitchPreference android:title="@string/dark_theme_main_switch_title" android:key="dark_ui_activated" settings:controller="com.android.settings.display.darkmode.DarkModeActivationPreferenceController" />
+    <com.android.settingslib.widget.BannerMessagePreference android:persistent="false" android:title="@string/twilight_mode_location_off_dialog_message" android:key="dark_ui_location_off" settings:controller="com.android.settings.display.TwilightLocationPreferenceController" />
+    <PreferenceCategory android:title="@string/dark_theme_version_category" android:key="dark_theme_group" settings:controller="com.android.settings.accessibility.ForceInvertPreferenceController">
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:key="standard_dark_theme" android:summary="@string/accessibility_standard_dark_theme_summary" settings:searchable="true" />
+        <com.android.settingslib.widget.SelectorWithWidgetPreference android:key="expanded_dark_theme" android:summary="@string/accessibility_expanded_dark_theme_summary" settings:searchable="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/dark_theme_timing_category" android:key="display_category">
+        <DropDownPreference android:persistent="true" android:entries="@array/dark_ui_scheduler_preference_titles" android:title="@string/dark_ui_auto_mode_title" android:key="dark_ui_auto_mode" android:summary="%s" android:entryValues="@array/dark_ui_scheduler_preference_titles" settings:controller="com.android.settings.display.darkmode.DarkModeScheduleSelectorController" settings:keywords="@string/keywords_dark_ui_mode" />
+        <Preference android:title="@string/night_display_start_time_title" android:key="dark_theme_start_time" settings:searchable="false" />
+        <Preference android:title="@string/night_display_end_time_title" android:key="dark_theme_end_time" settings:searchable="false" />
+    </PreferenceCategory>
+    <com.android.settingslib.widget.FooterPreference android:title="@string/twilight_mode_pending_location" android:key="dark_theme_connection_footer" settings:controller="com.android.settings.display.darkmode.DarkModePendingLocationPreferenceController" settings:searchable="false" />
+    <com.android.settingslib.widget.FooterPreference android:title="@string/accessibility_expanded_dark_theme_footer" android:key="dark_theme_expanded_footer" settings:controller="com.android.settings.display.darkmode.DarkModeExpandedFooterPreferenceController" settings:searchable="false" />
+    <com.android.settingslib.widget.FooterPreference android:title="@string/dark_ui_bedtime_footer_summary" android:key="dark_theme_custom_bedtime_footer" settings:controller="com.android.settings.display.darkmode.DarkModeCustomModesPreferenceController" settings:searchable="false" />
+    <com.android.settingslib.widget.ButtonPreference android:icon="@drawable/ic_feedback" android:persistent="false" android:title="@string/accessibility_send_feedback_title" android:key="feedback" settings:buttonPreferenceSize="normal" settings:buttonPreferenceType="tonal" settings:controller="com.android.settings.accessibility.FeedbackButtonPreferenceController" settings:searchable="false" />
+    <com.android.settingslib.widget.ButtonPreference android:icon="@drawable/ic_rate_review" android:persistent="false" android:title="@string/accessibility_send_survey_title" android:key="survey" settings:buttonPreferenceSize="normal" settings:buttonPreferenceType="tonal" settings:controller="com.android.settings.accessibility.ForceInvertSurveyButtonPreferenceController" settings:searchable="false" />
+</PreferenceScreen>

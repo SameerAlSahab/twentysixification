@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_bluetooth_device_profile_header" android:selectable="false" android:key="bluetooth_detail_header" settings:allowDividerBelow="true" settings:controller="com.samsung.android.settings.bluetooth.controller.SecBluetoothDetailsHeaderController" settings:searchable="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_bluetooth_details_header" android:selectable="false" android:key="sec_advanced_bluetooth_device_header" settings:allowDividerBelow="false" settings:controller="com.samsung.android.settings.bluetooth.controller.SecAdvancedBluetoothDetailsHeaderController" settings:searchable="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_bluetooth_fast_pair_header" android:selectable="false" android:key="sec_fast_pair_bluetooth_device_header" settings:allowDividerBelow="true" settings:controller="com.samsung.android.settings.bluetooth.controller.SecFastPairBluetoothDetailsHeaderController" settings:searchable="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_bluetooth_hearing_aid_header" android:selectable="false" android:key="sec_le_audio_bluetooth_device_header" settings:allowDividerBelow="true" settings:controller="com.samsung.android.settings.bluetooth.controller.SecLeAudioBluetoothDetailsHeaderController" settings:searchable="false" />
+    <PreferenceCategory android:key="bluetooth_profiles" android:order="10000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_bluetooth_profiles" android:order="15000" settings:removable="false" />
+    <SecSwitchPreference android:key="PAN" android:order="20000" />
+    <SeslPreferenceCaption android:key="bluetooth_profile_pan_caption" android:order="25000" settings:searchable="false" />
+    <SecSwitchPreference android:key="LE_AUDIO" android:order="30000" />
+    <SeslPreferenceCaption android:key="bluetooth_profile_le_audio_caption" android:order="35000" settings:searchable="false" />
+    <SecSwitchPreference android:title="@string/sec_bluetooth_detail_auto_switching" android:key="bluetooth_auto_switch" android:order="40000" />
+    <SeslPreferenceCaption android:key="bluetooth_auto_switch_caption" android:order="45000" settings:searchable="false" />
+    <com.samsung.android.settings.bluetooth.SecPresetListPreference android:title="@string/sec_bluetooth_hearing_aids_presets" android:key="hearing_aids_presets" android:order="50000" />
+    <com.samsung.android.settings.bluetooth.SecPresetListPreference android:title="@string/sec_bluetooth_hearing_aid_left_program" android:key="bluetooth_hearing_aid_left_preset" android:order="51000" />
+    <com.samsung.android.settings.bluetooth.SecPresetListPreference android:title="@string/sec_bluetooth_hearing_aid_right_program" android:key="bluetooth_hearing_aid_right_preset" android:order="52000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_general_preset" android:order="55000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_separate_preset" android:order="56000" />
+    <PreferenceCategory android:title="@string/bluetooth_hfp_codec" android:key="bluetooth_codec_call" android:order="60000" />
+    <PreferenceCategory android:title="@string/bluetooth_a2dp_codec" android:key="bluetooth_codec_media" android:order="70000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_media_codec" android:order="75000" settings:isPreferenceVisible="false" />
+    <PreferenceCategory android:key="bluetooth_smart_keyboard" android:order="80000">
+        <Preference android:title="@string/sec_bluetooth_keyboard_software_update" android:key="bluetooth_pref_sw_update" />
+    </PreferenceCategory>
+    <com.samsung.android.settings.bluetooth.SecMicSwitchListPreference android:title="@string/sec_bluetooth_hearing_device_input_routing_title" android:key="bluetooth_routing_control" android:order="90000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_micswitch" android:order="95000" />
+    <com.android.settings.slices.SlicePreference android:key="bt_extra_control" android:order="100000" settings:allowDividerAbove="true" settings:controller="com.android.settings.slices.SlicePreferenceController" />
+    <PreferenceCategory android:key="bt_device_slice_category" android:order="110000" settings:controller="com.android.settings.bluetooth.BlockingPrefWithSliceController" />
+    <SwitchPreferenceCompat android:title="@string/sec_bluetooth_asha_left_hearing_aid" android:key="bluetooth_switch_hearing_aid_left" android:order="120000" />
+    <SwitchPreferenceCompat android:title="@string/sec_bluetooth_asha_right_hearing_aid" android:key="bluetooth_switch_hearing_aid_right" android:order="121000" settings:allowDividerBelow="true" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_before_volume_adjust" android:order="122000" />
+    <SwitchPreferenceCompat android:title="@string/sec_bluetooth_asha_adjust_volume" android:key="bluetooth_switch_hearing_aid_adjust" android:order="125000" />
+    <com.samsung.android.settings.bluetooth.controller.SecBluetoothHearingAidVolumePreference android:icon="@drawable/sec_bluetooth_2d_bluetooth" android:title="@string/sec_bluetooth_asha_left_ear" android:key="bluetooth_volume_left" android:order="126000" />
+    <com.samsung.android.settings.bluetooth.controller.SecBluetoothHearingAidVolumePreference android:icon="@drawable/sec_bluetooth_2d_bluetooth" android:title="@string/sec_bluetooth_asha_right_ear" android:key="bluetooth_volume_right" android:order="127000" />
+    <com.samsung.android.settings.bluetooth.controller.SecBluetoothHearingAidVolumePreference android:icon="@drawable/sec_bluetooth_2d_bluetooth" android:title="@string/sec_bluetooth_asha_both_ears" android:key="bluetooth_volume_dual" android:order="128000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_asha_pref" android:order="129000" />
+    <com.samsung.android.settings.bluetooth.SecBluetoothAicsPreference android:key="ambient_volume" android:order="130000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_ambient_volume" android:order="139000" />
+    <Preference android:title="@string/sec_auracast_listen_entrance_title" android:key="bluetooth_pref_find_broadcast" android:order="140000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:key="divider_after_find_broadcast" android:order="141000" />
+    <Preference android:title="@string/sec_bluetooth_hearing_aid_type" android:key="bluetooth_pref_hearing_aid_type" android:order="150000" />
+    <SwitchPreferenceCompat android:title="@string/sec_bluetooth_block_touches" android:key="bluetooth_pref_touch_controls" android:order="160000" />
+    <Preference android:title="@string/sec_bluetooth_open_galaxy_app" android:key="bluetooth_pref_open_galaxy_wearable" android:order="170000" />
+    <Preference android:title="@string/sec_bluetooth_about_earbuds" android:key="bluetooth_pref_about_earbuds" android:order="180000" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference android:order="185000" settings:removable="false" />
+    <Preference android:title="@string/sec_bluetooth_audio_type" android:key="bluetooth_pref_audio_type" android:order="190000" />
+    <PreferenceCategory android:key="bluetooth_group" android:order="200000" />
+    <PreferenceCategory android:key="bluetooth_dummy_tail" android:order="210000" />
+</PreferenceScreen>

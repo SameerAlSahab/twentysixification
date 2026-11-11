@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:background="?android:listChoiceBackgroundIndicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeightSmall" android:paddingStart="?android:listPreferredItemPaddingStart" android:paddingEnd="@dimen/sec_app_list_item_switch_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/sec_app_list_item_padding_vertical" android:paddingBottom="@dimen/sec_app_list_item_padding_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textAppearance="?android:textAppearanceListItem" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:hyphenationFrequency="normalFast" android:lineBreakWordStyle="phrase" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/sec_wifi_version_text_size" android:textColor="@color/sec_wifi_version_text_color" android:gravity="center" android:id="@id/intelligent_version" android:layout_width="wrap_content" android:layout_height="fill_parent" android:minWidth="@dimen/sec_wifi_version_text_width" android:alpha="0.4" />
+</LinearLayout>

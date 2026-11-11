@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Delay before click"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:apps="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="0.2 seconds" android:key="autoclick_delay_time_very_short" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="0.4 seconds" android:key="autoclick_delay_time_short" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="0.6 second" android:key="autoclick_delay_time_medium" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="0.8 seconds" android:key="autoclick_delay_time_long" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="1 seconds" android:key="autoclick_delay_time_very_long" />
+    <com.samsung.android.settings.accessibility.base.widget.AccessibilitySelectorWithWidgetPreference android:persistent="false" android:title="@string/zen_mode_new_option_custom" android:key="autoclick_delay_time_custom" />
+    <com.samsung.android.settings.accessibility.base.widget.A11ySeekBarWithButtonsPreference android:layout="@layout/auto_action_delay" android:max="11" android:title="@string/accessibility_auto_action_delay_seekbar_title" android:key="autoclick_dalay_time_custom_seekbar" apps:controller="com.samsung.android.settings.accessibility.dexterity.autoclick.SecAutoClickDelayBeforeClickSliderController" apps:seekBarMode="expand" />
+</PreferenceScreen>

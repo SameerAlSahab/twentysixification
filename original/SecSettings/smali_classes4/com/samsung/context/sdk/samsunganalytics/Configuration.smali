@@ -1,0 +1,13 @@
+.class public final Lcom/samsung/context/sdk/samsunganalytics/Configuration;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# instance fields
+.field public auidType:I
+
+.field public enableAutoDeviceId:Z
+
+.field public userAgreement:Lcom/samsung/context/sdk/samsunganalytics/internal/Tracker$1;
+
+.field public version:Ljava/lang/String;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/theft_protection_button_margin_top_bottom" android:layout_marginEnd="@dimen/theft_protection_button_margin_top_bottom">
+            <TextView android:id="@id/theft_protection_info_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/theft_protection_info_activity_description" style="@style/description_text" />
+            <TextView android:textColor="@color/sec_security_status_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_margin_top" android:text="@string/theft_protection_mandatory_biometric_title" style="@style/sec_tip_title" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_subheader_margin_top" android:text="@string/theft_protection_info_identity_check_description" style="@style/description_text" />
+            <LinearLayout android:orientation="vertical" android:id="@id/theft_protection_info_theft_detection_lock_description" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/sec_security_status_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_margin_top" android:text="@string/theft_protection_theft_detection_lock_menu_title" style="@style/sec_tip_title" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_subheader_margin_top" android:text="@string/theft_protection_info_theft_detection_lock_description" style="@style/description_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/theft_protection_info_offline_device_lock_description" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/sec_security_status_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_margin_top" android:text="@string/theft_protection_offline_lock_menu_title" style="@style/sec_tip_title" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_subheader_margin_top" android:text="@string/theft_protection_info_offline_device_lock_description" style="@style/description_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/theft_protection_info_failed_auth_lock_description" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/sec_security_status_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_margin_top" android:text="@string/failed_authentication_lock_title" style="@style/sec_tip_title" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_subheader_margin_top" android:text="@string/theft_protection_info_failed_auth_lock_description" style="@style/description_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/theft_protection_info_remote_lock_description" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/sec_security_status_text_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_margin_top" android:text="@string/theft_protection_remote_lock_menu_title" style="@style/sec_tip_title" />
+                <TextView android:id="@id/theft_protection_info_remote_lock_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sec_widget_preference_unclickable_subheader_margin_top" android:text="@string/theft_protection_info_remote_lock_description" style="@style/description_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/touch_area" android:tag="layout/shooting_mode_scan_done_button_0" android:background="@color/transparent" android:clickable="true" android:layout_width="@dimen/scan_done_button_group_width" android:layout_height="@dimen/scan_done_button_group_height">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/done_group" android:paddingTop="@dimen/scan_done_icon_top_margin" android:paddingBottom="@dimen/scan_done_icon_end_margin" android:layout_width="@dimen/scan_done_button_group_width" android:layout_height="@dimen/scan_done_button_group_height" android:layout_centerInParent="true" android:stateListAnimator="?seslSmallTouchAnimator">
+            <ImageView android:layout_gravity="center" android:id="@id/done_icon" android:layout_width="@dimen/scan_done_icon_size" android:layout_height="@dimen/scan_done_icon_size" android:src="@drawable/ic_done_selected_checkmark" android:scaleType="centerCrop" android:contentDescription="@string/scan_preview_next" />
+            <TextView android:textSize="@dimen/scan_done_text_size" android:textColor="@color/white" android:layout_gravity="center|top" android:id="@id/done_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scan_preview_next" android:maxLines="2" android:contentDescription="@string/scan_preview_next" style="@style/SecSemiBold" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

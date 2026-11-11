@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="24.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/a11y_list_expander_icon_color" android:pathData="M3.03,7.432C3.322,7.139 3.797,7.139 4.09,7.432L12,15.338L19.91,7.432C20.203,7.139 20.678,7.139 20.971,7.432C21.263,7.725 21.263,8.2 20.97,8.493L12.53,16.929C12.238,17.221 11.763,17.221 11.47,16.929L3.03,8.493C2.737,8.2 2.737,7.725 3.03,7.432Z" android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change id="29623414" name="ENABLE_PREVENT_INTENT_REDIRECT_TAKE_ACTION" overridable="true"><meta-data definedIn="com.android.server.wm.ActivityStarter"/></compat-change></config>

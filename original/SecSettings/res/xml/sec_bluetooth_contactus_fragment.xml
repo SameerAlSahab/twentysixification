@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/bluetooth"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <Preference android:title="@string/sec_bluetooth_contact_us_when_description" android:key="bt_pair_rename_devices" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_minute_10" android:key="sec_bluetooth_10_minute" settings:allowDividerBelow="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_minute_30" android:key="sec_bluetooth_30_minute" settings:allowDividerBelow="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_minute_30_ago" android:key="sec_bluetooth_30_minute_ago" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <Preference android:title="@string/sec_bluetooth_trouble_device" android:key="bt_what" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_yes" android:key="sec_bluetooth_yes" settings:allowDividerBelow="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_no" android:key="sec_bluetooth_no" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <Preference android:title="@string/sec_bluetooth_which" android:key="pref_which" />
+    <CheckBoxPreference android:title="@string/sec_bluetooth_left" android:key="checkbox_left" />
+    <CheckBoxPreference android:title="@string/sec_bluetooth_right" android:key="checkbox_right" />
+    <CheckBoxPreference android:title="@string/sec_bluetooth_case" android:key="checkbox_case" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+</PreferenceScreen>

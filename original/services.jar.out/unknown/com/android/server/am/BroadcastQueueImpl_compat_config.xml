@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change id="469109889" name="ENFORCE_ENQUEUED_BROADCAST_LIMITS_FOR_SENDER" overridable="true"><meta-data definedIn="com.android.server.am.BroadcastQueueImpl"/></compat-change></config>

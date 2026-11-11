@@ -1,0 +1,22 @@
+version: 2.12.1
+apkFileName: SamsungCamera.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 37
+  targetSdkVersion: 37
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 1700043000
+  versionName: 17.0.00.43
+doNotCompress:
+- arsc
+- dex
+- ogg
+- png
+- so
+- webp
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm

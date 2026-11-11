@@ -1,0 +1,15 @@
+.class public final Lcom/android/settings/backup/AccountsAndBackupDashboardFragment$Companion$SEARCH_INDEX_DATA_PROVIDER$1;
+.super Lcom/android/settings/search/BaseSearchIndexProvider;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# virtual methods
+.method public final getXmlResourcesToIndex(Landroid/content/Context;)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p0, Lkotlin/collections/EmptyList;->INSTANCE:Lkotlin/collections/EmptyList;
+
+    return-object p0
+.end method

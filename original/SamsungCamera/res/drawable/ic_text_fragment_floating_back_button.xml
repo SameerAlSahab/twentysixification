@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <size android:height="@dimen/document_scan_toolbar_back_button_background_size" android:width="@dimen/document_scan_toolbar_back_button_background_size" />
+            <solid android:color="#ff3a3a3d" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:height="@dimen/document_scan_toolbar_back_button_size" android:width="@dimen/document_scan_toolbar_back_button_size" android:drawable="@drawable/ic_previous_back" />
+</layer-list>

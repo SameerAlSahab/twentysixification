@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/touchpad_gestures_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <SecPreference android:title="@string/tap_with_3_fingers" android:key="key_tap_with_3_fingers" settings:controller="com.samsung.android.settings.inputmethod.TabWith3FingersPreferenceController" />
+    <SecPreference android:title="@string/touchpad_gestures_option_four_finger" android:key="key_tap_with_4_fingers" settings:controller="com.samsung.android.settings.inputmethod.TabWith4FingersPreferenceController" />
+</PreferenceScreen>

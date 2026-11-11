@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="46.0dip" android:width="46.0dip" android:viewportWidth="46.0" android:viewportHeight="46.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <path android:fillColor="@drawable/$ic_gemini_suw__0" android:pathData="M23,1C23,13.029 32.654,22.803 44.636,22.997L45,23C32.971,23 23.197,32.654 23.003,44.636L23,45C23,32.85 13.15,23 1,23C13.15,23 23,13.15 23,1Z" android:strokeColor="#00000000" android:strokeWidth="1.0" android:fillType="evenOdd" />
+</vector>

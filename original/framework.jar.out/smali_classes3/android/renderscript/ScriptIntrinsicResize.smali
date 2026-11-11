@@ -1,0 +1,261 @@
+.class public final Landroid/renderscript/ScriptIntrinsicResize;
+.super Landroid/renderscript/ScriptIntrinsic;
+.source "ScriptIntrinsicResize.java"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# instance fields
+.field private greylist-max-o mInput:Landroid/renderscript/Allocation;
+
+
+# direct methods
+.method private constructor greylist-max-o <init>(JLandroid/renderscript/RenderScript;)V
+    .locals 0
+
+    .line 31
+    invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/ScriptIntrinsic;-><init>(JLandroid/renderscript/RenderScript;)V
+
+    return-void
+.end method
+
+.method public static whitelist create(Landroid/renderscript/RenderScript;)Landroid/renderscript/ScriptIntrinsicResize;
+    .locals 3
+
+    const/16 v0, 0xc
+
+    const-wide/16 v1, 0x0
+
+    .line 45
+    invoke-virtual {p0, v0, v1, v2}, Landroid/renderscript/RenderScript;->nScriptIntrinsicCreate(IJ)J
+
+    move-result-wide v0
+
+    .line 46
+    new-instance v2, Landroid/renderscript/ScriptIntrinsicResize;
+
+    invoke-direct {v2, v0, v1, p0}, Landroid/renderscript/ScriptIntrinsicResize;-><init>(JLandroid/renderscript/RenderScript;)V
+
+    return-object v2
+.end method
+
+
+# virtual methods
+.method public whitelist forEach_bicubic(Landroid/renderscript/Allocation;)V
+    .locals 1
+
+    .line 93
+    iget-object v0, p0, Landroid/renderscript/ScriptIntrinsicResize;->mInput:Landroid/renderscript/Allocation;
+
+    if-eq p1, v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 96
+    invoke-virtual {p0, p1, v0}, Landroid/renderscript/ScriptIntrinsicResize;->forEach_bicubic(Landroid/renderscript/Allocation;Landroid/renderscript/Script$LaunchOptions;)V
+
+    return-void
+
+    .line 94
+    :cond_0
+    const-string p0, "Output cannot be same as Input."
+
+    invoke-static {p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$6(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public whitelist forEach_bicubic(Landroid/renderscript/Allocation;Landroid/renderscript/Script$LaunchOptions;)V
+    .locals 6
+
+    const/4 v2, 0x0
+
+    .line 109
+    move-object v0, v2
+
+    check-cast v0, Landroid/renderscript/Allocation;
+
+    const/4 v4, 0x0
+
+    const/4 v1, 0x0
+
+    move-object v0, p0
+
+    move-object v3, p1
+
+    move-object v5, p2
+
+    invoke-virtual/range {v0 .. v5}, Landroid/renderscript/ScriptIntrinsicResize;->forEach(ILandroid/renderscript/Allocation;Landroid/renderscript/Allocation;Landroid/renderscript/FieldPacker;Landroid/renderscript/Script$LaunchOptions;)V
+
+    return-void
+.end method
+
+.method public whitelist getFieldID_Input()Landroid/renderscript/Script$FieldID;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    .line 80
+    invoke-virtual {p0, v0, v1}, Landroid/renderscript/ScriptIntrinsicResize;->createFieldID(ILandroid/renderscript/Element;)Landroid/renderscript/Script$FieldID;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist getKernelID_bicubic()Landroid/renderscript/Script$KernelID;
+    .locals 3
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    .line 118
+    invoke-virtual {p0, v2, v0, v1, v1}, Landroid/renderscript/ScriptIntrinsicResize;->createKernelID(IILandroid/renderscript/Element;Landroid/renderscript/Element;)Landroid/renderscript/Script$KernelID;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist setInput(Landroid/renderscript/Allocation;)V
+    .locals 2
+
+    .line 58
+    invoke-virtual {p1}, Landroid/renderscript/Allocation;->getElement()Landroid/renderscript/Element;
+
+    move-result-object v0
+
+    .line 59
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    invoke-static {v1}, Landroid/renderscript/Element;->U8(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 60
+    invoke-static {v1}, Landroid/renderscript/Element;->U8_2(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 61
+    invoke-static {v1}, Landroid/renderscript/Element;->U8_3(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 62
+    invoke-static {v1}, Landroid/renderscript/Element;->U8_4(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 63
+    invoke-static {v1}, Landroid/renderscript/Element;->F32(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 64
+    invoke-static {v1}, Landroid/renderscript/Element;->F32_2(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 65
+    invoke-static {v1}, Landroid/renderscript/Element;->F32_3(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mRS:Landroid/renderscript/RenderScript;
+
+    .line 66
+    invoke-static {v1}, Landroid/renderscript/Element;->F32_4(Landroid/renderscript/RenderScript;)Landroid/renderscript/Element;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/renderscript/Element;->isCompatible(Landroid/renderscript/Element;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 67
+    :cond_0
+    const-string p0, "Unsupported element type."
+
+    invoke-static {p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$6(Ljava/lang/String;)V
+
+    return-void
+
+    .line 70
+    :cond_1
+    :goto_0
+    iput-object p1, p0, Landroid/renderscript/ScriptIntrinsicResize;->mInput:Landroid/renderscript/Allocation;
+
+    const/4 v0, 0x0
+
+    .line 71
+    invoke-virtual {p0, v0, p1}, Landroid/renderscript/ScriptIntrinsicResize;->setVar(ILandroid/renderscript/BaseObj;)V
+
+    return-void
+.end method

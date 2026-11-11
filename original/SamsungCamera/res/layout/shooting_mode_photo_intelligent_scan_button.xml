@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/scan_layout" android:tag="layout/shooting_mode_photo_intelligent_scan_button_0" android:background="@drawable/scan_button_background_light" android:layout_width="wrap_content" android:layout_height="@dimen/scan_button_height" android:paddingStart="@dimen/scan_button_start_margin" android:paddingEnd="@dimen/scan_button_end_margin" android:stateListAnimator="?seslSmallTouchAnimator">
+        <ImageView android:layout_gravity="center" android:id="@id/scan_icon" android:background="@android:color/transparent" android:padding="@dimen/scan_icon_padding" android:layout_width="@dimen/scan_icon_size" android:layout_height="@dimen/scan_icon_size" android:src="@drawable/ic_intelligence_scan" android:contentDescription="@string/scan" />
+        <TextView android:textAppearance="@style/SecSemiBold" android:textSize="@dimen/scan_text_font_size" android:textColor="@color/scan_button_text_color" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/scan" android:layout_marginStart="@dimen/scan_button_side_margin" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="@dimen/widget_floating_quick_close_icon_size" android:width="@dimen/widget_floating_quick_close_icon_size" android:viewportWidth="40.0" android:viewportHeight="40.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffffffff" android:pathData="M20,32C26.627,32 32,26.627 32,20C32,13.373 26.627,8 20,8C13.373,8 8,13.373 8,20C8,26.627 13.373,32 20,32Z" android:fillAlpha="0.1" />
+    <path android:fillColor="#fffcfcff" android:pathData="M16.306,16.307C16.582,16.031 17.029,16.031 17.305,16.307L20,19.002L22.695,16.307C22.97,16.031 23.417,16.031 23.693,16.307C23.969,16.582 23.969,17.029 23.693,17.305L20.998,20L23.693,22.695C23.969,22.971 23.969,23.418 23.693,23.693C23.417,23.969 22.97,23.969 22.695,23.693L20,20.998L17.305,23.693C17.029,23.969 16.582,23.969 16.306,23.693C16.031,23.418 16.031,22.971 16.306,22.695L19.001,20L16.306,17.305C16.031,17.029 16.031,16.582 16.306,16.307Z" android:fillType="evenOdd" />
+</vector>

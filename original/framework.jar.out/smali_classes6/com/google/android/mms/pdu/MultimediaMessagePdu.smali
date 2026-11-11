@@ -1,0 +1,176 @@
+.class public Lcom/google/android/mms/pdu/MultimediaMessagePdu;
+.super Lcom/google/android/mms/pdu/GenericPdu;
+.source "MultimediaMessagePdu.java"
+
+
+# instance fields
+.field private blacklist mMessageBody:Lcom/google/android/mms/pdu/PduBody;
+
+
+# direct methods
+.method public constructor greylist <init>()V
+    .locals 0
+
+    .line 39
+    invoke-direct {p0}, Lcom/google/android/mms/pdu/GenericPdu;-><init>()V
+
+    return-void
+.end method
+
+.method constructor blacklist <init>(Lcom/google/android/mms/pdu/PduHeaders;)V
+    .locals 0
+
+    .line 60
+    invoke-direct {p0, p1}, Lcom/google/android/mms/pdu/GenericPdu;-><init>(Lcom/google/android/mms/pdu/PduHeaders;)V
+
+    return-void
+.end method
+
+.method public constructor greylist <init>(Lcom/google/android/mms/pdu/PduHeaders;Lcom/google/android/mms/pdu/PduBody;)V
+    .locals 0
+
+    .line 50
+    invoke-direct {p0, p1}, Lcom/google/android/mms/pdu/GenericPdu;-><init>(Lcom/google/android/mms/pdu/PduHeaders;)V
+
+    .line 51
+    iput-object p2, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mMessageBody:Lcom/google/android/mms/pdu/PduBody;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public greylist-max-r addTo(Lcom/google/android/mms/pdu/EncodedStringValue;)V
+    .locals 1
+
+    .line 122
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x97
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/mms/pdu/PduHeaders;->appendEncodedStringValue(Lcom/google/android/mms/pdu/EncodedStringValue;I)V
+
+    return-void
+.end method
+
+.method public greylist getBody()Lcom/google/android/mms/pdu/PduBody;
+    .locals 0
+
+    .line 70
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mMessageBody:Lcom/google/android/mms/pdu/PduBody;
+
+    return-object p0
+.end method
+
+.method public greylist getDate()J
+    .locals 2
+
+    .line 153
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x85
+
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/PduHeaders;->getLongInteger(I)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public greylist getPriority()I
+    .locals 1
+
+    .line 132
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x8f
+
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/PduHeaders;->getOctet(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public greylist getSubject()Lcom/google/android/mms/pdu/EncodedStringValue;
+    .locals 1
+
+    .line 90
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x96
+
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/PduHeaders;->getEncodedStringValue(I)Lcom/google/android/mms/pdu/EncodedStringValue;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public greylist getTo()[Lcom/google/android/mms/pdu/EncodedStringValue;
+    .locals 1
+
+    .line 111
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x97
+
+    invoke-virtual {p0, v0}, Lcom/google/android/mms/pdu/PduHeaders;->getEncodedStringValues(I)[Lcom/google/android/mms/pdu/EncodedStringValue;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public greylist setBody(Lcom/google/android/mms/pdu/PduBody;)V
+    .locals 0
+
+    .line 80
+    iput-object p1, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mMessageBody:Lcom/google/android/mms/pdu/PduBody;
+
+    return-void
+.end method
+
+.method public greylist-max-r setDate(J)V
+    .locals 1
+
+    .line 163
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x85
+
+    invoke-virtual {p0, p1, p2, v0}, Lcom/google/android/mms/pdu/PduHeaders;->setLongInteger(JI)V
+
+    return-void
+.end method
+
+.method public greylist-max-r setPriority(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/android/mms/InvalidHeaderValueException;
+        }
+    .end annotation
+
+    .line 143
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x8f
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/mms/pdu/PduHeaders;->setOctet(II)V
+
+    return-void
+.end method
+
+.method public greylist setSubject(Lcom/google/android/mms/pdu/EncodedStringValue;)V
+    .locals 1
+
+    .line 101
+    iget-object p0, p0, Lcom/google/android/mms/pdu/MultimediaMessagePdu;->mPduHeaders:Lcom/google/android/mms/pdu/PduHeaders;
+
+    const/16 v0, 0x96
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/android/mms/pdu/PduHeaders;->setEncodedStringValue(Lcom/google/android/mms/pdu/EncodedStringValue;I)V
+
+    return-void
+.end method

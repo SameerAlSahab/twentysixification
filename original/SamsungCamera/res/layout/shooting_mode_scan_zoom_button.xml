@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/touch_area" android:tag="layout/shooting_mode_scan_zoom_button_0" android:background="@color/transparent" android:clickable="true" android:layout_width="@dimen/scan_zoom_button_group_size" android:layout_height="@dimen/scan_zoom_button_group_size">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/zoom_group" android:tag="@string/scan_zoom_level" android:background="@drawable/camera_scan_zoom_bg" android:layout_width="@dimen/scan_zoom_button_group_size" android:layout_height="@dimen/scan_zoom_button_group_size" android:layout_centerInParent="true" android:stateListAnimator="?seslSmallTouchAnimator">
+            <com.sec.android.app.camera.widget.StrokedTextView android:textSize="@dimen/scan_zoom_button_text_size" android:textColor="@color/zoom_main_text_color" android:gravity="center" android:id="@id/zoom_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1.0" android:includeFontPadding="false" android:shadowColor="@color/zoom_main_text_shadow_color" android:shadowDx="@integer/zoom_text_shadow_dx" android:shadowDy="@integer/zoom_text_shadow_dy" android:shadowRadius="@integer/zoom_text_shadow_radius" android:importantForAccessibility="no" android:textDirection="ltr" android:textAlignment="center" app:textViewStroke="true" app:textViewStrokeColor="@color/zoom_text_stroke_color" app:textViewStrokeWidth="@integer/default_stroke_width" style="@style/SecNumFixedBold" />
+        </LinearLayout>
+    </RelativeLayout>
+</merge>

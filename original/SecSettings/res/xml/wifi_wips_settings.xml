@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifi_mobile_wips"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_wifi_ap_settings_main_switch_bar_preference" android:key="mobile_wips_main_switch_layout_preference" android:order="0" />
+    <Preference android:persistent="false" android:layout="@layout/wips_widget_preference_unclickable_with_history" android:selectable="false" android:key="wips_desc" android:order="1" settings:roundStroke="none" />
+    <PreferenceCategory android:key="wips_history_up" android:order="2" settings:isPreferenceVisible="true" />
+    <PreferenceCategory android:order="3">
+        <Preference android:title="@string/wifi_mobile_wips_exception" android:key="wifi_wips_exception_networks_settings" android:fragment="com.samsung.android.settings.wifi.intelligent.MobileWIPSExceptionList" />
+    </PreferenceCategory>
+</PreferenceScreen>

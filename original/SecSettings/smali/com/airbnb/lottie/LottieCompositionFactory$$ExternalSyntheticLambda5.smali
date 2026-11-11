@@ -1,0 +1,94 @@
+.class public final synthetic Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Lcom/airbnb/lottie/LottieListener;
+
+
+# instance fields
+.field public final synthetic $r8$classId:I
+
+.field public synthetic f$0:Ljava/lang/String;
+
+.field public synthetic f$1:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;->$r8$classId:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onResult(Ljava/lang/Object;)V
+    .locals 2
+
+    iget v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;->$r8$classId:I
+
+    const/4 v1, 0x1
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;->f$0:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;->f$1:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    sget-object p1, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->size()I
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    invoke-static {}, Lcom/airbnb/lottie/LottieCompositionFactory;->notifyTaskCacheIdleListeners()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;->f$0:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/airbnb/lottie/LottieCompositionFactory$$ExternalSyntheticLambda5;->f$1:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
+
+    sget-object p1, Lcom/airbnb/lottie/LottieCompositionFactory;->taskCache:Ljava/util/Map;
+
+    check-cast p1, Ljava/util/HashMap;
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    invoke-virtual {p1}, Ljava/util/HashMap;->size()I
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-static {}, Lcom/airbnb/lottie/LottieCompositionFactory;->notifyTaskCacheIdleListeners()V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

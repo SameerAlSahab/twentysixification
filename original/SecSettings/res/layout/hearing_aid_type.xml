@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_bluetooth_hearing_aid_type"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_le_hearing_aid" android:key="sec_bluetooth_hearing_aid_type_leaudio" settings:allowDividerBelow="false" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_button_preference_divider" android:selectable="false" android:key="divider" />
+    <com.samsung.android.settings.widget.SecRadioButtonPreference android:title="@string/sec_bluetooth_asha_hearing_aid" android:key="sec_bluetooth_hearing_aid_type_asha" settings:allowDividerBelow="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+</PreferenceScreen>

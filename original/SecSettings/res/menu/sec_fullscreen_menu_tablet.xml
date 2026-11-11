@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@id/app_default" android:title="@string/sec_set_aspect_ratio_for_each_app_app_default" />
+        <item android:id="@id/app_full_screen" android:title="@string/sec_set_aspect_ratio_for_each_app_full_screen" />
+    </group>
+</menu>

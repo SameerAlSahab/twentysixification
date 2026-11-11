@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.settings.widget.SettingsMainSwitchBar android:id="@id/switch_bar" android:background="@color/sec_widget_round_and_bgcolor" android:paddingBottom="@dimen/sec_widget_switchbar_padding_bottom" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

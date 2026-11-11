@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="sud_glif_expressive_blank_template">@layout/sud_glif_expressive_blank_template_card</item>
+    <item type="layout" name="sud_glif_expressive_embedded_template">@layout/sud_glif_embedded_template_card</item>
+    <item type="layout" name="sud_glif_expressive_fullscreen_loading_embedded_template">@layout/sud_glif_fullscreen_loading_embedded_template_card</item>
+    <item type="layout" name="sud_glif_expressive_fullscreen_loading_template">@layout/sud_glif_expressive_fullscreen_loading_template_card</item>
+    <item type="layout" name="sud_glif_expressive_list_embedded_template">@layout/sud_glif_list_embedded_template_card</item>
+    <item type="layout" name="sud_glif_expressive_list_template">@layout/sud_glif_expressive_list_template_card</item>
+    <item type="layout" name="sud_glif_expressive_loading_embedded_template">@layout/sud_glif_loading_embedded_template_card</item>
+    <item type="layout" name="sud_glif_expressive_loading_template">@layout/sud_glif_expressive_loading_template_card</item>
+    <item type="layout" name="sud_glif_expressive_preference_embedded_template">@layout/sud_glif_blank_embedded_template_card</item>
+    <item type="layout" name="sud_glif_expressive_preference_template">@layout/sud_glif_expressive_preference_template_card</item>
+    <item type="layout" name="sud_glif_expressive_recycler_embedded_template">@layout/sud_glif_recycler_embedded_template_card</item>
+    <item type="layout" name="sud_glif_expressive_recycler_template">@layout/sud_glif_expressive_recycler_template_card</item>
+    <item type="layout" name="sud_glif_expressive_template">@layout/sud_glif_expressive_template_card</item>
+</resources>

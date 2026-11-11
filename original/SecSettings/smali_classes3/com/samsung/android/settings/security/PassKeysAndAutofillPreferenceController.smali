@@ -1,0 +1,252 @@
+.class public Lcom/samsung/android/settings/security/PassKeysAndAutofillPreferenceController;
+.super Lcom/android/settings/core/BasePreferenceController;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "com.samsung.android.settings.security.PassKeysAndAutofillPreferenceController"
+
+
+# instance fields
+.field private mCredentialManager:Landroid/credentials/CredentialManager;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lcom/android/settings/core/BasePreferenceController;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    const-class p2, Landroid/credentials/CredentialManager;
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/credentials/CredentialManager;
+
+    iput-object p1, p0, Lcom/samsung/android/settings/security/PassKeysAndAutofillPreferenceController;->mCredentialManager:Landroid/credentials/CredentialManager;
+
+    return-void
+.end method
+
+.method private getAllProviders(I)Ljava/util/List;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Lcom/android/settings/applications/credentials/CombinedProviderInfo;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    invoke-static {v0, p1}, Landroid/service/autofill/AutofillServiceInfo;->getAvailableServices(Landroid/content/Context;I)Ljava/util/List;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+
+    sget-object v2, Lcom/samsung/android/settings/security/PassKeysAndAutofillPreferenceController;->TAG:Ljava/lang/String;
+
+    invoke-static {v1, p1, v2}, Lcom/android/settings/applications/credentials/CredentialManagerPreferenceController;->getSelectedAutofillProvider(Landroid/content/Context;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {p0, p1}, Lcom/samsung/android/settings/security/PassKeysAndAutofillPreferenceController;->getAvailableCredmanProvider(I)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-static {v0, p0, v1}, Lcom/android/settings/applications/credentials/CombinedProviderInfo;->buildMergedList(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method private getAvailableCredmanProvider(I)Ljava/util/List;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)",
+            "Ljava/util/List<",
+            "Landroid/credentials/CredentialProviderInfo;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iget-object p0, p0, Lcom/samsung/android/settings/security/PassKeysAndAutofillPreferenceController;->mCredentialManager:Landroid/credentials/CredentialManager;
+
+    if-eqz p0, :cond_0
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, p1, v1}, Landroid/credentials/CredentialManager;->getCredentialProviderServices(II)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    :cond_0
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public bridge synthetic getAsyncDBUri()Landroid/net/Uri;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public getAvailabilityStatus()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic getBackgroundWorkerClass()Ljava/lang/Class;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public getBackupKeys()Ljava/util/List;
+    .locals 0
+
+    new-instance p0, Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getIntentFilter()Landroid/content/IntentFilter;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getLaunchIntent()Landroid/content/Intent;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getSliceHighlightMenuRes()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic getStatusText()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getValue()Lcom/samsung/android/settings/cube/ControlValue;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic hasAsyncDBUpdate()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic hasAsyncUpdate()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic ignoreUserInteraction()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public bridge synthetic isControllable()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic isPublicSlice()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic isSliceable()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic needUserInteraction(Ljava/lang/Object;)Lcom/samsung/android/settings/cube/Controllable$ControllableType;
+    .locals 0
+
+    sget-object p0, Lcom/samsung/android/settings/cube/Controllable$ControllableType;->NO_INTERACTION:Lcom/samsung/android/settings/cube/Controllable$ControllableType;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic runDefaultAction()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public bridge synthetic setValue(Lcom/samsung/android/settings/cube/ControlValue;)Lcom/samsung/android/settings/cube/ControlResult;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic useDynamicSliceSummary()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method

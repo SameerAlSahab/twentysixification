@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center" android:id="@id/widget_root_layout" android:layout_width="@dimen/sesl_appwidget_preview_large_width" android:layout_height="@dimen/sesl_appwidget_preview_large_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/widget_image" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/widget_sample_image_large" android:scaleType="fitXY" android:clipToOutline="true" />
+    <ImageView android:id="@id/widget_dim_image" android:background="@drawable/widget_medium_large_dim_image" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/text_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginHorizontal="@dimen/sesl_appwidget_preview_padding_standard_1" android:layout_marginVertical="@dimen/sesl_appwidget_preview_padding_standard_2">
+        <TextView android:textSize="@dimen/sesl_appwidget_preview_text_size_level_12" android:textColor="@color/widget_text_white_color" android:ellipsize="end" android:id="@id/widget_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_sample_title" android:maxLines="2" style="@style/SecSemiBold" />
+        <TextView android:textSize="@dimen/sesl_appwidget_preview_text_size_level_16" android:textColor="@color/widget_text_white_color" android:ellipsize="end" android:id="@id/widget_mode_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SM_PHOTO" android:maxLines="2" style="@style/SecRegular" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:filterTouchesWhenObscured="true" style="?sudItemContainerStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.google.android.setupdesign.view.RichTextView android:gravity="start" android:id="@id/sud_items_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="?sudItemTitleStyle" />
+            <com.google.android.setupdesign.view.RichTextView android:gravity="start" android:id="@id/sud_items_summary" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="viewStart" style="?sudItemSummaryStyle" />
+        </LinearLayout>
+        <CheckBox android:layout_gravity="top" android:id="@id/sud_items_check_box" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout android:gravity="start" android:layout_gravity="center_vertical" android:id="@id/sud_items_icon_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/sud_items_icon" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingslib_expressive_space_small1" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+    </FrameLayout>
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/sud_items_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settingslib_expressive_space_small1" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+</LinearLayout>

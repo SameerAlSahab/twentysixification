@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ItemGroup android:id="@id/magnification_screen_in_suw"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.accessibility.setupwizard.items.IllustrationItem android:id="@id/magnification_illustration_in_suw" />
+    <SectionItem android:id="@id/magnification_option_in_suw" android:title="@string/accessibility_screen_option">
+        <com.android.settings.accessibility.setupwizard.items.TwoTargetItem android:id="@id/magnification_shortcut_in_suw" />
+        <SwitchItem android:id="@id/magnify_keyboard_in_suw" android:title="@string/accessibility_screen_magnification_nav_ime_title" android:summary="@string/accessibility_screen_magnification_nav_ime_summary" />
+    </SectionItem>
+    <com.android.settings.accessibility.setupwizard.items.FooterItem android:id="@id/magnification_footer_in_suw" />
+</ItemGroup>

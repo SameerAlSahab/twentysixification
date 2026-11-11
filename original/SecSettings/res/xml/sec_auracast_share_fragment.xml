@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sec_auracast_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_auracast_share_card_layout" android:selectable="false" android:key="key_auracast_share_card_layout" settings:controller="com.samsung.android.settings.bluetooth.audiobroadcast.SecAuracastShareCardController" settings:searchable="false" />
+    <PreferenceCategory android:title="" android:key="key_bottom_dummy_preference_category">
+        <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_auracast_share_bottom_dummy_layout" android:selectable="false" android:key="key_bottom_dummy_preference" settings:controller="com.samsung.android.settings.bluetooth.audiobroadcast.SecAuracastShareDummyPreferenceController" />
+    </PreferenceCategory>
+</PreferenceScreen>

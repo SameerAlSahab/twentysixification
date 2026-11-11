@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/tool_tip_parent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:filterTouchesWhenObscured="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/tool_tip_container" android:paddingTop="@dimen/sud_setup_tooltip_padding_top" android:paddingBottom="@dimen/sud_setup_tooltip_padding_bottom" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/sud_setup_tooltip_min_width" android:minHeight="@dimen/sud_setup_tooltip_min_height" android:importantForAccessibility="no">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="@dimen/sud_setup_tooltip_width" android:layout_height="wrap_content">
+            <com.google.android.setupdesign.view.RichTextView android:id="@id/text_primary_tooltip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" style="?sudItemTitleStyle" />
+            <com.google.android.setupdesign.view.RichTextView android:id="@id/text_secondary_tooltip" android:paddingTop="@dimen/sud_setup_tooltip_secondary_text_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" style="?sudItemSummaryStyle" />
+            <com.google.android.material.button.MaterialButton android:textSize="@dimen/sud_setup_tooltip_button_text_size" android:textColor="@color/sud_on_secondary_container" android:layout_gravity="center_horizontal" android:id="@id/button_primary_tooltip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sud_setup_tooltip_button_margin_top" android:fontFamily="sans-serif-medium" app:cornerRadius="@dimen/sud_setup_tooltip_button_corner_radius" app:strokeColor="@color/sud_on_secondary_container" app:strokeWidth="@dimen/sud_setup_tooltip_button_stroke_width" style="@style/Widget.Material3.Button.OutlinedButton" />
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

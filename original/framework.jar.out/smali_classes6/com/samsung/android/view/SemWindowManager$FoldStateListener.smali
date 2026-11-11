@@ -1,0 +1,22 @@
+.class public interface abstract Lcom/samsung/android/view/SemWindowManager$FoldStateListener;
+.super Ljava/lang/Object;
+.source "SemWindowManager.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/android/view/SemWindowManager;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "FoldStateListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract whitelist onFoldStateChanged(Z)V
+.end method
+
+.method public abstract whitelist onTableModeChanged(Z)V
+.end method

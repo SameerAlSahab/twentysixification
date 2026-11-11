@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="user_details_settings_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/sec_user_profile_header" android:selectable="false" android:key="user_detail_header" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.widget.SecRestrictedPreference android:key="switch_user" />
+    <SwitchPreference android:title="@string/user_grant_admin" android:key="user_grant_admin" />
+    <SwitchPreference android:title="@string/user_enable_calling_sms" android:key="enable_calling" />
+    <com.samsung.android.settings.widget.SecRestrictedPreference android:title="@string/user_restrictions_title" android:key="app_and_content_access" />
+    <com.samsung.android.settings.widget.SecRestrictedPreference android:title="@string/user_copy_apps_menu_title" android:key="app_copying" />
+    <com.samsung.android.settings.widget.SecRestrictedPreference android:key="remove_user" settings:useAdminDisabledSummary="true" settings:userRestriction="no_remove_user" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <Preference android:title="@string/guest_reset_button" android:key="guest_reset" />
+    <Preference android:title="@string/guest_exit_button" android:key="guest_exit" />
+    <com.android.settingslib.RestrictedSwitchPreference android:title="@string/remove_guest_on_exit" android:key="remove_guest_on_exit" settings:keywords="@string/remove_guest_on_exit_keywords" />
+    <SeslPreferenceCaption android:title="@string/remove_guest_on_exit_summary" android:key="remove_guest_on_exit_caption" settings:searchable="false" />
+    <com.android.settingslib.RestrictedSwitchPreference android:title="@string/enable_guest_calling" android:key="enable_guest_calling" android:singleLineTitle="false" />
+    <SeslPreferenceCaption android:title="@string/enable_guest_calling_summary" android:key="enable_guest_calling_caption" settings:searchable="false" />
+</PreferenceScreen>

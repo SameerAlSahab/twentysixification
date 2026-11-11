@@ -1,0 +1,77 @@
+.class public final Lcom/google/android/material/timepicker/ClockFaceView$1;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+
+# instance fields
+.field public synthetic this$0:Lcom/google/android/material/timepicker/ClockFaceView;
+
+
+# virtual methods
+.method public final onPreDraw()Z
+    .locals 3
+
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView$1;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->isShown()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView$1;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView$1;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getHeight()I
+
+    move-result v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    iget-object p0, p0, Lcom/google/android/material/timepicker/ClockFaceView$1;->this$0:Lcom/google/android/material/timepicker/ClockFaceView;
+
+    iget-object v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->clockHandView:Lcom/google/android/material/timepicker/ClockHandView;
+
+    iget v2, v2, Lcom/google/android/material/timepicker/ClockHandView;->selectorRadius:I
+
+    sub-int/2addr v0, v2
+
+    iget v2, p0, Lcom/google/android/material/timepicker/ClockFaceView;->clockHandPadding:I
+
+    sub-int/2addr v0, v2
+
+    iget v2, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
+
+    if-eq v0, v2, :cond_1
+
+    iput v0, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
+
+    invoke-virtual {p0}, Lcom/google/android/material/timepicker/ClockFaceView;->updateLayoutParams()V
+
+    iget-object v0, p0, Lcom/google/android/material/timepicker/ClockFaceView;->clockHandView:Lcom/google/android/material/timepicker/ClockHandView;
+
+    iget p0, p0, Lcom/google/android/material/timepicker/RadialViewGroup;->radius:I
+
+    iput p0, v0, Lcom/google/android/material/timepicker/ClockHandView;->circleRadius:I
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    :goto_0
+    return v1
+.end method

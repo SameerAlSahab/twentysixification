@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/on_sceen_keyboard_title" android:key="key_dex_mode_keyboard_settings_screen" settings:hierarchicalParentFragment="com.samsung.android.settings.multidevices.DexModeSettingsFragment"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.SwitchPreferenceCompat android:title="@string/show_on_screen_keyboard" android:key="key_dex_mode_on_screen_keyboard_connected_display" />
+    <androidx.preference.SwitchPreferenceCompat android:title="@string/on_screen_keyboard_physical" android:key="key_dex_mode_on_screen_keyboard_physical_connected" android:summary="@string/on_screen_keyboard_physical_summary" />
+    <PreferenceCategory>
+        <androidx.preference.Preference android:title="@string/dex_mode_keyboard_settings_more_settings" android:key="key_dex_mode_keyboard_settings_more_settings" />
+    </PreferenceCategory>
+</PreferenceScreen>

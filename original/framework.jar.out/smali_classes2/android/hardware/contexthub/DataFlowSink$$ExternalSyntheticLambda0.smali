@@ -1,0 +1,42 @@
+.class public final synthetic Landroid/hardware/contexthub/DataFlowSink$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "D8$$SyntheticClass"
+
+# interfaces
+.implements Landroid/os/CancellationSignal$OnCancelListener;
+
+
+# instance fields
+.field public final synthetic blacklist f$0:Landroid/hardware/contexthub/DataFlowSink;
+
+.field public final synthetic blacklist f$1:Landroid/hardware/contexthub/DataFlowSink$AsyncState;
+
+
+# direct methods
+.method public synthetic constructor blacklist <init>(Landroid/hardware/contexthub/DataFlowSink;Landroid/hardware/contexthub/DataFlowSink$AsyncState;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Landroid/hardware/contexthub/DataFlowSink$$ExternalSyntheticLambda0;->f$0:Landroid/hardware/contexthub/DataFlowSink;
+
+    iput-object p2, p0, Landroid/hardware/contexthub/DataFlowSink$$ExternalSyntheticLambda0;->f$1:Landroid/hardware/contexthub/DataFlowSink$AsyncState;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final whitelist onCancel()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Landroid/hardware/contexthub/DataFlowSink$$ExternalSyntheticLambda0;->f$0:Landroid/hardware/contexthub/DataFlowSink;
+
+    iget-object p0, p0, Landroid/hardware/contexthub/DataFlowSink$$ExternalSyntheticLambda0;->f$1:Landroid/hardware/contexthub/DataFlowSink$AsyncState;
+
+    invoke-static {v0, p0}, Landroid/hardware/contexthub/DataFlowSink;->$r8$lambda$SUjGaNQOwVpnZ7spdbgxzlpBuvk(Landroid/hardware/contexthub/DataFlowSink;Landroid/hardware/contexthub/DataFlowSink$AsyncState;)V
+
+    return-void
+.end method

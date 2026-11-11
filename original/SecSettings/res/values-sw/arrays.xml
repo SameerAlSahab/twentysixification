@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="animator_duration_scale_entries">
+        <item>Uhuishaji umezimwa</item>
+        <item>Mizani .5x ya uhuishaji</item>
+        <item>Mizani ya uhuishaji ya 1x</item>
+        <item>Mizani 1.5x ya uhuishaji</item>
+        <item>Mizani 2x ya uhuishaji</item>
+        <item>Mizani 5x ya uhuishaji</item>
+        <item>Mizani 10x ya uhuishaji</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Hamna</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP au CHAP</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Kiwango cha wastani</item>
+        <item>Hakuna michakato ya mandhari nyuma</item>
+        <item>Angalau mchakato 1</item>
+        <item>Angalau michakato 2</item>
+        <item>Angalau michakato 3</item>
+        <item>Angalau michakato 4</item>
+    </string-array>
+    <string-array name="battery_labels">
+        <item>0%</item>
+        <item>50%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_bits_per_sample_summaries">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>Biti 16 kwa kila sampuli</item>
+        <item>Biti 24 kwa kila sampuli</item>
+        <item>Biti 32 kwa kila sampuli</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_bits_per_sample_titles">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>Biti 16 kwa kila sampuli</item>
+        <item>Biti 24 kwa kila sampuli</item>
+        <item>Biti 32 kwa kila sampuli</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_channel_mode_summaries">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_channel_mode_titles">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>Mono</item>
+        <item>Stereo</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_summaries">
+        <item>Imeimarishwa kwa ajili ya Ubora wa Sauti</item>
+        <item>Ubora wa Muunganisho na Sauti Umesawazishwa</item>
+        <item>Imeimarishwa kwa ajili ya Ubora wa Muunganisho</item>
+        <item>Kazi Bora Zaidi (Kasi Maalum ya Biti)</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_ldac_playback_quality_titles">
+        <item>Imeimarishwa kwa ajili ya Ubora wa Sauti (990kbps/909kbps)</item>
+        <item>Ubora wa Muunganisho na Sauti Umesawazishwa (660kbps/606kbps)</item>
+        <item>Imeimarishwa kwa ajili ya Ubora wa Muunganisho (330kbps/303kbps)</item>
+        <item>Kazi Bora Zaidi (Kasi Maalum ya Biti)</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_sample_rate_summaries">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>kHz 44.1</item>
+        <item>kHz 48.0</item>
+        <item>kHz 88.2</item>
+        <item>kHz 96.0</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_sample_rate_titles">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>kHz 44.1</item>
+        <item>kHz 48.0</item>
+        <item>kHz 88.2</item>
+        <item>kHz 96.0</item>
+    </string-array>
+    <string-array name="bluetooth_a2dp_codec_summaries">
+        <item>Tumia Uteuzi wa Mfumo (Chaguomsingi)</item>
+        <item>SBC</item>
+        <item>AAC</item>
+        <item>Sauti ya Qualcomm® aptX™</item>
+        <item>Sauti ya Qualcomm® aptX™ HD</item>
+        <item>LDAC</item>
+        <item>Opus</item>
+    </string-array>
+    <string-array name="bluetooth_audio_active_device_summaries">
+        <item></item>
+        <item>, inatumika</item>
+        <item>, inatumika (maudhui)</item>
+        <item>, inatumika (simu)</item>
+    </string-array>
+    <string-array name="bluetooth_avrcp_version_values">
+        <item>avrcp15</item>
+        <item>avrcp13</item>
+        <item>avrcp14</item>
+        <item>avrcp16</item>
+    </string-array>
+    <string-array name="bluetooth_avrcp_versions">
+        <item>AVRCP 1.5 (Chaguomsingi)</item>
+        <item>AVRCP 1.3</item>
+        <item>AVRCP 1.4</item>
+        <item>AVRCP 1.6</item>
+    </string-array>
+    <string-array name="bluetooth_cast_timeout_entries">
+        <item>Dakika 5</item>
+        <item>Dakika 10</item>
+        <item>Dakika 30</item>
+        <item>Usikate muunganisho</item>
+    </string-array>
+    <string-array name="bluetooth_map_version_values">
+        <item>map14</item>
+        <item>ramani ya 13</item>
+        <item>map12</item>
+    </string-array>
+    <string-array name="bluetooth_map_versions">
+        <item>MAP 1.4 (Chaguomsingi)</item>
+        <item>RAMANI YA 1.3</item>
+        <item>MAP 1.2</item>
+    </string-array>
+    <string-array name="bluetooth_max_connected_audio_devices">
+        <item>Chaguomsingi ya mfumo: %d</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="bluetooth_sap_activation_entries">
+        <item>Chaguomsingi (hakuna madoido)</item>
+        <item>Washa SAP kwa nguvu</item>
+        <item>Zima SAP kwa nguvu</item>
+    </string-array>
+    <string-array name="bt_hci_snoop_log_entries">
+        <item>Imezimwa</item>
+        <item>Vichujio Vilivyowekwa</item>
+        <item>Imewashwa</item>
+    </string-array>
+    <string-array name="bt_hci_snoop_log_filters_entries">
+        <item>Acha vijajuu vya ACL pekee</item>
+        <item>Chuja kifurushi cha maudhui cha A2DP</item>
+        <item>Chuja kituo cha RFCOMM</item>
+    </string-array>
+    <string-array name="bt_hci_snoop_log_profile_filter_entries">
+        <item>Zima</item>
+        <item>Jaza ukitumia mfuatano wa herufi</item>
+        <item>Acha kijajuu pekee</item>
+        <item>Ondoa kabisa</item>
+    </string-array>
+    <string-array name="captioning_edge_type_selector_titles">
+        <item>Chaguomsingi</item>
+        <item>Hakuna</item>
+        <item>Ufupisho</item>
+        <item>Drop Shadow</item>
+        <item>Raised</item>
+        <item>Depressed</item>
+    </string-array>
+    <string-array name="captioning_font_size_selector_titles">
+        <item>Ndogo sana</item>
+        <item>Ndogo</item>
+        <item>Wastani</item>
+        <item>Kubwa</item>
+        <item>Kubwa sana</item>
+    </string-array>
+    <string-array name="captioning_preset_selector_titles">
+        <item>Chaguomsingi</item>
+        <item>White on black</item>
+        <item>Black on white</item>
+        <item>Yellow on black</item>
+        <item>Yellow on blue</item>
+        <item>Maalum</item>
+    </string-array>
+    <string-array name="captioning_typeface_selector_titles">
+        <item>Chaguomsingi</item>
+        <item>Sans serif</item>
+        <item>Sans serif condensed</item>
+        <item>Sans serif monospace</item>
+        <item>Serif</item>
+        <item>Serif monospace</item>
+        <item>Kawaida</item>
+        <item>Cursive</item>
+        <item>Small caps</item>
+    </string-array>
+    <string-array name="color_mode_descriptions">
+        <item>Rangi zilizoboreshwa</item>
+        <item>Rangi asili kama zinavyoonekana kwa macho</item>
+        <item>Rangi zilizoboreshwa kwa ajili ya maudhui dijitali</item>
+    </string-array>
+    <string-array name="color_mode_names">
+        <item>Maridadi (chaguomsingi)</item>
+        <item>Asili</item>
+        <item>Muundo-msingi</item>
+    </string-array>
+    <string-array name="data_usage_billing_cycle_summary">
+        <item>Siku ya 1 ya kila mwezi</item>
+        <item>Siku ya 2 ya kila mwezi</item>
+        <item>Siku ya 3 ya kila mwezi</item>
+        <item>Siku ya 4 ya kila mwezi</item>
+        <item>Siku ya 5 ya kila mwezi</item>
+        <item>Siku ya 6 ya kila mwezi</item>
+        <item>Siku ya 7 ya kila mwezi</item>
+        <item>Siku ya 8 ya kila mwezi</item>
+        <item>Siku ya 9 ya kila mwezi</item>
+        <item>Siku ya 10 ya kila mwezi</item>
+        <item>Siku ya 11 ya kila mwezi</item>
+        <item>Siku ya 12 ya kila mwezi</item>
+        <item>Siku ya 13 ya kila mwezi</item>
+        <item>Siku ya 14 ya kila mwezi</item>
+        <item>Siku ya 15 ya kila mwezi</item>
+        <item>Siku ya 16 ya kila mwezi</item>
+        <item>Siku ya 17 ya kila mwezi</item>
+        <item>Siku ya 18 ya kila mwezi</item>
+        <item>Siku ya 19 ya kila mwezi</item>
+        <item>Siku ya 20 ya kila mwezi</item>
+        <item>Siku ya 21 ya kila mwezi</item>
+        <item>Siku ya 22 ya kila mwezi</item>
+        <item>Siku ya 23 ya kila mwezi</item>
+        <item>Siku ya 24 ya kila mwezi</item>
+        <item>Siku ya 25 ya kila mwezi</item>
+        <item>Siku ya 26 ya kila mwezi</item>
+        <item>Siku ya 27 ya kila mwezi</item>
+        <item>Siku ya 28 ya kila mwezi</item>
+        <item>Siku ya 29 ya kila mwezi</item>
+        <item>Siku ya 30 ya kila mwezi</item>
+        <item>Siku ya 31 ya kila mwezi</item>
+    </string-array>
+    <string-array name="debug_hw_overdraw_entries">
+        <item>Zima</item>
+        <item>Onyesha maeneo yaliyoondolewa</item>
+        <item>Onyesha sehemu za Upofu Rangi Kijani</item>
+    </string-array>
+    <string-array name="dex_timeout_entries">
+        <item>Sekunde 15</item>
+        <item>Sekunde 30</item>
+        <item>Dakika 1</item>
+        <item>Dakika 2</item>
+        <item>Dakika 5</item>
+        <item>Dakika 10</item>
+        <item>Dakika 20</item>
+        <item>Dakika 30</item>
+        <item>Dakika 60</item>
+    </string-array>
+    <string-array name="enable_opengl_traces_entries">
+        <item>Hamna</item>
+        <item>Logcat</item>
+        <item>Systrace (Michoro)</item>
+        <item>Simu imekwama kwenye glGetError</item>
+    </string-array>
+    <string-array name="external_display_timeout_entries">
+        <item>Sekunde 15</item>
+        <item>Sekunde 30</item>
+        <item>Dakika 1</item>
+        <item>Dakika 2</item>
+        <item>Dakika 5</item>
+        <item>Dakika 10</item>
+        <item>Dakika 20</item>
+        <item>Dakika 30</item>
+        <item>Dakika 60</item>
+    </string-array>
+    <string-array name="gpuwatch_rendering_api_entries">
+        <item>Vulkan</item>
+        <item>OpenGL</item>
+    </string-array>
+    <string-array name="gpuwatch_widget_positions">
+        <item>Juu - Kushoto</item>
+        <item>Juu - Mlalo wa katikati</item>
+        <item>Juu - Kulia</item>
+        <item>Katikati kuenda juu - Kushoto</item>
+        <item>Katikati kuenda juu - Kulia</item>
+        <item>Chini - kushoto</item>
+        <item>Chini - Katikati ya usawa</item>
+        <item>Chini - Kulia</item>
+    </string-array>
+    <string-array name="grammatical_gender_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Katu usitumie kikaguaji cha HDCP</item>
+        <item>Tumia ukaguaji wa HDCP kwa maudhui ya DRM pekee</item>
+        <item>Kila wakati tumia ukakuaji wa HDCP</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Katu usikague</item>
+        <item>Chunguza maudhui ya DRM pekee</item>
+        <item>Kagua kila wakati</item>
+    </string-array>
+    <string-array name="key_backlight_entries">
+        <item>Always off</item>
+        <item>Sekunde 1</item>
+        <item>Sekunde 3</item>
+        <item>Sekunde 5</item>
+        <item>Sekunde 10</item>
+        <item>Sekunde 15</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Maramoja</item>
+        <item>Sekunde 5</item>
+        <item>Sekunde 15</item>
+        <item>Sekunde 30</item>
+        <item>Dakika 1</item>
+        <item>Dakika 2</item>
+        <item>Dakika 5</item>
+        <item>Dakika 10</item>
+        <item>Dakika 30</item>
+    </string-array>
+    <string-array name="mouse_pointer_color_type">
+        <item>Nyeupe</item>
+        <item>Nyeusi</item>
+        <item>Feruzi</item>
+        <item>Njano</item>
+        <item>Nyekundu chepesi</item>
+        <item>Urujuani chepesi</item>
+        <item>Bluu nyepesi</item>
+    </string-array>
+    <string-array name="mvno_type_entries">
+        <item>Hakuna</item>
+        <item>SPN</item>
+        <item>IMSI</item>
+        <item>GID</item>
+    </string-array>
+    <string-array name="num_allowed_devices">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="overlay_display_devices_entries">
+        <item>Hamna</item>
+        <item>480p</item>
+        <item>480p (ya nje, salama)</item>
+        <item>720p</item>
+        <item>720p (ya nje, salama)</item>
+        <item>1080p</item>
+        <item>1080p (ya nje, salama)</item>
+        <item>4K</item>
+        <item>4K (salama, ya nje)</item>
+        <item>4k (iliyoboreshwa)</item>
+        <item>4K (iliyoboreshwa, ya nje, salama)</item>
+        <item>720p, 1080p (dual screen ya nje, salama)</item>
+    </string-array>
+    <string-array name="ram_states">
+        <item>Normal</item>
+        <item>Moderate</item>
+        <item>Low</item>
+        <item>Critical</item>
+        <item>\?</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>Sekunde 15</item>
+        <item>Sekunde 30</item>
+        <item>Dakika 1</item>
+        <item>Dakika 2</item>
+        <item>Dakika 5</item>
+        <item>Dakika 10</item>
+        <item>Dakika 30</item>
+    </string-array>
+    <string-array name="sec_bt_stack_log_level_entries">
+        <item>Maneno mengi</item>
+        <item>Tatua</item>
+        <item>Maelezo</item>
+        <item>Toa tahadhari</item>
+        <item>Hitilafu</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_phone">
+        <item>Pata simu yako ikiwa imepotea.</item>
+        <item>Sawazisha programu na mipangilio kwenye vifaa vyako vyote.</item>
+        <item>Shiriki faili na marafiki, familia na vifaa vingine.</item>
+    </string-array>
+    <string-array name="sec_samsung_account_benefit_message_tablet">
+        <item>Pata tableti yako ikiwa imepotea.</item>
+        <item>Shiriki faili na marafiki, familia na vifaa vingine.</item>
+        <item>Nakili na ubandike kati ya simu na tableti yako.</item>
+        <item>Badili kiotomatiki Buds zako kati ya vifaa.</item>
+        <item>Jibu simu na maandishi kwenye tableti yako.</item>
+    </string-array>
+    <string-array name="security_settings_premium_sms_values">
+        <item>Uliza kila wakati</item>
+        <item>Kamwe usiruhusu</item>
+        <item>Ruhusu kila wakati</item>
+    </string-array>
+    <string-array name="select_logd_size_lowram_titles">
+        <item>Imezimwa</item>
+        <item>K64</item>
+        <item>K256</item>
+        <item>M1</item>
+    </string-array>
+    <string-array name="select_logd_size_summaries">
+        <item>Imezimwa</item>
+        <item>K64 kwa kila akiba ya kumbukumbu</item>
+        <item>K256 kwa kila akiba ya kumbukumbu</item>
+        <item>M1 kwa kila akiba ya kumbukumbu</item>
+        <item>M4 kwa kila akiba ya kumbukumbu</item>
+        <item>MB 8 kwa kila akiba ya kumbukumbu</item>
+    </string-array>
+    <string-array name="select_logd_size_titles">
+        <item>Imezimwa</item>
+        <item>K64</item>
+        <item>K256</item>
+        <item>M1</item>
+        <item>M4</item>
+        <item>MB 8</item>
+    </string-array>
+    <string-array name="select_logpersist_summaries">
+        <item>Imezimwa</item>
+        <item>Akiba ya kumbukumbu zote</item>
+        <item>Zote isipokuwa akiba ya kumbukumbu za redio</item>
+        <item>akiba ya kumbukumbu ya keneli pekee</item>
+    </string-array>
+    <string-array name="select_logpersist_titles">
+        <item>Yamezimwa</item>
+        <item>Zote</item>
+        <item>Zote isipokuwa redio</item>
+        <item>kiini pekee</item>
+    </string-array>
+    <string-array name="shade_display_awareness_entries">
+        <item>Kwenye skrini ya kifaa pekee (Chaguomsingi)</item>
+        <item>Skrini ya nje</item>
+        <item>Matumizi ya hivi majuzi zaidi ya sehemu ya arifa</item>
+        <item>Inayoangaziwa</item>
+    </string-array>
+    <string-array name="shade_display_awareness_summaries">
+        <item>Onyesha kiwango kwenye skrini ya kifaa pekee</item>
+        <item>Onyesha kiwango kwenye skrini moja ya nje</item>
+        <item>Onyesha kiwango kwenye skrini ambayo sehemu yake ya arifa ilitumiwa hivi majuzi</item>
+        <item>Onyesha kiwango kwenye skrini iliyoangaziwa mwisho kabisa</item>
+    </string-array>
+    <string-array name="shade_display_awareness_values">
+        <item>default_display</item>
+        <item>any_external_display</item>
+        <item>status_bar_latest_touch</item>
+        <item>focused_display</item>
+    </string-array>
+    <string-array name="show_non_rect_clip_entries">
+        <item>Imezimwa</item>
+        <item>Chora eneo la klipu lisilo mstatili kwa rangi ya bluu</item>
+        <item>Angazia amri za michoro iliyojaribiwa kwa rangi ya kijani</item>
+    </string-array>
+    <string-array name="track_frame_time_entries">
+        <item>Imezimwa</item>
+        <item>Kwenye skrini kama pau</item>
+        <item>Katika adb shell dumpsys gfxinfo</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Uhuishaji umezimwa</item>
+        <item>Skeli .5x ya uhuishaji</item>
+        <item>Mizani ya uhuishaji ya 1x</item>
+        <item>Skeli 1.5x ya uhuishaji</item>
+        <item>Skeli 2x ya uhuishaji</item>
+        <item>Skeli 5x ya uhuishaji</item>
+        <item>Skeli ya 10x ya uhuishaji</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Asilimia 60</item>
+        <item>Asilimia 80</item>
+        <item>Asilimia 100</item>
+        <item>Asilimia 150</item>
+        <item>Asilimia 200</item>
+        <item>Asilimia 250</item>
+        <item>Asilimia 300</item>
+        <item>Asilimia 350</item>
+        <item>Asilimia 400</item>
+    </string-array>
+    <string-array name="usb_configuration_titles">
+        <item>Inachaji</item>
+        <item>MTP (Itifaki ya Kuhamisha Maudhui)</item>
+        <item>PTP (Itifaki ya Kuhamisha Picha)</item>
+        <item>RNDIS (Ethaneti ya USB)</item>
+        <item>Chanzo cha Sauti</item>
+        <item>MIDI</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_phone">
+        <item>Simu</item>
+        <item>Televisheni au skrini</item>
+    </string-array>
+    <string-array name="virtual_keyboard_location_on_tablet">
+        <item>Tableti</item>
+        <item>Televisheni au skrini</item>
+    </string-array>
+    <string-array name="vpn_proxy_settings">
+        <item>Hakuna</item>
+        <item>Mwongozo</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Imetenganishwa</item>
+        <item>Inafungua…</item>
+        <item>Inaunganisha…</item>
+        <item>Imeunganishwa</item>
+        <item>Timeout</item>
+        <item>Haijafaulu</item>
+    </string-array>
+    <string-array name="wifi_ap_broadcast_channel_entries">
+        <item>Otomatiki</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_phone_entries">
+        <item>MAC isiyo na mpangilio</item>
+        <item>Simu MAC</item>
+    </string-array>
+    <string-array name="wifi_ap_mac_address_type_tablet_entries">
+        <item>MAC isiyo na mpangilio</item>
+        <item>Tableti MAC</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_security_type_entries1">
+        <item>Fungua</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_owe_wpa3_security_type_entries">
+        <item>Fungua</item>
+        <item>Enhanced Open</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_security_type_entries1">
+        <item>Fungua</item>
+        <item>WPA2-Personal</item>
+    </string-array>
+    <string-array name="wifi_ap_turn_off_hotspot_timer_entries">
+        <item>Muda usiishe kamwe</item>
+        <item>5 minutes</item>
+        <item>Dakika 10</item>
+        <item>20 minutes</item>
+        <item>30 minutes</item>
+        <item>60 minutes</item>
+    </string-array>
+    <string-array name="wifi_ap_wifi_sharing">
+        <item>Turn on Wi-Fi sharing</item>
+        <item>Turn off Wi-Fi sharing</item>
+    </string-array>
+    <string-array name="wifi_ap_wpa3_security_type_entries">
+        <item>Fungua</item>
+        <item>WPA2-Personal</item>
+        <item>WPA2/WPA3-Personal</item>
+        <item>WPA3-Personal</item>
+    </string-array>
+    <string-array name="wifi_connect_entries">
+        <item>Otomatiki</item>
+        <item>Mwongozo</item>
+        <item>Uliza kila mara</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Tuli</item>
+    </string-array>
+    <string-array name="wifi_metered_entries">
+        <item>Detect automatically</item>
+        <item>Treat as metered</item>
+        <item>Treat as unmetered</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Imeunganishwa</item>
+        <item>Umealikwa</item>
+        <item>"Imesh'wa kuunganisha"</item>
+        <item>Donoa hapa ili kuunganisha.</item>
+        <item>Nje ya masafa.</item>
+        <item>Imeunganishwa na kifaa kingine</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Hakuna</item>
+        <item>Mwongozo</item>
+        <item>Auto-config</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Inachanganua…</item>
+        <item>Inaunganisha…</item>
+        <item>Inathibitisha…</item>
+        <item>Inapata anwani ya IP…</item>
+        <item>Imeunganishwa</item>
+        <item>Imesitishwa</item>
+        <item>Inaondoa…</item>
+        <item>Imetenganishwa</item>
+        <item>Haijafaulu</item>
+        <item>Blocked</item>
+        <item>Checking the quality of your Internet connection…</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Inasafisha...</item>
+        <item>Inaunganisha kwa %1$s…</item>
+        <item>Uhalalishaji kwa %1$s…</item>
+        <item>Inamiliki anwani ya IP kutoka %1$s…</item>
+        <item>Umeunganishwa kwa %1$s</item>
+        <item>Imesimamishwa</item>
+        <item>inakatisha muunganisho kutoka %1$s…</item>
+        <item>Muunganisho Umekatika</item>
+        <item>Haijafanikiwa</item>
+        <item>Imezuiwa</item>
+        <item>Inaepuka kwa muda muunganisho mbovu</item>
+    </string-array>
+    <string-array name="wifitrackerlib_wifi_status">
+        <item></item>
+        <item>Inatafuta…</item>
+        <item>Inaunganisha…</item>
+        <item>Inathibitisha…</item>
+        <item>Inapata anwani ya IP…</item>
+        <item>Imeunganishwa</item>
+        <item>Imesimamishwa</item>
+        <item>Inatenganisha…</item>
+        <item>Imetenganishwa</item>
+        <item>Imeshindwa kuunganisha</item>
+        <item>Imezuiwa</item>
+        <item>Inaepuka kwa muda muunganisho mbovu</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Uhuishaji umezimwa</item>
+        <item>Skeli .5x ya uhuishaji</item>
+        <item>Mizani ya uhuishaji ya 1x</item>
+        <item>Skeli 1.5x ya uhuishaji</item>
+        <item>Skeli 2x ya uhuishaji</item>
+        <item>Skeli 5x ya uhuishaji</item>
+        <item>Skeli 10x ya uhuishaji</item>
+    </string-array>
+</resources>

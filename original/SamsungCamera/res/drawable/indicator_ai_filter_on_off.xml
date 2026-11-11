@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/$indicator_ai_filter_on_off__0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <target android:name="s10p10" android:animation="@drawable/$indicator_ai_filter_on_off__6" />
+    <target android:name="s9pg1p300" android:animation="@drawable/$indicator_ai_filter_on_off__7" />
+    <target android:name="s8pg1p400" android:animation="@drawable/$indicator_ai_filter_on_off__8" />
+    <target android:name="s6pg1p10" android:animation="@drawable/$indicator_ai_filter_on_off__9" />
+    <target android:name="s5pg1p300" android:animation="@drawable/$indicator_ai_filter_on_off__10" />
+    <target android:name="s4pg17p10" android:animation="@drawable/$indicator_ai_filter_on_off__11" />
+    <target android:name="s4pg16p10" android:animation="@drawable/$indicator_ai_filter_on_off__12" />
+    <target android:name="s4pg15p10" android:animation="@drawable/$indicator_ai_filter_on_off__13" />
+    <target android:name="s4pg14p10" android:animation="@drawable/$indicator_ai_filter_on_off__14" />
+    <target android:name="s4pg13p10" android:animation="@drawable/$indicator_ai_filter_on_off__15" />
+    <target android:name="s4pg12p10" android:animation="@drawable/$indicator_ai_filter_on_off__16" />
+    <target android:name="s4pg11p10" android:animation="@drawable/$indicator_ai_filter_on_off__17" />
+    <target android:name="s4pg10p10" android:animation="@drawable/$indicator_ai_filter_on_off__18" />
+    <target android:name="s4pg9p10" android:animation="@drawable/$indicator_ai_filter_on_off__19" />
+    <target android:name="s4pg8p10" android:animation="@drawable/$indicator_ai_filter_on_off__20" />
+    <target android:name="s4pg7p10" android:animation="@drawable/$indicator_ai_filter_on_off__21" />
+    <target android:name="s4pg6p10" android:animation="@drawable/$indicator_ai_filter_on_off__22" />
+    <target android:name="s4pg5p10" android:animation="@drawable/$indicator_ai_filter_on_off__23" />
+    <target android:name="s4pg4p10" android:animation="@drawable/$indicator_ai_filter_on_off__24" />
+    <target android:name="s4pg3p10" android:animation="@drawable/$indicator_ai_filter_on_off__25" />
+    <target android:name="s4pg2p10" android:animation="@drawable/$indicator_ai_filter_on_off__26" />
+    <target android:name="s4pg1p10" android:animation="@drawable/$indicator_ai_filter_on_off__27" />
+    <target android:name="s3pg1p10" android:animation="@drawable/$indicator_ai_filter_on_off__28" />
+    <target android:name="s2pg1p300" android:animation="@drawable/$indicator_ai_filter_on_off__29" />
+    <target android:name="s1pg17p10" android:animation="@drawable/$indicator_ai_filter_on_off__30" />
+    <target android:name="s1pg16p10" android:animation="@drawable/$indicator_ai_filter_on_off__31" />
+    <target android:name="s1pg15p10" android:animation="@drawable/$indicator_ai_filter_on_off__32" />
+    <target android:name="s1pg14p10" android:animation="@drawable/$indicator_ai_filter_on_off__33" />
+    <target android:name="s1pg13p10" android:animation="@drawable/$indicator_ai_filter_on_off__34" />
+    <target android:name="s1pg12p10" android:animation="@drawable/$indicator_ai_filter_on_off__35" />
+    <target android:name="s1pg11p10" android:animation="@drawable/$indicator_ai_filter_on_off__36" />
+    <target android:name="s1pg10p10" android:animation="@drawable/$indicator_ai_filter_on_off__37" />
+    <target android:name="s1pg9p10" android:animation="@drawable/$indicator_ai_filter_on_off__38" />
+    <target android:name="s1pg8p10" android:animation="@drawable/$indicator_ai_filter_on_off__39" />
+    <target android:name="s1pg7p10" android:animation="@drawable/$indicator_ai_filter_on_off__40" />
+    <target android:name="s1pg6p10" android:animation="@drawable/$indicator_ai_filter_on_off__41" />
+    <target android:name="s1pg5p10" android:animation="@drawable/$indicator_ai_filter_on_off__42" />
+    <target android:name="s1pg4p10" android:animation="@drawable/$indicator_ai_filter_on_off__43" />
+    <target android:name="s1pg3p10" android:animation="@drawable/$indicator_ai_filter_on_off__44" />
+    <target android:name="s1pg2p10" android:animation="@drawable/$indicator_ai_filter_on_off__45" />
+    <target android:name="s1pg1p10" android:animation="@drawable/$indicator_ai_filter_on_off__46" />
+</animated-vector>

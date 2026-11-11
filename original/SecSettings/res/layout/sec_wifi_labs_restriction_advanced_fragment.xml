@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <Preference android:key="network_restriction_downtime" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <SecSwitchPreference android:key="network_restriction_browser_restrictor" />
+        <SecSwitchPreference android:key="network_restriction_game_restrictor" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference android:key="network_restriction_change_pin" />
+        <Preference android:key="network_restriction_delete_pin" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference android:key="network_restriction_clear_history" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="face_detected">
+        <item quantity="other">%d fytyra</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d fytyrë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="max_scan_counter_reached">
+        <item quantity="other">Nuk mund të skanohen më shumë se %d faqe në të njëjtën kohë. Fshi faqet e skanuara ose ruaje këtë skanim dhe fillo një të ri.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Nuk mund të skanohen më shumë se %d faqe në të njëjtën kohë. Fshi faqet e skanuara ose ruaje këtë skanim dhe fillo një të ri.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="more_than_limit">
+        <item quantity="other">S’mund të futësh më shumë se %d shenja.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">S’mund të futësh më shumë se %d shenjë.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="multi_scan_item_selected">
+        <item quantity="other">%d janë përzgjedhur</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d është përzgjedhur</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="my_filter_reached_max_count">
+        <item quantity="other">S‘mund të krijohen më shumë se %d filtra të personalizuar.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">S‘mund të krijohet më shumë se %d filtër i personalizuar.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="scan_dialog_delete_scans">
+        <item quantity="other">Do të heqësh %d skanime?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Do të heqësh %d skanim?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_hour_plurals">
+        <item quantity="other">Koha e gjumit: %d orë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Koha e gjumit: %d orë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_min_plurals">
+        <item quantity="other">Koha e gjumit: %d minuta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Koha e gjumit: %d minutë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_hyperlaplse_duration_minutes">
+        <item quantity="other">%d minuta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minutë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_super_resolution_torch_high_temperature_warning">
+        <item quantity="other">Për të shmangur mbinxehjen, mos regjistro më shumë se %d minuta video 8K.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Për të shmangur mbinxehjen, mos regjistro më shumë se %d minutë video 8K.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_torch_high_temperature_warning">
+        <item quantity="other">Për të shmangur mbinxehjen, mos regjistro më shumë se %1$d minuta %2$s.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Për të shmangur mbinxehjen, mos regjistro më shumë se %1$d minutë %2$s.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_hyperlaplse_duration_minutes">
+        <item quantity="other">%d minuta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minutë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_photo_size">
+        <item quantity="other">%d megapikselë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d megapiksel</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours">
+        <item quantity="other">%d orë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d orë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute">
+        <item quantity="other">%d orë një minutë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d orë një minutë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute_one_second">
+        <item quantity="other">%d orë një minutë një sekondë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d orë një minutë një sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_second">
+        <item quantity="other">%d orë një sekondë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d orë një sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_minutes_one_second">
+        <item quantity="other">%d minuta një sekondë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minutë një sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_seconds">
+        <item quantity="other">%d sekonda</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes">
+        <item quantity="other">Një orë %d minuta</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Një orë %d minutë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes_one_second">
+        <item quantity="other">Një orë %d minuta një sekondë</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Një orë %d minutë një sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_seconds">
+        <item quantity="other">Një orë %d sekonda</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Një orë %d sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_one_minute_n_seconds">
+        <item quantity="other">Një orë një minutë %d sekonda</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Një orë një minutë %d sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_minute_n_seconds">
+        <item quantity="other">Një minutë %d sekonda</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Një minutë %d sekondë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_cropped">
+        <item quantity="other">U krasitën %d fytyra</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">U krasit %d fytyrë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_detected">
+        <item quantity="other">U pikasën %d fytyra</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">U pikas %d fytyrë</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_more_than_faces">
+        <item quantity="other">Më shumë se %1$d fytyra, %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Më shumë se %1$d fytyrë, %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_one_face_cropped">
+        <item quantity="other">%1$d fytyra u krasitën nga %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$d fytyrë u krasit nga %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+</resources>

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change id="150880553" name="PHONE_STATE_LISTENER_LIMIT_CHANGE_ID"><meta-data definedIn="android.telephony.TelephonyCallback"/></compat-change><compat-change id="433336412" name="PREVENT_CALLBACK_REREGISTRATION"><meta-data definedIn="android.telephony.TelephonyCallback"/></compat-change></config>

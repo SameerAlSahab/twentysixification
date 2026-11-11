@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.util.SeslShapeDrawable android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/sesl_white" />
+    <size android:height="@dimen/add_delete_button_size" android:width="@dimen/add_delete_button_size" />
+</androidx.appcompat.util.SeslShapeDrawable>

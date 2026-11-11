@@ -1,0 +1,70 @@
+.class public Landroid/telephony/TelephonyLocalConnection;
+.super Ljava/lang/Object;
+.source "TelephonyLocalConnection.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;
+    }
+.end annotation
+
+
+# static fields
+.field private static blacklist sInstance:Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 0
+
+    .line 27
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static blacklist checkInstance()V
+    .locals 1
+
+    .line 39
+    sget-object v0, Landroid/telephony/TelephonyLocalConnection;->sInstance:Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 40
+    :cond_0
+    const-string v0, "Connection impl is null!"
+
+    invoke-static {v0}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$5(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static blacklist getCallComposerServerUrlForHandle(ILjava/util/UUID;)Ljava/lang/String;
+    .locals 1
+
+    .line 34
+    invoke-static {}, Landroid/telephony/TelephonyLocalConnection;->checkInstance()V
+
+    .line 35
+    sget-object v0, Landroid/telephony/TelephonyLocalConnection;->sInstance:Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;
+
+    invoke-interface {v0, p0, p1}, Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;->getCallComposerServerUrlForHandle(ILjava/util/UUID;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist setInstance(Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;)V
+    .locals 0
+
+    .line 45
+    sput-object p0, Landroid/telephony/TelephonyLocalConnection;->sInstance:Landroid/telephony/TelephonyLocalConnection$ConnectionImpl;
+
+    return-void
+.end method

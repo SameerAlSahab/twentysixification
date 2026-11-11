@@ -1,0 +1,72 @@
+.class Lcom/samsung/android/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;
+.super Landroid/os/Handler;
+.source "NfcLedCoverTouchListenerDelegate.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/android/cover/NfcLedCoverTouchListenerDelegate;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0xa
+    name = "ListenerDelegateHandler"
+.end annotation
+
+
+# instance fields
+.field private final greylist mListener:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;
+
+
+# direct methods
+.method constructor greylist <init>(Landroid/os/Looper;Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;)V
+    .locals 0
+
+    .line 77
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 78
+    iput-object p2, p0, Lcom/samsung/android/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist handleMessage(Landroid/os/Message;)V
+    .locals 1
+
+    .line 83
+    iget-object v0, p0, Lcom/samsung/android/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;
+
+    if-eqz v0, :cond_2
+
+    .line 84
+    iget p1, p1, Landroid/os/Message;->what:I
+
+    if-eqz p1, :cond_1
+
+    const/4 v0, 0x1
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 89
+    :cond_0
+    iget-object p0, p0, Lcom/samsung/android/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;
+
+    invoke-virtual {p0}, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;->onCoverTouchReject()V
+
+    return-void
+
+    .line 86
+    :cond_1
+    iget-object p0, p0, Lcom/samsung/android/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;
+
+    invoke-virtual {p0}, Lcom/samsung/android/cover/CoverManager$NfcLedCoverTouchListener;->onCoverTouchAccept()V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method

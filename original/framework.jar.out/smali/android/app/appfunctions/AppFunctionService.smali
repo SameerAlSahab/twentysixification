@@ -1,0 +1,82 @@
+.class public abstract Landroid/app/appfunctions/AppFunctionService;
+.super Landroid/app/Service;
+.source "AppFunctionService.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/app/appfunctions/AppFunctionService$OnExecuteFunction;
+    }
+.end annotation
+
+
+# static fields
+.field public static final whitelist SERVICE_INTERFACE:Ljava/lang/String; = "android.app.appfunctions.AppFunctionService"
+
+.field private static final blacklist TAG:Ljava/lang/String; = "AppFunctionService"
+
+
+# instance fields
+.field private final blacklist mBinder:Landroid/os/Binder;
+
+
+# direct methods
+.method public constructor whitelist <init>()V
+    .locals 1
+
+    .line 83
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
+
+    .line 187
+    new-instance v0, Landroid/app/appfunctions/AppFunctionService$$ExternalSyntheticLambda0;
+
+    invoke-direct {v0, p0}, Landroid/app/appfunctions/AppFunctionService$$ExternalSyntheticLambda0;-><init>(Landroid/app/appfunctions/AppFunctionService;)V
+
+    .line 188
+    invoke-static {p0, v0}, Landroid/app/appfunctions/AppFunctionService;->createBinder(Landroid/content/Context;Landroid/app/appfunctions/AppFunctionService$OnExecuteFunction;)Landroid/os/Binder;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/app/appfunctions/AppFunctionService;->mBinder:Landroid/os/Binder;
+
+    return-void
+.end method
+
+.method public static blacklist createBinder(Landroid/content/Context;Landroid/app/appfunctions/AppFunctionService$OnExecuteFunction;)Landroid/os/Binder;
+    .locals 1
+
+    .line 120
+    new-instance v0, Landroid/app/appfunctions/AppFunctionService$1;
+
+    invoke-direct {v0, p0, p1}, Landroid/app/appfunctions/AppFunctionService$1;-><init>(Landroid/content/Context;Landroid/app/appfunctions/AppFunctionService$OnExecuteFunction;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final whitelist onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 0
+
+    .line 193
+    iget-object p0, p0, Landroid/app/appfunctions/AppFunctionService;->mBinder:Landroid/os/Binder;
+
+    return-object p0
+.end method
+
+.method public abstract whitelist onExecuteFunction(Landroid/app/appfunctions/ExecuteAppFunctionRequest;Ljava/lang/String;Landroid/content/pm/SigningInfo;Landroid/os/CancellationSignal;Landroid/os/OutcomeReceiver;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/app/appfunctions/ExecuteAppFunctionRequest;",
+            "Ljava/lang/String;",
+            "Landroid/content/pm/SigningInfo;",
+            "Landroid/os/CancellationSignal;",
+            "Landroid/os/OutcomeReceiver<",
+            "Landroid/app/appfunctions/ExecuteAppFunctionResponse;",
+            "Landroid/app/appfunctions/AppFunctionException;",
+            ">;)V"
+        }
+    .end annotation
+.end method

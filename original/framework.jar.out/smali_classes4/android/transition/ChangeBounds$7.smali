@@ -1,0 +1,116 @@
+.class Landroid/transition/ChangeBounds$7;
+.super Landroid/transition/TransitionListenerAdapter;
+.source "ChangeBounds.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/transition/ChangeBounds;->createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field blacklist mCanceled:Z
+
+.field final synthetic blacklist val$parent:Landroid/view/ViewGroup;
+
+
+# direct methods
+.method constructor blacklist <init>(Landroid/transition/ChangeBounds;Landroid/view/ViewGroup;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            null,
+            null
+        }
+    .end annotation
+
+    .line 325
+    iput-object p2, p0, Landroid/transition/ChangeBounds$7;->val$parent:Landroid/view/ViewGroup;
+
+    invoke-direct {p0}, Landroid/transition/TransitionListenerAdapter;-><init>()V
+
+    const/4 p1, 0x0
+
+    .line 326
+    iput-boolean p1, p0, Landroid/transition/ChangeBounds$7;->mCanceled:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist onTransitionCancel(Landroid/transition/Transition;)V
+    .locals 1
+
+    .line 330
+    iget-object p1, p0, Landroid/transition/ChangeBounds$7;->val$parent:Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->suppressLayout(Z)V
+
+    const/4 p1, 0x1
+
+    .line 331
+    iput-boolean p1, p0, Landroid/transition/ChangeBounds$7;->mCanceled:Z
+
+    return-void
+.end method
+
+.method public whitelist onTransitionEnd(Landroid/transition/Transition;)V
+    .locals 2
+
+    .line 336
+    iget-boolean v0, p0, Landroid/transition/ChangeBounds$7;->mCanceled:Z
+
+    if-nez v0, :cond_0
+
+    .line 337
+    iget-object v0, p0, Landroid/transition/ChangeBounds$7;->val$parent:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
+
+    .line 339
+    :cond_0
+    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
+
+    return-void
+.end method
+
+.method public whitelist onTransitionPause(Landroid/transition/Transition;)V
+    .locals 0
+
+    .line 344
+    iget-object p0, p0, Landroid/transition/ChangeBounds$7;->val$parent:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
+
+    return-void
+.end method
+
+.method public whitelist onTransitionResume(Landroid/transition/Transition;)V
+    .locals 0
+
+    .line 349
+    iget-object p0, p0, Landroid/transition/ChangeBounds$7;->val$parent:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
+
+    return-void
+.end method

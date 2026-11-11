@@ -1,0 +1,20 @@
+.class public interface abstract Lcom/samsung/android/settings/wifi/mobileap/WifiApSwitchEnabler1$OnStateChangeListener;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+
+# virtual methods
+.method public abstract onDialogShowing(Ljava/lang/String;)V
+.end method
+
+.method public abstract onDialogSuccess(Ljava/lang/String;)V
+.end method
+
+.method public abstract onEnablingError(Ljava/lang/String;)V
+.end method
+
+.method public abstract onSwitchStateChange(ZZZLjava/lang/String;)V
+.end method
+
+.method public abstract onWifiApStateChanged(Landroid/content/Intent;)V
+.end method

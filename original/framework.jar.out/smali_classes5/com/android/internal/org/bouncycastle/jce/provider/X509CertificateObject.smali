@@ -1,0 +1,2876 @@
+.class public Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;
+.super Ljava/security/cert/X509Certificate;
+.source "X509CertificateObject.java"
+
+# interfaces
+.implements Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;
+
+
+# instance fields
+.field private blacklist attrCarrier:Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;
+
+.field private blacklist basicConstraints:Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;
+
+.field private blacklist c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+.field private blacklist encoded:[B
+
+.field private blacklist hashValue:I
+
+.field private blacklist hashValueSet:Z
+
+.field private blacklist keyUsage:[Z
+
+
+# direct methods
+.method public constructor blacklist <init>(Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;)V
+    .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateParsingException;
+        }
+    .end annotation
+
+    .line 90
+    invoke-direct {p0}, Ljava/security/cert/X509Certificate;-><init>()V
+
+    .line 85
+    new-instance v0, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/util/PKCS12BagAttributeCarrierImpl;
+
+    invoke-direct {v0}, Lcom/android/internal/org/bouncycastle/jcajce/provider/asymmetric/util/PKCS12BagAttributeCarrierImpl;-><init>()V
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->attrCarrier:Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;
+
+    .line 91
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    .line 95
+    :try_start_0
+    const-string p1, "2.5.29.19"
+
+    invoke-direct {p0, p1}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getExtensionBytes(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 99
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;->fromByteArray([B)Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->basicConstraints:Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 109
+    :cond_0
+    :try_start_1
+    const-string p1, "2.5.29.15"
+
+    invoke-direct {p0, p1}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getExtensionBytes(Ljava/lang/String;)[B
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    .line 112
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;->fromByteArray([B)Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;
+
+    move-result-object p1
+
+    .line 114
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getBytes()[B
+
+    move-result-object v0
+
+    .line 115
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x8
+
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getPadBits()I
+
+    move-result p1
+
+    sub-int/2addr v1, p1
+
+    const/16 p1, 0x9
+
+    if-ge v1, p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move p1, v1
+
+    .line 117
+    :goto_0
+    new-array p1, p1, [Z
+
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->keyUsage:[Z
+
+    const/4 p1, 0x0
+
+    move v2, p1
+
+    :goto_1
+    if-eq v2, v1, :cond_3
+
+    .line 121
+    iget-object v3, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->keyUsage:[Z
+
+    div-int/lit8 v4, v2, 0x8
+
+    aget-byte v4, v0, v4
+
+    rem-int/lit8 v5, v2, 0x8
+
+    const/16 v6, 0x80
+
+    ushr-int v5, v6, v5
+
+    and-int/2addr v4, v5
+
+    if-eqz v4, :cond_2
+
+    const/4 v4, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    move v4, p1
+
+    :goto_2
+    aput-boolean v4, v3, v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-void
+
+    :cond_4
+    const/4 p1, 0x0
+
+    .line 126
+    iput-object p1, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->keyUsage:[Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 131
+    const-string p1, "cannot construct KeyUsage: "
+
+    invoke-static {p1, p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$13(Ljava/lang/String;Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+
+    :catch_1
+    move-exception p0
+
+    .line 104
+    const-string p1, "cannot construct BasicConstraints: "
+
+    invoke-static {p1, p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$13(Ljava/lang/String;Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    throw p0
+.end method
+
+.method private blacklist calculateHashCode()I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    .line 613
+    :try_start_0
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getEncoded()[B
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    move v2, v0
+
+    .line 614
+    :goto_0
+    array-length v3, p0
+
+    if-ge v1, v3, :cond_0
+
+    .line 616
+    aget-byte v3, p0, v1
+    :try_end_0
+    .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    mul-int/2addr v3, v1
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return v2
+
+    :catch_0
+    return v0
+.end method
+
+.method private blacklist checkSignature(Ljava/security/PublicKey;Ljava/security/Signature;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateException;,
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/SignatureException;,
+            Ljava/security/InvalidKeyException;
+        }
+    .end annotation
+
+    .line 808
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v1}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getSignature()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->isAlgIdEqual(Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 813
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v0
+
+    .line 816
+    invoke-static {p2, v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509SignatureUtil;->setSignatureParameters(Ljava/security/Signature;Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    .line 818
+    invoke-virtual {p2, p1}, Ljava/security/Signature;->initVerify(Ljava/security/PublicKey;)V
+
+    .line 820
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getTBSCertificate()[B
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Ljava/security/Signature;->update([B)V
+
+    .line 822
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSignature()[B
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Ljava/security/Signature;->verify([B)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return-void
+
+    .line 824
+    :cond_0
+    new-instance p0, Ljava/security/SignatureException;
+
+    const-string p1, "certificate does not verify with supplied key"
+
+    invoke-direct {p0, p1}, Ljava/security/SignatureException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 810
+    :cond_1
+    new-instance p0, Ljava/security/cert/CertificateException;
+
+    const-string/jumbo p1, "signature algorithm in TBS cert not same as outer cert"
+
+    invoke-direct {p0, p1}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method private static blacklist getAlternativeNames([B)Ljava/util/Collection;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateParsingException;
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return-object v0
+
+    .line 867
+    :cond_0
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 868
+    invoke-static {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getObjects()Ljava/util/Enumeration;
+
+    move-result-object p0
+
+    .line 869
+    :catch_0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 871
+    invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;
+
+    move-result-object v2
+
+    .line 872
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 873
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getTagNo()I
+
+    move-result v4
+
+    invoke-static {v4}, Lcom/android/internal/org/bouncycastle/util/Integers;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 874
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getTagNo()I
+
+    move-result v4
+
+    packed-switch v4, :pswitch_data_0
+
+    .line 908
+    new-instance p0, Ljava/io/IOException;
+
+    goto :goto_2
+
+    .line 892
+    :pswitch_0
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getName()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 895
+    :pswitch_1
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getName()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/internal/org/bouncycastle/asn1/DEROctetString;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;->getOctets()[B
+
+    move-result-object v2
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 899
+    :try_start_1
+    invoke-static {v2}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
+
+    move-result-object v2
+    :try_end_1
+    .catch Ljava/net/UnknownHostException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 905
+    :try_start_2
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 883
+    :pswitch_2
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getName()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/X509Name;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x509/X509Name;
+
+    move-result-object v2
+
+    sget-object v4, Lcom/android/internal/org/bouncycastle/asn1/x509/X509Name;->DefaultSymbols:Ljava/util/Hashtable;
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v2, v5, v4}, Lcom/android/internal/org/bouncycastle/asn1/x509/X509Name;->toString(ZLjava/util/Hashtable;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 889
+    :pswitch_3
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getName()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/internal/org/bouncycastle/asn1/ASN1String;
+
+    invoke-interface {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1String;->getString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    .line 879
+    :pswitch_4
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getEncoded()[B
+
+    move-result-object v2
+
+    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 911
+    :goto_1
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 908
+    :goto_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Bad tag number: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/GeneralName;->getTagNo()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    .line 913
+    :cond_1
+    invoke-interface {v1}, Ljava/util/Collection;->size()I
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return-object v0
+
+    .line 917
+    :cond_2
+    invoke-static {v1}, Ljava/util/Collections;->unmodifiableCollection(Ljava/util/Collection;)Ljava/util/Collection;
+
+    move-result-object p0
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    return-object p0
+
+    :catch_1
+    move-exception p0
+
+    .line 921
+    new-instance v0, Ljava/security/cert/CertificateParsingException;
+
+    invoke-virtual {p0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/security/cert/CertificateParsingException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_3
+        :pswitch_4
+        :pswitch_2
+        :pswitch_4
+        :pswitch_3
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private blacklist getExtensionBytes(Ljava/lang/String;)[B
+    .locals 1
+
+    .line 426
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getExtensions()Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 430
+    new-instance v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-direct {v0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->getExtension(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 433
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->getExtnValue()Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;->getOctets()[B
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method private blacklist isAlgIdEqual(Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;)Z
+    .locals 2
+
+    .line 830
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    move-result-object p0
+
+    invoke-virtual {p2}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->equals(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result p0
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    return v0
+
+    .line 835
+    :cond_0
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    if-nez p0, :cond_2
+
+    .line 837
+    invoke-virtual {p2}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p2}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    sget-object p1, Lcom/android/internal/org/bouncycastle/asn1/DERNull;->INSTANCE:Lcom/android/internal/org/bouncycastle/asn1/DERNull;
+
+    invoke-interface {p0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    return v0
+
+    :cond_1
+    return v1
+
+    .line 845
+    :cond_2
+    invoke-virtual {p2}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    if-nez p0, :cond_4
+
+    .line 847
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    sget-object p1, Lcom/android/internal/org/bouncycastle/asn1/DERNull;->INSTANCE:Lcom/android/internal/org/bouncycastle/asn1/DERNull;
+
+    invoke-interface {p0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    return v0
+
+    :cond_3
+    return v1
+
+    .line 855
+    :cond_4
+    invoke-virtual {p1}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    invoke-virtual {p2}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p1
+
+    invoke-interface {p0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public whitelist test-api checkValidity()V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateExpiredException;,
+            Ljava/security/cert/CertificateNotYetValidException;
+        }
+    .end annotation
+
+    .line 138
+    new-instance v0, Ljava/util/Date;
+
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->checkValidity(Ljava/util/Date;)V
+
+    return-void
+.end method
+
+.method public whitelist test-api checkValidity(Ljava/util/Date;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateExpiredException;,
+            Ljava/security/cert/CertificateNotYetValidException;
+        }
+    .end annotation
+
+    .line 145
+    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getNotAfter()Ljava/util/Date;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_1
+
+    .line 150
+    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getNotBefore()Ljava/util/Date;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-ltz p1, :cond_0
+
+    return-void
+
+    .line 152
+    :cond_0
+    new-instance p1, Ljava/security/cert/CertificateNotYetValidException;
+
+    const-string v0, "certificate not valid till "
+
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getStartDate()Lcom/android/internal/org/bouncycastle/asn1/x509/Time;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Time;->getTime()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/security/cert/CertificateNotYetValidException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 147
+    :cond_1
+    new-instance p1, Ljava/security/cert/CertificateExpiredException;
+
+    const-string v0, "certificate expired on "
+
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getEndDate()Lcom/android/internal/org/bouncycastle/asn1/x509/Time;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Time;->getTime()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/security/cert/CertificateExpiredException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public whitelist test-api equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    .line 577
+    :cond_0
+    instance-of v0, p1, Ljava/security/cert/Certificate;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_1
+
+    return v1
+
+    .line 582
+    :cond_1
+    check-cast p1, Ljava/security/cert/Certificate;
+
+    .line 586
+    :try_start_0
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getEncoded()[B
+
+    move-result-object p0
+
+    .line 587
+    invoke-virtual {p1}, Ljava/security/cert/Certificate;->getEncoded()[B
+
+    move-result-object p1
+
+    .line 589
+    invoke-static {p0, p1}, Lcom/android/internal/org/bouncycastle/util/Arrays;->areEqual([B[B)Z
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/security/cert/CertificateEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    return v1
+.end method
+
+.method public blacklist getBagAttribute(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+    .locals 0
+
+    .line 636
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->attrCarrier:Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;
+
+    invoke-interface {p0, p1}, Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;->getBagAttribute(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist getBagAttributeKeys()Ljava/util/Enumeration;
+    .locals 0
+
+    .line 641
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->attrCarrier:Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;
+
+    invoke-interface {p0}, Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;->getBagAttributeKeys()Ljava/util/Enumeration;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getBasicConstraints()I
+    .locals 1
+
+    .line 369
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->basicConstraints:Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;->isCA()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    .line 374
+    :cond_0
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->basicConstraints:Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;->getPathLenConstraintInteger()Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    move-result-object p0
+
+    if-nez p0, :cond_1
+
+    const p0, 0x7fffffff
+
+    return p0
+
+    .line 380
+    :cond_1
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->intPositiveValueExact()I
+
+    move-result p0
+
+    return p0
+
+    :cond_2
+    :goto_0
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public whitelist test-api getCriticalExtensionOIDs()Ljava/util/Set;
+    .locals 4
+
+    .line 397
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getVersion()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_2
+
+    .line 399
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    .line 400
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getExtensions()Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    .line 404
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->oids()Ljava/util/Enumeration;
+
+    move-result-object v1
+
+    .line 406
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 408
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    .line 409
+    invoke-virtual {p0, v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->getExtension(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;
+
+    move-result-object v3
+
+    .line 411
+    invoke-virtual {v3}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->isCritical()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 413
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getEncoded()[B
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateEncodingException;
+        }
+    .end annotation
+
+    .line 557
+    :try_start_0
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->encoded:[B
+
+    if-nez v0, :cond_0
+
+    .line 558
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    const-string v1, "DER"
+
+    invoke-virtual {v0, v1}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getEncoded(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->encoded:[B
+
+    .line 560
+    :cond_0
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->encoded:[B
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 565
+    new-instance v0, Ljava/security/cert/CertificateEncodingException;
+
+    invoke-virtual {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/security/cert/CertificateEncodingException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public whitelist test-api getExtendedKeyUsage()Ljava/util/List;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateParsingException;
+        }
+    .end annotation
+
+    .line 341
+    const-string v0, "2.5.29.37"
+
+    invoke-direct {p0, v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getExtensionBytes(Ljava/lang/String;)[B
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    .line 347
+    :try_start_0
+    new-instance v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;
+
+    invoke-direct {v0, p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;-><init>([B)V
+
+    .line 348
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;
+
+    .line 349
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v1, 0x0
+
+    .line 351
+    :goto_0
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->size()I
+
+    move-result v2
+
+    if-eq v1, v2, :cond_0
+
+    .line 353
+    invoke-virtual {p0, v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Sequence;->getObjectAt(I)Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 356
+    :cond_0
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    .line 360
+    :catch_0
+    new-instance p0, Ljava/security/cert/CertificateParsingException;
+
+    const-string v0, "error processing extended key usage extension"
+
+    invoke-direct {p0, v0}, Ljava/security/cert/CertificateParsingException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getExtensionValue(Ljava/lang/String;)[B
+    .locals 1
+
+    .line 442
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getExtensions()Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 446
+    new-instance v0, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-direct {v0, p1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->getExtension(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    .line 452
+    :try_start_0
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->getExtnValue()Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;->getEncoded()[B
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 456
+    const-string p1, "error parsing "
+
+    invoke-static {p1, p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$1(Ljava/lang/String;Ljava/lang/Exception;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getIssuerAlternativeNames()Ljava/util/Collection;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateParsingException;
+        }
+    .end annotation
+
+    .line 392
+    sget-object v0, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->issuerAlternativeName:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getExtensionBytes(Ljava/lang/String;)[B
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getAlternativeNames([B)Ljava/util/Collection;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getIssuerDN()Ljava/security/Principal;
+    .locals 1
+
+    .line 168
+    new-instance v0, Lcom/android/internal/org/bouncycastle/jce/X509Principal;
+
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getIssuer()Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lcom/android/internal/org/bouncycastle/jce/X509Principal;-><init>(Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;)V
+
+    return-object v0
+.end method
+
+.method public whitelist test-api getIssuerUniqueID()[Z
+    .locals 7
+
+    .line 295
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getIssuerUniqueId()Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    .line 299
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getBytes()[B
+
+    move-result-object v0
+
+    .line 300
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x8
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getPadBits()I
+
+    move-result p0
+
+    sub-int/2addr v1, p0
+
+    new-array p0, v1, [Z
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-eq v3, v1, :cond_1
+
+    .line 304
+    div-int/lit8 v4, v3, 0x8
+
+    aget-byte v4, v0, v4
+
+    rem-int/lit8 v5, v3, 0x8
+
+    const/16 v6, 0x80
+
+    ushr-int v5, v6, v5
+
+    and-int/2addr v4, v5
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    move v4, v2
+
+    :goto_1
+    aput-boolean v4, p0, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
+    .locals 1
+
+    .line 175
+    :try_start_0
+    new-instance v0, Ljavax/security/auth/x500/X500Principal;
+
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getIssuer()Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;->getEncoded()[B
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljavax/security/auth/x500/X500Principal;-><init>([B)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    .line 179
+    :catch_0
+    const-string p0, "can\'t encode issuer DN"
+
+    invoke-static {p0}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$5(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getKeyUsage()[Z
+    .locals 0
+
+    .line 335
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->keyUsage:[Z
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getNonCriticalExtensionOIDs()Ljava/util/Set;
+    .locals 4
+
+    .line 466
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getVersion()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_2
+
+    .line 468
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    .line 469
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getExtensions()Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    .line 473
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->oids()Ljava/util/Enumeration;
+
+    move-result-object v1
+
+    .line 475
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 477
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    .line 478
+    invoke-virtual {p0, v2}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->getExtension(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;
+
+    move-result-object v3
+
+    .line 480
+    invoke-virtual {v3}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->isCritical()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 482
+    invoke-virtual {v2}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    return-object v0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getNotAfter()Ljava/util/Date;
+    .locals 0
+
+    .line 207
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getEndDate()Lcom/android/internal/org/bouncycastle/asn1/x509/Time;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Time;->getDate()Ljava/util/Date;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getNotBefore()Ljava/util/Date;
+    .locals 0
+
+    .line 202
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getStartDate()Lcom/android/internal/org/bouncycastle/asn1/x509/Time;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Time;->getDate()Ljava/util/Date;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getPublicKey()Ljava/security/PublicKey;
+    .locals 0
+
+    .line 540
+    :try_start_0
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSubjectPublicKeyInfo()Lcom/android/internal/org/bouncycastle/asn1/x509/SubjectPublicKeyInfo;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/BouncyCastleProvider;->getPublicKey(Lcom/android/internal/org/bouncycastle/asn1/x509/SubjectPublicKeyInfo;)Ljava/security/PublicKey;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSerialNumber()Ljava/math/BigInteger;
+    .locals 0
+
+    .line 163
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSerialNumber()Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Integer;->getValue()Ljava/math/BigInteger;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSigAlgName()Ljava/lang/String;
+    .locals 6
+
+    .line 234
+    const-string v0, "BC"
+
+    invoke-static {v0}, Ljava/security/Security;->getProvider(Ljava/lang/String;)Ljava/security/Provider;
+
+    move-result-object v0
+
+    .line 236
+    const-string v1, "Alg.Alias.Signature."
+
+    if-eqz v0, :cond_0
+
+    .line 238
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSigAlgOID()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/security/Provider;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    return-object v0
+
+    .line 246
+    :cond_0
+    invoke-static {}, Ljava/security/Security;->getProviders()[Ljava/security/Provider;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    .line 251
+    :goto_0
+    array-length v3, v0
+
+    if-eq v2, v3, :cond_2
+
+    .line 253
+    aget-object v3, v0, v2
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSigAlgOID()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/security/Provider;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    return-object v3
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 260
+    :cond_2
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSigAlgOID()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSigAlgOID()Ljava/lang/String;
+    .locals 0
+
+    .line 268
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSigAlgParams()[B
+    .locals 2
+
+    .line 276
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 280
+    :try_start_0
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;->getParameters()Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;->toASN1Primitive()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object p0
+
+    const-string v0, "DER"
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;->getEncoded(Ljava/lang/String;)[B
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    :cond_0
+    return-object v1
+.end method
+
+.method public whitelist test-api getSignature()[B
+    .locals 0
+
+    .line 225
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignature()Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getOctets()[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSubjectAlternativeNames()Ljava/util/Collection;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateParsingException;
+        }
+    .end annotation
+
+    .line 386
+    sget-object v0, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->subjectAlternativeName:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getExtensionBytes(Ljava/lang/String;)[B
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getAlternativeNames([B)Ljava/util/Collection;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSubjectDN()Ljava/security/Principal;
+    .locals 1
+
+    .line 185
+    new-instance v0, Lcom/android/internal/org/bouncycastle/jce/X509Principal;
+
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSubject()Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Lcom/android/internal/org/bouncycastle/jce/X509Principal;-><init>(Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;)V
+
+    return-object v0
+.end method
+
+.method public whitelist test-api getSubjectUniqueID()[Z
+    .locals 7
+
+    .line 315
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getSubjectUniqueId()Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    .line 319
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getBytes()[B
+
+    move-result-object v0
+
+    .line 320
+    array-length v1, v0
+
+    mul-int/lit8 v1, v1, 0x8
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;->getPadBits()I
+
+    move-result p0
+
+    sub-int/2addr v1, p0
+
+    new-array p0, v1, [Z
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    if-eq v3, v1, :cond_1
+
+    .line 324
+    div-int/lit8 v4, v3, 0x8
+
+    aget-byte v4, v0, v4
+
+    rem-int/lit8 v5, v3, 0x8
+
+    const/16 v6, 0x80
+
+    ushr-int v5, v6, v5
+
+    and-int/2addr v4, v5
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, 0x1
+
+    goto :goto_1
+
+    :cond_0
+    move v4, v2
+
+    :goto_1
+    aput-boolean v4, p0, v3
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-object p0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
+    .locals 1
+
+    .line 192
+    :try_start_0
+    new-instance v0, Ljavax/security/auth/x500/X500Principal;
+
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSubject()Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x500/X500Name;->getEncoded()[B
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljavax/security/auth/x500/X500Principal;-><init>([B)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    .line 196
+    :catch_0
+    const-string p0, "can\'t encode issuer DN"
+
+    invoke-static {p0}, Landroid/net/Uri$$ExternalSyntheticBUOutline0;->m$5(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public whitelist test-api getTBSCertificate()[B
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateEncodingException;
+        }
+    .end annotation
+
+    .line 215
+    :try_start_0
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    const-string v0, "DER"
+
+    invoke-virtual {p0, v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getEncoded(Ljava/lang/String;)[B
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 219
+    new-instance v0, Ljava/security/cert/CertificateEncodingException;
+
+    invoke-virtual {p0}, Ljava/io/IOException;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/security/cert/CertificateEncodingException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public whitelist test-api getVersion()I
+    .locals 0
+
+    .line 158
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getVersionNumber()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public whitelist test-api hasUnsupportedCriticalExtension()Z
+    .locals 4
+
+    .line 495
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getVersion()I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_2
+
+    .line 497
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getExtensions()Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_2
+
+    .line 501
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->oids()Ljava/util/Enumeration;
+
+    move-result-object v0
+
+    .line 503
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 505
+    invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    .line 506
+    invoke-virtual {v1}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 508
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->KEY_USAGE:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->CERTIFICATE_POLICIES:Ljava/lang/String;
+
+    .line 509
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->POLICY_MAPPINGS:Ljava/lang/String;
+
+    .line 510
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->INHIBIT_ANY_POLICY:Ljava/lang/String;
+
+    .line 511
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->CRL_DISTRIBUTION_POINTS:Ljava/lang/String;
+
+    .line 512
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->ISSUING_DISTRIBUTION_POINT:Ljava/lang/String;
+
+    .line 513
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->DELTA_CRL_INDICATOR:Ljava/lang/String;
+
+    .line 514
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->POLICY_CONSTRAINTS:Ljava/lang/String;
+
+    .line 515
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->BASIC_CONSTRAINTS:Ljava/lang/String;
+
+    .line 516
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->SUBJECT_ALTERNATIVE_NAME:Ljava/lang/String;
+
+    .line 517
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/android/internal/org/bouncycastle/jce/provider/RFC3280CertPathUtilities;->NAME_CONSTRAINTS:Ljava/lang/String;
+
+    .line 518
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    goto :goto_0
+
+    .line 523
+    :cond_1
+    invoke-virtual {p0, v1}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->getExtension(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;
+
+    move-result-object v1
+
+    .line 525
+    invoke-virtual {v1}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->isCritical()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public declared-synchronized whitelist test-api hashCode()I
+    .locals 1
+
+    monitor-enter p0
+
+    .line 599
+    :try_start_0
+    iget-boolean v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->hashValueSet:Z
+
+    if-nez v0, :cond_0
+
+    .line 601
+    invoke-direct {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->calculateHashCode()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->hashValue:I
+
+    const/4 v0, 0x1
+
+    .line 602
+    iput-boolean v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->hashValueSet:Z
+
+    .line 605
+    :cond_0
+    iget v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->hashValue:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public blacklist setBagAttribute(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+    .locals 0
+
+    .line 630
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->attrCarrier:Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;
+
+    invoke-interface {p0, p1, p2}, Lcom/android/internal/org/bouncycastle/jce/interfaces/PKCS12BagAttributeCarrier;->setBagAttribute(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;Lcom/android/internal/org/bouncycastle/asn1/ASN1Encodable;)V
+
+    return-void
+.end method
+
+.method public whitelist test-api toString()Ljava/lang/String;
+    .locals 8
+
+    .line 646
+    new-instance v0, Ljava/lang/StringBuffer;
+
+    const-string v1, "  [0]         Version: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
+
+    .line 647
+    invoke-static {}, Lcom/android/internal/org/bouncycastle/util/Strings;->lineSeparator()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 649
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getVersion()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 650
+    const-string v2, "         SerialNumber: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSerialNumber()Ljava/math/BigInteger;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 651
+    const-string v2, "             IssuerDN: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getIssuerDN()Ljava/security/Principal;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 652
+    const-string v2, "           Start Date: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getNotBefore()Ljava/util/Date;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 653
+    const-string v2, "           Final Date: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getNotAfter()Ljava/util/Date;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 654
+    const-string v2, "            SubjectDN: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSubjectDN()Ljava/security/Principal;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 655
+    const-string v2, "           Public Key: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 656
+    const-string v2, "  Signature Algorithm: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSigAlgName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 658
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->getSignature()[B
+
+    move-result-object v2
+
+    .line 660
+    const-string v3, "            Signature: "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/String;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x14
+
+    invoke-static {v2, v5, v6}, Lcom/android/internal/org/bouncycastle/util/encoders/Hex;->encode([BII)[B
+
+    move-result-object v5
+
+    invoke-direct {v4, v5}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move v3, v6
+
+    .line 661
+    :goto_0
+    array-length v4, v2
+
+    if-ge v3, v4, :cond_1
+
+    .line 663
+    array-length v4, v2
+
+    sub-int/2addr v4, v6
+
+    const-string v5, "                       "
+
+    if-ge v3, v4, :cond_0
+
+    .line 665
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/String;
+
+    invoke-static {v2, v3, v6}, Lcom/android/internal/org/bouncycastle/util/encoders/Hex;->encode([BII)[B
+
+    move-result-object v7
+
+    invoke-direct {v5, v7}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_1
+
+    .line 669
+    :cond_0
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/String;
+
+    array-length v7, v2
+
+    sub-int/2addr v7, v3
+
+    invoke-static {v2, v3, v7}, Lcom/android/internal/org/bouncycastle/util/encoders/Hex;->encode([BII)[B
+
+    move-result-object v7
+
+    invoke-direct {v5, v7}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :goto_1
+    add-int/lit8 v3, v3, 0x14
+
+    goto :goto_0
+
+    .line 673
+    :cond_1
+    iget-object p0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getTBSCertificate()Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/TBSCertificate;->getExtensions()Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_9
+
+    .line 677
+    invoke-virtual {p0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->oids()Ljava/util/Enumeration;
+
+    move-result-object v2
+
+    .line 679
+    invoke-interface {v2}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 681
+    const-string v3, "       Extensions: \n"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 684
+    :cond_2
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Enumeration;->hasMoreElements()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    .line 686
+    invoke-interface {v2}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    .line 687
+    invoke-virtual {p0, v3}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extensions;->getExtension(Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;)Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;
+
+    move-result-object v4
+
+    .line 689
+    invoke-virtual {v4}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->getExtnValue()Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_8
+
+    .line 691
+    invoke-virtual {v4}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->getExtnValue()Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/android/internal/org/bouncycastle/asn1/ASN1OctetString;->getOctets()[B
+
+    move-result-object v5
+
+    .line 692
+    new-instance v6, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;
+
+    invoke-direct {v6, v5}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;-><init>([B)V
+
+    .line 693
+    const-string v5, "                       critical("
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v5
+
+    invoke-virtual {v4}, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->isCritical()Z
+
+    move-result v4
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuffer;->append(Z)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    const-string v5, ") "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 696
+    :try_start_0
+    sget-object v4, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->basicConstraints:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->equals(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    .line 698
+    invoke-virtual {v6}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x509/BasicConstraints;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_2
+
+    .line 700
+    :cond_3
+    sget-object v4, Lcom/android/internal/org/bouncycastle/asn1/x509/Extension;->keyUsage:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->equals(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    .line 702
+    invoke-virtual {v6}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/android/internal/org/bouncycastle/asn1/x509/KeyUsage;->getInstance(Ljava/lang/Object;)Lcom/android/internal/org/bouncycastle/asn1/x509/KeyUsage;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_2
+
+    .line 704
+    :cond_4
+    sget-object v4, Lcom/android/internal/org/bouncycastle/asn1/misc/MiscObjectIdentifiers;->netscapeCertType:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->equals(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    .line 706
+    new-instance v4, Lcom/android/internal/org/bouncycastle/asn1/misc/NetscapeCertType;
+
+    invoke-virtual {v6}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;
+
+    invoke-direct {v4, v5}, Lcom/android/internal/org/bouncycastle/asn1/misc/NetscapeCertType;-><init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1BitString;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto/16 :goto_2
+
+    .line 708
+    :cond_5
+    sget-object v4, Lcom/android/internal/org/bouncycastle/asn1/misc/MiscObjectIdentifiers;->netscapeRevocationURL:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->equals(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    .line 710
+    new-instance v4, Lcom/android/internal/org/bouncycastle/asn1/misc/NetscapeRevocationURL;
+
+    invoke-virtual {v6}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/internal/org/bouncycastle/asn1/ASN1IA5String;
+
+    invoke-direct {v4, v5}, Lcom/android/internal/org/bouncycastle/asn1/misc/NetscapeRevocationURL;-><init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1IA5String;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto/16 :goto_2
+
+    .line 712
+    :cond_6
+    sget-object v4, Lcom/android/internal/org/bouncycastle/asn1/misc/MiscObjectIdentifiers;->verisignCzagExtension:Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->equals(Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_7
+
+    .line 714
+    new-instance v4, Lcom/android/internal/org/bouncycastle/asn1/misc/VerisignCzagExtension;
+
+    invoke-virtual {v6}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object v5
+
+    check-cast v5, Lcom/android/internal/org/bouncycastle/asn1/ASN1IA5String;
+
+    invoke-direct {v4, v5}, Lcom/android/internal/org/bouncycastle/asn1/misc/VerisignCzagExtension;-><init>(Lcom/android/internal/org/bouncycastle/asn1/ASN1IA5String;)V
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/Object;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto/16 :goto_2
+
+    .line 718
+    :cond_7
+    invoke-virtual {v3}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 719
+    const-string v4, " value = "
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v6}, Lcom/android/internal/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/internal/org/bouncycastle/asn1/ASN1Primitive;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcom/android/internal/org/bouncycastle/asn1/util/ASN1Dump;->dumpAsString(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto/16 :goto_2
+
+    .line 725
+    :catch_0
+    invoke-virtual {v3}, Lcom/android/internal/org/bouncycastle/asn1/ASN1ObjectIdentifier;->getId()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    .line 727
+    const-string v3, " value = *****"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto/16 :goto_2
+
+    .line 732
+    :cond_8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto/16 :goto_2
+
+    .line 737
+    :cond_9
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final whitelist test-api verify(Ljava/security/PublicKey;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateException;,
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/InvalidKeyException;,
+            Ljava/security/NoSuchProviderException;,
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    .line 746
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509SignatureUtil;->getSignatureName(Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 750
+    :try_start_0
+    const-string v1, "BC"
+
+    invoke-static {v0, v1}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 754
+    :catch_0
+    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object v0
+
+    .line 757
+    :goto_0
+    invoke-direct {p0, p1, v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->checkSignature(Ljava/security/PublicKey;Ljava/security/Signature;)V
+
+    return-void
+.end method
+
+.method public final whitelist test-api verify(Ljava/security/PublicKey;Ljava/lang/String;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateException;,
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/InvalidKeyException;,
+            Ljava/security/NoSuchProviderException;,
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    .line 766
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509SignatureUtil;->getSignatureName(Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz p2, :cond_0
+
+    .line 771
+    invoke-static {v0, p2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    .line 775
+    :cond_0
+    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    .line 778
+    :goto_0
+    invoke-direct {p0, p1, p2}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->checkSignature(Ljava/security/PublicKey;Ljava/security/Signature;)V
+
+    return-void
+.end method
+
+.method public final whitelist test-api verify(Ljava/security/PublicKey;Ljava/security/Provider;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/cert/CertificateException;,
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/security/InvalidKeyException;,
+            Ljava/security/SignatureException;
+        }
+    .end annotation
+
+    .line 787
+    iget-object v0, p0, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->c:Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;
+
+    invoke-virtual {v0}, Lcom/android/internal/org/bouncycastle/asn1/x509/Certificate;->getSignatureAlgorithm()Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/org/bouncycastle/jce/provider/X509SignatureUtil;->getSignatureName(Lcom/android/internal/org/bouncycastle/asn1/x509/AlgorithmIdentifier;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz p2, :cond_0
+
+    .line 792
+    invoke-static {v0, p2}, Ljava/security/Signature;->getInstance(Ljava/lang/String;Ljava/security/Provider;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    .line 796
+    :cond_0
+    invoke-static {v0}, Ljava/security/Signature;->getInstance(Ljava/lang/String;)Ljava/security/Signature;
+
+    move-result-object p2
+
+    .line 799
+    :goto_0
+    invoke-direct {p0, p1, p2}, Lcom/android/internal/org/bouncycastle/jce/provider/X509CertificateObject;->checkSignature(Ljava/security/PublicKey;Ljava/security/Signature;)V
+
+    return-void
+.end method

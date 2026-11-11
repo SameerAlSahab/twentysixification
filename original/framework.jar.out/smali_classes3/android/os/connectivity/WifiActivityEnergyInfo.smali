@@ -1,0 +1,460 @@
+.class public final Landroid/os/connectivity/WifiActivityEnergyInfo;
+.super Ljava/lang/Object;
+.source "WifiActivityEnergyInfo.java"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation runtime Landroid/annotation/SystemApi;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/os/connectivity/WifiActivityEnergyInfo$StackState;
+    }
+.end annotation
+
+
+# static fields
+.field public static final whitelist CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Landroid/os/connectivity/WifiActivityEnergyInfo;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private static final blacklist DEFERRED_ENERGY_ESTIMATE:J = -0x1L
+
+.field public static final whitelist STACK_STATE_INVALID:I = 0x0
+
+.field public static final whitelist STACK_STATE_STATE_ACTIVE:I = 0x1
+
+.field public static final whitelist STACK_STATE_STATE_IDLE:I = 0x3
+
+.field public static final whitelist STACK_STATE_STATE_SCANNING:I = 0x2
+
+
+# instance fields
+.field private blacklist mControllerEnergyUsedMicroJoules:J
+
+.field private final blacklist mControllerIdleDurationMillis:J
+
+.field private final blacklist mControllerRxDurationMillis:J
+
+.field private final blacklist mControllerScanDurationMillis:J
+
+.field private final blacklist mControllerTxDurationMillis:J
+
+.field private final blacklist mStackState:I
+
+.field private final blacklist mTimeSinceBootMillis:J
+
+
+# direct methods
+.method static constructor blacklist <clinit>()V
+    .locals 1
+
+    .line 167
+    new-instance v0, Landroid/os/connectivity/WifiActivityEnergyInfo$1;
+
+    invoke-direct {v0}, Landroid/os/connectivity/WifiActivityEnergyInfo$1;-><init>()V
+
+    sput-object v0, Landroid/os/connectivity/WifiActivityEnergyInfo;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor whitelist <init>(JIJJJJ)V
+    .locals 14
+
+    const-wide/16 v12, -0x1
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move/from16 v3, p3
+
+    move-wide/from16 v4, p4
+
+    move-wide/from16 v6, p6
+
+    move-wide/from16 v8, p8
+
+    move-wide/from16 v10, p10
+
+    .line 98
+    invoke-direct/range {v0 .. v13}, Landroid/os/connectivity/WifiActivityEnergyInfo;-><init>(JIJJJJJ)V
+
+    return-void
+.end method
+
+.method public constructor blacklist <init>(JIJJJJJ)V
+    .locals 0
+
+    .line 144
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 145
+    iput-wide p1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mTimeSinceBootMillis:J
+
+    .line 146
+    iput p3, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mStackState:I
+
+    .line 147
+    iput-wide p4, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerTxDurationMillis:J
+
+    .line 148
+    iput-wide p6, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerRxDurationMillis:J
+
+    .line 149
+    iput-wide p8, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerScanDurationMillis:J
+
+    .line 150
+    iput-wide p10, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerIdleDurationMillis:J
+
+    .line 151
+    iput-wide p12, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerEnergyUsedMicroJoules:J
+
+    return-void
+.end method
+
+.method private static blacklist calculateEnergyMicroJoules(JJJ)J
+    .locals 10
+
+    .line 110
+    invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/ActivityThread;->getSystemContext()Landroid/app/ContextImpl;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-wide/16 p0, 0x0
+
+    return-wide p0
+
+    .line 115
+    :cond_0
+    new-instance v1, Lcom/android/internal/os/PowerProfile;
+
+    invoke-direct {v1, v0}, Lcom/android/internal/os/PowerProfile;-><init>(Landroid/content/Context;)V
+
+    .line 116
+    const-string/jumbo v0, "wifi.controller.idle"
+
+    invoke-virtual {v1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
+
+    move-result-wide v2
+
+    .line 118
+    const-string/jumbo v0, "wifi.controller.rx"
+
+    invoke-virtual {v1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
+
+    move-result-wide v4
+
+    .line 120
+    const-string/jumbo v0, "wifi.controller.tx"
+
+    invoke-virtual {v1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
+
+    move-result-wide v6
+
+    .line 122
+    const-string/jumbo v0, "wifi.controller.voltage"
+
+    invoke-virtual {v1, v0}, Lcom/android/internal/os/PowerProfile;->getAveragePower(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    const-wide v8, 0x408f400000000000L    # 1000.0
+
+    div-double/2addr v0, v8
+
+    long-to-double p0, p0
+
+    mul-double/2addr p0, v6
+
+    long-to-double p2, p2
+
+    mul-double/2addr p2, v4
+
+    add-double/2addr p0, p2
+
+    long-to-double p2, p4
+
+    mul-double/2addr p2, v2
+
+    add-double/2addr p0, p2
+
+    mul-double/2addr p0, v0
+
+    double-to-long p0, p0
+
+    return-wide p0
+.end method
+
+.method private static blacklist calculateEnergyMicroJoules$ravenwood(JJJ)J
+    .locals 0
+
+    const-wide/16 p0, 0x0
+
+    return-wide p0
+.end method
+
+
+# virtual methods
+.method public whitelist describeContents()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public whitelist getControllerEnergyUsedMicroJoules()J
+    .locals 7
+
+    .line 242
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerEnergyUsedMicroJoules:J
+
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    .line 243
+    iget-wide v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerTxDurationMillis:J
+
+    iget-wide v3, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerRxDurationMillis:J
+
+    iget-wide v5, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerIdleDurationMillis:J
+
+    invoke-static/range {v1 .. v6}, Landroid/os/connectivity/WifiActivityEnergyInfo;->calculateEnergyMicroJoules(JJJ)J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerEnergyUsedMicroJoules:J
+
+    .line 247
+    :cond_0
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerEnergyUsedMicroJoules:J
+
+    return-wide v0
+.end method
+
+.method public whitelist getControllerIdleDurationMillis()J
+    .locals 2
+
+    .line 236
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerIdleDurationMillis:J
+
+    return-wide v0
+.end method
+
+.method public whitelist getControllerRxDurationMillis()J
+    .locals 2
+
+    .line 224
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerRxDurationMillis:J
+
+    return-wide v0
+.end method
+
+.method public whitelist getControllerScanDurationMillis()J
+    .locals 2
+
+    .line 230
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerScanDurationMillis:J
+
+    return-wide v0
+.end method
+
+.method public whitelist getControllerTxDurationMillis()J
+    .locals 2
+
+    .line 218
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerTxDurationMillis:J
+
+    return-wide v0
+.end method
+
+.method public whitelist getStackState()I
+    .locals 0
+
+    .line 212
+    iget p0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mStackState:I
+
+    return p0
+.end method
+
+.method public whitelist getTimeSinceBootMillis()J
+    .locals 2
+
+    .line 202
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mTimeSinceBootMillis:J
+
+    return-wide v0
+.end method
+
+.method public blacklist isValid()Z
+    .locals 4
+
+    .line 255
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerTxDurationMillis:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerRxDurationMillis:J
+
+    cmp-long v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerScanDurationMillis:J
+
+    cmp-long v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerIdleDurationMillis:J
+
+    cmp-long p0, v0, v2
+
+    if-ltz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public whitelist test-api toString()Ljava/lang/String;
+    .locals 3
+
+    .line 156
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "WifiActivityEnergyInfo{ mTimeSinceBootMillis="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mTimeSinceBootMillis:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " mStackState="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mStackState:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " mControllerTxDurationMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerTxDurationMillis:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " mControllerRxDurationMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerRxDurationMillis:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " mControllerScanDurationMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerScanDurationMillis:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " mControllerIdleDurationMillis="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerIdleDurationMillis:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, " mControllerEnergyUsedMicroJoules="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 163
+    invoke-virtual {p0}, Landroid/os/connectivity/WifiActivityEnergyInfo;->getControllerEnergyUsedMicroJoules()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p0, " }"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    .line 186
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mTimeSinceBootMillis:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 187
+    iget p2, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mStackState:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 188
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerTxDurationMillis:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 189
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerRxDurationMillis:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 190
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerScanDurationMillis:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 191
+    iget-wide v0, p0, Landroid/os/connectivity/WifiActivityEnergyInfo;->mControllerIdleDurationMillis:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    return-void
+.end method

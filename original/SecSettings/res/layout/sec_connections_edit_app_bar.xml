@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/bottom_bar" android:background="@color/sec_widget_bottom_bar_bg_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/sec_tab_widget_height" android:paddingStart="@dimen/sec_widget_bottom_bar_button_side_padding" android:paddingEnd="@dimen/sec_widget_bottom_bar_button_side_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="bottom" android:id="@id/button_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <View android:id="@id/bottom_divider" android:layout_width="fill_parent" style="@style/sec_widget_bottom_bar_divider" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:weightSum="0.0" android:paddingStart="24.0dip" android:paddingEnd="24.0dip" style="@style/sec_widget_bottom_bar_container">
+            <com.samsung.android.settings.widget.SecBottomBarButton android:id="@id/cancel_button" android:layout_width="fill_parent" android:text="@string/sec_dnd_schedule_action_cancel" android:height="48.0dip" style="@style/sec_widget_bottom_bar_button" />
+            <com.samsung.android.settings.widget.SecBottomBarButton android:id="@id/save_button" android:layout_width="fill_parent" android:text="@string/sec_apn_ConfirmationDialog_positive_button" android:height="48.0dip" style="@style/sec_widget_bottom_bar_button" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,56 @@
+.class public final Lcom/android/server/cocktailbar/mode/NormalMode;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Lcom/android/server/cocktailbar/mode/CocktailBarMode;
+
+
+# virtual methods
+.method public final getCocktailType()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final getModeId()I
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final getModeName()Ljava/lang/String;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final getRegistrationType()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final onBroadcastReceived(Landroid/content/Intent;)I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final renewMode(I)I
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method

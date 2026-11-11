@@ -1,0 +1,782 @@
+.class public abstract Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;
+.super Landroid/os/Binder;
+.source "ISemAuthnrService.java"
+
+# interfaces
+.implements Lcom/samsung/android/authnrservice/manager/ISemAuthnrService;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/android/authnrservice/manager/ISemAuthnrService;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "Stub"
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub$Proxy;
+    }
+.end annotation
+
+
+# static fields
+.field static final blacklist TRANSACTION_deleteFile:I = 0xb
+
+.field static final blacklist TRANSACTION_getDrkKeyHandle:I = 0x9
+
+.field static final blacklist TRANSACTION_getFiles:I = 0xc
+
+.field static final blacklist TRANSACTION_getMatchedFilePaths:I = 0x11
+
+.field static final blacklist TRANSACTION_getVersion:I = 0x1
+
+.field static final blacklist TRANSACTION_getWrappedObject:I = 0x6
+
+.field static final blacklist TRANSACTION_initialize:I = 0x2
+
+.field static final blacklist TRANSACTION_initializeDrk:I = 0x7
+
+.field static final blacklist TRANSACTION_initializePreloadedTa:I = 0x12
+
+.field static final blacklist TRANSACTION_initializeWithPreloadedTa:I = 0xd
+
+.field static final blacklist TRANSACTION_process:I = 0x4
+
+.field static final blacklist TRANSACTION_processPreloadedTa:I = 0x14
+
+.field static final blacklist TRANSACTION_processWithPreloadedTa:I = 0xf
+
+.field static final blacklist TRANSACTION_readFile:I = 0x10
+
+.field static final blacklist TRANSACTION_setChallenge:I = 0x5
+
+.field static final blacklist TRANSACTION_terminate:I = 0x3
+
+.field static final blacklist TRANSACTION_terminateDrk:I = 0x8
+
+.field static final blacklist TRANSACTION_terminatePreloadedTa:I = 0x13
+
+.field static final blacklist TRANSACTION_terminateWithPreloadedTa:I = 0xe
+
+.field static final blacklist TRANSACTION_writeFile:I = 0xa
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 1
+
+    .line 114
+    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+
+    .line 115
+    const-string v0, "com.samsung.android.authnrservice.manager.ISemAuthnrService"
+
+    invoke-virtual {p0, p0, v0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public static blacklist asInterface(Landroid/os/IBinder;)Lcom/samsung/android/authnrservice/manager/ISemAuthnrService;
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 126
+    :cond_0
+    const-string v0, "com.samsung.android.authnrservice.manager.ISemAuthnrService"
+
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 127
+    instance-of v1, v0, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService;
+
+    if-eqz v1, :cond_1
+
+    .line 128
+    check-cast v0, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService;
+
+    return-object v0
+
+    .line 130
+    :cond_1
+    new-instance v0, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub$Proxy;
+
+    invoke-direct {v0, p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub$Proxy;-><init>(Landroid/os/IBinder;)V
+
+    return-object v0
+.end method
+
+.method public static blacklist getDefaultTransactionName(I)Ljava/lang/String;
+    .locals 0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 219
+    :pswitch_0
+    const-string/jumbo p0, "processPreloadedTa"
+
+    return-object p0
+
+    .line 215
+    :pswitch_1
+    const-string/jumbo p0, "terminatePreloadedTa"
+
+    return-object p0
+
+    .line 211
+    :pswitch_2
+    const-string/jumbo p0, "initializePreloadedTa"
+
+    return-object p0
+
+    .line 207
+    :pswitch_3
+    const-string/jumbo p0, "getMatchedFilePaths"
+
+    return-object p0
+
+    .line 203
+    :pswitch_4
+    const-string/jumbo p0, "readFile"
+
+    return-object p0
+
+    .line 199
+    :pswitch_5
+    const-string/jumbo p0, "processWithPreloadedTa"
+
+    return-object p0
+
+    .line 195
+    :pswitch_6
+    const-string/jumbo p0, "terminateWithPreloadedTa"
+
+    return-object p0
+
+    .line 191
+    :pswitch_7
+    const-string/jumbo p0, "initializeWithPreloadedTa"
+
+    return-object p0
+
+    .line 187
+    :pswitch_8
+    const-string/jumbo p0, "getFiles"
+
+    return-object p0
+
+    .line 183
+    :pswitch_9
+    const-string p0, "deleteFile"
+
+    return-object p0
+
+    .line 179
+    :pswitch_a
+    const-string/jumbo p0, "writeFile"
+
+    return-object p0
+
+    .line 175
+    :pswitch_b
+    const-string/jumbo p0, "getDrkKeyHandle"
+
+    return-object p0
+
+    .line 171
+    :pswitch_c
+    const-string/jumbo p0, "terminateDrk"
+
+    return-object p0
+
+    .line 167
+    :pswitch_d
+    const-string/jumbo p0, "initializeDrk"
+
+    return-object p0
+
+    .line 163
+    :pswitch_e
+    const-string/jumbo p0, "getWrappedObject"
+
+    return-object p0
+
+    .line 159
+    :pswitch_f
+    const-string/jumbo p0, "setChallenge"
+
+    return-object p0
+
+    .line 155
+    :pswitch_10
+    const-string/jumbo p0, "process"
+
+    return-object p0
+
+    .line 151
+    :pswitch_11
+    const-string/jumbo p0, "terminate"
+
+    return-object p0
+
+    .line 147
+    :pswitch_12
+    const-string/jumbo p0, "initialize"
+
+    return-object p0
+
+    .line 143
+    :pswitch_13
+    const-string/jumbo p0, "getVersion"
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public whitelist asBinder()Landroid/os/IBinder;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public blacklist getTransactionName(I)Ljava/lang/String;
+    .locals 0
+
+    .line 230
+    invoke-static {p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->getDefaultTransactionName(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public whitelist onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    .locals 7
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    if-lt p1, v0, :cond_0
+
+    const v1, 0xffffff
+
+    if-gt p1, v1, :cond_0
+
+    .line 235
+    const-string v1, "com.samsung.android.authnrservice.manager.ISemAuthnrService"
+
+    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    :cond_0
+    packed-switch p1, :pswitch_data_0
+
+    move-object v1, p0
+
+    .line 434
+    invoke-super {v1, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    move-result p0
+
+    return p0
+
+    .line 423
+    :pswitch_0
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    .line 425
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p4
+
+    .line 426
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 427
+    invoke-virtual {p0, p1, p4}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->processPreloadedTa(I[B)[B
+
+    move-result-object p0
+
+    .line 428
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 429
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto/16 :goto_0
+
+    .line 413
+    :pswitch_1
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    .line 414
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 415
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->terminatePreloadedTa(I)Z
+
+    move-result p0
+
+    .line 416
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 417
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 403
+    :pswitch_2
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    .line 404
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 405
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->initializePreloadedTa(I)Z
+
+    move-result p0
+
+    .line 406
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 407
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 391
+    :pswitch_3
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 393
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 394
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 395
+    invoke-virtual {p0, p1, p4}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->getMatchedFilePaths(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p0
+
+    .line 396
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 397
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    .line 381
+    :pswitch_4
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 382
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 383
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->readFile(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 384
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 385
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 369
+    :pswitch_5
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    .line 371
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 372
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 373
+    invoke-virtual {p0, p1, p4}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->processWithPreloadedTa([BLjava/lang/String;)[B
+
+    move-result-object p0
+
+    .line 374
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 375
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto/16 :goto_0
+
+    .line 361
+    :pswitch_6
+    invoke-virtual {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->terminateWithPreloadedTa()Z
+
+    move-result p0
+
+    .line 362
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 363
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 354
+    :pswitch_7
+    invoke-virtual {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->initializeWithPreloadedTa()Z
+
+    move-result p0
+
+    .line 355
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 356
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 343
+    :pswitch_8
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 345
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 346
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 347
+    invoke-virtual {p0, p1, p4}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->getFiles(Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p0
+
+    .line 348
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 349
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    goto/16 :goto_0
+
+    .line 333
+    :pswitch_9
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 334
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 335
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->deleteFile(Ljava/lang/String;)Z
+
+    move-result p0
+
+    .line 336
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 337
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 321
+    :pswitch_a
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    .line 323
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p4
+
+    .line 324
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 325
+    invoke-virtual {p0, p1, p4}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->writeFile([BLjava/lang/String;)Z
+
+    move-result p0
+
+    .line 326
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 327
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 313
+    :pswitch_b
+    invoke-virtual {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->getDrkKeyHandle()[B
+
+    move-result-object p0
+
+    .line 314
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 315
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto/16 :goto_0
+
+    .line 306
+    :pswitch_c
+    invoke-virtual {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->terminateDrk()Z
+
+    move-result p0
+
+    .line 307
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 308
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto/16 :goto_0
+
+    .line 299
+    :pswitch_d
+    invoke-virtual {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->initializeDrk()Z
+
+    move-result p0
+
+    .line 300
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 301
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    .line 290
+    :pswitch_e
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    .line 291
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 292
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->getWrappedObject([B)[B
+
+    move-result-object p0
+
+    .line 293
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 294
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto :goto_0
+
+    .line 280
+    :pswitch_f
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    .line 281
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 282
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->setChallenge([B)Z
+
+    move-result p0
+
+    .line 283
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 284
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    .line 270
+    :pswitch_10
+    invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object p1
+
+    .line 271
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    .line 272
+    invoke-virtual {p0, p1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->process([B)[B
+
+    move-result-object p0
+
+    .line 273
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 274
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto :goto_0
+
+    .line 262
+    :pswitch_11
+    invoke-virtual {p0}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->terminate()Z
+
+    move-result p0
+
+    .line 263
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 264
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    .line 249
+    :pswitch_12
+    sget-object p1, Landroid/os/ParcelFileDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p2, p1}, Landroid/os/Parcel;->readTypedObject(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v2, p1
+
+    check-cast v2, Landroid/os/ParcelFileDescriptor;
+
+    .line 251
+    invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+
+    .line 253
+    invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v5
+
+    .line 254
+    invoke-virtual {p2}, Landroid/os/Parcel;->enforceNoDataAvail()V
+
+    move-object v1, p0
+
+    .line 255
+    invoke-virtual/range {v1 .. v6}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->initialize(Landroid/os/ParcelFileDescriptor;JJ)Z
+
+    move-result p0
+
+    .line 256
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 257
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    goto :goto_0
+
+    :pswitch_13
+    move-object v1, p0
+
+    .line 241
+    invoke-virtual {v1}, Lcom/samsung/android/authnrservice/manager/ISemAuthnrService$Stub;->getVersion()I
+
+    move-result p0
+
+    .line 242
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 243
+    invoke-virtual {p3, p0}, Landroid/os/Parcel;->writeInt(I)V
+
+    :goto_0
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

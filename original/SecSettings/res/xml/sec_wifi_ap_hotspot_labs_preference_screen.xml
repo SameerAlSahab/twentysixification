@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="Hotspot Labs"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:order="1">
+        <SecSwitchPreference android:persistent="false" android:title="L4S" android:key="hotspotlabs_l4s_switch_preference" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApL4sController" />
+        <com.samsung.android.settings.wifi.mobileap.views.WifiApEditTextPreference android:persistent="false" android:title="Target Delay" android:key="hotspotlabs_l4s_target_delay_preference" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApL4sTargetEditController" />
+        <Preference android:title="Client Rtt Graph" android:key="hotspotlabs_l4s_rtt_graph" android:fragment="com.samsung.android.settings.wifi.mobileap.hotspotlabs.l4sRttGraph.WifiApHotspotL4sGraph" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.l4sRttGraph.WifiApL4sRttGraphController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="2">
+        <SecSwitchPreferenceScreen android:persistent="false" android:title="@string/mobileap" android:key="wifi_ap_settings_switch_preference" android:fragment="com.samsung.android.settings.wifi.mobileap.WifiApSettings" settings:controller="com.samsung.android.settings.wifi.mobileap.WifiApSwitchController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="3">
+        <PreferenceScreen android:title="Hotspot configuration history" android:key="hotspot_configuration_history_preference_screen" android:summary="To track all hotspot configuration changes." settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotConfigHistoryController" />
+        <PreferenceScreen android:title="Client event history" android:key="client_event_history_preference_screen" android:summary="To track all client connection/settings related events." settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApClientEventHistoryController" />
+        <PreferenceScreen android:title="Hotspot connection history" android:key="hotpot_connection_history_preference_screen" android:summary="To track all hotspot on/off related events." android:fragment="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotConnectionHistory" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotConnectionHistoryController" />
+        <PreferenceScreen android:title="Channel switch history" android:key="channel_switch_history_preference_screen" android:summary="To track all channel switch history related events on the device." android:fragment="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotChannelSwitchHistory" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotChannelSwitchHistoryController" />
+        <PreferenceScreen android:title="Hotspot Speed history Graph" android:key="hotspot_speed_usage_graph_preference_screen" android:summary="To check overall data rate used by all clients in graph format over the time." settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotSpeedHistoryController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="4">
+        <SecSwitchPreference android:key="wifi_sharing_menu_api_test_switch_preference" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApLabWifiSharingMenuController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="5">
+        <SecSwitchPreference android:key="wifi_ap_dun_popup_blocked_switch_preference" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApLabBlockDunPopupController" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="?expressiveSelectorWithWidgetPreferenceTheme" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?expressiveSelectorWithWidgetPreferenceRootLayoutStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@android:id/widget_frame" style="?expressiveSelectorWithWidgetPreferenceWidgetFrameStyle" />
+    <LinearLayout style="?expressiveSelectorWithWidgetPreferenceTextContainerStyle">
+        <TextView android:id="@android:id/title" style="?expressiveSelectorWithWidgetPreferenceTitleStyle" />
+        <LinearLayout android:id="@id/summary_container" style="?expressiveSelectorWithWidgetPreferenceSummaryContainerStyle">
+            <TextView android:id="@android:id/summary" style="?expressiveSelectorWithWidgetPreferenceSummaryStyle" />
+        </LinearLayout>
+        <ImageView android:id="@android:id/icon" android:paddingTop="@dimen/settingslib_illustration_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true" android:maxWidth="@dimen/settingslib_illustration_width" android:maxHeight="@dimen/settingslib_illustration_height" />
+    </LinearLayout>
+</LinearLayout>

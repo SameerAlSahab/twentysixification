@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="206.0dip" android:width="412.0dip" android:viewportWidth="412.0" android:viewportHeight="206.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+    <path android:fillColor="@color/materialColorSurfaceContainer" android:pathData="M28,0L384,0A28,28 0,0 1,412 28L412,178A28,28 0,0 1,384 206L28,206A28,28 0,0 1,0 178L0,28A28,28 0,0 1,28 0z" />
+    <path android:fillColor="@color/materialColorSurfaceContainerLowest" android:pathData="M412,178C412,193.46 399.46,206 384,206L28,206C12.54,206 0,193.46 0,178L0,33.65L412,33.65L412,178Z" />
+    <path android:fillColor="@color/materialColorPrimary" android:pathData="M223,49L369,49A12,12 0,0 1,381 61L381,103A12,12 0,0 1,369 115L223,115A12,12 0,0 1,211 103L211,61A12,12 0,0 1,223 49z" />
+    <path android:fillColor="@color/materialColorSurfaceBright" android:pathData="M43,49L189,49A12,12 0,0 1,201 61L201,103A12,12 0,0 1,189 115L43,115A12,12 0,0 1,31 103L31,61A12,12 0,0 1,43 49z" />
+    <path android:fillColor="@color/materialColorSurfaceBright" android:pathData="M43,125L189,125A12,12 0,0 1,201 137L201,179A12,12 0,0 1,189 191L43,191A12,12 0,0 1,31 179L31,137A12,12 0,0 1,43 125z" />
+    <path android:fillColor="@color/materialColorSurfaceBright" android:pathData="M223,125L369,125A12,12 0,0 1,381 137L381,179A12,12 0,0 1,369 191L223,191A12,12 0,0 1,211 179L211,137A12,12 0,0 1,223 125z" />
+</vector>

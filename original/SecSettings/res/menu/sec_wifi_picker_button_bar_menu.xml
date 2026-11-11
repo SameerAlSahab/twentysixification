@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@id/menu_back" android:title="@string/back_button_label" android:showAsAction="always" app:contentDescription="@string/back_button_label" app:showAsAction="always" />
+    <item android:id="@id/menu_next" android:title="@string/next_button_label" android:showAsAction="always" app:contentDescription="@string/next_button_label" app:showAsAction="always" />
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/sec_widget_body_text_padding_start_end" android:paddingEnd="@dimen/sec_widget_body_text_padding_start_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/screen_permission_footer_intro" android:paddingTop="@dimen/sec_screen_permission_footer_padding_top" android:paddingBottom="@dimen/sec_screen_permission_footer_spacing_intro_body" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/description_text" />
+    <TextView android:id="@id/screen_permission_footer_body" android:paddingBottom="@dimen/sec_screen_permission_footer_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/description_text" />
+</LinearLayout>

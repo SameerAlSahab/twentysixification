@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/hint_scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/sec_lockscreen_choose_lock_hint_img_container_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="@dimen/sec_lock_hint_img_container_margin_horizontal_tablet" android:layout_marginVertical="@dimen/sec_lock_hint_img_container_margin_vertical_tablet">
+                <ImageView android:layout_width="wrap_content" android:layout_height="@dimen/sec_lock_hint_image_height_tablet" android:src="@drawable/sec_hint_preview" android:adjustViewBounds="true" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="24.0dip" layout="@layout/sec_choose_lock_hint_edittext" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/sec_dialog_button_area_container">
+        <com.samsung.android.settings.widget.SecBottomBarButton android:id="@id/cancel_button" android:text="@string/intelligent_biometrics_lock_settings_button_skip" style="@style/SecurityPreferenceButtonTablet" />
+        <com.samsung.android.settings.widget.SecBottomBarButton android:id="@id/next_button" android:text="@string/common_ok" style="@style/SecurityPreferenceButtonTablet" />
+    </LinearLayout>
+</LinearLayout>

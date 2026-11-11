@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout-land/menu_scan_remove_menu_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/top_guideline" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintGuide_percent="@integer/top_guideline_percent" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@id/shutter_area_guideline" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintGuide_percent="@integer/shutter_area_guideline_percent" />
+    <include android:id="@id/remove_menu" android:layout_width="@dimen/menu_scan_remove_menu_width" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/shutter_area_guideline" app:layout_constraintTop_toTopOf="parent" layout="@layout/scan_remove_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>

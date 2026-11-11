@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ha_one_battery_merged" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ProgressBar android:id="@id/sec_ha_progress_left" android:layout_centerInParent="false" android:layout_centerHorizontal="true" app:glance_isTopLevelLayout="true" style="@style/SecBluetoothArcProgressBar" />
+            <ImageView android:id="@id/sec_ha_icon_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:src="@drawable/hearing_aids_lr" android:scaleType="fitXY" android:tint="@color/bt_device_icon_tint_color" android:layout_centerHorizontal="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip">
+                <TextView android:id="@id/battery_title_left" android:text="@string/sec_bluetooth_battery_left" style="@style/HaBatteryTitle" />
+                <TextView android:id="@id/battery_title_dot" android:text=" · " style="@style/HaBatteryTitle" />
+                <TextView android:id="@id/battery_title_right" android:text="@string/sec_bluetooth_battery_right" style="@style/HaBatteryTitle" />
+                <TextView android:id="@id/battery_summary_left" android:layout_marginStart="4.0dip" style="@style/HaBatterySummary" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

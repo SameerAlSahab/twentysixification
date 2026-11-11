@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_document_scan"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.SpinnerPreference android:persistent="false" android:entries="@array/scan_resolution_entries" android:title="@string/title_scan_resolution" android:key="@string/key_scan_resolution" android:entryValues="@array/dual_recording_values" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/title_add_scan_documents_to_apps_screen" android:key="@string/key_scan_add_scan_documents_to_apps_screen" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_auto_scan" android:key="@string/key_auto_scan" />
+        <SeslPreferenceCaption android:key="@string/key_auto_scan_caption" />
+        <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_object_removal" android:key="@string/key_remove_unwanted_objects" />
+        <SeslPreferenceCaption android:key="@string/key_remove_unwanted_objects_caption" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="" android:key="@string/dep_empty" />
+</PreferenceScreen>

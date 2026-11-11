@@ -1,0 +1,731 @@
+.class public final Landroid/content/res/XmlBlock;
+.super Ljava/lang/Object;
+.source "XmlBlock.java"
+
+# interfaces
+.implements Ljava/lang/AutoCloseable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/content/res/XmlBlock$Parser;,
+        Landroid/content/res/XmlBlock$FlagInfo;
+    }
+.end annotation
+
+
+# static fields
+.field public static final blacklist ANDROID_RESOURCES:Ljava/lang/String; = "http://schemas.android.com/apk/res/android"
+
+.field private static final greylist-max-o DEBUG:Z = false
+
+.field private static final blacklist ERROR_BAD_DOCUMENT:I
+
+.field private static final blacklist ERROR_NULL_DOCUMENT:I = -0x7ffffff8
+
+
+# instance fields
+.field private final greylist-max-o mAssets:Landroid/content/res/AssetManager;
+
+.field private greylist-max-o mNative:J
+
+.field private greylist-max-o mOpen:Z
+
+.field private greylist-max-o mOpenCount:I
+
+.field final greylist-max-o mStrings:Landroid/content/res/StringBlock;
+
+.field private final blacklist mUsesFeatureFlags:Z
+
+
+# direct methods
+.method static bridge synthetic blacklist -$$Nest$fgetmOpenCount(Landroid/content/res/XmlBlock;)I
+    .locals 0
+
+    iget p0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$fgetmUsesFeatureFlags(Landroid/content/res/XmlBlock;)Z
+    .locals 0
+
+    iget-boolean p0, p0, Landroid/content/res/XmlBlock;->mUsesFeatureFlags:Z
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$fputmOpenCount(Landroid/content/res/XmlBlock;I)V
+    .locals 0
+
+    iput p1, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    return-void
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$mdecOpenCountLocked(Landroid/content/res/XmlBlock;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/content/res/XmlBlock;->decOpenCountLocked()V
+
+    return-void
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$sfgetERROR_BAD_DOCUMENT()I
+    .locals 1
+
+    sget v0, Landroid/content/res/XmlBlock;->ERROR_BAD_DOCUMENT:I
+
+    return v0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeDestroyParseState(J)V
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeDestroyParseState(J)V
+
+    return-void
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeCount(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetAttributeCount(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeData(JI)I
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/XmlBlock;->nativeGetAttributeData(JI)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeDataType(JI)I
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/XmlBlock;->nativeGetAttributeDataType(JI)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeIndex(JLjava/lang/String;Ljava/lang/String;)I
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3}, Landroid/content/res/XmlBlock;->nativeGetAttributeIndex(JLjava/lang/String;Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeName(JI)I
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/XmlBlock;->nativeGetAttributeName(JI)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeNamespace(JI)I
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/XmlBlock;->nativeGetAttributeNamespace(JI)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeResource(JI)I
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/XmlBlock;->nativeGetAttributeResource(JI)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetAttributeStringValue(JI)I
+    .locals 0
+
+    invoke-static {p0, p1, p2}, Landroid/content/res/XmlBlock;->nativeGetAttributeStringValue(JI)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetClassAttribute(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetClassAttribute(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetFlagInfo(J)Landroid/content/res/XmlBlock$FlagInfo;
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetFlagInfo(J)Landroid/content/res/XmlBlock$FlagInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetIdAttribute(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetIdAttribute(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetLineNumber(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetLineNumber(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetNamespace(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetNamespace(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetSourceResId(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetSourceResId(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetStyleAttribute(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetStyleAttribute(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static bridge synthetic blacklist -$$Nest$smnativeGetText(J)I
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/res/XmlBlock;->nativeGetText(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static constructor blacklist <clinit>()V
+    .locals 1
+
+    .line 125
+    sget v0, Landroid/system/OsConstants;->EINVAL:I
+
+    neg-int v0, v0
+
+    sput v0, Landroid/content/res/XmlBlock;->ERROR_BAD_DOCUMENT:I
+
+    return-void
+.end method
+
+.method constructor blacklist <init>(Landroid/content/res/AssetManager;JZ)V
+    .locals 1
+
+    .line 674
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 684
+    iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
+
+    .line 685
+    iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    .line 675
+    iput-object p1, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
+
+    .line 676
+    iput-wide p2, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    .line 677
+    new-instance p1, Landroid/content/res/StringBlock;
+
+    invoke-static {p2, p3}, Landroid/content/res/XmlBlock;->nativeGetStringBlock(J)J
+
+    move-result-wide p2
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p2, p3, v0}, Landroid/content/res/StringBlock;-><init>(JZ)V
+
+    iput-object p1, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
+
+    .line 678
+    iput-boolean p4, p0, Landroid/content/res/XmlBlock;->mUsesFeatureFlags:Z
+
+    return-void
+.end method
+
+.method public constructor greylist <init>([B)V
+    .locals 5
+
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 684
+    iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
+
+    .line 685
+    iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    const/4 v1, 0x0
+
+    .line 56
+    iput-object v1, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
+
+    .line 57
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    invoke-static {p1, v2, v1}, Landroid/content/res/XmlBlock;->nativeCreate([BII)J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    .line 58
+    new-instance p1, Landroid/content/res/StringBlock;
+
+    iget-wide v3, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    invoke-static {v3, v4}, Landroid/content/res/XmlBlock;->nativeGetStringBlock(J)J
+
+    move-result-wide v3
+
+    invoke-direct {p1, v3, v4, v2}, Landroid/content/res/StringBlock;-><init>(JZ)V
+
+    iput-object p1, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
+
+    .line 59
+    iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mUsesFeatureFlags:Z
+
+    return-void
+.end method
+
+.method public constructor greylist-max-o <init>([BII)V
+    .locals 2
+
+    .line 62
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    .line 684
+    iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
+
+    .line 685
+    iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    const/4 v1, 0x0
+
+    .line 63
+    iput-object v1, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
+
+    .line 64
+    invoke-static {p1, p2, p3}, Landroid/content/res/XmlBlock;->nativeCreate([BII)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    .line 65
+    new-instance p1, Landroid/content/res/StringBlock;
+
+    iget-wide p2, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    invoke-static {p2, p3}, Landroid/content/res/XmlBlock;->nativeGetStringBlock(J)J
+
+    move-result-wide p2
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p2, p3, v1}, Landroid/content/res/StringBlock;-><init>(JZ)V
+
+    iput-object p1, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
+
+    .line 66
+    iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mUsesFeatureFlags:Z
+
+    return-void
+.end method
+
+.method private greylist-max-o decOpenCountLocked()V
+    .locals 2
+
+    .line 80
+    iget v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Landroid/content/res/XmlBlock;->mOpenCount:I
+
+    if-nez v0, :cond_0
+
+    .line 82
+    iget-object v0, p0, Landroid/content/res/XmlBlock;->mStrings:Landroid/content/res/StringBlock;
+
+    invoke-virtual {v0}, Landroid/content/res/StringBlock;->close()V
+
+    .line 83
+    iget-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    invoke-static {v0, v1}, Landroid/content/res/XmlBlock;->nativeDestroy(J)V
+
+    const-wide/16 v0, 0x0
+
+    .line 84
+    iput-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    .line 85
+    iget-object v0, p0, Landroid/content/res/XmlBlock;->mAssets:Landroid/content/res/AssetManager;
+
+    if-eqz v0, :cond_0
+
+    .line 86
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Landroid/content/res/AssetManager;->xmlBlockGone(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method private static final native greylist-max-o nativeCreate([BII)J
+.end method
+
+.method private static final native blacklist nativeCreateParseState(JI)J
+.end method
+
+.method private static final native greylist-max-o nativeDestroy(J)V
+.end method
+
+.method private static final native greylist-max-o nativeDestroyParseState(J)V
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeCount(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeData(JI)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeDataType(JI)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static native greylist-max-o nativeGetAttributeIndex(JLjava/lang/String;Ljava/lang/String;)I
+    .annotation build Ldalvik/annotation/optimization/FastNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeName(JI)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeNamespace(JI)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeResource(JI)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetAttributeStringValue(JI)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetClassAttribute(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native blacklist nativeGetFlagInfo(J)Landroid/content/res/XmlBlock$FlagInfo;
+    .annotation build Ldalvik/annotation/optimization/FastNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetIdAttribute(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetLineNumber(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method static final native greylist-max-o nativeGetName(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetNamespace(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native blacklist nativeGetSourceResId(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetStringBlock(J)J
+.end method
+
+.method private static final native greylist-max-o nativeGetStyleAttribute(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method private static final native greylist-max-o nativeGetText(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+.method static final native greylist-max-o nativeNext(J)I
+    .annotation build Ldalvik/annotation/optimization/CriticalNative;
+    .end annotation
+.end method
+
+
+# virtual methods
+.method public whitelist test-api close()V
+    .locals 1
+
+    .line 71
+    monitor-enter p0
+
+    .line 72
+    :try_start_0
+    iget-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    .line 73
+    iput-boolean v0, p0, Landroid/content/res/XmlBlock;->mOpen:Z
+
+    .line 74
+    invoke-direct {p0}, Landroid/content/res/XmlBlock;->decOpenCountLocked()V
+
+    .line 76
+    :cond_0
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method protected whitelist test-api finalize()V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Throwable;
+        }
+    .end annotation
+
+    .line 665
+    invoke-virtual {p0}, Landroid/content/res/XmlBlock;->close()V
+
+    return-void
+.end method
+
+.method public greylist newParser()Landroid/content/res/XmlResourceParser;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 93
+    invoke-virtual {p0, v0}, Landroid/content/res/XmlBlock;->newParser(I)Landroid/content/res/XmlResourceParser;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist newParser(I)Landroid/content/res/XmlResourceParser;
+    .locals 4
+
+    .line 97
+    monitor-enter p0
+
+    .line 98
+    :try_start_0
+    iget-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 99
+    new-instance v0, Landroid/content/res/XmlBlock$Parser;
+
+    iget-wide v1, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    invoke-static {v1, v2, p1}, Landroid/content/res/XmlBlock;->nativeCreateParseState(JI)J
+
+    move-result-wide v1
+
+    invoke-direct {v0, p0, v1, v2, p0}, Landroid/content/res/XmlBlock$Parser;-><init>(Landroid/content/res/XmlBlock;JLandroid/content/res/XmlBlock;)V
+
+    monitor-exit p0
+
+    return-object v0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 101
+    monitor-exit p0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    .line 102
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+.end method
+
+.method public blacklist newParser(ILandroid/content/res/Validator;)Landroid/content/res/XmlResourceParser;
+    .locals 7
+
+    .line 109
+    monitor-enter p0
+
+    .line 110
+    :try_start_0
+    iget-wide v0, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    .line 111
+    new-instance v1, Landroid/content/res/XmlBlock$Parser;
+
+    iget-wide v2, p0, Landroid/content/res/XmlBlock;->mNative:J
+
+    invoke-static {v2, v3, p1}, Landroid/content/res/XmlBlock;->nativeCreateParseState(JI)J
+
+    move-result-wide v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-object v5, p0
+
+    move-object v2, p0
+
+    move-object v6, p2
+
+    :try_start_1
+    invoke-direct/range {v1 .. v6}, Landroid/content/res/XmlBlock$Parser;-><init>(Landroid/content/res/XmlBlock;JLandroid/content/res/XmlBlock;Landroid/content/res/Validator;)V
+
+    monitor-exit v2
+
+    return-object v1
+
+    :cond_0
+    move-object v2, p0
+
+    const/4 p0, 0x0
+
+    .line 113
+    monitor-exit v2
+
+    return-object p0
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, p0
+
+    :goto_0
+    move-object p0, v0
+
+    .line 114
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw p0
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_0
+.end method

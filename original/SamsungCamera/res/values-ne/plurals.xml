@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="face_detected">
+        <item quantity="other">%d अनुहारहरू</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d अनुहार</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="max_scan_counter_reached">
+        <item quantity="other">एकैचोटिमा %d वटाभन्दा धेरै पेज स्क्यान गर्न मिल्दैन। स्क्यान गरिएका पेजहरू मेटाउनुहोस् वा यो स्क्यान सेव गर्नुहोस् र नयाँ सुरु गर्नुहोस्।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">एकैचोटिमा %d भन्दा धेरै पेज स्क्यान गर्न मिल्दैन। स्क्यान गरिएका पेजहरू मेटाउनुहोस् वा यो स्क्यान सेव गर्नुहोस् र नयाँ सुरु गर्नुहोस्।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="more_than_limit">
+        <item quantity="other">%d भन्दा धेरै वर्णहरू प्रविष्ट गर्न सकिँदैन।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d भन्दा धेरै वर्ण प्रविष्ट गर्न सकिँदैन।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d नयाँ सूचनाहरू</item>
+        <item quantity="one">%d नयाँ सूचना</item>
+    </plurals>
+    <plurals name="multi_scan_item_selected">
+        <item quantity="other">%d चयन गरियो</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d चयन गरियो</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="my_filter_reached_max_count">
+        <item quantity="other">आफूले चाहेअनुसारका %d भन्दा धेरै फिल्टरहरू सिर्जना गर्न सकिँदैन।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">आफूले चाहेअनुसारको %d भन्दा धेरै फिल्टर सिर्जना गर्न सकिँदैन।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="scan_dialog_delete_scans">
+        <item quantity="other">%d वटा स्क्यानहरू मेटाउने हो?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d स्क्यान मेटाउने हो?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_hour_plurals">
+        <item quantity="other">सुतेको समय: %d घण्‍टा</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">सुतेको समय: %d घण्‍टा</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_min_plurals">
+        <item quantity="other">सुतेको समय: %d मिनट</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">सुतेको समय: %d मिनट</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_hyperlaplse_duration_minutes">
+        <item quantity="other">%d मिनट</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d मिनट</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_super_resolution_torch_high_temperature_warning">
+        <item quantity="other">यन्त्रलाई धेरै तात्नबाट जोगाउन %d मिनटभन्दा बढी समयको 8K भिडियो रेकर्ड नगर्नुहोला।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">यन्त्रलाई धेरै तात्नबाट जोगाउन %d मिनटभन्दा बढी समयको 8K भिडियो रेकर्ड नगर्नुहोला।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_torch_high_temperature_warning">
+        <item quantity="other">यन्त्रलाई धेरै तात्नबाट जोगाउन %1$d मिनटभन्दा बढी समय %2$s रेकर्ड नगर्नुहोस्।</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">यन्त्रलाई धेरै तात्नबाट जोगाउन %1$d मिनटभन्दा बढी समय %2$s रेकर्ड नगर्नुहोस्।</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_hyperlaplse_duration_minutes">
+        <item quantity="other">%d मिनट</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d मिनट</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_photo_size">
+        <item quantity="other">%d मेगापिक्सेल</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d मेगापिक्सेल</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours">
+        <item quantity="other">%d घण्टा</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d घण्टा</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute">
+        <item quantity="other">%d घण्टा एक मिनट</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d घण्टा एक मिनट</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute_one_second">
+        <item quantity="other">%d घण्टा एक मिनट एक सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d घण्टा एक मिनट एक सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_second">
+        <item quantity="other">%d घण्टा एक सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d घण्टा एक सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_minutes_one_second">
+        <item quantity="other">%d मिनट एक सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d मिनट एक सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_seconds">
+        <item quantity="other">%d सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes">
+        <item quantity="other">एक घण्टा %d मिनट</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">एक घण्टा %d मिनट</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes_one_second">
+        <item quantity="other">एक घण्टा %d मिनट एक सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">एक घण्टा %d मिनट एक सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_seconds">
+        <item quantity="other">एक घण्टा %d सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">एक घण्टा %d सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_one_minute_n_seconds">
+        <item quantity="other">एक घण्टा एक मिनट %d सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">एक घण्टा एक मिनट %d सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_minute_n_seconds">
+        <item quantity="other">एक मिनट %d सेकेन्ड</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">एक मिनट %d सेकेन्ड</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_cropped">
+        <item quantity="other">%d वटा अनुहारहरू क्रप गरियो</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d अनुहार क्रप गरियो</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_detected">
+        <item quantity="other">%d वटा अनुहारहरू पत्ता लागे</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d अनुहार पत्ता लाग्यो</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_more_than_faces">
+        <item quantity="other">%1$d वटाभन्दा बढी अनुहारहरू, %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$d भन्दा बढी अनुहार, %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_one_face_cropped">
+        <item quantity="other">%2$s बाट %1$d वटा अनुहारहरू क्रप गरियो</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%2$s बाट %1$d अनुहार क्रप गरियो</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+</resources>

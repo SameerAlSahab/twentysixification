@@ -1,0 +1,106 @@
+.class Landroid/media/tv/TvInputService$Session$4;
+.super Ljava/lang/Object;
+.source "TvInputService.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroid/media/tv/TvInputService$Session;->notifyChannelRetuned(Landroid/net/Uri;Landroid/os/Bundle;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic blacklist this$0:Landroid/media/tv/TvInputService$Session;
+
+.field final synthetic blacklist val$args:Landroid/os/Bundle;
+
+.field final synthetic blacklist val$channelUri:Landroid/net/Uri;
+
+
+# direct methods
+.method constructor blacklist <init>(Landroid/media/tv/TvInputService$Session;Landroid/net/Uri;Landroid/os/Bundle;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010,
+            0x1010
+        }
+        names = {
+            null,
+            null,
+            null
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .line 796
+    iput-object p1, p0, Landroid/media/tv/TvInputService$Session$4;->this$0:Landroid/media/tv/TvInputService$Session;
+
+    iput-object p2, p0, Landroid/media/tv/TvInputService$Session$4;->val$channelUri:Landroid/net/Uri;
+
+    iput-object p3, p0, Landroid/media/tv/TvInputService$Session$4;->val$args:Landroid/os/Bundle;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public whitelist test-api run()V
+    .locals 2
+
+    .line 802
+    :try_start_0
+    iget-object v0, p0, Landroid/media/tv/TvInputService$Session$4;->this$0:Landroid/media/tv/TvInputService$Session;
+
+    invoke-static {v0}, Landroid/media/tv/TvInputService$Session;->-$$Nest$fgetmSessionCallback(Landroid/media/tv/TvInputService$Session;)Landroid/media/tv/ITvInputSessionCallback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 803
+    iget-object v0, p0, Landroid/media/tv/TvInputService$Session$4;->this$0:Landroid/media/tv/TvInputService$Session;
+
+    invoke-static {v0}, Landroid/media/tv/TvInputService$Session;->-$$Nest$fgetmSessionCallback(Landroid/media/tv/TvInputService$Session;)Landroid/media/tv/ITvInputSessionCallback;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/media/tv/TvInputService$Session$4;->val$channelUri:Landroid/net/Uri;
+
+    iget-object p0, p0, Landroid/media/tv/TvInputService$Session$4;->val$args:Landroid/os/Bundle;
+
+    invoke-interface {v0, v1, p0}, Landroid/media/tv/ITvInputSessionCallback;->onChannelRetunedWithExtraInfo(Landroid/net/Uri;Landroid/os/Bundle;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    .line 806
+    const-string v0, "TvInputService"
+
+    const-string v1, "error in notifyChannelRetuned"
+
+    invoke-static {v0, v1, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-void
+.end method

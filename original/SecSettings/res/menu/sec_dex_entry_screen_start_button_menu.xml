@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/contained_btn_start_dex_bg" android:id="@id/menu_start_dex_btn" android:visible="false" android:title="@string/dex_entry_start_dex_btn" android:contentDescription="@string/dex_entry_start_dex_btn" app:showAsAction="always" />
+</menu>

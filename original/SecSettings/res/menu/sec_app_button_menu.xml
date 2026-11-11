@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/sec_app_info_button_open" android:id="@id/open_button" android:visible="true" android:title="@string/launch_instant_app" android:contentDescription="@string/launch_instant_app" android:tooltipText="@string/launch_instant_app" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/sec_app_info_button_archive" android:id="@id/archive_button" android:visible="true" android:title="@string/archive" android:contentDescription="@string/archive" android:tooltipText="@string/archive" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/sec_app_info_button_uninstall" android:id="@id/uninstall_button" android:visible="true" android:title="@string/uninstall_text" android:contentDescription="@string/uninstall_text" android:tooltipText="@string/uninstall_text" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/sec_app_info_button_force_stop" android:id="@id/forcestop_button" android:visible="true" android:title="@string/force_stop" android:contentDescription="@string/force_stop" android:tooltipText="@string/force_stop" app:showAsAction="ifRoom" />
+</menu>

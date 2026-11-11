@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.lockscreen.SecInsetCategory android:key="configure_main_section" android:order="1">
+        <com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureSSIDPreference android:key="network_name_preference" android:order="1" />
+        <com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigurePassWordPreference android:key="password_preference" android:order="2" />
+        <SecDropDownPreference android:title="@string/wifi_ap_configure_broadcast_band" android:key="band_dropdown_preference" android:order="3" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureBandDropDownController" />
+        <com.samsung.android.settings.wifi.mobileap.views.WifiApSeekBarPreference android:title="@string/wifi_ap_configure_broadcast_band" android:key="band_seekbar_preference" android:order="3" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureBandSeekBarController" />
+        <SecDropDownPreference android:title="@string/wifi_security" android:key="security_dropdown_preference" android:order="4" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureSecurityDropDownController" />
+    </com.samsung.android.settings.lockscreen.SecInsetCategory>
+    <SecPreferenceCategory android:order="2">
+        <com.samsung.android.settings.wifi.mobileap.views.WifiApExpandablePreference android:title="@string/wifi_ap_menu_advanced" android:key="configure_advanced_expandable_preference" />
+    </SecPreferenceCategory>
+    <PreferenceCategory android:key="configure_advanced_section_1" android:order="3" settings:isPreferenceVisible="false">
+        <SecDropDownPreference android:title="@string/wifi_ap_maxclient" android:key="max_connection_dropdown_preference" android:order="1" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureMaxConnectionDropDownController" />
+        <SecDropDownPreference android:title="@string/wifi_ap_channel" android:key="broadcast_channel_dropdown_preference" android:order="2" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureBroadcastChannelDropDownController" />
+        <SecPreference android:title="@string/data_usage_disable_mobile_limit" android:key="set_data_limit_preference" android:order="3" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureSetDataLimitPreferenceController" settings:isPreferenceVisible="false" />
+        <SecDropDownPreference android:title="@string/wifi_privacy_settings" android:key="mac_address_type_dropdown_preference" android:order="4" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureMacAddressTypeDropDownController" />
+        <SecDropDownPreference android:title="@string/wifi_ap_menu_timeout" android:key="turn_off_hotspot_timer_dropdown_preference" android:order="5" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureTurnOffHotspotTimerDropDownController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="configure_advanced_section_2" android:order="4" settings:isPreferenceVisible="false">
+        <SecSwitchPreference android:title="@string/wifi_ap_hide_ssid" android:key="hidden_network_switch_preference" android:order="1000" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureHiddenNetworkController" />
+        <androidx.preference.SeslPreferenceCaption android:key="hidden_network_switch_summary" android:order="1001" settings:isPreferenceVisible="false" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/wifi_ap_11ax_title" android:key="support_wifi_6_standard" android:order="2000" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureSupportWifi6Controller" />
+        <androidx.preference.SeslPreferenceCaption android:title="@string/wifi_ap_11ax_summary" android:key="support_wifi_6_standard_summary" android:order="2001" settings:isPreferenceVisible="false" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/wifi_ap_pmf_title" android:key="protected_management_frames" android:order="3000" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigurePmfController" />
+        <androidx.preference.SeslPreferenceCaption android:key="protected_management_frames_summary" android:order="3001" settings:isPreferenceVisible="false" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/wifi_ap_power_save" android:key="power_saving_mode" android:order="4000" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigurePowerSavingModeController" />
+        <androidx.preference.SeslPreferenceCaption android:key="power_saving_mode_summary" android:order="4001" settings:isPreferenceVisible="false" settings:searchable="false" />
+        <SecSwitchPreference android:title="@string/wifi_ap__wifi_sharing" android:key="wifi_sharing" android:order="5000" settings:controller="com.samsung.android.settings.wifi.mobileap.configure.WifiApConfigureWifiSharingController" />
+        <androidx.preference.SeslPreferenceCaption android:key="wifi_sharing_summary" android:order="5001" settings:isPreferenceVisible="false" settings:searchable="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:key="hotspot_lab_section" android:order="999" settings:isPreferenceVisible="false">
+        <PreferenceScreen android:title="Hotspot Labs" android:key="hotspot_labs_preference_screen" android:summary="This feature is for internal test purpose. It does not guarantee stability." android:fragment="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotLabs" settings:controller="com.samsung.android.settings.wifi.mobileap.hotspotlabs.WifiApHotspotLabsController" />
+    </PreferenceCategory>
+</PreferenceScreen>

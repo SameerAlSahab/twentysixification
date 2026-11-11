@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_buds_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/view_top" android:background="@color/sec_round_and_bgcolor" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="6.0dip" />
+    <RelativeLayout android:id="@id/rl_bg_layout" android:background="@drawable/buds_menu_bg_all18dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_all_layout" android:background="@drawable/buds_menu_bg18dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layerType="software" android:clipToOutline="true">
+            <FrameLayout android:id="@id/fl_buds_layout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_buds_layout1" android:background="?android:listChoiceBackgroundIndicator" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip" android:paddingStart="18.0dip" android:paddingEnd="18.0dip">
+                    <ImageView android:id="@id/img_buds_icon1" android:layout_width="28.0dip" android:layout_height="28.0dip" android:scaleType="fitXY" android:tint="@color/sec_widget_multi_button_selected_icon_color" android:importantForAccessibility="no" />
+                    <LinearLayout android:orientation="horizontal" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="14.0dip" android:layout_marginEnd="0.0dip">
+                        <TextView android:textSize="13.0sp" android:textColor="@color/sec_widget_multi_button_selected_color" android:id="@id/tv_buds_name1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="sec" android:textAlignment="viewStart" android:textFontWeight="400" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="17.0dip" android:paddingEnd="17.0dip">
+                <View android:id="@id/divider_line" android:background="#ff9ebdfe" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/fl_buds_layout2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_buds_layout2" android:background="?android:listChoiceBackgroundIndicator" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="40.0dip" android:paddingStart="18.0dip" android:paddingEnd="18.0dip">
+                    <ImageView android:id="@id/img_buds_icon2" android:layout_width="28.0dip" android:layout_height="28.0dip" android:scaleType="fitXY" android:tint="@color/sec_widget_multi_button_selected_icon_color" android:importantForAccessibility="no" />
+                    <LinearLayout android:orientation="horizontal" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="14.0dip" android:layout_marginEnd="0.0dip">
+                        <TextView android:textSize="13.0sp" android:textColor="@color/sec_widget_multi_button_selected_color" android:id="@id/tv_buds_name2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="sec" android:textAlignment="viewStart" android:textFontWeight="400" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

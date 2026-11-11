@@ -1,0 +1,120 @@
+.class Landroid/telephony/ActivityStatsTechSpecificInfo$1;
+.super Ljava/lang/Object;
+.source "ActivityStatsTechSpecificInfo.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroid/telephony/ActivityStatsTechSpecificInfo;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Landroid/telephony/ActivityStatsTechSpecificInfo;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor blacklist <init>()V
+    .locals 0
+
+    .line 223
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist createFromParcel(Landroid/os/Parcel;)Landroid/telephony/ActivityStatsTechSpecificInfo;
+    .locals 3
+
+    .line 225
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p0
+
+    .line 226
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    const/4 v1, 0x5
+
+    .line 227
+    new-array v1, v1, [I
+
+    .line 228
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
+
+    .line 229
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    .line 230
+    new-instance v2, Landroid/telephony/ActivityStatsTechSpecificInfo;
+
+    invoke-direct {v2, p0, v0, v1, p1}, Landroid/telephony/ActivityStatsTechSpecificInfo;-><init>(II[II)V
+
+    return-object v2
+.end method
+
+.method public bridge synthetic whitelist createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .line 223
+    invoke-virtual {p0, p1}, Landroid/telephony/ActivityStatsTechSpecificInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/telephony/ActivityStatsTechSpecificInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public blacklist newArray(I)[Landroid/telephony/ActivityStatsTechSpecificInfo;
+    .locals 0
+
+    .line 235
+    new-array p0, p1, [Landroid/telephony/ActivityStatsTechSpecificInfo;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic whitelist newArray(I)[Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000
+        }
+        names = {
+            null
+        }
+    .end annotation
+
+    .line 223
+    invoke-virtual {p0, p1}, Landroid/telephony/ActivityStatsTechSpecificInfo$1;->newArray(I)[Landroid/telephony/ActivityStatsTechSpecificInfo;
+
+    move-result-object p0
+
+    return-object p0
+.end method

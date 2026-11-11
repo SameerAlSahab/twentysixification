@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/galaxy_system_update"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="galaxy_system_update_main_switch" android:defaultValue="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/galaxy_system_update_description" android:selectable="false" android:key="galaxy_system_update_description" settings:positionMode="first_item" style="@style/description_text" />
+    <com.samsung.android.settings.widget.SecRestrictedSwitchPreference android:title="@string/galaxy_system_use_wifi_only" android:key="use_wifi_only" />
+    <SeslPreferenceCaption android:title="@string/galaxy_system_use_wifi_only_description" android:key="use_wifi_only_caption" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <SecPreference android:title="@string/galaxy_system_apps" android:key="galaxy_system_apps" android:fragment="com.samsung.android.settings.galaxysystemupdate.apps.GalaxySystemAppsFragment" />
+</PreferenceScreen>

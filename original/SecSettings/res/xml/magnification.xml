@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/accessibility_screen_magnification_title"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:key="description_image_preference" settings:image_contentDescription="@string/magnification_guide_image_content_description" settings:lottie_rawRes="@raw/a11y_accessibility_screen_magnification" settings:searchable="false" />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:title="@string/magnification_desc" settings:searchable="false" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/accessibility_screen_magnification_shortcut_title" android:key="magnification_shortcut_preference" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.ToggleMagnificationShortcutPreferenceController" />
+    <PreferenceCategory />
+    <Preference android:title="@string/magnification_mode_title" android:key="screen_magnification_mode" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.MagnificationTypePreferenceController">
+        <intent android:action="com.android.settings.ACCESSIBILITY_MAGNIFICATION_MODE" />
+    </Preference>
+    <PreferenceCategory android:key="accessibility_magnification_preference_category" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.MagnificationPreferenceCategoryController" />
+    <SwitchPreference android:title="@string/magnification_always_on_fullscreen_title" android:key="accessibility_magnification_always_on_enabled" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.AlwaysOnPreferenceController" />
+    <SwitchPreference android:title="@string/magnification_keyboard_typing_title" android:key="accessibility_magnification_keyboard_region" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.MagnificationKeyboardPreferenceController" />
+    <PreferenceCategory />
+    <SwitchPreference android:title="@string/magnification_follow_typing_cursor_title" android:key="magnification_follow_typing" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.FollowTypingPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/magnification_follow_typing_cursor_summary" />
+    <SwitchPreference android:title="@string/sec_accessibility_move_with_keyboard_focus" android:key="magnification_focus_follow_keyboard" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.SecFollowKeyboardPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/sec_accessibility_move_with_keyboard_focus_summary" />
+    <SwitchPreference android:title="@string/sec_accessibility_magnification_cursor_following_title" android:key="accessibility_magnification_cursor_following_mode" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.SecCursorFollowingModeSwitchPreferenceController" />
+    <SeslPreferenceCaption android:title="@string/sec_accessibility_magnification_move_screen_summary" android:key="accessibility_magnification_description_preference" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.MagnificationDescriptionPreferenceController" settings:searchable="false" />
+    <com.samsung.android.settings.accessibility.base.widget.DescriptionPreference android:key="description_text_preference" settings:searchable="false" settings:showTopPadding="true" />
+</PreferenceScreen>

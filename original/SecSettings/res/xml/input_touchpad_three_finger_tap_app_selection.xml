@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:persistent="false" android:title="@string/three_finger_tap_launch_app_title" android:key="input_touchpad_three_finger_tap" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapAppListController"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto" />

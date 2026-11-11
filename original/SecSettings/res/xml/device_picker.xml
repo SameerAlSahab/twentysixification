@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.bluetooth.BluetoothProgressCategory android:title="@string/bluetooth_preference_found_media_devices" android:orderingFromXml="false" android:key="bt_device_list" />
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/nearby_sharing_suggestion_card" android:selectable="false" android:key="nearby_share_key" settings:allowDividerBelow="true" settings:controller="com.android.settings.bluetooth.NearbySharePreferenceController" settings:searchable="false" />
+</PreferenceScreen>

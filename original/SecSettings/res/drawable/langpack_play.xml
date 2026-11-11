@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="18.0dip" android:width="18.0dip" android:viewportWidth="18.0" android:viewportHeight="18.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffd9d9d9" android:pathData="M6.541,14.066L12.569,9.982C13.31,9.566 13.31,8.399 12.569,7.982L6.541,3.899C5.801,3.482 4.875,3.982 4.875,4.899V13.066C4.875,13.983 5.801,14.566 6.541,14.066Z" android:fillType="evenOdd" />
+    <path android:fillColor="@color/langpack_download_icon_tint_color" android:pathData="M6.541,14.066L12.569,9.982C13.31,9.566 13.31,8.399 12.569,7.982L6.541,3.899C5.801,3.482 4.875,3.982 4.875,4.899V13.066C4.875,13.983 5.801,14.566 6.541,14.066Z" android:fillType="evenOdd" />
+</vector>

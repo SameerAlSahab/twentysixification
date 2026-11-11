@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space android:layout_width="@dimen/sec_auracast_device_space_left" android:layout_height="1.0dip" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/auracast_device_icon" android:layout_width="@dimen/sec_auracast_device_icon_size" android:layout_height="@dimen/sec_auracast_device_icon_size" android:src="@drawable/sec_auracast_ic_headphones_square" android:selectable="true" />
+    <Space android:layout_width="@dimen/sec_auracast_device_space_between_icon_and_name" android:layout_height="1.0dip" />
+    <TextView android:textSize="@dimen/sec_auracast_device_name_text_size" android:ellipsize="marquee" android:id="@id/auracast_device_name" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:marqueeRepeatLimit="marquee_forever" android:fontFamily="sec" android:textFontWeight="400" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/auracast_down_arrow" android:layout_width="@dimen/sec_auracast_device_icon_size" android:layout_height="@dimen/sec_auracast_device_icon_size" android:src="@drawable/sec_auracast_ic_spinner_arrow_down" android:tint="@color/sec_auracast_current_device_text_color" android:selectable="true" />
+    <Space android:layout_width="@dimen/sec_auracast_device_space_right" android:layout_height="1.0dip" />
+</LinearLayout>

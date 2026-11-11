@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.bottomnavigation.BottomNavigationView android:layout_gravity="center_horizontal" android:id="@id/bottom_navigation" android:clipToPadding="false" android:layout_width="@dimen/sec_locale_remove_button_width" android:layout_height="?actionBarSize" app:menu="@menu/sec_bottom_navigation_view_delete" app:seslViewType="IconLabel" style="@style/LangpackDeleteBottomFloatingBar"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

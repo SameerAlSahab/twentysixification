@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:tag="layout/menu_bokeh_lighting_menu_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/top_guideline" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintGuide_percent="@integer/top_guideline_percent" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/preview_top_guideline" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+    <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@id/bottom_guideline" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintGuide_percent="@integer/bottom_guideline_percent" />
+    <com.sec.android.app.camera.widget.FloatingContainerWidget android:id="@id/slider" android:visibility="invisible" android:layout_width="@dimen/widget_floating_container_width" android:layout_height="@dimen/widget_floating_container_height" android:layout_marginTop="@dimen/widget_floating_container_top_margin" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/bottom_guideline" />
+</androidx.constraintlayout.widget.ConstraintLayout>

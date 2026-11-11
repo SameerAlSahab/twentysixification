@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="face_detected">
+        <item quantity="other">%d visi</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d viso</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="max_scan_counter_reached">
+        <item quantity="other">Impossibile effettuare la scansione di più di %d pagine alla volta. Eliminate le pagine acquisite o salvate questa scansione e avviatene una nuova.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Impossibile effettuare la scansione di più di %d pagina alla volta. Eliminate le pagine acquisite o salvate questa scansione e avviatene una nuova.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="more_than_limit">
+        <item quantity="other">Impossibile inserire più di %d caratteri.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Impossibile inserire più di %d carattere.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nuove notifiche</item>
+        <item quantity="one">%d nuova notifica</item>
+    </plurals>
+    <plurals name="multi_scan_item_selected">
+        <item quantity="other">%d selezionati</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d selezionato</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="my_filter_reached_max_count">
+        <item quantity="other">Impossibile creare più di %d filtri personalizzati.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Impossibile creare più di %d filtro personalizzato.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="scan_dialog_delete_scans">
+        <item quantity="other">Eliminare %d scansioni?</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Eliminare %d scansione?</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_hour_plurals">
+        <item quantity="other">Durata sonno: %d ore</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Durata sonno: %d ora</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="sesl_sleep_duration_in_min_plurals">
+        <item quantity="other">Durata sonno: %d minuti</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Durata sonno: %d minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_hyperlaplse_duration_minutes">
+        <item quantity="other">%d minuti</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_super_resolution_torch_high_temperature_warning">
+        <item quantity="other">Per evitare il surriscaldamento, non registrate più di %d minuti di video in 8K.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Per evitare il surriscaldamento, non registrate più di %d minuto di video in 8K.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="toast_torch_high_temperature_warning">
+        <item quantity="other">Per evitare il surriscaldamento, non registrate più di %1$d minuti di %2$s.</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Per evitare il surriscaldamento, non registrate più di %1$d minuto di %2$s.</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_hyperlaplse_duration_minutes">
+        <item quantity="other">%d minuti</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_photo_size">
+        <item quantity="other">%d megapixel</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d megapixel</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours">
+        <item quantity="other">%d ore</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ora</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute">
+        <item quantity="other">%d ore e un minuto</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ora e un minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_minute_one_second">
+        <item quantity="other">%d ore, un minuto e un secondo</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ora, un minuto e un secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_hours_one_second">
+        <item quantity="other">%d ore e un secondo</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d ora e un secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_minutes_one_second">
+        <item quantity="other">%d minuti e un secondo</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d minuto e un secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_n_seconds">
+        <item quantity="other">%d secondi</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes">
+        <item quantity="other">Un’ora e %d minuti</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Un’ora e %d minuto</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_minutes_one_second">
+        <item quantity="other">Un’ora, %d minuti e un secondo</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Un’ora, %d minuto e un secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_n_seconds">
+        <item quantity="other">Un’ora e %d secondi</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Un’ora e %d secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_hour_one_minute_n_seconds">
+        <item quantity="other">Un’ora, un minuto e %d secondi</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Un’ora, un minuto e %d secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="tts_recording_elapsed_time_one_minute_n_seconds">
+        <item quantity="other">Un minuto e %d secondi</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Un minuto e %d secondo</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_cropped">
+        <item quantity="other">%d visi ritagliati</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d viso ritagliato</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_face_detected">
+        <item quantity="other">%d visi rilevati</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%d viso rilevato</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_more_than_faces">
+        <item quantity="other">Più di %1$d visi, %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">Più di %1$d viso, %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+    <plurals name="voice_guide_one_face_cropped">
+        <item quantity="other">%1$d visi ritagliati da %2$s</item>
+        <item quantity="zero">N/A</item>
+        <item quantity="one">%1$d viso ritagliato da %2$s</item>
+        <item quantity="two">N/A</item>
+        <item quantity="few">N/A</item>
+        <item quantity="many">N/A</item>
+    </plurals>
+</resources>

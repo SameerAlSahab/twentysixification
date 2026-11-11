@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sec.android.app.camera.layer.keyscreen.zoom.widget.ZoomShortcutButton android:id="@id/zoomItem" android:tag="layout/key_screen_zoom_shortcut_list_item_0" android:layout_width="@dimen/overlay_layout_zoom_group_shortcut_button_size" android:layout_height="@dimen/overlay_layout_zoom_group_shortcut_button_size"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

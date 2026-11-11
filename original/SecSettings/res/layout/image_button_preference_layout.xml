@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/sec_widget_round_and_bgcolor" android:focusable="false" android:clickable="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/button_container" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.samsung.android.settings.widget.SecRoundButtonView android:gravity="center" android:id="@id/button" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/ColorRoundButtonStyle" />
+            <androidx.appcompat.widget.SeslProgressBar android:theme="@style/UpdateButtonProgress" android:gravity="center" android:id="@id/progress_icon" android:visibility="gone" android:layout_width="@dimen/sec_security_dashboard_menu_item_scan_progress_bar_size" android:layout_height="@dimen/sec_security_dashboard_menu_item_scan_progress_bar_size" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyleLarge" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

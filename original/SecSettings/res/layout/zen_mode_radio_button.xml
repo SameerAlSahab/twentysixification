@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton android:textSize="16.0sp" android:textColor="?android:textColorPrimary" android:gravity="center_vertical" android:id="@android:id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:lineSpacingExtra="@dimen/zen_mode_condition_detail_item_interline_spacing" android:paddingStart="16.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="4.0dip" android:layout_alignParentStart="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/widgets_on_lockscreen_title" android:key="widgets_on_lockscreen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.communal.BetaTagPreference android:key="widgets_on_lockscreen_beta_tag" />
+    <com.android.settingslib.widget.IllustrationPreference android:key="widgets_on_lockscreen_illustration" settings:dynamicColor="true" settings:lottie_rawRes="@raw/lottie_lockscreen_widgets_illustration" />
+    <com.android.settings.widget.SettingsMainSwitchPreference android:title="@string/widgets_on_lockscreen_title" android:key="widgets_on_lockscreen_main_switch" settings:controller="com.android.settings.display.WidgetsOnLockscreenMainPreferenceController" />
+    <Preference android:title="@string/when_to_auto_show_hubmode_title" android:key="when_to_start_hubmode" android:fragment="com.android.settings.communal.WhenToStartHubPicker" settings:controller="com.android.settings.communal.WhenToStartHubPreferenceController" />
+    <com.android.settingslib.widget.FooterPreference android:title="@string/widgets_on_lockscreen_footer" android:key="footer_pref" />
+</PreferenceScreen>

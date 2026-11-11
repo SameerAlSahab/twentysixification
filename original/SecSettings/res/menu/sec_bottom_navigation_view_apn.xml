@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/sec_app_info_button_force_stop" android:id="@id/cancel_btn" android:title="@string/cancel" app:showAsAction="always" />
+    <item android:icon="@drawable/sec_wifi_qr_save_image" android:id="@id/save_btn" android:title="@string/sec_apn_ConfirmationDialog_positive_button" app:showAsAction="always" />
+</menu>

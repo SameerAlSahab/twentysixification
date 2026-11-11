@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gradient android:type="linear" android:startX="-20.573" android:startY="15.379" android:endX="15.144" android:endY="52.71"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:color="@color/sec_dashboard_galaxy_ai_settings_gradient_color1" android:offset="0.0" />
+    <item android:color="@color/sec_dashboard_galaxy_ai_settings_gradient_color2" android:offset="0.639" />
+    <item android:color="@color/sec_dashboard_galaxy_ai_settings_gradient_color3" android:offset="0.999" />
+</gradient>

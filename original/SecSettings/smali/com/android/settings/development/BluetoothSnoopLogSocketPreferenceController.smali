@@ -1,0 +1,91 @@
+.class public final Lcom/android/settings/development/BluetoothSnoopLogSocketPreferenceController;
+.super Lcom/android/settingslib/development/DeveloperOptionsPreferenceController;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Landroidx/preference/Preference$OnPreferenceChangeListener;
+.implements Lcom/android/settings/core/PreferenceControllerMixin;
+
+
+# static fields
+.field static final BLUETOOTH_SNOOP_LOG_SOCKET_PROPERTY:Ljava/lang/String; = "persist.bluetooth.btsnoopsocket.enabled"
+
+
+# virtual methods
+.method public final getPreferenceKey()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "bt_hci_snoop_log_socket"
+
+    return-object p0
+.end method
+
+.method public final onDeveloperOptionsSwitchDisabled()V
+    .locals 2
+
+    invoke-super {p0}, Lcom/android/settingslib/development/DeveloperOptionsPreferenceController;->onDeveloperOptionsSwitchDisabled()V
+
+    const-string v0, "persist.bluetooth.btsnoopsocket.enabled"
+
+    const-string v1, "false"
+
+    invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcom/android/settingslib/development/DeveloperOptionsPreferenceController;->mPreference:Landroidx/preference/Preference;
+
+    check-cast p0, Landroidx/preference/TwoStatePreference;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    return-void
+.end method
+
+.method public final onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const-string/jumbo p0, "true"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p0, "false"
+
+    :goto_0
+    const-string p1, "persist.bluetooth.btsnoopsocket.enabled"
+
+    invoke-static {p1, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final updateState(Landroidx/preference/Preference;)V
+    .locals 1
+
+    const-string p1, "persist.bluetooth.btsnoopsocket.enabled"
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    iget-object p0, p0, Lcom/android/settingslib/development/DeveloperOptionsPreferenceController;->mPreference:Landroidx/preference/Preference;
+
+    check-cast p0, Landroidx/preference/TwoStatePreference;
+
+    invoke-virtual {p0, p1}, Landroidx/preference/TwoStatePreference;->setChecked(Z)V
+
+    return-void
+.end method

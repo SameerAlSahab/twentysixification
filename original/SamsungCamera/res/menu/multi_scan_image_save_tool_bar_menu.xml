@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:id="@id/group_action_tool_bar">
+        <item android:icon="@drawable/ic_share_point_3_connected_dotted" android:id="@id/action_tool_bar_share" android:title="@string/share" app:showAsAction="always" />
+        <item android:icon="@drawable/ic_split_view_1_square_split_1x2" android:id="@id/action_tool_bar_view_mode" android:title="@string/Title_Multi_Recording_Type" app:showAsAction="always" />
+        <item android:id="@id/action_tool_bar_select" android:title="@string/multi_scan_select" app:showAsAction="never" />
+        <item android:id="@id/action_tool_bar_save_as_image" android:title="@string/scan_save_as_image" app:showAsAction="never" />
+    </group>
+</menu>

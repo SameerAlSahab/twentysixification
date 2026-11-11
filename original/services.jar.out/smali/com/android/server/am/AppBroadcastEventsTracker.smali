@@ -1,0 +1,160 @@
+.class public final Lcom/android/server/am/AppBroadcastEventsTracker;
+.super Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Landroid/app/ActivityManagerInternal$BroadcastEventListener;
+
+
+# virtual methods
+.method public final createAppStateEvents(ILjava/lang/String;)Lcom/android/server/am/BaseAppStateEvents;
+    .locals 6
+
+    new-instance v0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$SimpleAppStateTimeslotEvents;
+
+    iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
+
+    iget-object p0, p0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mAppStatePolicy:Lcom/android/server/am/BaseAppStatePolicy;
+
+    move-object v1, p0
+
+    check-cast v1, Lcom/android/server/am/AppBroadcastEventsTracker$AppBroadcastEventsPolicy;
+
+    iget-wide v3, v1, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$BaseAppStateTimeSlotEventsPolicy;->mTimeSlotSize:J
+
+    move-object v5, p0
+
+    check-cast v5, Lcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;
+
+    move v1, p1
+
+    move-object v2, p2
+
+    invoke-direct/range {v0 .. v5}, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$SimpleAppStateTimeslotEvents;-><init>(ILjava/lang/String;JLcom/android/server/am/BaseAppStateEventsTracker$BaseAppStateEventsPolicy;)V
+
+    return-object v0
+.end method
+
+.method public final dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
+    .locals 1
+
+    invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
+
+    const-string v0, "APP BROADCAST EVENT TRACKER:"
+
+    invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
+
+    const-string v0, "  "
+
+    invoke-virtual {v0, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-super {p0, p1, p2}, Lcom/android/server/am/BaseAppStateEventsTracker;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final getTrackerInfoForStatsd(I)[B
+    .locals 4
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, p1}, Lcom/android/server/am/BaseAppStateEventsTracker;->getUidEventsLocked(I)Lcom/android/server/am/BaseAppStateEvents;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$SimpleAppStateTimeslotEvents;
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {p0, v2, v3}, Lcom/android/server/am/BaseAppStateEvents;->getEarliest(J)J
+
+    move-result-wide v2
+
+    invoke-virtual {p0, v2, v3, v0, v1}, Lcom/android/server/am/BaseAppStateTimeSlotEvents;->getTotalEventsSince(JJ)I
+
+    move-result p0
+
+    :goto_0
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_1
+    new-instance p1, Landroid/util/proto/ProtoOutputStream;
+
+    invoke-direct {p1}, Landroid/util/proto/ProtoOutputStream;-><init>()V
+
+    const-wide v0, 0x10500000001L
+
+    invoke-virtual {p1, v0, v1, p0}, Landroid/util/proto/ProtoOutputStream;->write(JI)V
+
+    invoke-virtual {p1}, Landroid/util/proto/ProtoOutputStream;->flush()V
+
+    invoke-virtual {p1}, Landroid/util/proto/ProtoOutputStream;->getBytes()[B
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getType()I
+    .locals 0
+
+    const/4 p0, 0x6
+
+    return p0
+.end method
+
+.method public final onSendingBroadcast(Ljava/lang/String;I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
+
+    iget-object v0, v0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mAppStatePolicy:Lcom/android/server/am/BaseAppStatePolicy;
+
+    check-cast v0, Lcom/android/server/am/AppBroadcastEventsTracker$AppBroadcastEventsPolicy;
+
+    iget-boolean v0, v0, Lcom/android/server/am/BaseAppStatePolicy;->mTrackerEnabled:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker;->mHandler:Lcom/android/server/am/BaseAppStateTimeSlotEventsTracker$H;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p2, v0, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onSystemReady()V
+    .locals 1
+
+    invoke-super {p0}, Lcom/android/server/am/BaseAppStateTracker;->onSystemReady()V
+
+    iget-object v0, p0, Lcom/android/server/am/BaseAppStateTracker;->mInjector:Lcom/android/server/am/BaseAppStateTracker$Injector;
+
+    iget-object v0, v0, Lcom/android/server/am/BaseAppStateTracker$Injector;->mActivityManagerInternal:Landroid/app/ActivityManagerInternal;
+
+    invoke-virtual {v0, p0}, Landroid/app/ActivityManagerInternal;->addBroadcastEventListener(Landroid/app/ActivityManagerInternal$BroadcastEventListener;)V
+
+    return-void
+.end method

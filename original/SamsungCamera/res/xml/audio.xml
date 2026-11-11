@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_audio"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_Camcorder_Zoom_In_Mic" android:key="@string/key_zoom_in_mic" />
+    <SeslPreferenceCaption android:key="@string/key_zoom_in_mic_caption" />
+    <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_Recording_360_BT_Mic" android:key="@string/key_recording_360_bt_mic" />
+    <SeslPreferenceCaption android:key="@string/key_recording_360_bt_mic_caption" />
+    <com.sec.android.app.camera.setting.CameraSwitchPreference android:persistent="false" android:title="@string/Title_audio_playback" android:key="@string/key_audio_playback" />
+    <SeslPreferenceCaption android:key="@string/key_audio_playback_caption" />
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.EmptyPreference app:emptyHeight="@dimen/navigation_bar_height_in_android_fw" />
+    </PreferenceCategory>
+</PreferenceScreen>

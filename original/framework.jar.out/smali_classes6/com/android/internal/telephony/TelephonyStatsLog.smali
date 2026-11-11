@@ -1,0 +1,6383 @@
+.class public final Lcom/android/internal/telephony/TelephonyStatsLog;
+.super Ljava/lang/Object;
+.source "TelephonyStatsLog.java"
+
+
+# static fields
+.field public static final blacklist AIRPLANE_MODE:I = 0x137
+
+.field public static final blacklist ANNOTATION_ID_DEFAULT_STATE:B = 0x6t
+
+.field public static final blacklist ANNOTATION_ID_EXCLUSIVE_STATE:B = 0x4t
+
+.field public static final blacklist ANNOTATION_ID_IS_UID:B = 0x1t
+
+.field public static final blacklist ANNOTATION_ID_PRIMARY_FIELD:B = 0x3t
+
+.field public static final blacklist ANNOTATION_ID_PRIMARY_FIELD_FIRST_UID:B = 0x5t
+
+.field public static final blacklist ANNOTATION_ID_STATE_NESTED:B = 0x8t
+
+.field public static final blacklist ANNOTATION_ID_TRIGGER_STATE_RESET:B = 0x7t
+
+.field public static final blacklist ANNOTATION_ID_TRUNCATE_TIMESTAMP:B = 0x2t
+
+.field public static final blacklist CARRIER_ID_MISMATCH_REPORTED:I = 0x139
+
+.field public static final blacklist CARRIER_ID_TABLE_UPDATED:I = 0x13a
+
+.field public static final blacklist CARRIER_ID_TABLE_VERSION:I = 0x2768
+
+.field public static final blacklist CARRIER_PRIVILEGES_REPORTED:I = 0x4e4
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS:I = 0x27e4
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_CARRIER_CONFIG:I = 0x3
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_CONFIG_UPDATER:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_DEVICE_CONFIG:I = 0x4
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_ENTITLEMENT:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__ELIGIBILITY_SOURCE__SATELLITE_ELIGIBILITY_SOURCE_CARRIER_CONFIG:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__ELIGIBILITY_SOURCE__SATELLITE_ELIGIBILITY_SOURCE_ENTITLEMENT:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__ELIGIBILITY_SOURCE__SATELLITE_ELIGIBILITY_SOURCE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SERVICE_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_CONSTRAINED:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SERVICE_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_RESTRICTED:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SERVICE_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_SUPPORT_ALL:I = 0x3
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SERVICE_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_CONTROLLER_STATS__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION:I = 0x27e3
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__ELIGIBILITY_SOURCE__SATELLITE_ELIGIBILITY_SOURCE_CARRIER_CONFIG:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__ELIGIBILITY_SOURCE__SATELLITE_ELIGIBILITY_SOURCE_ENTITLEMENT:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__ELIGIBILITY_SOURCE__SATELLITE_ELIGIBILITY_SOURCE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist CARRIER_ROAMING_SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CARRIER_SERVICE_CONFIG_OVERRIDES_REPORTED:I = 0x4f6
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH:I = 0x276b
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_FROM__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist CELLULAR_DATA_SERVICE_SWITCH__RAT_TO__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED:I = 0x320
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__CELLULAR_IDENTIFIER__CELLULAR_IDENTIFIER_IMEI:I = 0x2
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__CELLULAR_IDENTIFIER__CELLULAR_IDENTIFIER_IMSI:I = 0x1
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__CELLULAR_IDENTIFIER__CELLULAR_IDENTIFIER_SUCI:I = 0x3
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__CELLULAR_IDENTIFIER__CELLULAR_IDENTIFIER_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_ATTACH_REQUEST:I = 0x1
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_AUTHENTICATION_AND_CIPHERING_RESPONSE:I = 0x6
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_CM_REESTABLISHMENT_REQUEST:I = 0x9
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_CM_SERVICE_REQUEST:I = 0xa
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_DEREGISTRATION_REQUEST:I = 0x8
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_DETACH_REQUEST:I = 0x3
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_IDENTITY_RESPONSE:I = 0x2
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_IMSI_DETACH_INDICATION:I = 0xb
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_LOCATION_UPDATE_REQUEST:I = 0x5
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_REGISTRATION_REQUEST:I = 0x7
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_TRACKING_AREA_UPDATE_REQUEST:I = 0x4
+
+.field public static final blacklist CELLULAR_IDENTIFIER_DISCLOSED__NAS_PROTOCOL_MESSAGE__NAS_MESSAGE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_RADIO_POWER_STATE_CHANGED:I = 0x2c9
+
+.field public static final blacklist CELLULAR_RADIO_POWER_STATE_CHANGED__STATE__RADIO_POWER_STATE_OFF:I = 0x1
+
+.field public static final blacklist CELLULAR_RADIO_POWER_STATE_CHANGED__STATE__RADIO_POWER_STATE_ON:I = 0x2
+
+.field public static final blacklist CELLULAR_RADIO_POWER_STATE_CHANGED__STATE__RADIO_POWER_STATE_UNAVAILABLE:I = 0x3
+
+.field public static final blacklist CELLULAR_RADIO_POWER_STATE_CHANGED__STATE__RADIO_POWER_STATE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_SERVICE_STATE:I = 0x276a
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_ROAMING_TYPE__ROAMING_TYPE_NOT_ROAMING:I = 0x0
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_ROAMING_TYPE__ROAMING_TYPE_ROAMING:I = 0x1
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_ROAMING_TYPE__ROAMING_TYPE_ROAMING_DOMESTIC:I = 0x2
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__DATA_ROAMING_TYPE__ROAMING_TYPE_ROAMING_INTERNATIONAL:I = 0x3
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__FOLD_STATE__STATE_CLOSED:I = 0x1
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__FOLD_STATE__STATE_FLIPPED:I = 0x4
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__FOLD_STATE__STATE_HALF_OPENED:I = 0x2
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__FOLD_STATE__STATE_OPENED:I = 0x3
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__FOLD_STATE__STATE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_ROAMING_TYPE__ROAMING_TYPE_NOT_ROAMING:I = 0x0
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_ROAMING_TYPE__ROAMING_TYPE_ROAMING:I = 0x1
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_ROAMING_TYPE__ROAMING_TYPE_ROAMING_DOMESTIC:I = 0x2
+
+.field public static final blacklist CELLULAR_SERVICE_STATE__VOICE_ROAMING_TYPE__ROAMING_TYPE_ROAMING_INTERNATIONAL:I = 0x3
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED:I = 0x372
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED__CONNECTED_CHANNEL_COUNT__CHANNEL_COUNT_FIVE:I = 0x5
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED__CONNECTED_CHANNEL_COUNT__CHANNEL_COUNT_FOUR:I = 0x4
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED__CONNECTED_CHANNEL_COUNT__CHANNEL_COUNT_ONE:I = 0x1
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED__CONNECTED_CHANNEL_COUNT__CHANNEL_COUNT_THREE:I = 0x3
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED__CONNECTED_CHANNEL_COUNT__CHANNEL_COUNT_TWO:I = 0x2
+
+.field public static final blacklist CONNECTED_CHANNEL_CHANGED__CONNECTED_CHANNEL_COUNT__CHANNEL_COUNT_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist CONTROLLER_STATS_PER_PACKAGE:I = 0x27e5
+
+.field public static final blacklist DATA_CALL_SESSION:I = 0x2769
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_AIRPLANE_MODE_ON:I = 0x7
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_CDMA_EMERGENCY_CALLBACK_MODE:I = 0x1a
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_CONCURRENT_VOICE_DATA_NOT_ALLOWED:I = 0xc
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_CONNECTIVITY_SERVICE_UNWANTED:I = 0x5
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_CONFIG_NOT_READY:I = 0x17
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_DISABLED:I = 0x8
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_LIMIT_REACHED:I = 0x23
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_NETWORK_TRANSPORT_NOT_ALLOWED:I = 0x24
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_PROFILE_INVALID:I = 0x1d
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_PROFILE_NOT_PREFERRED:I = 0x1e
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_SERVICE_NOT_READY:I = 0xe
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_SERVICE_OPTION_NOT_SUPPORTED:I = 0xd
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_STALL:I = 0x10
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DATA_THROTTLED:I = 0x1c
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DEFAULT_DATA_UNSELECTED:I = 0x15
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_DEVICE_SHUT_DOWN:I = 0x25
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_HANDOVER:I = 0x3
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_HANDOVER_FAILED:I = 0x11
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_HANDOVER_NOT_ALLOWED:I = 0x12
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_ILLEGAL_STATE:I = 0x20
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_NONE:I = 0x4
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_NORMAL:I = 0x1
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_NOT_ALLOWED_BY_POLICY:I = 0x1f
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_NOT_IN_SERVICE:I = 0x16
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_NO_LIVE_REQUEST:I = 0x9
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_NO_SUITABLE_DATA_PROFILE:I = 0x19
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_ONLY_ALLOWED_SINGLE_NETWORK:I = 0x21
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_PENDING_TEAR_DOWN_ALL:I = 0x18
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_POWER_OFF_BY_CARRIER:I = 0xf
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_PREFERRED_DATA_SWITCHED:I = 0x22
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_RADIO_OFF:I = 0x2
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_RAT_NOT_ALLOWED:I = 0xa
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_RETRY_SCHEDULED:I = 0x1b
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_ROAMING_DISABLED:I = 0xb
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_SIM_REMOVAL:I = 0x6
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_UNSUPPORTED_NETWORK_CAPABILITIES:I = 0x26
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_VCN_REQUESTED:I = 0x13
+
+.field public static final blacklist DATA_CALL_SESSION__DEACTIVATE_REASON__DEACTIVATE_REASON_VOPS_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist DATA_CALL_SESSION__IP_TYPE__APN_PROTOCOL_IPV4:I = 0x0
+
+.field public static final blacklist DATA_CALL_SESSION__IP_TYPE__APN_PROTOCOL_IPV4V6:I = 0x2
+
+.field public static final blacklist DATA_CALL_SESSION__IP_TYPE__APN_PROTOCOL_IPV6:I = 0x1
+
+.field public static final blacklist DATA_CALL_SESSION__IP_TYPE__APN_PROTOCOL_PPP:I = 0x3
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_CBS:I = 0x4
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_DEFAULT:I = 0x0
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_FOTA:I = 0x3
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_IMS:I = 0x2
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_INVALID:I = -0x1
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_OEM_BASE:I = 0x3e8
+
+.field public static final blacklist DATA_CALL_SESSION__PROFILE__DATA_PROFILE_TETHERED:I = 0x1
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist DATA_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_NETWORK_VALIDATION:I = 0x27df
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__NETWORK_TYPE__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__SIGNAL_STRENGTH__SIGNAL_STRENGTH_GOOD:I = 0x3
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__SIGNAL_STRENGTH__SIGNAL_STRENGTH_GREAT:I = 0x4
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__SIGNAL_STRENGTH__SIGNAL_STRENGTH_MODERATE:I = 0x2
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__SIGNAL_STRENGTH__SIGNAL_STRENGTH_NONE_OR_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__SIGNAL_STRENGTH__SIGNAL_STRENGTH_POOR:I = 0x1
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__VALIDATION_RESULT__VALIDATION_RESULT_ALREADY_IN_PROGRESS:I = 0x2
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__VALIDATION_RESULT__VALIDATION_RESULT_FAILURE:I = 0x4
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__VALIDATION_RESULT__VALIDATION_RESULT_NOT_SUPPORTED:I = 0x1
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__VALIDATION_RESULT__VALIDATION_RESULT_SUCCESS:I = 0x3
+
+.field public static final blacklist DATA_NETWORK_VALIDATION__VALIDATION_RESULT__VALIDATION_RESULT_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED:I = 0x356
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_2G:I = 0x2
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_3G:I = 0x3
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_4G_LTE:I = 0x4
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_5G_NSA_FR1:I = 0x6
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_5G_NSA_FR2:I = 0x7
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_5G_NSA_LTE:I = 0x5
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_5G_SA_FR1:I = 0x8
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_5G_SA_FR2:I = 0x9
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__DATA_RAT_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist DATA_RAT_STATE_CHANGED__DATA_RAT__NO_SIM:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED:I = 0x13b
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__ACTION__RECOVERY_ACTION_CLEANUP:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__ACTION__RECOVERY_ACTION_GET_DATA_CALL_LIST:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__ACTION__RECOVERY_ACTION_RADIO_RESTART:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__ACTION__RECOVERY_ACTION_REREGISTER:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__ACTION__RECOVERY_ACTION_RESET_MODEM:I = 0x4
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_REG_STATE__REGISTRATION_STATE_DENIED:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_REG_STATE__REGISTRATION_STATE_HOME:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_REG_STATE__REGISTRATION_STATE_NOT_REGISTERED_OR_SEARCHING:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_REG_STATE__REGISTRATION_STATE_NOT_REGISTERED_SEARCHING:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_REG_STATE__REGISTRATION_STATE_ROAMING:I = 0x5
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_REG_STATE__REGISTRATION_STATE_UNKNOWN:I = 0x4
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_SIGNAL_STRENGTH__SIGNAL_STRENGTH_GOOD:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_SIGNAL_STRENGTH__SIGNAL_STRENGTH_GREAT:I = 0x4
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_SIGNAL_STRENGTH__SIGNAL_STRENGTH_MODERATE:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_SIGNAL_STRENGTH__SIGNAL_STRENGTH_NONE_OR_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__OTHER_PHONE_SIGNAL_STRENGTH__SIGNAL_STRENGTH_POOR:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__PHONE_REG_STATE__REGISTRATION_STATE_DENIED:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__PHONE_REG_STATE__REGISTRATION_STATE_HOME:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__PHONE_REG_STATE__REGISTRATION_STATE_NOT_REGISTERED_OR_SEARCHING:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__PHONE_REG_STATE__REGISTRATION_STATE_NOT_REGISTERED_SEARCHING:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__PHONE_REG_STATE__REGISTRATION_STATE_ROAMING:I = 0x5
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__PHONE_REG_STATE__REGISTRATION_STATE_UNKNOWN:I = 0x4
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__REASON__RECOVERED_REASON_DSRM:I = 0x1
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__REASON__RECOVERED_REASON_MODEM:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__REASON__RECOVERED_REASON_NONE:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__REASON__RECOVERED_REASON_USER:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__SIGNAL_STRENGTH__SIGNAL_STRENGTH_GOOD:I = 0x3
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__SIGNAL_STRENGTH__SIGNAL_STRENGTH_GREAT:I = 0x4
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__SIGNAL_STRENGTH__SIGNAL_STRENGTH_MODERATE:I = 0x2
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__SIGNAL_STRENGTH__SIGNAL_STRENGTH_NONE_OR_UNKNOWN:I = 0x0
+
+.field public static final blacklist DATA_STALL_RECOVERY_REPORTED__SIGNAL_STRENGTH__SIGNAL_STRENGTH_POOR:I = 0x1
+
+.field public static final blacklist DEVICE_TELEPHONY_PROPERTIES:I = 0x27aa
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO:I = 0x27c4
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__ROUTE__EMERGENCY_CALL_ROUTE_EMERGENCY:I = 0x1
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__ROUTE__EMERGENCY_CALL_ROUTE_NORMAL:I = 0x2
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__ROUTE__EMERGENCY_CALL_ROUTE_UNKNOWN:I = 0x0
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_AIEC:I = 0x7
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_AMBULANCE:I = 0x2
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_FIRE_BRIGADE:I = 0x3
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_MARINE_GUARD:I = 0x4
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_MIEC:I = 0x6
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_MOUNTAIN_RESCUE:I = 0x5
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_POLICE:I = 0x1
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SERVICE_CATEGORIES__EMERGENCY_SERVICE_CATEGORY_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SOURCES__EMERGENCY_NUMBER_SOURCE_DATABASE:I = 0x2
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SOURCES__EMERGENCY_NUMBER_SOURCE_DEFAULT:I = 0x4
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SOURCES__EMERGENCY_NUMBER_SOURCE_MODEM_CONFIG:I = 0x3
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SOURCES__EMERGENCY_NUMBER_SOURCE_NETWORK_SIGNALING:I = 0x0
+
+.field public static final blacklist EMERGENCY_NUMBERS_INFO__SOURCES__EMERGENCY_NUMBER_SOURCE_SIM:I = 0x1
+
+.field public static final blacklist GBA_EVENT:I = 0x27a1
+
+.field public static final blacklist GBA_EVENT__FAILED_REASON__FEATURE_NOT_READY:I = 0x2
+
+.field public static final blacklist GBA_EVENT__FAILED_REASON__FEATURE_NOT_SUPPORTED:I = 0x1
+
+.field public static final blacklist GBA_EVENT__FAILED_REASON__INCORRECT_NAF_ID:I = 0x4
+
+.field public static final blacklist GBA_EVENT__FAILED_REASON__NETWORK_FAILURE:I = 0x3
+
+.field public static final blacklist GBA_EVENT__FAILED_REASON__SECURITY_PROTOCOL_NOT_SUPPORTED:I = 0x5
+
+.field public static final blacklist GBA_EVENT__FAILED_REASON__UNKNOWN:I = 0x0
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT:I = 0x279d
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__BEARER_STATE__STATE_ADDED:I = 0x1
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__BEARER_STATE__STATE_DELETED:I = 0x3
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__BEARER_STATE__STATE_MODIFIED:I = 0x2
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__BEARER_STATE__STATE_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist IMS_DEDICATED_BEARER_EVENT__RAT_AT_END__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT:I = 0x279c
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist IMS_DEDICATED_BEARER_LISTENER_EVENT__RAT_AT_END__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS:I = 0x2795
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CALL_COMPOSER_ENRICHED_CALLING:I = 0x7
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CALL_COMPOSER_VIA_TELEPHONY:I = 0x8
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_COMMUNICATION_USING_SESSION:I = 0xe
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_COMMUNICATION_USING_STANDALONE_MSG:I = 0xf
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_ROLE:I = 0x11
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_VERSION_SUPPORTED:I = 0x10
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHAT_IM:I = 0x3
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHAT_SESSION:I = 0x4
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CUSTOM:I = 0x1
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_FILE_TRANSFER:I = 0x5
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_FILE_TRANSFER_VIA_SMS:I = 0x6
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_GEO_PUSH:I = 0xc
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_GEO_PUSH_VIA_SMS:I = 0xd
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_MMTEL:I = 0x12
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_POST_CALL:I = 0x9
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_PRESENCE:I = 0x14
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_SHARED_MAP:I = 0xa
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_SHARED_SKETCH:I = 0xb
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_STANDALONE_MSG:I = 0x2
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist IMS_REGISTRATION_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_VIDEO:I = 0x13
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS:I = 0x279e
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CALL_COMPOSER:I = 0x9
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CHATBOT:I = 0xd
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CHATBOT_ROLE:I = 0xf
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CHATBOT_STANDALONE:I = 0xe
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CHAT_V1:I = 0x3
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CHAT_V2:I = 0x4
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_CUSTOM:I = 0x1
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_FT:I = 0x5
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_FT_OVER_SMS:I = 0x6
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_GEO_PUSH:I = 0x7
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_GEO_PUSH_VIA_SMS:I = 0x8
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_MMTEL:I = 0x2
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_POST_CALL:I = 0xa
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_SHARED_MAP:I = 0xb
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_SHARED_SKETCH:I = 0xc
+
+.field public static final blacklist IMS_REGISTRATION_SERVICE_DESC_STATS__SERVICE_ID_NAME__SERVICE_ID_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist IMS_REGISTRATION_STATS:I = 0x276e
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist IMS_REGISTRATION_STATS__RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION:I = 0x276d
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist IMS_REGISTRATION_TERMINATION__RAT_AT_END__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist INCOMING_SMS:I = 0x2766
+
+.field public static final blacklist INCOMING_SMS__ERROR__SMS_ERROR_GENERIC:I = 0x1
+
+.field public static final blacklist INCOMING_SMS__ERROR__SMS_ERROR_NOT_SUPPORTED:I = 0x3
+
+.field public static final blacklist INCOMING_SMS__ERROR__SMS_ERROR_NO_MEMORY:I = 0x2
+
+.field public static final blacklist INCOMING_SMS__ERROR__SMS_SUCCESS:I = 0x0
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist INCOMING_SMS__RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist INCOMING_SMS__SMS_FORMAT__SMS_FORMAT_3GPP:I = 0x1
+
+.field public static final blacklist INCOMING_SMS__SMS_FORMAT__SMS_FORMAT_3GPP2:I = 0x2
+
+.field public static final blacklist INCOMING_SMS__SMS_FORMAT__SMS_FORMAT_UNKNOWN:I = 0x0
+
+.field public static final blacklist INCOMING_SMS__SMS_TECH__SMS_TECH_CS_3GPP:I = 0x1
+
+.field public static final blacklist INCOMING_SMS__SMS_TECH__SMS_TECH_CS_3GPP2:I = 0x2
+
+.field public static final blacklist INCOMING_SMS__SMS_TECH__SMS_TECH_IMS:I = 0x3
+
+.field public static final blacklist INCOMING_SMS__SMS_TECH__SMS_TECH_UNKNOWN:I = 0x0
+
+.field public static final blacklist INCOMING_SMS__SMS_TYPE__SMS_TYPE_NORMAL:I = 0x0
+
+.field public static final blacklist INCOMING_SMS__SMS_TYPE__SMS_TYPE_SMS_PP:I = 0x1
+
+.field public static final blacklist INCOMING_SMS__SMS_TYPE__SMS_TYPE_VOICEMAIL_INDICATION:I = 0x2
+
+.field public static final blacklist INCOMING_SMS__SMS_TYPE__SMS_TYPE_WAP_PUSH:I = 0x4
+
+.field public static final blacklist INCOMING_SMS__SMS_TYPE__SMS_TYPE_ZERO:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED:I = 0x542
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__CACHE_EVENT__CACHE_EVENT_ADDED:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__CACHE_EVENT__CACHE_EVENT_REMOVED_DISPATCHED:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__CACHE_EVENT__CACHE_EVENT_REMOVED_EVICTED:I = 0x4
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__CACHE_EVENT__CACHE_EVENT_REMOVED_REJECTED:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__CACHE_EVENT__CACHE_EVENT_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__INTENT_TYPE__UPGRADE_INTENT_DELIVERY:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__INTENT_TYPE__UPGRADE_INTENT_SENT:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__INTENT_TYPE__UPGRADE_INTENT_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__SOURCE_TYPE__SOURCE_TYPE_BLUETOOTH:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__SOURCE_TYPE__SOURCE_TYPE_DEFAULT_APP:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__SOURCE_TYPE__SOURCE_TYPE_THIRD_PARTY_APP:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__SOURCE_TYPE__SOURCE_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__UPGRADE_TYPE__ORIGINAL_MESSAGE_TYPE_MMS:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__UPGRADE_TYPE__ORIGINAL_MESSAGE_TYPE_SMS:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__UPGRADE_TYPE__ORIGINAL_MESSAGE_TYPE_SMS_MULTIPART:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_INTENT_CACHED__UPGRADE_TYPE__ORIGINAL_MESSAGE_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED:I = 0x541
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__ORIGINAL_MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_MMS:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__ORIGINAL_MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_SMS:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__ORIGINAL_MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_SMS_MULTIPART:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__ORIGINAL_MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__SOURCE_TYPE__SOURCE_TYPE_BLUETOOTH:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__SOURCE_TYPE__SOURCE_TYPE_DEFAULT_APP:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__SOURCE_TYPE__SOURCE_TYPE_THIRD_PARTY_APP:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__SOURCE_TYPE__SOURCE_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__STATUS__STATUS_FAILED:I = 0x3
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__STATUS__STATUS_NOT_SUPPORTED:I = 0x1
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__STATUS__STATUS_SUCCEEDED:I = 0x2
+
+.field public static final blacklist MESSAGE_UPGRADE_RESOLVED__STATUS__STATUS_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS:I = 0x548
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__BACKUP:I = 0x6
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__BULK_INSERT:I = 0x5
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__DELETE:I = 0x4
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__INSERT:I = 0x2
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__OPEN_FILE:I = 0x8
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__QUERY:I = 0x1
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__RESTORE:I = 0x7
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__UNKNOWN_OP:I = 0x0
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__OPERATION__UPDATE:I = 0x3
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__CONVERSATIONS:I = 0x1
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__MMS:I = 0x3
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__PART:I = 0x6
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__SMS:I = 0x2
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__THREADS:I = 0x4
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__THREAD_ID_RESOLUTION:I = 0x5
+
+.field public static final blacklist MESSAGING_DB_LOCK_CONTENTION_STATS__TARGET_URI__UNKNOWN_URI:I = 0x0
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS:I = 0x547
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__BACKUP:I = 0x6
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__BULK_INSERT:I = 0x5
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__DELETE:I = 0x4
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__INSERT:I = 0x2
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__OPEN_FILE:I = 0x8
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__QUERY:I = 0x1
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__RESTORE:I = 0x7
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__UNKNOWN_OP:I = 0x0
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__OPERATION__UPDATE:I = 0x3
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__CONVERSATIONS:I = 0x1
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__MMS:I = 0x3
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__PART:I = 0x6
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__SMS:I = 0x2
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__THREADS:I = 0x4
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__THREAD_ID_RESOLUTION:I = 0x5
+
+.field public static final blacklist MESSAGING_DB_OPERATION_STATS__TARGET_URI__UNKNOWN_URI:I = 0x0
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED:I = 0x544
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__CONTENT_PROVIDER__CONTENT_PROVIDER_MMS_PROVIDER:I = 0x2
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__CONTENT_PROVIDER__CONTENT_PROVIDER_SMS_PROVIDER:I = 0x1
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__CONTENT_PROVIDER__CONTENT_PROVIDER_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__EVENT_TYPE__MESSAGING_READ_RESTRICTION_EVENT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__EVENT_TYPE__QUERY_RESTRICTED_MESSAGES:I = 0x4
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__EVENT_TYPE__RESTRICTED_MESSAGE_INSERTED:I = 0x1
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__EVENT_TYPE__UNRESTRICTED_MESSAGE_INSERTED:I = 0x2
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__EVENT_TYPE__UPDATED_MESSAGE_TO_UNRESTRICTED:I = 0x3
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__READ_RESTRICTED_MESSAGES_APP_OP_MODE__APP_OP_MODE_ALLOWED:I = 0x1
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__READ_RESTRICTED_MESSAGES_APP_OP_MODE__APP_OP_MODE_IGNORED:I = 0x2
+
+.field public static final blacklist MESSAGING_READ_RESTRICTION_REPORTED__READ_RESTRICTED_MESSAGES_APP_OP_MODE__APP_OP_MODE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MMS_SMS_DATABASE_HELPER_ON_UPGRADE_FAILED:I = 0x1bb
+
+.field public static final blacklist MMS_SMS_DATABASE_HELPER_ON_UPGRADE_FAILED__FAILURE_CODE__FAILURE_IO_EXCEPTION:I = 0x1
+
+.field public static final blacklist MMS_SMS_DATABASE_HELPER_ON_UPGRADE_FAILED__FAILURE_CODE__FAILURE_SECURITY_EXCEPTION:I = 0x2
+
+.field public static final blacklist MMS_SMS_DATABASE_HELPER_ON_UPGRADE_FAILED__FAILURE_CODE__FAILURE_SQL_EXCEPTION:I = 0x3
+
+.field public static final blacklist MMS_SMS_DATABASE_HELPER_ON_UPGRADE_FAILED__FAILURE_CODE__FAILURE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MMS_SMS_PROVIDER_GET_THREAD_ID_FAILED:I = 0x1ba
+
+.field public static final blacklist MMS_SMS_PROVIDER_GET_THREAD_ID_FAILED__FAILURE_CODE__FAILURE_FIND_OR_CREATE_THREAD_ID_SQL:I = 0x2
+
+.field public static final blacklist MMS_SMS_PROVIDER_GET_THREAD_ID_FAILED__FAILURE_CODE__FAILURE_MULTIPLE_THREAD_IDS_FOUND:I = 0x3
+
+.field public static final blacklist MMS_SMS_PROVIDER_GET_THREAD_ID_FAILED__FAILURE_CODE__FAILURE_NO_RECIPIENTS:I = 0x1
+
+.field public static final blacklist MMS_SMS_PROVIDER_GET_THREAD_ID_FAILED__FAILURE_CODE__FAILURE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED:I = 0x4b
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED__STATE__ACTIVATING:I = 0x2
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED__STATE__ACTIVE:I = 0x3
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED__STATE__DISCONNECTING:I = 0x4
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED__STATE__DISCONNECTION_ERROR_CREATING_CONNECTION:I = 0x5
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED__STATE__INACTIVE:I = 0x1
+
+.field public static final blacklist MOBILE_CONNECTION_STATE_CHANGED__STATE__UNKNOWN:I = 0x0
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED:I = 0x4c
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist MOBILE_RADIO_TECHNOLOGY_CHANGED__STATE__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist MODEM_RESTART:I = 0x138
+
+.field public static final blacklist OUTGOING_SHORT_CODE_SMS:I = 0x27b2
+
+.field public static final blacklist OUTGOING_SHORT_CODE_SMS__CATEGORY__SMS_CATEGORY_FREE_SHORT_CODE:I = 0x1
+
+.field public static final blacklist OUTGOING_SHORT_CODE_SMS__CATEGORY__SMS_CATEGORY_NOT_SHORT_CODE:I = 0x0
+
+.field public static final blacklist OUTGOING_SHORT_CODE_SMS__CATEGORY__SMS_CATEGORY_POSSIBLE_PREMIUM_SHORT_CODE:I = 0x3
+
+.field public static final blacklist OUTGOING_SHORT_CODE_SMS__CATEGORY__SMS_CATEGORY_PREMIUM_SHORT_CODE:I = 0x4
+
+.field public static final blacklist OUTGOING_SHORT_CODE_SMS__CATEGORY__SMS_CATEGORY_STANDARD_SHORT_CODE:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS:I = 0x2767
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist OUTGOING_SMS__RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist OUTGOING_SMS__SATELLITE_MESSAGE_TRIGGER__SATELLITE_MESSAGE_TRIGGER_DIRECT_MESSAGES_UI:I = 0x1
+
+.field public static final blacklist OUTGOING_SMS__SATELLITE_MESSAGE_TRIGGER__SATELLITE_MESSAGE_TRIGGER_EMERGENCY_DIALER_BUTTON:I = 0x3
+
+.field public static final blacklist OUTGOING_SMS__SATELLITE_MESSAGE_TRIGGER__SATELLITE_MESSAGE_TRIGGER_NON_EMERGENCY_DIALER_DIALOG:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS__SATELLITE_MESSAGE_TRIGGER__SATELLITE_MESSAGE_TRIGGER_SYSTEM_NOTIFICATION:I = 0x4
+
+.field public static final blacklist OUTGOING_SMS__SATELLITE_MESSAGE_TRIGGER__SATELLITE_MESSAGE_TRIGGER_UNKNOWN:I = 0x0
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_BLUETOOTH_DISCONNECTED:I = 0x1b
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_CANCELLED:I = 0x17
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_FAIL_AFTER_MAX_RETRY:I = 0x8a
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_FDN_CHECK_FAILURE:I = 0x6
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_GENERIC_FAILURE:I = 0x1
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_INTERNAL_ERROR:I = 0x15
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_INVALID_ARGUMENTS:I = 0xb
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_INVALID_BLUETOOTH_ADDRESS:I = 0x1a
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_INVALID_SMSC_ADDRESS:I = 0x13
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_INVALID_SMS_FORMAT:I = 0xe
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_INVALID_STATE:I = 0xc
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_LIMIT_EXCEEDED:I = 0x5
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_MODEM_ERROR:I = 0x10
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NETWORK_ERROR:I = 0x11
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NETWORK_REJECT:I = 0xa
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NONE:I = 0x0
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NO_BLUETOOTH_SERVICE:I = 0x19
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NO_DEFAULT_SMS_APP:I = 0x20
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NO_MEMORY:I = 0xd
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NO_RESOURCES:I = 0x16
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NO_SERVICE:I = 0x4
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_NULL_PDU:I = 0x3
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_OPERATION_NOT_ALLOWED:I = 0x14
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RADIO_NOT_AVAILABLE:I = 0x9
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RADIO_OFF:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_REMOTE_EXCEPTION:I = 0x1f
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_REQUEST_NOT_SUPPORTED:I = 0x18
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_ABORTED:I = 0x89
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_ACCESS_BARRED:I = 0x7a
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_BLOCKED_DUE_TO_CALL:I = 0x7b
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_CANCELLED:I = 0x77
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_DEVICE_IN_USE:I = 0x88
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_ENCODING_ERR:I = 0x6d
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_GENERIC_ERROR:I = 0x7c
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INTERNAL_ERR:I = 0x71
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_ARGUMENTS:I = 0x68
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_MODEM_STATE:I = 0x73
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_RESPONSE:I = 0x7d
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_SIM_STATE:I = 0x82
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_SMSC_ADDRESS:I = 0x6e
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_SMS_FORMAT:I = 0x6b
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_INVALID_STATE:I = 0x67
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_MODEM_ERR:I = 0x6f
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NETWORK_ERR:I = 0x70
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NETWORK_NOT_READY:I = 0x74
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NETWORK_REJECT:I = 0x66
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NO_MEMORY:I = 0x69
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NO_NETWORK_FOUND:I = 0x87
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NO_RESOURCES:I = 0x76
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NO_SMS_TO_ACK:I = 0x83
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_NO_SUBSCRIPTION:I = 0x86
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_OPERATION_NOT_ALLOWED:I = 0x75
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_RADIO_NOT_AVAILABLE:I = 0x64
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_REQUEST_NOT_SUPPORTED:I = 0x72
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_REQUEST_RATE_LIMITED:I = 0x6a
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIMULTANEOUS_SMS_AND_CALL_NOT_ALLOWED:I = 0x79
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIM_ABSENT:I = 0x78
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIM_BUSY:I = 0x84
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIM_ERR:I = 0x81
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIM_FULL:I = 0x85
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIM_PIN2:I = 0x7e
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SIM_PUK2:I = 0x7f
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SMS_SEND_FAIL_RETRY:I = 0x65
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SUBSCRIPTION_NOT_AVAILABLE:I = 0x80
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_RIL_SYSTEM_ERR:I = 0x6c
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_SHORT_CODE_NEVER_ALLOWED:I = 0x8
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_SHORT_CODE_NOT_ALLOWED:I = 0x7
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_SMS_BLOCKED_DURING_EMERGENCY:I = 0x1d
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_SMS_SEND_RETRY_FAILED:I = 0x1e
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_SYSTEM_ERROR:I = 0xf
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_UNEXPECTED_EVENT_STOP_SENDING:I = 0x1c
+
+.field public static final blacklist OUTGOING_SMS__SEND_ERROR_CODE__SMS_SEND_ERROR_USER_NOT_ALLOWED:I = 0x21
+
+.field public static final blacklist OUTGOING_SMS__SEND_RESULT__SMS_SEND_RESULT_ERROR:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS__SEND_RESULT__SMS_SEND_RESULT_ERROR_FALLBACK:I = 0x4
+
+.field public static final blacklist OUTGOING_SMS__SEND_RESULT__SMS_SEND_RESULT_ERROR_RETRY:I = 0x3
+
+.field public static final blacklist OUTGOING_SMS__SEND_RESULT__SMS_SEND_RESULT_SUCCESS:I = 0x1
+
+.field public static final blacklist OUTGOING_SMS__SEND_RESULT__SMS_SEND_RESULT_UNKNOWN:I = 0x0
+
+.field public static final blacklist OUTGOING_SMS__SMS_FORMAT__SMS_FORMAT_3GPP:I = 0x1
+
+.field public static final blacklist OUTGOING_SMS__SMS_FORMAT__SMS_FORMAT_3GPP2:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS__SMS_FORMAT__SMS_FORMAT_UNKNOWN:I = 0x0
+
+.field public static final blacklist OUTGOING_SMS__SMS_TECH__SMS_TECH_CS_3GPP:I = 0x1
+
+.field public static final blacklist OUTGOING_SMS__SMS_TECH__SMS_TECH_CS_3GPP2:I = 0x2
+
+.field public static final blacklist OUTGOING_SMS__SMS_TECH__SMS_TECH_IMS:I = 0x3
+
+.field public static final blacklist OUTGOING_SMS__SMS_TECH__SMS_TECH_UNKNOWN:I = 0x0
+
+.field public static final blacklist PER_SIM_STATUS:I = 0x27a2
+
+.field public static final blacklist PER_SIM_STATUS__SIM_VOLTAGE_CLASS__VOLTAGE_CLASS_A:I = 0x1
+
+.field public static final blacklist PER_SIM_STATUS__SIM_VOLTAGE_CLASS__VOLTAGE_CLASS_B:I = 0x2
+
+.field public static final blacklist PER_SIM_STATUS__SIM_VOLTAGE_CLASS__VOLTAGE_CLASS_C:I = 0x3
+
+.field public static final blacklist PER_SIM_STATUS__SIM_VOLTAGE_CLASS__VOLTAGE_CLASS_UNKNOWN:I = 0x0
+
+.field public static final blacklist PER_SIM_STATUS__WFC_MODE__CELLULAR_PREFERRED:I = 0x2
+
+.field public static final blacklist PER_SIM_STATUS__WFC_MODE__UNKNOWN:I = 0x0
+
+.field public static final blacklist PER_SIM_STATUS__WFC_MODE__WIFI_ONLY:I = 0x1
+
+.field public static final blacklist PER_SIM_STATUS__WFC_MODE__WIFI_PREFERRED:I = 0x3
+
+.field public static final blacklist PER_SIM_STATUS__WFC_ROAMING_MODE__CELLULAR_PREFERRED:I = 0x2
+
+.field public static final blacklist PER_SIM_STATUS__WFC_ROAMING_MODE__UNKNOWN:I = 0x0
+
+.field public static final blacklist PER_SIM_STATUS__WFC_ROAMING_MODE__WIFI_ONLY:I = 0x1
+
+.field public static final blacklist PER_SIM_STATUS__WFC_ROAMING_MODE__WIFI_PREFERRED:I = 0x3
+
+.field public static final blacklist PIN_STORAGE_EVENT:I = 0x150
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__CACHED_PIN_DISCARDED:I = 0x3
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_COUNT_NOT_MATCHING_AFTER_REBOOT:I = 0x7
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_DECRYPTION_ERROR:I = 0x8
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_ENCRYPTION_ERROR:I = 0x9
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_ENCRYPTION_KEY_MISSING:I = 0xa
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_REQUIRED_AFTER_REBOOT:I = 0x5
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_STORED_FOR_VERIFICATION:I = 0x4
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_VERIFICATION_FAILURE:I = 0x2
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_VERIFICATION_SKIPPED_SIM_CARD_MISMATCH:I = 0x6
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__PIN_VERIFICATION_SUCCESS:I = 0x1
+
+.field public static final blacklist PIN_STORAGE_EVENT__EVENT__UNKNOWN:I = 0x0
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT:I = 0x27a0
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_CUSTOM:I = 0x1
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_DEACTIVATED:I = 0x2
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_GIVEUP:I = 0x6
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_NORESOURCE:I = 0x7
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_PROBATION:I = 0x3
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_REJECTED:I = 0x4
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_TIMEOUT:I = 0x5
+
+.field public static final blacklist PRESENCE_NOTIFY_EVENT__REASON__REASON_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist RCS_ACS_PROVISIONING_STATS:I = 0x2797
+
+.field public static final blacklist RCS_ACS_PROVISIONING_STATS__RESPONSE_TYPE__ERROR:I = 0x1
+
+.field public static final blacklist RCS_ACS_PROVISIONING_STATS__RESPONSE_TYPE__PRE_PROVISIONING_XML:I = 0x3
+
+.field public static final blacklist RCS_ACS_PROVISIONING_STATS__RESPONSE_TYPE__PROVISIONING_XML:I = 0x2
+
+.field public static final blacklist RCS_ACS_PROVISIONING_STATS__RESPONSE_TYPE__RESPONSE_TYPE_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist RCS_CLIENT_PROVISIONING_STATS:I = 0x2796
+
+.field public static final blacklist RCS_CLIENT_PROVISIONING_STATS__EVENT__CLIENT_PARAMS_SENT:I = 0x1
+
+.field public static final blacklist RCS_CLIENT_PROVISIONING_STATS__EVENT__DMA_CHANGED:I = 0x3
+
+.field public static final blacklist RCS_CLIENT_PROVISIONING_STATS__EVENT__EVENT_TYPE_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist RCS_CLIENT_PROVISIONING_STATS__EVENT__TRIGGER_RCS_RECONFIGURATION:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER:I = 0x27eb
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__ACCESS_CONTROL_TYPE__ACCESS_CONTROL_TYPE_CACHED_COUNTRY_CODE:I = 0x4
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__ACCESS_CONTROL_TYPE__ACCESS_CONTROL_TYPE_CURRENT_LOCATION:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__ACCESS_CONTROL_TYPE__ACCESS_CONTROL_TYPE_LAST_KNOWN_LOCATION:I = 0x3
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__ACCESS_CONTROL_TYPE__ACCESS_CONTROL_TYPE_NETWORK_COUNTRY_CODE:I = 0x1
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__ACCESS_CONTROL_TYPE__ACCESS_CONTROL_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_CARRIER_CONFIG:I = 0x3
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_CONFIG_UPDATER:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_DEVICE_CONFIG:I = 0x4
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_ENTITLEMENT:I = 0x1
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__CONFIG_DATA_SOURCE__CONFIG_DATA_SOURCE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_ACCESS_BARRED:I = 0x10
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_EMERGENCY_CALL_IN_PROGRESS:I = 0x1b
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_ERROR:I = 0x1
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_ILLEGAL_STATE:I = 0x17
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_INVALID_ARGUMENTS:I = 0x8
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_INVALID_MODEM_STATE:I = 0x7
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_INVALID_TELEPHONY_STATE:I = 0x6
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_LOCATION_DISABLED:I = 0x19
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_LOCATION_NOT_AVAILABLE:I = 0x1a
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_MODEM_BUSY:I = 0x16
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_MODEM_ERROR:I = 0x4
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_MODEM_TIMEOUT:I = 0x18
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_NETWORK_ERROR:I = 0x5
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_NETWORK_TIMEOUT:I = 0x11
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_NOT_AUTHORIZED:I = 0x13
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_NOT_REACHABLE:I = 0x12
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_NO_RESOURCES:I = 0xc
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_RADIO_NOT_AVAILABLE:I = 0xa
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_REQUEST_ABORTED:I = 0xf
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_REQUEST_FAILED:I = 0x9
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_REQUEST_IN_PROGRESS:I = 0x15
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_REQUEST_NOT_SUPPORTED:I = 0xb
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_SERVER_ERROR:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_SERVICE_ERROR:I = 0x3
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_SERVICE_NOT_PROVISIONED:I = 0xd
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_SERVICE_PROVISION_IN_PROGRESS:I = 0xe
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__RESULT_CODE__SATELLITE_RESULT_SUCCESS:I = 0x0
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__TRIGGERING_EVENT__TRIGGERING_EVENT_CONFIG_DATA_UPDATED:I = 0x5
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__TRIGGERING_EVENT__TRIGGERING_EVENT_EXTERNAL_REQUEST:I = 0x1
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__TRIGGERING_EVENT__TRIGGERING_EVENT_LOCATION_SETTINGS_DISABLED:I = 0x4
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__TRIGGERING_EVENT__TRIGGERING_EVENT_LOCATION_SETTINGS_ENABLED:I = 0x3
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__TRIGGERING_EVENT__TRIGGERING_EVENT_MCC_CHANGED:I = 0x2
+
+.field public static final blacklist SATELLITE_ACCESS_CONTROLLER__TRIGGERING_EVENT__TRIGGERING_EVENT_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER:I = 0x27e7
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_CONNECT_TYPE:I = 0xf
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_CONNECT_TYPE_PER_PLMN:I = 0xe
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_DATA_SUPPORT_MODE:I = 0x10
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_ENTITLEMENT_URL:I = 0x11
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_MAX_ALLOWED_DATA_MODE:I = 0xd
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_PLMN:I = 0x7
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_SUPPORTED_SERVICES:I = 0x8
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_DEVICE_DATA_INVALID_COUNTRY_CODE:I = 0x9
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_DEVICE_DATA_INVALID_S2_CELL_FILE:I = 0xa
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_INVALID_DOMAIN:I = 0x2
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_INVALID_SATELLITE_ACCESS_CONFIG_FILE:I = 0xc
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_INVALID_VERSION:I = 0x3
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_IO_ERROR:I = 0xb
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_NO_DATA:I = 0x4
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_NO_SATELLITE_DATA:I = 0x5
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_PARSE_ERROR:I = 0x6
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_SUCCESS:I = 0x1
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__CARRIER_CONFIG_RESULT__CONFIG_UPDATE_RESULT_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_CONNECT_TYPE:I = 0xf
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_CONNECT_TYPE_PER_PLMN:I = 0xe
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_DATA_SUPPORT_MODE:I = 0x10
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_ENTITLEMENT_URL:I = 0x11
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_MAX_ALLOWED_DATA_MODE:I = 0xd
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_PLMN:I = 0x7
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_CARRIER_DATA_INVALID_SUPPORTED_SERVICES:I = 0x8
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_DEVICE_DATA_INVALID_COUNTRY_CODE:I = 0x9
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_DEVICE_DATA_INVALID_S2_CELL_FILE:I = 0xa
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_INVALID_DOMAIN:I = 0x2
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_INVALID_SATELLITE_ACCESS_CONFIG_FILE:I = 0xc
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_INVALID_VERSION:I = 0x3
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_IO_ERROR:I = 0xb
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_NO_DATA:I = 0x4
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_NO_SATELLITE_DATA:I = 0x5
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_PARSE_ERROR:I = 0x6
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_SUCCESS:I = 0x1
+
+.field public static final blacklist SATELLITE_CONFIG_UPDATER__OEM_CONFIG_RESULT__CONFIG_UPDATE_RESULT_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_CONTROLLER:I = 0x27c6
+
+.field public static final blacklist SATELLITE_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_CONTROLLER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ENTITLEMENT:I = 0x27e6
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_CONSTRAINED:I = 0x2
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_RESTRICTED:I = 0x1
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_SUPPORT_ALL:I = 0x3
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_DATA_POLICY__SATELLITE_ENTITLEMENT_SERVICE_POLICY_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_STATUS__SATELLITE_ENTITLEMENT_STATUS_DISABLED:I = 0x1
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_STATUS__SATELLITE_ENTITLEMENT_STATUS_ENABLED:I = 0x2
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_STATUS__SATELLITE_ENTITLEMENT_STATUS_INCOMPATIBLE:I = 0x3
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_STATUS__SATELLITE_ENTITLEMENT_STATUS_PROVISIONING:I = 0x4
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__ENTITLEMENT_STATUS__SATELLITE_ENTITLEMENT_STATUS_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_AIRPLANE_MODE_TOGGLE:I = 0x7
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_BOOTUP:I = 0x1
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_CARRIER_CONFIG_CHANGED:I = 0x4
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_FCM_TICKLE:I = 0x5
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_INTERNET_CONNECTED:I = 0x3
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_REFRESH_TIMER:I = 0x2
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_RETRY:I = 0x8
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_SIM_REFRESH:I = 0x6
+
+.field public static final blacklist SATELLITE_ENTITLEMENT__TRIGGER_EVENT__SATELLITE_ENTITLEMENT_QUERY_TRIGGER_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM:I = 0x27c8
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_ACCESS_BARRED:I = 0x10
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_EMERGENCY_CALL_IN_PROGRESS:I = 0x1b
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_ERROR:I = 0x1
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_ILLEGAL_STATE:I = 0x17
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_INVALID_ARGUMENTS:I = 0x8
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_INVALID_MODEM_STATE:I = 0x7
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_INVALID_TELEPHONY_STATE:I = 0x6
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_LOCATION_DISABLED:I = 0x19
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_LOCATION_NOT_AVAILABLE:I = 0x1a
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_MODEM_BUSY:I = 0x16
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_MODEM_ERROR:I = 0x4
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_MODEM_TIMEOUT:I = 0x18
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NETWORK_ERROR:I = 0x5
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NETWORK_TIMEOUT:I = 0x11
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NOT_AUTHORIZED:I = 0x13
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NOT_REACHABLE:I = 0x12
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NO_RESOURCES:I = 0xc
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_RADIO_NOT_AVAILABLE:I = 0xa
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_ABORTED:I = 0xf
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_FAILED:I = 0x9
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_IN_PROGRESS:I = 0x15
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_NOT_SUPPORTED:I = 0xb
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVER_ERROR:I = 0x2
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVICE_ERROR:I = 0x3
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVICE_NOT_PROVISIONED:I = 0xd
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVICE_PROVISION_IN_PROGRESS:I = 0xe
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SUCCESS:I = 0x0
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_INCOMING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM:I = 0x27c9
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_ACCESS_BARRED:I = 0x10
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_EMERGENCY_CALL_IN_PROGRESS:I = 0x1b
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_ERROR:I = 0x1
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_ILLEGAL_STATE:I = 0x17
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_INVALID_ARGUMENTS:I = 0x8
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_INVALID_MODEM_STATE:I = 0x7
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_INVALID_TELEPHONY_STATE:I = 0x6
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_LOCATION_DISABLED:I = 0x19
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_LOCATION_NOT_AVAILABLE:I = 0x1a
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_MODEM_BUSY:I = 0x16
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_MODEM_ERROR:I = 0x4
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_MODEM_TIMEOUT:I = 0x18
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NETWORK_ERROR:I = 0x5
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NETWORK_TIMEOUT:I = 0x11
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NOT_AUTHORIZED:I = 0x13
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NOT_REACHABLE:I = 0x12
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_NO_RESOURCES:I = 0xc
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_RADIO_NOT_AVAILABLE:I = 0xa
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_ABORTED:I = 0xf
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_FAILED:I = 0x9
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_IN_PROGRESS:I = 0x15
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_REQUEST_NOT_SUPPORTED:I = 0xb
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVER_ERROR:I = 0x2
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVICE_ERROR:I = 0x3
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVICE_NOT_PROVISIONED:I = 0xd
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SERVICE_PROVISION_IN_PROGRESS:I = 0xe
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__RESULT_CODE__SATELLITE_RESULT_SUCCESS:I = 0x0
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_KEEP_ALIVE:I = 0x3
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_LAST_SOS_MESSAGE_NO_HELP_NEEDED:I = 0x5
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_LAST_SOS_MESSAGE_STILL_NEED_HELP:I = 0x4
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_LOCATION_SHARING:I = 0x2
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_SMS:I = 0x6
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_SOS_MESSAGE:I = 0x1
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SATELLITE_DATAGRAM_TYPE__DATAGRAM_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_OUTGOING_DATAGRAM__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_PROVISION:I = 0x27ca
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_ACCESS_BARRED:I = 0x10
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_EMERGENCY_CALL_IN_PROGRESS:I = 0x1b
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_ERROR:I = 0x1
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_ILLEGAL_STATE:I = 0x17
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_INVALID_ARGUMENTS:I = 0x8
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_INVALID_MODEM_STATE:I = 0x7
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_INVALID_TELEPHONY_STATE:I = 0x6
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_LOCATION_DISABLED:I = 0x19
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_LOCATION_NOT_AVAILABLE:I = 0x1a
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_MODEM_BUSY:I = 0x16
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_MODEM_ERROR:I = 0x4
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_MODEM_TIMEOUT:I = 0x18
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_NETWORK_ERROR:I = 0x5
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_NETWORK_TIMEOUT:I = 0x11
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_NOT_AUTHORIZED:I = 0x13
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_NOT_REACHABLE:I = 0x12
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_NO_RESOURCES:I = 0xc
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_RADIO_NOT_AVAILABLE:I = 0xa
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_REQUEST_ABORTED:I = 0xf
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_REQUEST_FAILED:I = 0x9
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_REQUEST_IN_PROGRESS:I = 0x15
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_REQUEST_NOT_SUPPORTED:I = 0xb
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_SERVER_ERROR:I = 0x2
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_SERVICE_ERROR:I = 0x3
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_SERVICE_NOT_PROVISIONED:I = 0xd
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_SERVICE_PROVISION_IN_PROGRESS:I = 0xe
+
+.field public static final blacklist SATELLITE_PROVISION__RESULT_CODE__SATELLITE_RESULT_SUCCESS:I = 0x0
+
+.field public static final blacklist SATELLITE_PROVISION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_PROVISION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_PROVISION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_PROVISION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SESSION:I = 0x27c7
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_ACCESS_BARRED:I = 0x10
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_EMERGENCY_CALL_IN_PROGRESS:I = 0x1b
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_ERROR:I = 0x1
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_ILLEGAL_STATE:I = 0x17
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_INVALID_ARGUMENTS:I = 0x8
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_INVALID_MODEM_STATE:I = 0x7
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_INVALID_TELEPHONY_STATE:I = 0x6
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_LOCATION_DISABLED:I = 0x19
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_LOCATION_NOT_AVAILABLE:I = 0x1a
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_MODEM_BUSY:I = 0x16
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_MODEM_ERROR:I = 0x4
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_MODEM_TIMEOUT:I = 0x18
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_NETWORK_ERROR:I = 0x5
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_NETWORK_TIMEOUT:I = 0x11
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_NOT_AUTHORIZED:I = 0x13
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_NOT_REACHABLE:I = 0x12
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_NO_RESOURCES:I = 0xc
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_RADIO_NOT_AVAILABLE:I = 0xa
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_REQUEST_ABORTED:I = 0xf
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_REQUEST_FAILED:I = 0x9
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_REQUEST_IN_PROGRESS:I = 0x15
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_REQUEST_NOT_SUPPORTED:I = 0xb
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_SERVER_ERROR:I = 0x2
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_SERVICE_ERROR:I = 0x3
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_SERVICE_NOT_PROVISIONED:I = 0xd
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_SERVICE_PROVISION_IN_PROGRESS:I = 0xe
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_INITIALIZATION_RESULT__SATELLITE_RESULT_SUCCESS:I = 0x0
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_ACCESS_BARRED:I = 0x10
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_EMERGENCY_CALL_IN_PROGRESS:I = 0x1b
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_ERROR:I = 0x1
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_ILLEGAL_STATE:I = 0x17
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_INVALID_ARGUMENTS:I = 0x8
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_INVALID_MODEM_STATE:I = 0x7
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_INVALID_TELEPHONY_STATE:I = 0x6
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_LOCATION_DISABLED:I = 0x19
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_LOCATION_NOT_AVAILABLE:I = 0x1a
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_MODEM_BUSY:I = 0x16
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_MODEM_ERROR:I = 0x4
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_MODEM_TIMEOUT:I = 0x18
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_NETWORK_ERROR:I = 0x5
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_NETWORK_TIMEOUT:I = 0x11
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_NOT_AUTHORIZED:I = 0x13
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_NOT_REACHABLE:I = 0x12
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_NOT_SUPPORTED:I = 0x14
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_NO_RESOURCES:I = 0xc
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_RADIO_NOT_AVAILABLE:I = 0xa
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_REQUEST_ABORTED:I = 0xf
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_REQUEST_FAILED:I = 0x9
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_REQUEST_IN_PROGRESS:I = 0x15
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_REQUEST_NOT_SUPPORTED:I = 0xb
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_SERVER_ERROR:I = 0x2
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_SERVICE_ERROR:I = 0x3
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_SERVICE_NOT_PROVISIONED:I = 0xd
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_SERVICE_PROVISION_IN_PROGRESS:I = 0xe
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_SERVICE_TERMINATION_RESULT__SATELLITE_RESULT_SUCCESS:I = 0x0
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_TECHNOLOGY__NT_RADIO_TECHNOLOGY_EMTC_NTN:I = 0x3
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_TECHNOLOGY__NT_RADIO_TECHNOLOGY_NB_IOT_NTN:I = 0x1
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_TECHNOLOGY__NT_RADIO_TECHNOLOGY_NR_NTN:I = 0x2
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_TECHNOLOGY__NT_RADIO_TECHNOLOGY_PROPRIETARY:I = 0x4
+
+.field public static final blacklist SATELLITE_SESSION__SATELLITE_TECHNOLOGY__NT_RADIO_TECHNOLOGY_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SESSION__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_SESSION__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_SESSION__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_SESSION__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER:I = 0x27cb
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__CELLULAR_SERVICE_STATE__SERVICE_STATE_EMERGENCY_ONLY:I = 0x2
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__CELLULAR_SERVICE_STATE__SERVICE_STATE_IN_SERVICE:I = 0x0
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__CELLULAR_SERVICE_STATE__SERVICE_STATE_OUT_OF_SERVICE:I = 0x1
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__CELLULAR_SERVICE_STATE__SERVICE_STATE_POWER_OFF:I = 0x3
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__EMERGENCY_NUMBER_SOURCE_USED_IN_HANDOVER_INTENT__EMERGENCY_NUMBER_SOURCE_CARRIER_REDIRECTION:I = 0x2
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__EMERGENCY_NUMBER_SOURCE_USED_IN_HANDOVER_INTENT__EMERGENCY_NUMBER_SOURCE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__EMERGENCY_NUMBER_SOURCE_USED_IN_HANDOVER_INTENT__EMERGENCY_NUMBER_SOURCE_USER_DIALED:I = 0x1
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__RECOMMENDING_HANDOVER_TYPE__RECOMMENDING_HANDOVER_TYPE_SOS:I = 0x1
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__RECOMMENDING_HANDOVER_TYPE__RECOMMENDING_HANDOVER_TYPE_T911:I = 0x2
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__RECOMMENDING_HANDOVER_TYPE__RECOMMENDING_HANDOVER_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SESSION_CONNECTION_MODE__SATELLITE_SESSION_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_AUTOMATIC:I = 0x1
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_HYBRID:I = 0x3
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_MANUAL:I = 0x2
+
+.field public static final blacklist SATELLITE_SOS_MESSAGE_RECOMMENDER__SUPPORTED_CONNECTION_MODE__SATELLITE_GLOBAL_CONNECT_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SIM_SLOT_STATE:I = 0x275e
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED:I = 0x14e
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__MATCHING_CRITERIA__SIM_RESTORE_MATCHING_CRITERIA_CARRIER_ID_AND_PHONE_NUMBER:I = 0x3
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__MATCHING_CRITERIA__SIM_RESTORE_MATCHING_CRITERIA_CARRIER_ID_ONLY:I = 0x4
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__MATCHING_CRITERIA__SIM_RESTORE_MATCHING_CRITERIA_ICCID:I = 0x2
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__MATCHING_CRITERIA__SIM_RESTORE_MATCHING_CRITERIA_NONE:I = 0x1
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__MATCHING_CRITERIA__SIM_RESTORE_MATCHING_CRITERIA_UNSET:I = 0x0
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESTORED_FROM_SUW__SIM_RESTORE_CASE_SIM_INSERTED:I = 0x2
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESTORED_FROM_SUW__SIM_RESTORE_CASE_SUW:I = 0x1
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESTORED_FROM_SUW__SIM_RESTORE_CASE_UNDEFINED_USE_CASE:I = 0x0
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESULT__SIM_RESTORE_RESULT_NONE_MATCH:I = 0x2
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESULT__SIM_RESTORE_RESULT_SUCCESS:I = 0x1
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESULT__SIM_RESTORE_RESULT_UNKNOWN:I = 0x0
+
+.field public static final blacklist SIM_SPECIFIC_SETTINGS_RESTORED__RESULT__SIM_RESTORE_RESULT_ZERO_SIM_IN_BACKUP:I = 0x3
+
+.field public static final blacklist SIP_DELEGATE_STATS:I = 0x2798
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE:I = 0x279a
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_DIRECTION__INCOMING:I = 0x1
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_DIRECTION__OUTGOING:I = 0x2
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_DIRECTION__UNKNOWN:I = 0x0
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_ACK:I = 0x3
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_BYE:I = 0x5
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_CANCEL:I = 0x6
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_CUSTOM:I = 0x1
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_INFO:I = 0xc
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_INVITE:I = 0x2
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_MESSAGE:I = 0xe
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_NOTIFY:I = 0xa
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_OPTIONS:I = 0x4
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_PRACK:I = 0x8
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_PUBLISH:I = 0xb
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_REFER:I = 0xd
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_REGISTER:I = 0x7
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_SUBSCRIBE:I = 0x9
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist SIP_MESSAGE_RESPONSE__SIP_MESSAGE_METHOD__SIP_REQUEST_UPDATE:I = 0xf
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS:I = 0x2799
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CALL_COMPOSER_ENRICHED_CALLING:I = 0x7
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CALL_COMPOSER_VIA_TELEPHONY:I = 0x8
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_COMMUNICATION_USING_SESSION:I = 0xe
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_COMMUNICATION_USING_STANDALONE_MSG:I = 0xf
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_ROLE:I = 0x11
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHATBOT_VERSION_SUPPORTED:I = 0x10
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHAT_IM:I = 0x3
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CHAT_SESSION:I = 0x4
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_CUSTOM:I = 0x1
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_FILE_TRANSFER:I = 0x5
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_FILE_TRANSFER_VIA_SMS:I = 0x6
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_GEO_PUSH:I = 0xc
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_GEO_PUSH_VIA_SMS:I = 0xd
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_MMTEL:I = 0x12
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_POST_CALL:I = 0x9
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_PRESENCE:I = 0x14
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_SHARED_MAP:I = 0xa
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_SHARED_SKETCH:I = 0xb
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_STANDALONE_MSG:I = 0x2
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist SIP_TRANSPORT_FEATURE_TAG_STATS__FEATURE_TAG_NAME__IMS_FEATURE_TAG_VIDEO:I = 0x13
+
+.field public static final blacklist SIP_TRANSPORT_SESSION:I = 0x279b
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_ACK:I = 0x3
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_BYE:I = 0x5
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_CANCEL:I = 0x6
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_CUSTOM:I = 0x1
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_INFO:I = 0xc
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_INVITE:I = 0x2
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_MESSAGE:I = 0xe
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_NOTIFY:I = 0xa
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_OPTIONS:I = 0x4
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_PRACK:I = 0x8
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_PUBLISH:I = 0xb
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_REFER:I = 0xd
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_REGISTER:I = 0x7
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_SUBSCRIBE:I = 0x9
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SESSION_METHOD__SIP_REQUEST_UPDATE:I = 0xf
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SIP_MESSAGE_DIRECTION__INCOMING:I = 0x1
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SIP_MESSAGE_DIRECTION__OUTGOING:I = 0x2
+
+.field public static final blacklist SIP_TRANSPORT_SESSION__SIP_MESSAGE_DIRECTION__UNKNOWN:I = 0x0
+
+.field public static final blacklist SMS_OTP_EVALUATION:I = 0x471
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_ALGORITHM__REDACTION_ALGORITHM_ENGLISH_REGEX:I = 0x2
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_ALGORITHM__REDACTION_ALGORITHM_ML_MODEL:I = 0x3
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_ALGORITHM__REDACTION_ALGORITHM_OTHER:I = 0x4
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_ALGORITHM__REDACTION_ALGORITHM_SMS_RETRIEVER:I = 0x1
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_ALGORITHM__REDACTION_ALGORITHM_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_LOCATION__REDACTION_LOCATION_SMS_BROADCAST:I = 0x1
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_LOCATION__REDACTION_LOCATION_SMS_QUERY:I = 0x2
+
+.field public static final blacklist SMS_OTP_EVALUATION__REDACTION_LOCATION__REDACTION_LOCATION_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist SMS_OTP_EVALUATION__RESULT__EVALUATION_RESULT_HAS_OTP:I = 0x2
+
+.field public static final blacklist SMS_OTP_EVALUATION__RESULT__EVALUATION_RESULT_NOT_CHECKED:I = 0x0
+
+.field public static final blacklist SMS_OTP_EVALUATION__RESULT__EVALUATION_RESULT_NO_OTP:I = 0x1
+
+.field public static final blacklist SMS_OTP_REDACTED:I = 0x470
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_ALGORITHM__REDACTION_ALGORITHM_ENGLISH_REGEX:I = 0x2
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_ALGORITHM__REDACTION_ALGORITHM_ML_MODEL:I = 0x3
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_ALGORITHM__REDACTION_ALGORITHM_OTHER:I = 0x4
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_ALGORITHM__REDACTION_ALGORITHM_SMS_RETRIEVER:I = 0x1
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_ALGORITHM__REDACTION_ALGORITHM_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_LOCATION__REDACTION_LOCATION_SMS_BROADCAST:I = 0x1
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_LOCATION__REDACTION_LOCATION_SMS_QUERY:I = 0x2
+
+.field public static final blacklist SMS_OTP_REDACTED__REDACTION_LOCATION__REDACTION_LOCATION_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist STORED_MESSAGE_SEND_REQUESTED:I = 0x546
+
+.field public static final blacklist STORED_MESSAGE_SEND_REQUESTED__MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_MMS:I = 0x3
+
+.field public static final blacklist STORED_MESSAGE_SEND_REQUESTED__MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_SMS:I = 0x1
+
+.field public static final blacklist STORED_MESSAGE_SEND_REQUESTED__MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_SMS_MULTIPART:I = 0x2
+
+.field public static final blacklist STORED_MESSAGE_SEND_REQUESTED__MESSAGE_TYPE__ORIGINAL_MESSAGE_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist SUPPORTED_RADIO_ACCESS_FAMILY:I = 0x275f
+
+.field public static final blacklist TELEPHONY_ANOMALY_DETECTED:I = 0x1cd
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS:I = 0x2783
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2:I = 0x27a9
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__CBS:I = 0x3
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__ENTERPRISE:I = 0x4
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__PRIORITIZE_BANDWIDTH:I = 0x2
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__PRIORITIZE_LATENCY:I = 0x1
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__PRIORITIZE_UNIFIFED_COMMUNICATIONS:I = 0xb
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__SATELLITE_EIMS_RESTRICTED:I = 0x9
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__SATELLITE_IMS_RESTRICTED:I = 0x7
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__SATELLITE_INTERNET_RESTRICTED:I = 0x5
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__SATELLITE_MMS_RESTRICTED:I = 0x6
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__SATELLITE_SUPL_RESTRICTED:I = 0xa
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__SATELLITE_XCAP_RESTRICTED:I = 0x8
+
+.field public static final blacklist TELEPHONY_NETWORK_REQUESTS_V2__CAPABILITY__UNKNOWN:I = 0x0
+
+.field public static final blacklist UCE_EVENT_STATS:I = 0x279f
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__FETCH_ERROR:I = 0x3
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__GENERIC_FAILURE:I = 0x1
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__INSUFFICIENT_MEMORY:I = 0x5
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__INVALID_PARAM:I = 0x2
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__LOST_NETWORK_CONNECTION:I = 0x6
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__NOT_FOUND:I = 0x8
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__NOT_SUPPORTED:I = 0x7
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__NO_CHANGE:I = 0xa
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__REQUEST_TIMEOUT:I = 0x4
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__SERVICE_UNAVAILABLE:I = 0x9
+
+.field public static final blacklist UCE_EVENT_STATS__COMMAND_CODE__SERVICE_UNKNOWN:I = 0x0
+
+.field public static final blacklist UCE_EVENT_STATS__TYPE__INCOMING_OPTION:I = 0x3
+
+.field public static final blacklist UCE_EVENT_STATS__TYPE__MESSAGE_TYPE_UNSPECIFIED:I = 0x0
+
+.field public static final blacklist UCE_EVENT_STATS__TYPE__OUTGOING_OPTION:I = 0x4
+
+.field public static final blacklist UCE_EVENT_STATS__TYPE__PUBLISH:I = 0x1
+
+.field public static final blacklist UCE_EVENT_STATS__TYPE__SUBSCRIBE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE:I = 0x275d
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist VOICE_CALL_RAT_USAGE__RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION:I = 0x275c
+
+.field public static final blacklist VOICE_CALL_SESSION__BEARER_AT_END__CALL_BEARER_CS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__BEARER_AT_END__CALL_BEARER_IMS:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__BEARER_AT_END__CALL_BEARER_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__BEARER_AT_START__CALL_BEARER_CS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__BEARER_AT_START__CALL_BEARER_IMS:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__BEARER_AT_START__CALL_BEARER_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_COMPOSER_STATUS__CALL_COMPOSER_STATUS_BUSINESS_ONLY:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_COMPOSER_STATUS__CALL_COMPOSER_STATUS_OFF:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_COMPOSER_STATUS__CALL_COMPOSER_STATUS_ON:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_COMPOSER_STATUS__CALL_COMPOSER_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_LESS_THAN_FIVE_MINUTES:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_LESS_THAN_ONE_HOUR:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_LESS_THAN_ONE_MINUTE:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_LESS_THAN_TEN_MINUTES:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_LESS_THAN_THIRTY_MINUTES:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_MORE_THAN_ONE_HOUR:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_DURATION__CALL_DURATION_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_ACTIVE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_ALERTING:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_DIALING:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_DISCONNECTED:I = 0x8
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_DISCONNECTING:I = 0x9
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_HOLDING:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_IDLE:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_INCOMING:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_INCOMING_SETUP:I = 0xa
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__CALL_STATE_ON_SETUP__CALL_STATE_WAITING:I = 0x7
+
+.field public static final blacklist VOICE_CALL_SESSION__DIRECTION__CALL_DIRECTION_MO:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__DIRECTION__CALL_DIRECTION_MT:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__DIRECTION__CALL_DIRECTION_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__FOLD_STATE__STATE_CLOSED:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__FOLD_STATE__STATE_FLIPPED:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__FOLD_STATE__STATE_HALF_OPENED:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__FOLD_STATE__STATE_OPENED:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__FOLD_STATE__STATE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__LAST_KNOWN_RAT__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__MAIN_CODEC_QUALITY__CODEC_QUALITY_FULLBAND:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__MAIN_CODEC_QUALITY__CODEC_QUALITY_NARROWBAND:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__MAIN_CODEC_QUALITY__CODEC_QUALITY_SUPER_WIDEBAND:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__MAIN_CODEC_QUALITY__CODEC_QUALITY_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__MAIN_CODEC_QUALITY__CODEC_QUALITY_WIDEBAND:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_CONNECTED__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_END__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_1XRTT:I = 0x7
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_CDMA:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_EDGE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_EHRPD:I = 0xe
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_EVDO_0:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_EVDO_A:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_EVDO_B:I = 0xc
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_GPRS:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_GSM:I = 0x10
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_HSDPA:I = 0x8
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_HSPA:I = 0xa
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_HSPAP:I = 0xf
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_HSUPA:I = 0x9
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_IDEN:I = 0xb
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_IWLAN:I = 0x12
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_LTE:I = 0xd
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_LTE_CA:I = 0x13
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_NR:I = 0x14
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_TD_SCDMA:I = 0x11
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_UMTS:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__RAT_AT_START__NETWORK_TYPE_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_EXTREMELY_FAST:I = 0x1
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_EXTREMELY_SLOW:I = 0x9
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_FAST:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_NORMAL:I = 0x5
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_SLOW:I = 0x6
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_ULTRA_FAST:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_ULTRA_SLOW:I = 0x8
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_VERY_FAST:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__SETUP_DURATION__CALL_SETUP_DURATION_VERY_SLOW:I = 0x7
+
+.field public static final blacklist VOICE_CALL_SESSION__SIGNAL_STRENGTH_AT_END__SIGNAL_STRENGTH_GOOD:I = 0x3
+
+.field public static final blacklist VOICE_CALL_SESSION__SIGNAL_STRENGTH_AT_END__SIGNAL_STRENGTH_GREAT:I = 0x4
+
+.field public static final blacklist VOICE_CALL_SESSION__SIGNAL_STRENGTH_AT_END__SIGNAL_STRENGTH_MODERATE:I = 0x2
+
+.field public static final blacklist VOICE_CALL_SESSION__SIGNAL_STRENGTH_AT_END__SIGNAL_STRENGTH_NONE_OR_UNKNOWN:I = 0x0
+
+.field public static final blacklist VOICE_CALL_SESSION__SIGNAL_STRENGTH_AT_END__SIGNAL_STRENGTH_POOR:I = 0x1
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 0
+
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static blacklist buildStatsEvent(II)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2410
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2411
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2412
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2414
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(III)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2539
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2540
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2541
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x27e5
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    .line 2543
+    invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2545
+    :cond_0
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2547
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2577
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2578
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2579
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2580
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2581
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2583
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIFII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3080
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3081
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3082
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3083
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3084
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3085
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeFloat(F)Landroid/util/StatsEvent$Builder;
+
+    .line 3086
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3087
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3089
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2650
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2651
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2652
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2653
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2654
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2655
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2657
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2766
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2767
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2768
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2769
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2770
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2771
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2772
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2774
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2857
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2858
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2859
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2860
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2861
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2862
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2863
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2864
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2866
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2898
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2899
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2900
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2901
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2902
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2903
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2904
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2905
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2906
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2908
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIZIIIIIIZIIIIIIIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2961
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2962
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2963
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2964
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2965
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2966
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2967
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2968
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2969
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2970
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2971
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2972
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2973
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2974
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2975
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2976
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2977
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2978
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2979
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 2980
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p19
+
+    .line 2981
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p20
+
+    .line 2982
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p21
+
+    .line 2983
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p22
+
+    .line 2984
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p23
+
+    .line 2985
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p24
+
+    .line 2986
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p25
+
+    .line 2987
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p26
+
+    .line 2988
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p27
+
+    .line 2989
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p28
+
+    .line 2990
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p29
+
+    .line 2991
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p30
+
+    .line 2992
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p31
+
+    .line 2993
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p32
+
+    .line 2994
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p33
+
+    .line 2995
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p34
+
+    .line 2996
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p35
+
+    .line 2997
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p36
+
+    .line 2998
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p37
+
+    .line 2999
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p38
+
+    .line 3000
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p39
+
+    .line 3001
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p40
+
+    .line 3002
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p41
+
+    .line 3003
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p42
+
+    .line 3004
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p43
+
+    .line 3005
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p44
+
+    .line 3006
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p45
+
+    .line 3007
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p46
+
+    .line 3008
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3010
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIIIIIIIIIIZI)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2938
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2939
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2940
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2941
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2942
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2943
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2944
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2945
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2946
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2947
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2948
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2949
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2950
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2951
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2952
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2953
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2954
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2955
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2957
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIIIIZZIZIIIIIZI)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2912
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2913
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2914
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2915
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2916
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2917
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2918
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2919
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2920
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2921
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2922
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2923
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2924
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2925
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2926
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2927
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2928
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2929
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2930
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 2931
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p19
+
+    .line 2932
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2934
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIIZIZIZZIJIZZZZILjava/lang/String;)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2870
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2871
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2872
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2873
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2874
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2875
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2876
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2877
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2878
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2879
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2880
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2881
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2882
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2883
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2884
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide p0, p14
+
+    .line 2885
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2886
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2887
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 2888
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p19
+
+    .line 2889
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p20
+
+    .line 2890
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p21
+
+    .line 2891
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-object/from16 p0, p22
+
+    .line 2892
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2894
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIZZIIZZJZZIIJZZ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2831
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2832
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2833
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2834
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2835
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2836
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2837
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2838
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2839
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2840
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2841
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2842
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2843
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2844
+    invoke-virtual {v0, p12, p13}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2845
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2846
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2847
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2848
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p0, p18
+
+    .line 2849
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p20
+
+    .line 2850
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p21
+
+    .line 2851
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2853
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIZZIZZIJIJIIIZZZZZILjava/lang/String;ILjava/lang/String;I)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2794
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2795
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2796
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2797
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2798
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2799
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2800
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2801
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2802
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2803
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2804
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2805
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2806
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2807
+    invoke-virtual {v0, p12, p13}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2808
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p1, p15
+
+    .line 2809
+    invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p17
+
+    .line 2810
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p18
+
+    .line 2811
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p19
+
+    .line 2812
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p20
+
+    .line 2813
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p21
+
+    .line 2814
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p22
+
+    .line 2815
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p23
+
+    .line 2816
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p24
+
+    .line 2817
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p25
+
+    .line 2818
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-object/from16 p1, p26
+
+    .line 2819
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p27
+
+    .line 2820
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x2767
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    .line 2822
+    invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    :cond_0
+    move-object/from16 p0, p28
+
+    .line 2824
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p29
+
+    .line 2825
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2827
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIIZZZI)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2778
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2779
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2780
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2781
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2782
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2783
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2784
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2785
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2786
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2787
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2788
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2790
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIJJIIIIIZIIIIIZZIIILjava/lang/String;IIZIJ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3028
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3029
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3030
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3031
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3032
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3033
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3034
+    invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3035
+    invoke-virtual {v0, p7, p8}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3036
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3037
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3038
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3039
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3040
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3041
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 3042
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 3043
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 3044
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 3045
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p19
+
+    .line 3046
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p20
+
+    .line 3047
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p21
+
+    .line 3048
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p22
+
+    .line 3049
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p23
+
+    .line 3050
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p24
+
+    .line 3051
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-object/from16 p0, p25
+
+    .line 3052
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p26
+
+    .line 3053
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p27
+
+    .line 3054
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p28
+
+    .line 3055
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p29
+
+    .line 3056
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p0, p30
+
+    .line 3057
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3059
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIJZI)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3014
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3015
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3016
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3017
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3018
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3019
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3020
+    invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3021
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3022
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3024
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIZI)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2661
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2662
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2663
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2664
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2665
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2666
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2667
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2668
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2670
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIZII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2700
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2701
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2702
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2703
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2704
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2705
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2706
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2707
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2708
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2710
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIZIILjava/lang/String;IIJJIIIZZIZJJZZZIIIIIZIZIIIJZZZZZZZII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2714
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2715
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2716
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2717
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2718
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2719
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2720
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2721
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2722
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2723
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2724
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2725
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2726
+    invoke-virtual {v0, p11, p12}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2727
+    invoke-virtual {v0, p13, p14}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2728
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2729
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2730
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 2731
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p19
+
+    .line 2732
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p20
+
+    .line 2733
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p21
+
+    .line 2734
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p0, p22
+
+    .line 2735
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p0, p24
+
+    .line 2736
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p26
+
+    .line 2737
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p27
+
+    .line 2738
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p28
+
+    .line 2739
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p29
+
+    .line 2740
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p30
+
+    .line 2741
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p31
+
+    .line 2742
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p32
+
+    .line 2743
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p33
+
+    .line 2744
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p34
+
+    .line 2745
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p35
+
+    .line 2746
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p36
+
+    .line 2747
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p37
+
+    .line 2748
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p38
+
+    .line 2749
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p39
+
+    .line 2750
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p0, p40
+
+    .line 2751
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p42
+
+    .line 2752
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p43
+
+    .line 2753
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p44
+
+    .line 2754
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p45
+
+    .line 2755
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p46
+
+    .line 2756
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p47
+
+    .line 2757
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p48
+
+    .line 2758
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p49
+
+    .line 2759
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p50
+
+    .line 2760
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2762
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIIZIZIIZZIZZZZZZLjava/lang/String;)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2674
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2675
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2676
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2677
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2678
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2679
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2680
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2681
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2682
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2683
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2684
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2685
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2686
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2687
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2688
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2689
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2690
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2691
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2692
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 2693
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move-object/from16 p0, p19
+
+    .line 2694
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2696
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIJZIZIILjava/lang/String;)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3063
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3064
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3065
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3066
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3067
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3068
+    invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3069
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3070
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3071
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3072
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3073
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3074
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 3076
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIZIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2621
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2622
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2623
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2624
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2625
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2626
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2627
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2628
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2629
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2631
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIZIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2635
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2636
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2637
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2638
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2639
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2640
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2641
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2642
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2643
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2644
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2646
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIZIIZ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2607
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2608
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2609
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2610
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2611
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2612
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2613
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2614
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2615
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2617
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIIZIZ[IIIII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2589
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2590
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2591
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2592
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2593
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2594
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2595
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2596
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    if-nez p7, :cond_0
+
+    const/4 p0, 0x0
+
+    .line 2597
+    new-array p7, p0, [I
+
+    :cond_0
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    .line 2598
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2599
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2600
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2601
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2603
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIJJ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3109
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3110
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3111
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3112
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3113
+    invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3114
+    invoke-virtual {v0, p5, p6}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3116
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIJZIZIILjava/lang/String;)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3093
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3094
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3095
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3096
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3097
+    invoke-virtual {v0, p3, p4}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3098
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3099
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3100
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3101
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3102
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3103
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 3105
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIZII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2565
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2566
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2567
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2568
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2569
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2570
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2571
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2573
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIIZZIZI)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2551
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2552
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2553
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2554
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2555
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2556
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2557
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2558
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2559
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2561
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIJJJZZI[Ljava/lang/String;IIIZII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3122
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3123
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3124
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3125
+    invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3126
+    invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3127
+    invoke-virtual {v0, p6, p7}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3128
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3129
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 3130
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    if-nez p11, :cond_0
+
+    const/4 p0, 0x0
+
+    .line 3131
+    new-array p11, p0, [Ljava/lang/String;
+
+    :cond_0
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 3132
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3133
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3134
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 3135
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 3136
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 3137
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3139
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIZIIIIIIIIIIIIII[IIJZZI[IIIIIIIII[Ljava/lang/String;[I[JIILjava/lang/String;ZZZIIZIJIZIIIJJ[J[J)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2475
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2476
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2477
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2478
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2479
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2480
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2481
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2482
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2483
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2484
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2485
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2486
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2487
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2488
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2489
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2490
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p15
+
+    .line 2491
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p1, p16
+
+    .line 2492
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/4 p1, 0x0
+
+    if-nez p17, :cond_0
+
+    .line 2493
+    new-array p2, p1, [I
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 p2, p17
+
+    :goto_0
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p18
+
+    .line 2494
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p2, p19
+
+    .line 2495
+    invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p21
+
+    .line 2496
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p22
+
+    .line 2497
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p23
+
+    .line 2498
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    if-nez p24, :cond_1
+
+    .line 2499
+    new-array p2, p1, [I
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 p2, p24
+
+    :goto_1
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p25
+
+    .line 2500
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p26
+
+    .line 2501
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p27
+
+    .line 2502
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p28
+
+    .line 2503
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p29
+
+    .line 2504
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p30
+
+    .line 2505
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p31
+
+    .line 2506
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p2, p32
+
+    .line 2507
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    if-nez p33, :cond_2
+
+    .line 2508
+    new-array p2, p1, [Ljava/lang/String;
+
+    goto :goto_2
+
+    :cond_2
+    move-object/from16 p2, p33
+
+    :goto_2
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    if-nez p34, :cond_3
+
+    .line 2509
+    new-array p2, p1, [I
+
+    goto :goto_3
+
+    :cond_3
+    move-object/from16 p2, p34
+
+    :goto_3
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p2, 0x27e3
+
+    if-ne p2, p0, :cond_4
+
+    const/4 p0, 0x1
+
+    .line 2511
+    invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    :cond_4
+    if-nez p35, :cond_5
+
+    .line 2513
+    new-array p0, p1, [J
+
+    goto :goto_4
+
+    :cond_5
+    move-object/from16 p0, p35
+
+    :goto_4
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeLongArray([J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p36
+
+    .line 2514
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p37
+
+    .line 2515
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-object/from16 p0, p38
+
+    .line 2516
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p39
+
+    .line 2517
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p40
+
+    .line 2518
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p41
+
+    .line 2519
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p42
+
+    .line 2520
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p43
+
+    .line 2521
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p44
+
+    .line 2522
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p45
+
+    .line 2523
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p2, p46
+
+    .line 2524
+    invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p48
+
+    .line 2525
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p49
+
+    .line 2526
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p50
+
+    .line 2527
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p51
+
+    .line 2528
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p52
+
+    .line 2529
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p2, p53
+
+    .line 2530
+    invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p2, p55
+
+    .line 2531
+    invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    if-nez p57, :cond_6
+
+    .line 2532
+    new-array p0, p1, [J
+
+    goto :goto_5
+
+    :cond_6
+    move-object/from16 p0, p57
+
+    :goto_5
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeLongArray([J)Landroid/util/StatsEvent$Builder;
+
+    if-nez p58, :cond_7
+
+    .line 2533
+    new-array p0, p1, [J
+
+    goto :goto_6
+
+    :cond_7
+    move-object/from16 p0, p58
+
+    :goto_6
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeLongArray([J)Landroid/util/StatsEvent$Builder;
+
+    .line 2535
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIZIZIILjava/lang/String;IZ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2457
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2458
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2459
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2460
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2461
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2462
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2463
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2464
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2465
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2466
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2467
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2469
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IIZZIIIZIZJZIZIIIJZI[I[IZZZZZZILjava/lang/String;I)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2420
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2421
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2422
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2423
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2424
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2425
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2426
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2427
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2428
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2429
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2430
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2431
+    invoke-virtual {v0, p10, p11}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2432
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2433
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2434
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2435
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2436
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2437
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-wide/from16 p0, p18
+
+    .line 2438
+    invoke-virtual {v0, p0, p1}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p20
+
+    .line 2439
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p21
+
+    .line 2440
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/4 p0, 0x0
+
+    if-nez p22, :cond_0
+
+    .line 2441
+    new-array p1, p0, [I
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 p1, p22
+
+    :goto_0
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    if-nez p23, :cond_1
+
+    .line 2442
+    new-array p0, p0, [I
+
+    goto :goto_1
+
+    :cond_1
+    move-object/from16 p0, p23
+
+    :goto_1
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p24
+
+    .line 2443
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p25
+
+    .line 2444
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p26
+
+    .line 2445
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p27
+
+    .line 2446
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p28
+
+    .line 2447
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p29
+
+    .line 2448
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p30
+
+    .line 2449
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move-object/from16 p0, p31
+
+    .line 2450
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p32
+
+    .line 2451
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2453
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IJ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 3143
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 3144
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 3145
+    invoke-virtual {v0, p1, p2}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 3147
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IZIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;I[Ljava/lang/String;[I[I)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2393
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2394
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2395
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2396
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2397
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2398
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2399
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2400
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2401
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/4 p0, 0x0
+
+    if-nez p8, :cond_0
+
+    .line 2402
+    new-array p8, p0, [Ljava/lang/String;
+
+    :cond_0
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeStringArray([Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    if-nez p9, :cond_1
+
+    .line 2403
+    new-array p9, p0, [I
+
+    :cond_1
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    if-nez p10, :cond_2
+
+    .line 2404
+    new-array p10, p0, [I
+
+    :cond_2
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    .line 2406
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IZIZIIZIZZIZIILjava/lang/String;ZII)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2367
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2368
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2369
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2370
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2371
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2372
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2373
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2374
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2375
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2376
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2377
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2378
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2379
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2380
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2381
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2382
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2383
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2384
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2385
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2387
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist buildStatsEvent(IZZIZIIIJ)Landroid/util/StatsEvent;
+    .locals 1
+
+    .line 2352
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2353
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2354
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2355
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2356
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2357
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2358
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2359
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2360
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2361
+    invoke-virtual {v0, p8, p9}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2363
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static blacklist write(II)V
+    .locals 5
+
+    .line 2117
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2118
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2119
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x2c9
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x8
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x4
+
+    if-ne p1, p0, :cond_0
+
+    .line 2121
+    invoke-virtual {v0, v4, v3}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2122
+    invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    :cond_0
+    const/16 p1, 0x356
+
+    if-ne p1, p0, :cond_1
+
+    .line 2125
+    invoke-virtual {v0, v4, v3}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2126
+    invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    :cond_1
+    const/16 p1, 0x372
+
+    if-ne p1, p0, :cond_2
+
+    .line 2129
+    invoke-virtual {v0, v4, v3}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2130
+    invoke-virtual {v0, v2, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2133
+    :cond_2
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2134
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(III)V
+    .locals 1
+
+    .line 2138
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2139
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2140
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x546
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    .line 2142
+    invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2144
+    :cond_0
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2146
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2147
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIII)V
+    .locals 1
+
+    .line 2151
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2152
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2153
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2154
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2155
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2157
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2158
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIIII)V
+    .locals 1
+
+    .line 2162
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2163
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2164
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x470
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    .line 2166
+    invoke-virtual {v0, p0, p0}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2168
+    :cond_0
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2169
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2170
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2172
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2173
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIIIII)V
+    .locals 2
+
+    .line 2204
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2205
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2206
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x544
+
+    const/4 v1, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    .line 2208
+    invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2210
+    :cond_0
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2211
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2212
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2213
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 p1, 0x541
+
+    if-ne p1, p0, :cond_1
+
+    .line 2215
+    invoke-virtual {v0, v1, v1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2218
+    :cond_1
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2219
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIIIIIILjava/lang/String;)V
+    .locals 1
+
+    .line 2245
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2246
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2247
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2248
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2249
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2250
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2251
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2252
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2253
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2255
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2256
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIIIIIIZZ)V
+    .locals 2
+
+    .line 2225
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2226
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    const/16 v1, 0x320
+
+    if-ne v1, p0, :cond_0
+
+    const/16 p0, 0x9
+
+    const/4 v1, 0x4
+
+    .line 2228
+    invoke-virtual {v0, p0, v1}, Landroid/util/StatsEvent$Builder;->addIntAnnotation(BI)Landroid/util/StatsEvent$Builder;
+
+    .line 2231
+    :cond_0
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2232
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2233
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2234
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2235
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2236
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2237
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2238
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2240
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2241
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIIIIZZIZIIIIIZIIIII)V
+    .locals 1
+
+    .line 2177
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2178
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2179
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2180
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2181
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2182
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2183
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2184
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2185
+    invoke-virtual {v0, p7}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2186
+    invoke-virtual {v0, p8}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2187
+    invoke-virtual {v0, p9}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2188
+    invoke-virtual {v0, p10}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2189
+    invoke-virtual {v0, p11}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2190
+    invoke-virtual {v0, p12}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2191
+    invoke-virtual {v0, p13}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2192
+    invoke-virtual {v0, p14}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p15
+
+    .line 2193
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p16
+
+    .line 2194
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p17
+
+    .line 2195
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p18
+
+    .line 2196
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    move/from16 p0, p19
+
+    .line 2197
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2199
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2200
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIIIJZ)V
+    .locals 1
+
+    .line 2260
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2261
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2262
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2263
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2264
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2265
+    invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2266
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2268
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2269
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIILjava/lang/String;)V
+    .locals 1
+
+    .line 2273
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2274
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2275
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2276
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2277
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2279
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2280
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIILjava/lang/String;Ljava/lang/String;II)V
+    .locals 1
+
+    .line 2284
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2285
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2286
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2287
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2288
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2289
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2290
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2291
+    invoke-virtual {v0, p6}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2293
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2294
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(III[I)V
+    .locals 1
+
+    .line 2300
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2301
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2302
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2303
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    const/4 p1, 0x1
+
+    const/16 p2, 0x4f6
+
+    if-ne p2, p0, :cond_0
+
+    .line 2305
+    invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    :cond_0
+    if-nez p3, :cond_1
+
+    const/4 p3, 0x0
+
+    .line 2307
+    new-array p3, p3, [I
+
+    :cond_1
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeIntArray([I)Landroid/util/StatsEvent$Builder;
+
+    if-ne p2, p0, :cond_2
+
+    .line 2309
+    invoke-virtual {v0, p1, p1}, Landroid/util/StatsEvent$Builder;->addBooleanAnnotation(BZ)Landroid/util/StatsEvent$Builder;
+
+    .line 2312
+    :cond_2
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2313
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IIJJ)V
+    .locals 1
+
+    .line 2317
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2318
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2319
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2320
+    invoke-virtual {v0, p2, p3}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2321
+    invoke-virtual {v0, p4, p5}, Landroid/util/StatsEvent$Builder;->writeLong(J)Landroid/util/StatsEvent$Builder;
+
+    .line 2323
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2324
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 2328
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2329
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2330
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2331
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2332
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2333
+    invoke-virtual {v0, p4}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2334
+    invoke-virtual {v0, p5}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2336
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2337
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(ILjava/lang/String;Ljava/lang/String;I)V
+    .locals 1
+
+    .line 2341
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2342
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2343
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2344
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeString(Ljava/lang/String;)Landroid/util/StatsEvent$Builder;
+
+    .line 2345
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2347
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2348
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method
+
+.method public static blacklist write(IZZI)V
+    .locals 1
+
+    .line 2106
+    invoke-static {}, Landroid/util/StatsEvent;->newBuilder()Landroid/util/StatsEvent$Builder;
+
+    move-result-object v0
+
+    .line 2107
+    invoke-virtual {v0, p0}, Landroid/util/StatsEvent$Builder;->setAtomId(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2108
+    invoke-virtual {v0, p1}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2109
+    invoke-virtual {v0, p2}, Landroid/util/StatsEvent$Builder;->writeBoolean(Z)Landroid/util/StatsEvent$Builder;
+
+    .line 2110
+    invoke-virtual {v0, p3}, Landroid/util/StatsEvent$Builder;->writeInt(I)Landroid/util/StatsEvent$Builder;
+
+    .line 2112
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->usePooledBuffer()Landroid/util/StatsEvent$Builder;
+
+    .line 2113
+    invoke-virtual {v0}, Landroid/util/StatsEvent$Builder;->build()Landroid/util/StatsEvent;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/util/StatsLog;->write(Landroid/util/StatsEvent;)V
+
+    return-void
+.end method

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.samsung.android.settings.core.SecColoredPaddingView android:id="@id/included_window_inset" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.google.android.material.appbar.AppBarLayout android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:seslHeightProportion="0.0" style="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@id/collapsing_app_bar" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="scroll|exitUntilCollapsed" style="@style/Theme.Settings.CollapsingToolbar">
+                    <View android:layout_gravity="bottom" android:background="@android:color/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:background="@android:color/transparent" />
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/sesl_appbar_scrolling_view_behavior">
+                <FrameLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <fragment android:id="@id/bluetooth_fragment_settings" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.android.settings.bluetooth.DevicePickerFragment" />
+                </FrameLayout>
+            </LinearLayout>
+            <com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout android:id="@id/sesl_floating_toolbar_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:layout_anchor="@id/app_bar">
+                <androidx.appcompat.widget.Toolbar android:layout_gravity="bottom" android:id="@id/action_bar" android:background="@android:color/transparent" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:clipToOutline="false" app:background="@android:color/transparent" app:layout_collapseMode="pin" />
+            </com.google.android.material.oneui.floatingactioncontainer.FloatingToolbarLayout>
+            <View android:id="@id/round_corner" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</com.samsung.android.settings.core.SecColoredPaddingView>

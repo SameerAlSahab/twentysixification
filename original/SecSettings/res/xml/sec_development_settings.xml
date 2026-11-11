@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:icon="@drawable/ic_settings_development" android:title="@string/sec_development_settings_title" android:key="sec_development_prefs_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:order="100">
+        <Preference android:title="@string/unified_sales_setup_title" android:key="tss_country_chooser">
+            <intent android:targetPackage="com.sec.android.app.SecSetupWizard" android:action="com.sec.android.app.secsetupwizard.COUNTRY_SELECTION" android:targetClass="com.sec.android.app.SecSetupWizard.UI.CountrySelectionActivity" settings:controller="com.samsung.android.settings.development.CountrySelectionPreferenceController" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debug_debugging_category" android:order="200">
+        <SwitchPreference android:title="@string/atcmd_setting" android:key="atcmd_developer_settings" android:summary="@string/atcmd_setting_description" />
+        <SwitchPreference android:title="@string/mobile_network_experience_booster" android:key="mobile_network_experience_booster" android:summary="@string/mobile_network_experience_booster_summary" />
+        <Preference android:title="@string/cross_layer_optimizer_for_mobile_network" android:key="clo_dashboard" android:summary="@string/cross_layer_optimizer_for_mobile_network_summary" android:fragment="com.samsung.android.settings.development.clo.CloFragment" />
+        <SwitchPreference android:title="@string/uplink_latency_optimizer" android:key="uplink_latency_optimizer" android:summary="@string/uplink_latency_optimizer_summary" />
+        <SwitchPreference android:title="@string/enable_samsung_log" android:key="enable_samsung_log" android:summary="@string/enable_samsung_log_summary" />
+        <Preference android:title="@string/adaptive_app_by_default_title" android:key="adaptive_app_by_default_settings" android:summary="@string/adaptive_app_by_default_summary" android:fragment="com.samsung.android.settings.development.AdaptiveAppByDefaultSettings" />
+        <SwitchPreference android:title="@string/fling_flexible_frame_rate_title" android:key="fling_flexible_frame_rate" android:summary="@string/fling_flexible_frame_rate_summary" />
+        <SwitchPreference android:title="@string/disable_siop_title" android:key="disable_siop" android:summary="@string/disable_siop_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debug_networking_category" android:order="400">
+        <SwitchPreference android:title="@string/wifi_safe_mode" android:key="safe_wifi" android:summary="@string/wifi_safe_mode_summary" />
+        <SwitchPreference android:title="@string/multicore_packet_scheduler" android:key="multicore_packet_scheduler" android:summary="@string/multicore_packet_scheduler_summary" />
+        <SwitchPreferenceCompat android:title="@string/bluetooth_show_le_devices_without_interesting_uuids" android:key="bluetooth_show_le_devices_without_interesting_uuids" />
+        <SwitchPreferenceCompat android:title="@string/bluetooth_turn_off_avc_blocklist" android:key="bluetooth_disable_avc_blocklist" />
+        <ListPreference android:entries="@array/bluetooth_hfp_codec_priority_items" android:title="@string/bluetooth_hfp_codec_priority_title" android:key="bluetooth_hfp_codec_priority" android:dialogTitle="@string/bluetooth_hfp_codec_priority_title" android:entryValues="@array/bluetooth_hfp_codec_priority_items" />
+        <SwitchPreference android:title="@string/sec_bluetooth_ibr_title" android:key="key_bluetooth_ibr" android:summary="@string/sec_bluetooth_ibr_summary" settings:controller="com.samsung.android.settings.development.bluetooth.BluetoothIbrPreferenceController" />
+        <SwitchPreference android:title="@string/bluetooth_hfp_disable" android:key="bluetooth_hfp_disable" android:summary="@string/bluetooth_hfp_disable_summary" />
+        <SwitchPreference android:title="@string/bluetooth_dualmode_disable" android:key="bluetooth_dualmode_disable" android:summary="@string/bluetooth_dualmode_disable_summary" />
+        <Preference android:title="@string/bluetooth_map_title" android:key="bluetooth_map" android:fragment="com.samsung.android.settings.development.bluetooth.MapDashboard" settings:controller="com.samsung.android.settings.development.bluetooth.MapDashboardController" />
+        <Preference android:title="@string/bluetooth_pbap_title" android:key="bluetooth_pbap" android:fragment="com.samsung.android.settings.development.bluetooth.PbapDashboard" settings:controller="com.samsung.android.settings.development.bluetooth.PbapDashboardController" />
+        <ListPreference android:entries="@array/bluetooth_sap_activation_entries" android:title="@string/bluetooth_sap_activation" android:key="bluetooth_sap_activation" android:dialogTitle="@string/bluetooth_sap_activation_dialog_title" android:entryValues="@array/bluetooth_sap_activation_values" />
+        <ListPreference android:entries="@array/dev_network_mode_entries" android:title="@string/sim1_dev_network_mode_title" android:key="dev_sim_network_mode0" android:dialogTitle="@string/dev_network_mode_dialog_title_sim1" android:entryValues="@array/dev_network_mode_values" />
+        <ListPreference android:entries="@array/dev_network_mode_entries" android:title="@string/sim2_dev_network_mode_title" android:key="dev_sim_network_mode1" android:dialogTitle="@string/dev_network_mode_dialog_title_sim2" android:entryValues="@array/dev_network_mode_values" />
+        <ListPreference android:entries="@array/network_mode_of_5g_activation_entries" android:title="@string/network_mode_of_5g_activation" android:key="network_mode_of_5g_activation" android:dialogTitle="@string/network_mode_of_5g_activation_dialog_title" android:entryValues="@array/network_mode_of_5g_activation_values" />
+        <SwitchPreference android:title="@string/sim1_vonr_calls_title" android:key="sim_vonr_calls0" />
+        <SwitchPreference android:title="@string/sim2_vonr_calls_title" android:key="sim_vonr_calls1" />
+        <SwitchPreference android:title="@string/ims_data_channel_title" android:key="ims_data_channel" android:summary="@string/ims_data_channel_summary" />
+        <SwitchPreference android:title="@string/ims_vcrbt_block_title" android:key="ims_vcrbt_block" android:summary="@string/ims_vcrbt_block_summary" />
+        <Preference android:title="@string/ims_configuration_sideloading_title" android:key="ims_settings_sideloading" android:summary="@string/ims_configuration_sideloading_summary">
+            <intent android:targetPackage="com.samsung.advp.imssettings" android:targetClass="com.samsung.advp.imssettings.SideloadingActivity" />
+        </Preference>
+        <ListPreference android:entries="@array/satellite_communication_entries" android:title="Tiantong Starpoint Test mode" android:key="enable_satellite_communication" android:dialogTitle="Tiantong Starpoint Test mode" android:entryValues="@array/satellite_communication_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debug_drawing_category" android:order="600">
+        <SwitchPreferenceCompat android:title="@string/show_text_id_title" android:key="show_text_id" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debug_applications_category" android:order="1000">
+        <SwitchPreferenceCompat android:title="@string/notification_realtime_nowbar_test_title" android:key="notification_nowbar_test" android:summary="@string/notification_realtime_nowbar_test_summary" />
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/sec_disable_app_compatibility_policies" android:key="package_policy_disabled" android:summary="@string/sec_disable_app_compatibility_policies" settings:useAdditionalSummary="true" />
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/sec_disable_camera_compatibility_policies" android:key="camera_package_policy_disabled" android:summary="@string/sec_disable_camera_compatibility_policies" settings:useAdditionalSummary="true" />
+        <com.android.settingslib.RestrictedSwitchPreference android:title="@string/sec_disable_camera_compat_force_rotation" android:key="camera_compat_force_rotation_disabled" />
+        <ListPreference android:entries="@array/sec_audio_hardening_entries" android:title="@string/sec_audio_hardening_title" android:key="sec_audio_hardening" android:dialogTitle="@string/sec_audio_hardening_dialog_title" android:entryValues="@array/sec_audio_hardening_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/security_settings_title" android:order="1350">
+        <SwitchPreference android:title="@string/disable_message_sandboxing_title" android:key="disable_message_sandboxing" android:summary="@string/disable_message_sandboxing_summary" />
+        <SwitchPreference android:title="@string/enable_message_sandboxing_image_tagging_title" android:key="enable_message_sandboxing_image_tagging" android:summary="@string/enable_message_sandboxing_image_tagging_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="1400">
+        <ListPreference android:entries="@array/sa_logging_checking_titles" android:title="@string/sa_logging_checking_title" android:key="sa_logging_checking" android:dialogTitle="@string/sa_logging_checking_dialog_title" android:entryValues="@array/sa_logging_checking_values" />
+        <Preference android:title="@string/status_logging_result_title" android:key="status_logging_result" android:summary="@string/status_logging_result_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="1500">
+        <Preference android:title="Action Dashboard" android:key="action_dashboard" android:fragment="com.samsung.android.settings.actions.development.ActionDashboardFragment" settings:controller="com.samsung.android.settings.development.ActionDashboardPreferenceController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="1600">
+        <SwitchPreference android:title="Show external code" android:key="key_show_external_code" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="1700">
+        <Preference android:title="Bixby Test" android:key="settings_bixby" android:fragment="com.samsung.android.settings.actions.development.SettingsBixbyFragment" settings:controller="com.samsung.android.settings.development.SettingsBixbyPreferenceController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="1800">
+        <Preference android:title="Test backup and restore" android:key="backup_and_restore" android:fragment="com.samsung.android.settings.eternal.development.BackupAndRestoreFragment" settings:controller="com.samsung.android.settings.eternal.development.BackupAndRestoreController" />
+    </PreferenceCategory>
+    <PreferenceCategory android:order="1900">
+        <SwitchPreference android:title="Settings history toast show" android:key="key_settings_history_toast_show" />
+    </PreferenceCategory>
+</PreferenceScreen>

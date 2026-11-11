@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:key="fingersetting"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.samsung.android.settings.biometrics.fingerprint.FingerprintCheckboxPreference android:persistent="false" android:title="Finger 1" android:key="Finger 0" />
+    <com.samsung.android.settings.biometrics.fingerprint.FingerprintCheckboxPreference android:persistent="false" android:title="Finger 2" android:key="Finger 1" />
+    <com.samsung.android.settings.biometrics.fingerprint.FingerprintCheckboxPreference android:persistent="false" android:title="Finger 3" android:key="Finger 2" />
+    <com.samsung.android.settings.biometrics.fingerprint.FingerprintCheckboxPreference android:persistent="false" android:title="Finger 4" android:key="Finger 3" />
+</PreferenceScreen>

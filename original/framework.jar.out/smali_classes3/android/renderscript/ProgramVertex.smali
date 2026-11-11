@@ -1,0 +1,77 @@
+.class public Landroid/renderscript/ProgramVertex;
+.super Landroid/renderscript/Program;
+.source "ProgramVertex.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/renderscript/ProgramVertex$Builder;
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# direct methods
+.method constructor greylist-max-o <init>(JLandroid/renderscript/RenderScript;)V
+    .locals 0
+
+    .line 55
+    invoke-direct {p0, p1, p2, p3}, Landroid/renderscript/Program;-><init>(JLandroid/renderscript/RenderScript;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public greylist-max-o getInput(I)Landroid/renderscript/Element;
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    .line 72
+    iget-object v0, p0, Landroid/renderscript/ProgramVertex;->mInputs:[Landroid/renderscript/Element;
+
+    array-length v0, v0
+
+    if-ge p1, v0, :cond_0
+
+    .line 75
+    iget-object p0, p0, Landroid/renderscript/ProgramVertex;->mInputs:[Landroid/renderscript/Element;
+
+    aget-object p0, p0, p1
+
+    return-object p0
+
+    .line 73
+    :cond_0
+    const-string p0, "Slot ID out of range."
+
+    invoke-static {p0}, Landroid/os/Debug$$ExternalSyntheticBUOutline2;->m$3(Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public greylist-max-o getInputCount()I
+    .locals 1
+
+    .line 63
+    iget-object v0, p0, Landroid/renderscript/ProgramVertex;->mInputs:[Landroid/renderscript/Element;
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Landroid/renderscript/ProgramVertex;->mInputs:[Landroid/renderscript/Element;
+
+    array-length p0, p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method

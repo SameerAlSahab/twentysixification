@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/data_usage_cycle_time_button_select_bg_color"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/rec_shape">
+        <androidx.appcompat.util.SeslShapeDrawable android:shape="rectangle">
+            <corners android:radius="22.0dip" />
+            <solid android:color="@color/data_usage_cycle_time_button_select_bg_color" />
+        </androidx.appcompat.util.SeslShapeDrawable>
+    </item>
+</ripple>

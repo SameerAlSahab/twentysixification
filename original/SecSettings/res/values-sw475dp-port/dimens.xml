@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sesl_color_picker_oneui_3_color_spectrum_view_width">345.0dip</dimen>
+    <dimen name="sesl_color_picker_oneui_3_color_spectrum_view_width_background">400.0dip</dimen>
+    <dimen name="sesl_color_picker_oneui_3_color_swatch_view_width_background">400.0dip</dimen>
+    <dimen name="sesl_color_picker_selected_color_item_margin">8.0dip</dimen>
+    <dimen name="sesl_spectrum_rect_starting">54.0dip</dimen>
+    <dimen name="sesl_swatch_rect_starting">52.0dip</dimen>
+</resources>

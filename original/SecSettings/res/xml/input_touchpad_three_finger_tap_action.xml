@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:persistent="false" android:title="@string/three_finger_tap_preference_title" android:key="input_touchpad_three_finger_tap"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/three_finger_tap_middle_click" android:key="middle_click" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapActionPreferenceController" />
+    <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/three_finger_tap_launch_gemini" android:key="launch_gemini" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapActionPreferenceController" />
+    <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/three_finger_tap_go_home" android:key="go_home" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapActionPreferenceController" />
+    <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/three_finger_tap_go_back" android:key="go_back" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapActionPreferenceController" />
+    <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/three_finger_tap_recent_apps" android:key="recent_apps" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapActionPreferenceController" />
+    <com.android.settingslib.widget.SelectorWithWidgetPreference android:title="@string/three_finger_tap_launch_app_title" android:key="launch_app" settings:controller="com.android.settings.inputmethod.TouchpadThreeFingerTapActionPreferenceController" />
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/Title_Watermark"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory>
+        <com.sec.android.app.camera.setting.DescriptionPreference android:selectable="false" android:summary="@string/watermark_limitation_info" app:topMargin="@dimen/watermark_info_preference_top_margin" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/watermark_style">
+        <com.sec.android.app.camera.setting.WatermarkStylePreference android:persistent="false" android:key="@string/key_watermark_frame_style" />
+        <com.sec.android.app.camera.setting.SpinnerPreference android:persistent="false" android:entries="@array/watermark_frame_color" android:title="@string/watermark_frame_color" android:key="@string/key_watermark_frame_color" android:entryValues="@array/watermark_frame_color_value" />
+    </PreferenceCategory>
+</PreferenceScreen>

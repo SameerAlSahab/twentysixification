@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/item_root" android:paddingTop="18.0dip" android:paddingBottom="18.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layoutDirection="ltr" android:paddingStart="24.0dip" android:paddingEnd="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:id="@id/midbar" android:background="#ffeeeef0" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_marginTop="19.0dip" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ambientOff" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <View android:id="@id/ellipse_1" android:background="@drawable/sec_bluetooth_ellipse_disabled_bg" android:clickable="true" android:layout_width="@dimen/sec_bt_ha_ambient_person_bg_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_bg_size" android:contentDescription="@string/sec_bluetooth_aics_off" />
+                    <ImageView android:id="@id/noise_controls_off" android:layout_width="@dimen/sec_bt_ha_ambient_person_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_size" android:src="@drawable/ic_noise_controls_off_person" android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <TextView android:textSize="13.0dip" android:gravity="center" android:id="@id/mute" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/sec_bluetooth_aics_off" style="@style/HaAmbientText" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ambientOn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <View android:id="@id/ellipse_2" android:background="@drawable/sec_bluetooth_ellipse_disabled_bg" android:clickable="true" android:layout_width="@dimen/sec_bt_ha_ambient_person_bg_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_bg_size" android:contentDescription="@string/sec_bluetooth_aics_ambient_sound" />
+                    <ImageView android:id="@id/ambient_sound_person" android:layout_width="@dimen/sec_bt_ha_ambient_person_size" android:layout_height="@dimen/sec_bt_ha_ambient_person_size" android:src="@drawable/ic_ambient_sound_person" android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <TextView android:textSize="13.0dip" android:gravity="center" android:id="@id/ambient" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/sec_bluetooth_aics_ambient_sound" style="@style/HaAmbientText" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

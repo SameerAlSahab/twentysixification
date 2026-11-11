@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/sec_reset_settings_layout" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.core.widget.NestedScrollView android:id="@id/floating_options_column_land" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/sec_floating_notifications_setting_preview_floating_options_land_margin_bottom" android:fillViewport="true" android:layout_weight="49.5">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <FrameLayout android:id="@id/floating_options_preference_container" android:background="@color/content_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <FrameLayout android:id="@id/floating_summary_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.core.widget.NestedScrollView android:id="@id/floating_icon_preview_parent" android:background="@color/sec_widget_round_and_bgcolor" android:layout_width="0.0dip" android:layout_height="fill_parent" android:fillViewport="true" android:layout_weight="50.5">
+        <LinearLayout android:orientation="vertical" android:id="@id/floating_icon_preview_container" android:background="@color/content_background" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

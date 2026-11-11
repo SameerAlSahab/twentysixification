@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="@dimen/display_block_padding" android:color="@color/display_topology_background_color" />
+            <corners android:radius="@dimen/display_block_corner_radius" />
+        </shape>
+    </item>
+    <item android:left="@dimen/display_block_insets" android:top="@dimen/display_block_insets" android:right="@dimen/display_block_insets" android:bottom="@dimen/display_block_insets">
+        <shape android:shape="rectangle">
+            <stroke android:width="@dimen/display_block_highlight_width_external" android:color="@color/display_topology_block_border_color" />
+            <corners android:radius="@dimen/display_block_corner_radius" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settings.widget.SettingsMainSwitchPreference android:key="main_switch_preference" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverTextPreferenceController" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecInsetCategoryPreference />
+    <com.samsung.android.settings.accessibility.base.widget.HoverTextPreviewPreference android:key="guide_preview" settings:searchable="false" />
+    <com.samsung.android.settings.widget.SecUnclickablePreference android:title="@string/hover_text_description" android:selectable="false" android:key="guide_text" settings:positionMode="normal" settings:searchable="false" />
+    <com.android.settings.accessibility.ShortcutPreference android:persistent="false" android:title="@string/text_spotlight_shortcut_title" android:key="text_spotlight_shortcut_key" settings:controller="com.android.settings.accessibility.ToggleShortcutPreferenceController" />
+    <SecPreferenceCategory android:title="@string/text_category" />
+    <com.samsung.android.settings.accessibility.base.widget.A11ySeekBarWithButtonsPreference android:layout="@layout/hover_text_seekbar" android:max="12" android:title="@string/font_size" android:key="font_size_seek_bar" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverTextSeekbarPreferenceController" settings:seekBarMode="levelbar" />
+    <SecSwitchPreference android:title="@string/sec_bold_font_title" android:key="bold_font" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverTextBoldPreferenceController" />
+    <SecPreference android:title="@string/hover_text_font_color" android:key="hover_text_color" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverTextFontColorPreferenceController" />
+    <SecDropDownPreference android:persistent="false" android:title="@string/scrolling_speed" android:key="scrolling_speed" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverTextScrollSpeedController" />
+    <SecPreferenceCategory android:title="@string/hover_window" />
+    <SecPreference android:title="@string/captioning_background_color" android:key="hover_window_background" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverWindowBackgroundPreferenceController" />
+    <SecPreference android:title="@string/border_color" android:key="hover_window_border" settings:controller="com.samsung.android.settings.accessibility.vision.controllers.HoverTextBorderPreferenceController" />
+</PreferenceScreen>

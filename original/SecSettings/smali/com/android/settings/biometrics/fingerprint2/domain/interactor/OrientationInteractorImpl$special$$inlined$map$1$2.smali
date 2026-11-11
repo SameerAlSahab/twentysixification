@@ -1,0 +1,277 @@
+.class public final Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;
+.super Ljava/lang/Object;
+.source "qb/115377217 260e2bd8c6ada73ad117cd82af31dea42dfb64c3a20bee3f3471e598fedaf83c"
+
+# interfaces
+.implements Lkotlinx/coroutines/flow/FlowCollector;
+
+
+# instance fields
+.field public final synthetic $r8$classId:I
+
+.field public synthetic $this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+.field public synthetic this$0:Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl;
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;->$r8$classId:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 9
+
+    iget v0, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;->$r8$classId:I
+
+    sget-object v1, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    const/4 v2, 0x0
+
+    const-string v3, "call to \'resume\' before \'invoke\' with coroutine"
+
+    const/high16 v4, -0x80000000
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    packed-switch v0, :pswitch_data_0
+
+    instance-of v0, p2, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p2
+
+    check-cast v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;
+
+    iget v7, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->label:I
+
+    and-int v8, v7, v4
+
+    if-eqz v8, :cond_0
+
+    sub-int/2addr v7, v4
+
+    iput v7, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->label:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;
+
+    invoke-direct {v0, p0, p2}, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;-><init>(Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;Lkotlin/coroutines/Continuation;)V
+
+    :goto_0
+    iget-object p2, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->result:Ljava/lang/Object;
+
+    sget-object v4, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v7, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->label:I
+
+    if-eqz v7, :cond_2
+
+    if-ne v7, v5, :cond_1
+
+    iget-object p0, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->L$2:Ljava/lang/Object;
+
+    check-cast p0, Lkotlinx/coroutines/flow/FlowCollector;
+
+    iget-object p0, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->L$1:Ljava/lang/Object;
+
+    check-cast p0, Lkotlin/coroutines/Continuation;
+
+    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v3}, Lokio/Buffer$$ExternalSyntheticBUOutline0;->m$1(Ljava/lang/String;)V
+
+    move-object v1, v6
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;->this$0:Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl;
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl;->context:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/Display;->getRotation()I
+
+    move-result p0
+
+    new-instance v3, Ljava/lang/Integer;
+
+    invoke-direct {v3, p0}, Ljava/lang/Integer;-><init>(I)V
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->L$0:Ljava/lang/Object;
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->L$1:Ljava/lang/Object;
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->L$2:Ljava/lang/Object;
+
+    iput p1, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->I$0:I
+
+    iput v2, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->I$1:I
+
+    iput v5, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$transform$1$1$1;->label:I
+
+    invoke-interface {p2, v3, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_3
+
+    move-object v1, v4
+
+    :cond_3
+    :goto_1
+    return-object v1
+
+    :pswitch_0
+    instance-of v0, p2, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;
+
+    if-eqz v0, :cond_4
+
+    move-object v0, p2
+
+    check-cast v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;
+
+    iget v7, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->label:I
+
+    and-int v8, v7, v4
+
+    if-eqz v8, :cond_4
+
+    sub-int/2addr v7, v4
+
+    iput v7, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->label:I
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;
+
+    invoke-direct {v0, p0, p2}, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;-><init>(Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;Lkotlin/coroutines/Continuation;)V
+
+    :goto_2
+    iget-object p2, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->result:Ljava/lang/Object;
+
+    sget-object v4, Lkotlin/coroutines/intrinsics/CoroutineSingletons;->COROUTINE_SUSPENDED:Lkotlin/coroutines/intrinsics/CoroutineSingletons;
+
+    iget v7, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->label:I
+
+    if-eqz v7, :cond_6
+
+    if-ne v7, v5, :cond_5
+
+    iget-object p0, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->L$3:Ljava/lang/Object;
+
+    check-cast p0, Lkotlinx/coroutines/flow/FlowCollector;
+
+    iget-object p0, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->L$1:Ljava/lang/Object;
+
+    check-cast p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;
+
+    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-static {v3}, Lokio/Buffer$$ExternalSyntheticBUOutline0;->m$1(Ljava/lang/String;)V
+
+    move-object v1, v6
+
+    goto :goto_3
+
+    :cond_6
+    invoke-static {p2}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;->$this_unsafeFlow:Lkotlinx/coroutines/flow/FlowCollector;
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2;->this$0:Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl;
+
+    iget-object p0, p0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl;->context:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    const v3, 0x1110263
+
+    invoke-virtual {p0, v3}, Landroid/content/res/Resources;->getBoolean(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_7
+
+    add-int/lit8 p1, p1, 0x1
+
+    rem-int/lit8 p1, p1, 0x4
+
+    :cond_7
+    new-instance p0, Ljava/lang/Integer;
+
+    invoke-direct {p0, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->L$0:Ljava/lang/Object;
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->L$1:Ljava/lang/Object;
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->L$2:Ljava/lang/Object;
+
+    iput-object v6, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->L$3:Ljava/lang/Object;
+
+    iput v2, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->I$0:I
+
+    iput v5, v0, Lcom/android/settings/biometrics/fingerprint2/domain/interactor/OrientationInteractorImpl$special$$inlined$map$1$2$1;->label:I
+
+    invoke-interface {p2, p0, v0}, Lkotlinx/coroutines/flow/FlowCollector;->emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_8
+
+    move-object v1, v4
+
+    :cond_8
+    :goto_3
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

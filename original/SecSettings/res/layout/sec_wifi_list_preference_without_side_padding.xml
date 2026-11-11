@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/sec_wifi_list_item_start_padding"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:background="?android:selectableItemBackground" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/sec_wifi_list_preference_item_content" />
+    </LinearLayout>
+</LinearLayout>

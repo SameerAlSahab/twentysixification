@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/sec_bt_ha_header" android:background="@color/sec_widget_round_and_bgcolor" android:paddingTop="@dimen/sec_bluetooth_ha_header_padding_top" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_gravity="center" android:id="@id/header_icon_bg" android:padding="@dimen/sec_bt_ha_header_icon_bg_padding" android:layout_width="@dimen/sec_bt_ha_header_icon_bg_size" android:layout_height="@dimen/sec_bt_ha_header_icon_bg_size">
+        <ImageView android:id="@id/sec_bt_ha_header_icon" android:layout_width="@dimen/sec_bt_ha_header_icon_size" android:layout_height="@dimen/sec_bt_ha_header_icon_size" android:src="@drawable/hearing_aids_icon" android:antialias="true" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView android:gravity="center" android:id="@id/sec_bt_ha_connection_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" style="@style/HaHeaderConnectionState" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ha_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:layoutDirection="ltr">
+        <include android:id="@id/layout_one_battery_merged" layout="@layout/sec_bluetooth_hearing_aid_header_one_battery_merged" />
+        <include android:id="@id/layout_dual_battery" layout="@layout/sec_bluetooth_hearing_aid_header_dual_battery" />
+        <include android:id="@id/layout_one_battery" layout="@layout/sec_bluetooth_hearing_aid_header_one_battery" />
+    </LinearLayout>
+</LinearLayout>

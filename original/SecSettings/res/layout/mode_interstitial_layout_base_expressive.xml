@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/interstitial_page" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transitionGroup="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Toolbar android:theme="?android:actionBarTheme" android:id="@id/action_bar" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="0.0dip" style="?android:actionBarStyle" />
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:paddingLeft="24.0dip" android:paddingTop="12.0dip" android:paddingRight="24.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textAppearance="@style/TextAppearance.SettingsLib.DisplaySmall" android:id="@id/mode_name_title" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingVertical="16.0dip" app:layout_constraintTop_toTopOf="parent" />
+        <TextView android:textAppearance="@style/TextAppearance.SettingsLib.BodyLarge" android:id="@id/mode_name_subtitle" android:paddingBottom="48.0dip" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/zen_mode_setup_page_summary" app:layout_constraintTop_toBottomOf="@id/mode_name_title" />
+        <FrameLayout android:id="@id/image_frame" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintTop_toBottomOf="@id/mode_name_subtitle">
+            <ImageView android:layout_gravity="center" android:id="@id/image" android:clickable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:adjustViewBounds="true" />
+        </FrameLayout>
+        <com.google.android.material.button.MaterialButton android:id="@id/enable_mode_button" android:layout_width="fill_parent" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="1.0" style="@style/SettingsLibButtonStyle.Expressive.Filled.Large" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

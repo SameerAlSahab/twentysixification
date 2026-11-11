@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/outro_label" android:key="outro_screen" settings:controller="com.android.settings.core.BasePreferenceController" settings:searchable="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:settings="http://schemas.android.com/apk/res-auto">
+    <com.android.settingslib.widget.LayoutPreference android:layout="@layout/fragment_outro" android:selectable="false" android:key="fragment_outro" />
+</PreferenceScreen>

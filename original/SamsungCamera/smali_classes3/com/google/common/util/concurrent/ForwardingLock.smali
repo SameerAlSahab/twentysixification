@@ -1,0 +1,138 @@
+.class abstract Lcom/google/common/util/concurrent/ForwardingLock;
+.super Ljava/lang/Object;
+.source "r8-map-id-9ff5ece02b885c5453aa5d037fd007b9fe43faba2eb98a42b720297e8f32cfe2"
+
+# interfaces
+.implements Ljava/util/concurrent/locks/Lock;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract delegate()Ljava/util/concurrent/locks/Lock;
+.end method
+
+.method public lock()V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->lock()V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public lockInterruptibly()V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->lockInterruptibly()V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+.method public newCondition()Ljava/util/concurrent/locks/Condition;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->newCondition()Ljava/util/concurrent/locks/Condition;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    return-object p0
+.end method
+
+.method public tryLock()Z
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->tryLock()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public tryLock(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 0
+
+    .line 2
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
+
+    move-result-object p0
+
+    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/locks/Lock;->tryLock(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public unlock()V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/google/common/util/concurrent/ForwardingLock;->delegate()Ljava/util/concurrent/locks/Lock;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method

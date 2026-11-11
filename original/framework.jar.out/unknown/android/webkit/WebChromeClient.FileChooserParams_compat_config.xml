@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><config><compat-change enableAfterTargetSdk="36" id="364980165" name="ENABLE_FILE_SYSTEM_ACCESS"><meta-data definedIn="android.webkit.WebChromeClient.FileChooserParams"/></compat-change></config>
