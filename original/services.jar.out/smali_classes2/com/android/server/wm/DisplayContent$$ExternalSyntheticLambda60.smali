@@ -1,0 +1,26 @@
+.class public final synthetic Lcom/android/server/wm/DisplayContent$$ExternalSyntheticLambda60;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/util/function/BiPredicate;
+
+
+# virtual methods
+.method public final test(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Lcom/android/server/wm/ActivityRecord;
+
+    check-cast p2, Ljava/lang/Integer;
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Lcom/android/server/wm/ActivityRecord;->isUid(I)Z
+
+    move-result p0
+
+    return p0
+.end method

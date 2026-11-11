@@ -1,0 +1,109 @@
+.class public final Lcom/android/server/om/OverlayManagerService$UserLifecycleListener;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Lcom/android/server/pm/UserManagerInternal$UserLifecycleListener;
+
+
+# instance fields
+.field public synthetic this$0:Lcom/android/server/om/OverlayManagerService;
+
+
+# virtual methods
+.method public final onUserCreated(Landroid/content/pm/UserInfo;Ljava/lang/Object;)V
+    .locals 5
+
+    const-string/jumbo p2, "OMS#onUserCreated "
+
+    const-string/jumbo v0, "Updating overlays for onUserCreated "
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/content/pm/UserInfo;->isMain()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget p1, p1, Landroid/content/pm/UserInfo;->id:I
+
+    const-wide/32 v1, 0x4000000
+
+    :try_start_0
+    const-string/jumbo v3, "OverlayManager"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {v1, v2, p2}, Landroid/os/Trace;->traceBegin(JLjava/lang/String;)V
+
+    iget-object p2, p0, Lcom/android/server/om/OverlayManagerService$UserLifecycleListener;->this$0:Lcom/android/server/om/OverlayManagerService;
+
+    iget-object p2, p2, Lcom/android/server/om/OverlayManagerService;->mLock:Ljava/lang/Object;
+
+    monitor-enter p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget-object p0, p0, Lcom/android/server/om/OverlayManagerService$UserLifecycleListener;->this$0:Lcom/android/server/om/OverlayManagerService;
+
+    iget-object v0, p0, Lcom/android/server/om/OverlayManagerService;->mImpl:Lcom/android/server/om/OverlayManagerServiceImpl;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/om/OverlayManagerServiceImpl;->updateOverlaysForUser(I)Landroid/util/ArraySet;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/android/server/om/OverlayManagerService;->updatePackageManagerLocked(Ljava/util/Set;)Landroid/util/SparseArray;
+
+    monitor-exit p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_2
+    monitor-exit p2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :catchall_1
+    move-exception p0
+
+    invoke-static {v1, v2}, Landroid/os/Trace;->traceEnd(J)V
+
+    throw p0
+
+    :cond_0
+    return-void
+.end method

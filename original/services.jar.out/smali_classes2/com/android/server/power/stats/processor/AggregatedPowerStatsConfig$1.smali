@@ -1,0 +1,11 @@
+.class public final Lcom/android/server/power/stats/processor/AggregatedPowerStatsConfig$1;
+.super Lcom/android/server/power/stats/processor/PowerStatsProcessor;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# virtual methods
+.method public final finish(Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats;J)V
+    .locals 0
+
+    return-void
+.end method

@@ -1,0 +1,48 @@
+.class public final Lcom/samsung/android/sdk/moneta/memory/option/ActivityQueryType$Companion;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# direct methods
+.method public static fromInt(I)Lcom/samsung/android/sdk/moneta/memory/option/ActivityQueryType;
+    .locals 3
+
+    invoke-static {}, Lcom/samsung/android/sdk/moneta/memory/option/ActivityQueryType;->getEntries()Lcom/android/server/core/jarjar/kotlin/enums/EnumEntries;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lcom/samsung/android/sdk/moneta/memory/option/ActivityQueryType;
+
+    invoke-virtual {v2}, Lcom/samsung/android/sdk/moneta/memory/option/ActivityQueryType;->getValue()I
+
+    move-result v2
+
+    if-ne v2, p0, :cond_0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x0
+
+    :goto_0
+    check-cast v1, Lcom/samsung/android/sdk/moneta/memory/option/ActivityQueryType;
+
+    return-object v1
+.end method

@@ -1,0 +1,48 @@
+.class public final Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# instance fields
+.field public volatile mInstance:Ljava/lang/Object;
+
+.field public final mProducer:Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Producer;
+
+
+# direct methods
+.method public constructor <init>(Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Producer;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;->mInstance:Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;->mProducer:Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Producer;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;->mInstance:Ljava/lang/Object;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;->mProducer:Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Producer;
+
+    invoke-interface {v0, p1, p2}, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Producer;->produce(Lcom/android/server/pm/PackageManagerServiceInjector;Lcom/android/server/pm/PackageManagerService;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;->mInstance:Ljava/lang/Object;
+
+    :cond_0
+    iget-object p0, p0, Lcom/samsung/android/server/pm/lifecycle/PmCustomInjector$Singleton;->mInstance:Ljava/lang/Object;
+
+    return-object p0
+.end method

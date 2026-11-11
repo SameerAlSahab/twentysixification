@@ -1,0 +1,81 @@
+.class public final Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;
+.super Landroid/content/BroadcastReceiver;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# instance fields
+.field public final synthetic this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
+
+
+# direct methods
+.method public constructor <init>(Lcom/samsung/accessory/manager/connectivity/BTConnectivity;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string/jumbo v0, "android.bluetooth.adapter.action.STATE_CHANGED"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$BTStateReceiver;->this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
+
+    iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity;->mAdapterStateChangedHandler:Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;
+
+    iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/BTConnectivity$AdapterStateChangedHandler;->this$0:Lcom/samsung/accessory/manager/connectivity/BTConnectivity;
+
+    const-string/jumbo p1, "android.bluetooth.adapter.extra.STATE"
+
+    const/high16 v0, -0x80000000
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result p1
+
+    const/16 p2, 0xa
+
+    if-eq p1, p2, :cond_1
+
+    const/16 p2, 0xc
+
+    if-eq p1, p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mStateChangedCallback:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->onStateChanged(I)V
+
+    return-void
+
+    :cond_1
+    iget-object p0, p0, Lcom/samsung/accessory/manager/connectivity/Connectivity;->mStateChangedCallback:Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;
+
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, p1}, Lcom/samsung/accessory/manager/authentication/AuthenticationSession$1;->onStateChanged(I)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method

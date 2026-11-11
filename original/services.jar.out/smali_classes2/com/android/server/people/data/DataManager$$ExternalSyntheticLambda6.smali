@@ -1,0 +1,246 @@
+.class public final synthetic Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda6;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
+
+
+# instance fields
+.field public synthetic f$0:Lcom/android/server/people/data/DataManager;
+
+.field public synthetic f$1:Landroid/os/CancellationSignal;
+
+.field public synthetic f$2:I
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 8
+
+    iget-object v0, p0, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda6;->f$0:Lcom/android/server/people/data/DataManager;
+
+    iget-object v1, p0, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda6;->f$1:Landroid/os/CancellationSignal;
+
+    iget p0, p0, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda6;->f$2:I
+
+    check-cast p1, Lcom/android/server/people/data/PackageData;
+
+    invoke-virtual {v1}, Landroid/os/CancellationSignal;->isCanceled()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v1, p1, Lcom/android/server/people/data/PackageData;->mEventStore:Lcom/android/server/people/data/EventStore;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v1, Lcom/android/server/people/data/EventStore;->mEventHistoryMaps:Ljava/util/List;
+
+    check-cast v2, Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :cond_1
+    if-ge v5, v3, :cond_2
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    add-int/lit8 v5, v5, 0x1
+
+    check-cast v6, Ljava/util/Map;
+
+    invoke-interface {v6}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v6
+
+    :goto_0
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcom/android/server/people/data/EventHistoryImpl;
+
+    invoke-virtual {v7}, Lcom/android/server/people/data/EventHistoryImpl;->pruneOldEvents()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto/16 :goto_1
+
+    :cond_2
+    monitor-exit v1
+
+    iget-object v1, p1, Lcom/android/server/people/data/PackageData;->mIsDefaultDialerPredicate:Ljava/util/function/Predicate;
+
+    iget-object v2, p1, Lcom/android/server/people/data/PackageData;->mPackageName:Ljava/lang/String;
+
+    invoke-interface {v1, v2}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    if-nez v1, :cond_3
+
+    iget-object v1, p1, Lcom/android/server/people/data/PackageData;->mEventStore:Lcom/android/server/people/data/EventStore;
+
+    invoke-virtual {v1, v2}, Lcom/android/server/people/data/EventStore;->deleteEventHistories(I)V
+
+    :cond_3
+    iget-object v1, p1, Lcom/android/server/people/data/PackageData;->mIsDefaultSmsAppPredicate:Ljava/util/function/Predicate;
+
+    iget-object v3, p1, Lcom/android/server/people/data/PackageData;->mPackageName:Ljava/lang/String;
+
+    invoke-interface {v1, v3}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v3, 0x3
+
+    if-nez v1, :cond_4
+
+    iget-object v1, p1, Lcom/android/server/people/data/PackageData;->mEventStore:Lcom/android/server/people/data/EventStore;
+
+    invoke-virtual {v1, v3}, Lcom/android/server/people/data/EventStore;->deleteEventHistories(I)V
+
+    :cond_4
+    iget-object v1, p1, Lcom/android/server/people/data/PackageData;->mEventStore:Lcom/android/server/people/data/EventStore;
+
+    new-instance v5, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;
+
+    invoke-direct {v5, v4}, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;-><init>(I)V
+
+    iput-object p1, v5, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/people/data/PackageData;
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    invoke-virtual {v1, v4, v5}, Lcom/android/server/people/data/EventStore;->pruneOrphanEventHistories(ILjava/util/function/Predicate;)V
+
+    new-instance v4, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v5}, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;-><init>(I)V
+
+    iput-object p1, v4, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/people/data/PackageData;
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    invoke-virtual {v1, v5, v4}, Lcom/android/server/people/data/EventStore;->pruneOrphanEventHistories(ILjava/util/function/Predicate;)V
+
+    iget-object v4, p1, Lcom/android/server/people/data/PackageData;->mIsDefaultDialerPredicate:Ljava/util/function/Predicate;
+
+    iget-object v5, p1, Lcom/android/server/people/data/PackageData;->mPackageName:Ljava/lang/String;
+
+    invoke-interface {v4, v5}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_5
+
+    new-instance v4, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;
+
+    invoke-direct {v4, v2}, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;-><init>(I)V
+
+    iput-object p1, v4, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/people/data/PackageData;
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    invoke-virtual {v1, v2, v4}, Lcom/android/server/people/data/EventStore;->pruneOrphanEventHistories(ILjava/util/function/Predicate;)V
+
+    :cond_5
+    iget-object v2, p1, Lcom/android/server/people/data/PackageData;->mIsDefaultSmsAppPredicate:Ljava/util/function/Predicate;
+
+    iget-object v4, p1, Lcom/android/server/people/data/PackageData;->mPackageName:Ljava/lang/String;
+
+    invoke-interface {v2, v4}, Ljava/util/function/Predicate;->test(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    new-instance v2, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;
+
+    invoke-direct {v2, v3}, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;-><init>(I)V
+
+    iput-object p1, v2, Lcom/android/server/people/data/PackageData$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/people/data/PackageData;
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    invoke-virtual {v1, v3, v2}, Lcom/android/server/people/data/EventStore;->pruneOrphanEventHistories(ILjava/util/function/Predicate;)V
+
+    :cond_6
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    new-instance p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda7;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda7;->f$0:Lcom/android/server/people/data/DataManager;
+
+    iput-wide v1, p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda7;->f$1:J
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/people/data/DataManager;->forPackagesInProfile(ILjava/util/function/Consumer;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    new-instance p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda5;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda5;->f$0:Lcom/android/server/people/data/DataManager;
+
+    iput-wide v1, p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda5;->f$1:J
+
+    iput p0, p1, Lcom/android/server/people/data/DataManager$$ExternalSyntheticLambda5;->f$2:I
+
+    invoke-static {}, Ljava/lang/invoke/VarHandle;->storeStoreFence()V
+
+    invoke-virtual {v0, p0, p1}, Lcom/android/server/people/data/DataManager;->forPackagesInProfile(ILjava/util/function/Consumer;)V
+
+    invoke-virtual {v0, p0}, Lcom/android/server/people/data/DataManager;->cleanupCachedShortcuts(I)V
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method

@@ -1,0 +1,232 @@
+.class public final synthetic Lcom/android/server/vibrator/VibratorFrameworkStatsLogger$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public synthetic f$0:Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;
+
+
+# virtual methods
+.method public final run()V
+    .locals 37
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;
+
+    iget-object v1, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mVibrationStatsQueue:Ljava/util/Queue;
+
+    check-cast v2, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v2}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;
+
+    iget-object v3, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mVibrationStatsQueue:Ljava/util/Queue;
+
+    check-cast v3, Ljava/util/ArrayDeque;
+
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v2, :cond_0
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v4
+
+    iput-wide v4, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mLastVibrationReportedLogUptime:J
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto/16 :goto_2
+
+    :cond_0
+    :goto_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v2, :cond_1
+
+    const-string/jumbo v1, "VibratorFrameworkStatsLogger"
+
+    const-string/jumbo v2, "Unexpected vibration metric flush with empty queue. Ignoring."
+
+    invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    move/from16 p0, v3
+
+    goto/16 :goto_1
+
+    :cond_1
+    iget-boolean v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->mIsWritten:Z
+
+    if-eqz v1, :cond_2
+
+    const-string/jumbo v1, "VibrationStats"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "Writing same vibration stats multiple times for uid="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v5, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->uid:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v1, v4}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    const/4 v1, 0x1
+
+    iput-boolean v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->mIsWritten:Z
+
+    iget v5, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->uid:I
+
+    iget v7, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->vibrationType:I
+
+    iget v8, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->usage:I
+
+    iget v9, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->status:I
+
+    iget-boolean v10, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->endedBySameUid:Z
+
+    iget v11, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->endedByUsage:I
+
+    iget v12, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->interruptedUsage:I
+
+    iget v13, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->repeatCount:I
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->totalDurationMillis:I
+
+    int-to-long v14, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->vibratorOnMillis:I
+
+    move/from16 p0, v3
+
+    int-to-long v3, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->startLatencyMillis:I
+
+    move-wide/from16 v16, v3
+
+    int-to-long v3, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->endLatencyMillis:I
+
+    move-wide/from16 v18, v3
+
+    int-to-long v3, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halComposeCount:I
+
+    iget v6, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halComposePwleCount:I
+
+    move/from16 v22, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halOnCount:I
+
+    move/from16 v24, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halOffCount:I
+
+    move/from16 v25, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halPerformCount:I
+
+    move/from16 v26, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halSetAmplitudeCount:I
+
+    move/from16 v27, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halSetExternalControlCount:I
+
+    move/from16 v28, v1
+
+    iget-object v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halSupportedCompositionPrimitivesUsed:[I
+
+    move-object/from16 v29, v1
+
+    iget-object v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halSupportedEffectsUsed:[I
+
+    move-object/from16 v30, v1
+
+    iget-object v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halUnsupportedCompositionPrimitivesUsed:[I
+
+    move-object/from16 v31, v1
+
+    iget-object v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halUnsupportedEffectsUsed:[I
+
+    move-object/from16 v32, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halCompositionSize:I
+
+    move/from16 v33, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halPwleSize:I
+
+    move/from16 v34, v1
+
+    iget v1, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->adaptiveScale:F
+
+    iget v2, v2, Lcom/android/server/vibrator/VibrationStats$StatsInfo;->halPerformVendorCount:I
+
+    move-wide/from16 v20, v3
+
+    const/16 v4, 0x1e7
+
+    move/from16 v23, v6
+
+    const/4 v6, 0x0
+
+    move/from16 v35, v1
+
+    move/from16 v36, v2
+
+    invoke-static/range {v4 .. v36}, Lcom/android/internal/util/FrameworkStatsLog;->write_non_chained(IILjava/lang/String;IIIZIIIJJJJIIIIIII[I[I[I[IIIFI)V
+
+    :goto_1
+    if-nez p0, :cond_3
+
+    iget-object v1, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mHandler:Landroid/os/Handler;
+
+    iget-object v2, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mConsumeVibrationStatsQueueRunnable:Lcom/android/server/vibrator/VibratorFrameworkStatsLogger$$ExternalSyntheticLambda0;
+
+    iget-wide v3, v0, Lcom/android/server/vibrator/VibratorFrameworkStatsLogger;->mVibrationReportedLogIntervalMillis:J
+
+    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_3
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method

@@ -1,0 +1,31 @@
+.class public final synthetic Lcom/android/server/media/MediaRouterMetricLogger$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/util/function/Predicate;
+
+
+# virtual methods
+.method public final test(Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Landroid/media/RouteListingPreference$Item;
+
+    invoke-virtual {p1}, Landroid/media/RouteListingPreference$Item;->getFlags()I
+
+    move-result p0
+
+    and-int/lit8 p0, p0, 0x4
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method

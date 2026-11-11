@@ -1,0 +1,70 @@
+.class public final Lcom/android/server/wm/MultiTaskingAppCompatStatusLogger$StatusCollector;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# instance fields
+.field public mOverrideToSettingsIdList:Ljava/util/List;
+
+.field public mSender:Lcom/android/server/wm/MultiTaskingAppCompatStatusLogger$$ExternalSyntheticLambda0;
+
+.field public mSettings:Ljava/util/HashMap;
+
+
+# virtual methods
+.method public final addStatus(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    if-eqz p1, :cond_3
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/android/server/wm/MultiTaskingAppCompatStatusLogger$StatusCollector;->mSettings:Ljava/util/HashMap;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/android/server/wm/MultiTaskingAppCompatStatusLogger$StatusCollector;->mSettings:Ljava/util/HashMap;
+
+    :cond_1
+    iget-object p0, p0, Lcom/android/server/wm/MultiTaskingAppCompatStatusLogger$StatusCollector;->mSettings:Ljava/util/HashMap;
+
+    new-instance v0, Lcom/android/server/wm/MultiTaskingAppCompatStatusLogger$StatusCollector$$ExternalSyntheticLambda0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p0, p1, v0}, Ljava/util/HashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    return-void
+
+    :cond_2
+    const-string p1, ", "
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    :goto_0
+    return-void
+.end method

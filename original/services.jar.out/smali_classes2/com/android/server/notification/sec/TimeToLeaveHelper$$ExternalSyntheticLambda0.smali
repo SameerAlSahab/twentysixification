@@ -1,0 +1,131 @@
+.class public final synthetic Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
+
+
+# instance fields
+.field public final synthetic $r8$classId:I
+
+.field public synthetic f$0:Lcom/android/server/notification/sec/TimeToLeaveHelper;
+
+.field public synthetic f$1:Ljava/util/concurrent/CompletableFuture;
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->$r8$classId:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
+
+    iget v0, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->$r8$classId:I
+
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "TimeToLeaveHelper"
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/notification/sec/TimeToLeaveHelper;
+
+    iget-object p0, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->f$1:Ljava/util/concurrent/CompletableFuture;
+
+    check-cast p1, Landroid/app/appsearch/AppSearchResult;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
+
+    const-string/jumbo p0, "Succeeded to set Schema"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->f$1:Ljava/util/concurrent/CompletableFuture;
+
+    check-cast p1, Landroid/app/appsearch/AppSearchResult;
+
+    invoke-virtual {p1}, Landroid/app/appsearch/AppSearchResult;->isSuccess()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-virtual {p1}, Landroid/app/appsearch/AppSearchResult;->getErrorMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/CompletableFuture;->completeExceptionally(Ljava/lang/Throwable;)Z
+
+    const-string p0, "Failed to create AppSearchSession"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/app/appsearch/AppSearchResult;->getResultValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroid/app/appsearch/AppSearchResult;->getResultValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/appsearch/AppSearchSession;
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
+
+    const-string/jumbo p0, "Succeeded to create AppSearchSession"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/notification/sec/TimeToLeaveHelper;
+
+    iget-object p0, p0, Lcom/android/server/notification/sec/TimeToLeaveHelper$$ExternalSyntheticLambda0;->f$1:Ljava/util/concurrent/CompletableFuture;
+
+    check-cast p1, Landroid/app/appsearch/AppSearchResult;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/CompletableFuture;->complete(Ljava/lang/Object;)Z
+
+    const-string/jumbo p0, "succeeded to clear documents"
+
+    invoke-static {v2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

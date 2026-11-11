@@ -1,0 +1,27 @@
+.class public abstract Lcom/samsung/android/server/pm/install/PackageBlockListPolicy;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+
+# static fields
+.field public static sBypassBlocklist:Z = false
+
+.field public static final sIsRduDevice:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public static sLduBlocklist:Ljava/util/HashSet;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    sput-object v0, Lcom/samsung/android/server/pm/install/PackageBlockListPolicy;->sIsRduDevice:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-void
+.end method

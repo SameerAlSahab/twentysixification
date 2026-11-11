@@ -1,0 +1,74 @@
+.class public final synthetic Lcom/android/server/power/PreRebootLogger$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public synthetic f$0:Ljava/io/File;
+
+.field public synthetic f$1:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    iget-object v0, p0, Lcom/android/server/power/PreRebootLogger$$ExternalSyntheticLambda0;->f$0:Ljava/io/File;
+
+    iget-object p0, p0, Lcom/android/server/power/PreRebootLogger$$ExternalSyntheticLambda0;->f$1:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    sget-object v1, Lcom/android/server/power/PreRebootLogger;->sLock:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v2, Lcom/android/server/power/PreRebootLogger;->BUFFERS_TO_DUMP:[Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-static {v0, v2}, Lcom/android/server/power/PreRebootLogger;->dumpLogsLocked(Ljava/io/File;Ljava/lang/String;)V
+
+    sget-object v2, Lcom/android/server/power/PreRebootLogger;->SERVICES_TO_DUMP:[Ljava/lang/String;
+
+    :goto_0
+    const/4 v4, 0x2
+
+    if-ge v3, v4, :cond_0
+
+    aget-object v4, v2, v3
+
+    invoke-static {v0, v4}, Lcom/android/server/power/PreRebootLogger;->dumpServiceLocked(Ljava/io/File;Ljava/lang/String;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method

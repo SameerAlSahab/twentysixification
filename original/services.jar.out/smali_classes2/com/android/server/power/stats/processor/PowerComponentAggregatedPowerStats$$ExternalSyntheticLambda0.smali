@@ -1,0 +1,145 @@
+.class public final synthetic Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Ljava/util/function/Consumer;
+
+
+# instance fields
+.field public synthetic f$0:Lcom/android/server/power/stats/processor/MultiStateStats;
+
+.field public synthetic f$1:[J
+
+.field public synthetic f$2:[Z
+
+.field public synthetic f$3:Landroid/util/IndentingPrintWriter;
+
+.field public synthetic f$4:Ljava/lang/String;
+
+.field public synthetic f$5:[Lcom/android/server/power/stats/processor/MultiStateStats$States;
+
+.field public synthetic f$6:Ljava/lang/String;
+
+.field public synthetic f$7:Lcom/android/internal/os/PowerStats$PowerStatsFormatter;
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 10
+
+    iget-object v0, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$0:Lcom/android/server/power/stats/processor/MultiStateStats;
+
+    iget-object v1, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$1:[J
+
+    iget-object v2, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$2:[Z
+
+    iget-object v3, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$3:Landroid/util/IndentingPrintWriter;
+
+    iget-object v4, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$4:Ljava/lang/String;
+
+    iget-object v5, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$5:[Lcom/android/server/power/stats/processor/MultiStateStats$States;
+
+    iget-object v6, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$6:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/android/server/power/stats/processor/PowerComponentAggregatedPowerStats$$ExternalSyntheticLambda0;->f$7:Lcom/android/internal/os/PowerStats$PowerStatsFormatter;
+
+    check-cast p1, [I
+
+    iget-object v7, v0, Lcom/android/server/power/stats/processor/MultiStateStats;->mCounter:Lcom/android/internal/os/LongArrayMultiStateCounter;
+
+    iget-object v0, v0, Lcom/android/server/power/stats/processor/MultiStateStats;->mFactory:Lcom/android/server/power/stats/processor/MultiStateStats$Factory;
+
+    invoke-virtual {v0, p1}, Lcom/android/server/power/stats/processor/MultiStateStats$Factory;->getSerialState([I)I
+
+    move-result v0
+
+    invoke-virtual {v7, v1, v0}, Lcom/android/internal/os/LongArrayMultiStateCounter;->getCounts([JI)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    aget-boolean v7, v2, v0
+
+    if-eqz v7, :cond_1
+
+    invoke-virtual {v3, v4}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Landroid/util/IndentingPrintWriter;->increaseIndent()Landroid/util/IndentingPrintWriter;
+
+    :cond_1
+    aput-boolean v0, v2, v0
+
+    const-string v2, "("
+
+    invoke-static {v2}, Lcom/android/server/BootReceiver$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    move v7, v0
+
+    :goto_0
+    array-length v8, p1
+
+    const-string v9, " "
+
+    if-ge v7, v8, :cond_4
+
+    aget-object v8, v5, v7
+
+    iget-boolean v8, v8, Lcom/android/server/power/stats/processor/MultiStateStats$States;->mTracked:Z
+
+    if-eqz v8, :cond_3
+
+    if-nez v4, :cond_2
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    aget-object v4, v5, v7
+
+    iget-object v4, v4, Lcom/android/server/power/stats/processor/MultiStateStats$States;->mLabels:[Ljava/lang/String;
+
+    aget v8, p1, v7
+
+    aget-object v4, v4, v8
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move v4, v0
+
+    :cond_3
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    if-eqz v6, :cond_5
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_5
+    const-string p1, ") "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v1}, Lcom/android/internal/os/PowerStats$PowerStatsFormatter;->format([J)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Landroid/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
+
+    return-void
+.end method

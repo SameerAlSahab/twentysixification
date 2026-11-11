@@ -1,0 +1,24 @@
+.class public final synthetic Lcom/android/server/wm/PrivacyDisplayController$$ExternalSyntheticLambda1;
+.super Ljava/lang/Object;
+.source "qb/115377217 beaa6963e2d61e532f52e0d4029b70eb8d75e4d9c1d5a6364748278c88fe5259"
+
+# interfaces
+.implements Lcom/samsung/android/server/packagefeature/PackageFeatureUserChange$DumpInterface;
+
+
+# virtual methods
+.method public final valueToString(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 0
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    invoke-static {p0}, Landroid/window/PrivacyDisplayManager;->stateToString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
